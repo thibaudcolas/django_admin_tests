@@ -53,7 +53,7 @@ const Scenario = (scenario) => {
           </p>
           <p>
             Lighthouse:
-            <a href="lighthouse/${fullLabel}.html"
+            <a href="lighthouse/${encodeURIComponent(fullLabel)}.html"
               ><code>${fullLabel}.html</code></a
             >
           </p>
@@ -81,11 +81,11 @@ const Scenario = (scenario) => {
           </details>
         </div>
         <a
-          href="screenshots/${fullLabel}.png"
+          href="screenshots/${encodeURIComponent(fullLabel)}.png"
           aria-label="Open screenshot of ${fullLabel}"
         >
           <img
-            src="screenshots/${fullLabel}.png"
+            src="screenshots/${encodeURIComponent(fullLabel)}.png"
             alt="Screenshot of ${fullLabel}"
             width="300"
             loading="lazy"
@@ -139,8 +139,10 @@ const OverviewRow = (scenarioLabel) => {
       <td>
         <a href="#scenario-${encodeURIComponent(label)}">details</a>,
         <a href="http://localhost:8000${scenario.path}">path</a>,
-        <a href="screenshots/${screenshot}">screenshot</a>,
-        <a href="lighthouse/${lighthouseReport}">lighthouse</a>
+        <a href="screenshots/${encodeURIComponent(screenshot)}">screenshot</a>,
+        <a href="lighthouse/${encodeURIComponent(lighthouseReport)}"
+          >lighthouse</a
+        >
       </td>
     </tr>
   `;
