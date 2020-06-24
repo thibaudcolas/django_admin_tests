@@ -87,6 +87,7 @@ const Scenario = (scenario) => {
           <img
             src="screenshots/${encodeURIComponent(fullLabel)}.png"
             alt="Screenshot of ${fullLabel}"
+            style="width: 100%; max-width: 40vw;"
             width="300"
             loading="lazy"
           />
@@ -130,9 +131,6 @@ const OverviewRow = (scenarioLabel) => {
   return html`
     <tr>
       <td>
-        ${category}
-      </td>
-      <td>
         ${label}
       </td>
       <td>${issues.length}</td>
@@ -153,6 +151,10 @@ const report = html`
   <html lang="en">
     <head>
       <title>Django admin tests report | Pa11y + Lighthouse</title>
+      <meta
+        name="description"
+        content="Automated accessibility CI tests for Django, based on Pa11y and Lighthouse, inspired by wagtail-tooling"
+      />
       <style>
         html {
           font-size: 1.25rem;
@@ -181,6 +183,9 @@ const report = html`
         <p>
           Generated: <time>${new Date().toISOString().replace("T", " ")}</time>
         </p>
+        <p>
+          All issues: <a href="pa11y.json"><code>pa11y.json</code></a>
+        </p>
         <p>Running with Axe and HTML CodeSniffer via Pa11y, and Lighthouse.</p>
         <h2 id="overview">Overview</h2>
         <table>
@@ -189,7 +194,6 @@ const report = html`
           </caption>
           <thead>
             <tr>
-              <th>Category</th>
               <th>Scenario</th>
               <th>Issues</th>
               <th>Links</th>
