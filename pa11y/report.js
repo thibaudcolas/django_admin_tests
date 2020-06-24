@@ -137,12 +137,8 @@ const OverviewRow = (scenarioLabel) => {
       </td>
       <td>${issues.length}</td>
       <td>
-        <a
-          href="#scenario-${encodeURIComponent(category)}-${encodeURIComponent(
-            label
-          )}"
-          >details</a
-        >, <a href="http://localhost:8000${scenario.path}">path</a>,
+        <a href="#scenario-${encodeURIComponent(label)}">details</a>,
+        <a href="http://localhost:8000${scenario.path}">path</a>,
         <a href="screenshots/${screenshot}">screenshot</a>,
         <a href="lighthouse/${lighthouseReport}">lighthouse</a>
       </td>
