@@ -1,0 +1,15 @@
+version: ~> 1.0
+dist: bionic
+language: python
+python: 3.6
+install:
+  - nvm install
+  - npm ci
+script:
+  - pip install -r requirements.txt
+  - ./manage.py migrate
+  - ./manage.py loaddata fixtures.json
+  - ./manage.py runserver &
+  - npm run test
+notifications:
+  email: false
