@@ -41,9 +41,9 @@ const Scenario = (scenario) => {
       <div style="display: grid; grid-template-columns: 1fr 1fr;">
         <div>
           <h3
-            id="scenario-${encodeURIComponent(category)}-${encodeURIComponent(
-              label
-            )}"
+            id="scenario-${encodeURIComponent(
+              category
+            )}%20–%20${encodeURIComponent(label)}"
           >
             ${label}
           </h3>
