@@ -137,3 +137,15 @@ dmypy.json
 cython_debug/
 
 .cache
+
+# -------------------------------------------------
+# Your own project's ignores
+# -------------------------------------------------
+
+pa11y.json
+report.html
+screenshots
+lighthouse
+.vscode
+node_modules
+.DS_Store

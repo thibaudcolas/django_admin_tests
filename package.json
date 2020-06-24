@@ -1,0 +1,16 @@
+{
+  "name": "django_admin_tests",
+  "version": "0.1.0",
+  "description": "Automated CI tests for Django, inspired by [wagtail-tooling](https://github.com/thibaudcolas/wagtail-tooling).",
+  "author": "Thibaud Colas",
+  "private": true,
+  "license": "MIT",
+  "keywords": [],
+  "scripts": {
+    "test": "node pa11y/test.js"
+  },
+  "devDependencies": {
+    "lighthouse": "^6.0.0",
+    "pa11y": "^5.3.0"
+  }
+}
