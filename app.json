@@ -1,0 +1,12 @@
+{
+  "name": "django_admin_tests",
+  "stack": "heroku-20",
+  "buildpacks": [{ "url": "heroku/python" }],
+  "addons": [],
+  "description": "",
+  "env": {},
+  "formation": {
+    "web": { "quantity": 1 }
+  },
+  "scripts": {}
+}
