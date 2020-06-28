@@ -24,7 +24,7 @@ deploy:
     local_dir: pa11y
     github_token: "$PAGES_GITHUB_API_TOKEN"
     on:
-      branch: master
+      branch: main
 notifications:
   email: false
 env:
