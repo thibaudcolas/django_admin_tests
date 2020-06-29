@@ -108,6 +108,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# This is where Django will put files collected from application directories
+# and custom direcotires set in "STATICFILES_DIRS" when
+# using "django-admin collectstatic" command.
+# https://docs.djangoproject.com/en/stable/ref/settings/#static-root
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
 #########################################
 # Custom settings
 
