@@ -2,7 +2,7 @@
   "name": "django_admin_tests",
   "stack": "heroku-20",
   "buildpacks": [{ "url": "heroku/python" }],
-  "addons": [],
+  "addons": ["heroku-postgresql:hobby-dev"],
   "description": "",
   "env": {},
   "formation": {
