@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example form</title>
+</head>
+<body>
+<main>
+  <h1>Example form</h1>
+
+
+  <form action="" method="POST" novalidate>
+    {% csrf_token %}
+
+    {{ form.non_field_errors }}
+
+    <button type="Submit">Submit</button>
+
+    {% if as_type == "p" %}
+    {{ form.as_p }}
+    {% elif as_type == "ul" %}
+      <ul>
+        {{ form.as_ul }}
+      </ul>
+    {% elif as_type == "table" %}
+      <table>
+        <tbody>
+          {{ form.as_table }}
+        </tbody>
+      </table>
+    {% endif %}
+  </form>
+</main>
+</body>
+</html>

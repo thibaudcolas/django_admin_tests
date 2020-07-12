@@ -6,7 +6,7 @@ const lighthouse = require("lighthouse");
 
 const scenarios = require("./scenarios");
 
-const ADMIN_ROOT = "http://localhost:8000/admin";
+const SITE_ROOT = "http://localhost:8000";
 
 let views = [];
 
@@ -48,7 +48,7 @@ const getAuthCookie = async (browser) => {
     domain: "localhost",
     path: "/",
   });
-  await page.goto(`${ADMIN_ROOT}/login`);
+  await page.goto(`${SITE_ROOT}/admin/login`);
   await page.type("#id_username", "admin");
   await page.type("#id_password", "changeme");
   await page.keyboard.press("Enter");
@@ -170,7 +170,7 @@ const run = async () => {
         browser,
         page,
       };
-      const result = await pa11y(`${ADMIN_ROOT}${scenario.path}`, pa11yOptions);
+      const result = await pa11y(`${SITE_ROOT}${scenario.path}`, pa11yOptions);
 
       if (HAS_ONLY_FILTER) {
         console.log(result);
@@ -202,7 +202,7 @@ const run = async () => {
         "utf8"
       );
 
-      const runnerResult = await lighthouse(`${ADMIN_ROOT}${scenario.path}`, {
+      const runnerResult = await lighthouse(`${SITE_ROOT}${scenario.path}`, {
         port: new URL(browser.wsEndpoint()).port,
         onlyCategories: ["accessibility"],
         output: "html",
