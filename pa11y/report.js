@@ -28,7 +28,7 @@ const slug = (str) =>
   str
     .toLowerCase()
     .replace(/ /g, "-")
-    .replace(/[-]+/g, "-")
+    .replace(/[-–]+/g, "-")
     .replace(/[^\w-]+/g, "");
 
 /**
@@ -228,6 +228,8 @@ const OverviewRow = (scenarioLabel) => {
       <td>${axeIssues.length}</td>
       <td>${htmlcsIssues.length}</td>
       <td>
+        <a href="#scenario-${slug(label)}" aria-label="jump to ${label}">jump</a
+        >,
         <a
           href="http://localhost:8000${scenario.path}"
           aria-label="path - ${label}"
