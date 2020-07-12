@@ -56,3 +56,31 @@ node pa11y/report.js
 - `report.html` is a high-level overview generated from the list of issues, and scenarios.
 - `screenshots/` contains the screenshots for all scenarios (including sub-state scenarios).
 - `ligthhouse/` contains the Lighthouse reports for all scenarios (including sub-state scenarios, but without any browser interaction taken into account).
+
+## Scope for future audits
+
+### Django admin
+
+- [Django admin](https://docs.djangoproject.com/en/3.0/ref/contrib/admin/)
+- [Django admindocs](https://docs.djangoproject.com/en/3.0/ref/contrib/admin/admindocs/)
+- [GIS](https://docs.djangoproject.com/en/3.0/ref/contrib/gis/) Geo Admin
+
+### Django output
+
+- [Django forms](https://docs.djangoproject.com/en/3.0/ref/forms/)
+  - Default widgets
+  - as_p, as_ul, as_table
+- Ex-contrib [comments](https://github.com/django/django-contrib-comments)
+- Ex-contrib [formtools](https://github.com/jazzband/django-formtools)
+- ([PDFs](https://docs.djangoproject.com/en/3.0/howto/outputting-pdf/)?)
+- Examples from Django docs
+  - [Pagination example template](https://docs.djangoproject.com/en/3.0/topics/pagination/#paginating-a-listview)
+  - [WeekArchiveView example template](https://docs.djangoproject.com/en/3.0/ref/class-based-views/generic-date-based/#weekarchiveview)
+- Error pages: 404, 500, 403, 400
+- Welcome page / Default URL conf
+- (Flatpages?)
+
+### Docs
+
+- Locally-built docs
+- [docs.djangoproject.com](https://docs.djangoproject.com/)
