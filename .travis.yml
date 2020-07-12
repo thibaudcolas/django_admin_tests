@@ -1,4 +1,5 @@
 version: ~> 1.0
+os: linux
 dist: bionic
 language: python
 python: 3.6
@@ -20,9 +21,10 @@ branches:
     - gh-pages
 deploy:
   - provider: pages
+    strategy: git
     skip_cleanup: true
     local_dir: pa11y
-    github_token: "$PAGES_GITHUB_API_TOKEN"
+    token: "$PAGES_GITHUB_API_TOKEN"
     on:
       branch: main
 notifications:
