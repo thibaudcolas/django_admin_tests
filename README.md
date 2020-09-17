@@ -84,3 +84,13 @@ node pa11y/report.js
 
 - Locally-built docs
 - [docs.djangoproject.com](https://docs.djangoproject.com/)
+
+## Improving the Pa11y test suite
+
+The test suite is an unusual setup of Pa11y,
+
+- [pa11y/scenarios.js](https://github.com/thibaudcolas/django_admin_tests/blob/main/pa11y/scenarios.js) contains all of the test cases, with more metadata than strictly needed. This is to facilitate the generation of custom reports based on this metadata.
+  - The scenarios also inherit from their parents, grouping related scenarios for ease of understanding.
+- [pa11y/test.js](https://github.com/thibaudcolas/django_admin_tests/blob/main/pa11y/test.js) runs the tests. The run starts by logging into the admin (only once), and each test with Pa11y is followed by a test with Lighthouse.
+  - The test runs produce a single JSON file with all of the issues decorated with additional metadata from the scenarios, as well as Lighthouse results.
+- [pa11y/report.js](https://github.com/thibaudcolas/django_admin_tests/blob/main/pa11y/report.js) runs on the generated report, separately from test runs. This makes it easy to iterate on the report format.
