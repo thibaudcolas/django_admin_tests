@@ -57,9 +57,11 @@ node pa11y/report.js
 - `screenshots/` contains the screenshots for all scenarios (including sub-state scenarios).
 - `ligthhouse/` contains the Lighthouse reports for all scenarios (including sub-state scenarios, but without any browser interaction taken into account).
 
-## Scope for future audits
+## Scope for audits
 
 ### Django admin
+
+To be refined
 
 - [Django admin](https://docs.djangoproject.com/en/3.0/ref/contrib/admin/)
 - [Django admindocs](https://docs.djangoproject.com/en/3.0/ref/contrib/admin/admindocs/)
@@ -79,6 +81,13 @@ node pa11y/report.js
 - Error pages: 404, 500, 403, 400
 - Welcome page / Default URL conf
 - (Flatpages?)
+
+### High-profile third-party packages
+
+- [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms)
+- [cookiecutter-django](https://github.com/pydanny/cookiecutter-django)
+- [django-recaptcha](https://github.com/praekelt/django-recaptcha)
+- [django-phonenumber-field](https://github.com/stefanfoulis/django-phonenumber-field)
 
 ### Docs
 
