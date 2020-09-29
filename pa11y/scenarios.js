@@ -27,6 +27,19 @@ const errors = [
     path: "/defaults/400/",
     category: "Errors",
   },
+  {
+    label: "CSRF",
+    path: "/defaults/csrf_failure/",
+    category: "Errors",
+  },
+];
+
+const static = [
+  {
+    label: "Directory index",
+    path: "/defaults/directory_index/",
+    category: "Static",
+  },
 ];
 
 const dashboard = [
@@ -404,6 +417,7 @@ const sites = [
 const scenarios = [
   welcome,
   errors,
+  static,
   dashboard,
   auth,
   groups,

@@ -78,8 +78,9 @@ To be refined
 - Examples from Django docs
   - [Pagination example template](https://docs.djangoproject.com/en/3.0/topics/pagination/#paginating-a-listview)
   - [WeekArchiveView example template](https://docs.djangoproject.com/en/3.0/ref/class-based-views/generic-date-based/#weekarchiveview)
-- Error pages: 404, 500, 403, 400
+- Error pages: 404, 500, 403, 400, CSRF
 - Welcome page / Default URL conf
+- Static’s directory listing
 - (Flatpages?)
 
 ### High-profile third-party packages
