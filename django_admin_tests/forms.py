@@ -70,8 +70,13 @@ class ExampleForm(forms.Form):
     datetime_optional = forms.DateTimeField(help_text="Help", required=False)
     datetime_disabled = forms.DateTimeField(help_text="Help", disabled=True)
 
-    # DecimalField
-    # DurationField
+    decimal_required = forms.DecimalField(help_text="Help", required=True)
+    decimal_optional = forms.DecimalField(help_text="Help", required=False)
+    decimal_disabled = forms.DecimalField(help_text="Help", disabled=True)
+
+    duration_required = forms.DurationField(help_text="Help", required=True)
+    duration_optional = forms.DurationField(help_text="Help", required=False)
+    duration_disabled = forms.DurationField(help_text="Help", disabled=True)
 
     email_required = forms.EmailField(help_text="Help", required=True)
     email_optional = forms.EmailField(help_text="Help", required=False)
@@ -82,36 +87,64 @@ class ExampleForm(forms.Form):
     file_disabled = forms.FileField(help_text="Help", disabled=True)
 
     # FilePathField
-    # FloatField
-    # ImageField
+
+    float_required = forms.FloatField(help_text="Help", required=True)
+    float_optional = forms.FloatField(help_text="Help", required=False)
+    float_disabled = forms.FloatField(help_text="Help", disabled=True)
+
+    image_required = forms.ImageField(help_text="Help", required=True)
+    image_optional = forms.ImageField(help_text="Help", required=False)
+    image_disabled = forms.ImageField(help_text="Help", disabled=True)
 
     integer_required = forms.IntegerField(help_text="Help", required=True)
     integer_optional = forms.IntegerField(help_text="Help", required=False)
     integer_disabled = forms.IntegerField(help_text="Help", disabled=True)
 
-    # GenericIPAddressField
+    json_required = forms.JSONField(label="JSON required", help_text="Help", required=True)
+    json_optional = forms.JSONField(label="JSON optional", help_text="Help", required=False)
+    json_disabled = forms.JSONField(label="JSON disabled", help_text="Help", disabled=True)
+
+    generic_ip_address_required = forms.GenericIPAddressField(help_text="Help", required=True)
+    generic_ip_address_optional = forms.GenericIPAddressField(help_text="Help", required=False)
+    generic_ip_address_disabled = forms.GenericIPAddressField(help_text="Help", disabled=True)
 
     select_multiple = forms.MultipleChoiceField(choices=choices)
-    checboxes_multiple = forms.MultipleChoiceField(
+    checkboxes_multiple = forms.MultipleChoiceField(
         choices=choices, widget=forms.CheckboxSelectMultiple()
     )
+
+    # TypedMultipleChoiceField
 
     null_boolean_required = forms.NullBooleanField(help_text="Help")
     null_boolean_optional = forms.NullBooleanField(help_text="Help", required=False)
     null_boolean_disabled = forms.NullBooleanField(help_text="Help", disabled=True)
 
-    # RegexField
     # SlugField
+
+    regex_required = forms.RegexField(regex="\w", help_text="Help", required=True)
+    regex_optional = forms.RegexField(regex="\w", help_text="Help", required=False)
+    regex_disabled = forms.RegexField(regex="\w", help_text="Help", disabled=True)
+
+    slug_required = forms.SlugField(help_text="Help", required=True)
+    slug_optional = forms.SlugField(help_text="Help", required=False)
+    slug_disabled = forms.SlugField(help_text="Help", disabled=True)
 
     time_required = forms.TimeField(help_text="Help", required=True)
     time_optional = forms.TimeField(help_text="Help", required=False)
     time_disabled = forms.TimeField(help_text="Help", disabled=True)
 
-    url_required = forms.URLField(label="URL", help_text="Help", required=True)
-    url_optional = forms.URLField(label="URL", help_text="Help", required=False)
-    url_disabled = forms.URLField(label="URL", help_text="Help", disabled=True)
+    url_required = forms.URLField(label="URL required", help_text="Help", required=True)
+    url_optional = forms.URLField(label="URL optional", help_text="Help", required=False)
+    url_disabled = forms.URLField(label="URL disabled", help_text="Help", disabled=True)
 
-    # UUIDField
+    uuid_required = forms.UUIDField(label="UUID required", help_text="Help", required=True)
+    uuid_optional = forms.UUIDField(label="UUID optional", help_text="Help", required=False)
+    uuid_disabled = forms.UUIDField(label="UUID disabled", help_text="Help", disabled=True)
+
+    combo_required = forms.ComboField(fields=[forms.CharField(max_length=20), forms.EmailField()], help_text="Help", required=True)
+    combo_optional = forms.ComboField(fields=[forms.CharField(max_length=20), forms.EmailField()], help_text="Help", required=False)
+    combo_disabled = forms.ComboField(fields=[forms.CharField(max_length=20), forms.EmailField()], help_text="Help", disabled=True)
+
     # ComboField
     # MultiValueField
     # SplitDateTimeField
