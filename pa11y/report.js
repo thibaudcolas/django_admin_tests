@@ -222,9 +222,7 @@ const OverviewRow = (scenarioLabel) => {
 
   return html`
     <tr>
-      <td>
-        ${label}
-      </td>
+      <td>${label}</td>
       <td>${axeIssues.length}</td>
       <td>${htmlcsIssues.length}</td>
       <td>
@@ -286,7 +284,7 @@ const report = html`
         </p>
         <p>
           Generated:
-          <a href="https://travis-ci.com/github/thibaudcolas/django_admin_tests"
+          <a href="https://github.com/thibaudcolas/django_admin_tests/actions"
             ><time>${new Date().toISOString().replace("T", " ")}</time></a
           >
         </p>
@@ -321,9 +319,7 @@ const report = html`
         </table>
         ${categories.map(Category).join("")}
       </main>
-      <footer>
-        ${githubCorner}
-      </footer>
+      <footer>${githubCorner}</footer>
     </body>
   </html>
 `;

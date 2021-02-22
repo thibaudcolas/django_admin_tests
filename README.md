@@ -1,4 +1,4 @@
-# [Django admin tests](http://thibaudcolas.github.io/django_admin_tests/) [![Build Status](https://travis-ci.com/thibaudcolas/django_admin_tests.svg?branch=main)](https://travis-ci.com/thibaudcolas/django_admin_tests)
+# [Django admin tests](http://thibaudcolas.github.io/django_admin_tests/) [![Build status](https://github.com/thibaudcolas/django_admin_tests/workflows/CI/badge.svg)](https://github.com/thibaudcolas/django_admin_tests/actions)
 
 > Automated accessibility CI tests for Django, based on Pa11y and Lighthouse, inspired by [wagtail-tooling](https://github.com/thibaudcolas/wagtail-tooling). [View latest report](http://thibaudcolas.github.io/django_admin_tests/)
 

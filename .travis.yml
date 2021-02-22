@@ -19,14 +19,14 @@ script:
 branches:
   except:
     - gh-pages
-deploy:
-  - provider: pages
-    strategy: git
-    skip_cleanup: true
-    local_dir: pa11y
-    token: "$PAGES_GITHUB_API_TOKEN"
-    on:
-      branch: main
+# deploy:
+#   - provider: pages
+#     strategy: git
+#     skip_cleanup: true
+#     local_dir: pa11y
+#     token: "$PAGES_GITHUB_API_TOKEN"
+#     on:
+#       branch: main
 notifications:
   email: false
 env:
