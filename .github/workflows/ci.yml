@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.6
+          python-version: 3.9
       - id: nvm
         run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
       - uses: actions/setup-node@v2-beta
@@ -24,7 +24,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - run: npm install --no-optional --no-audit --no-fund --progress=false
+      - run: python -m pip install --upgrade pip
       - run: pip install -r requirements.txt
+      - run: ./manage.py makemigrations --check
       - run: ./manage.py migrate
       - run: ./manage.py loaddata fixtures.json
       - run: ./manage.py runserver &

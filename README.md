@@ -22,7 +22,7 @@ The Lighthouse reports are provided for reference – a score of 100% doesn’t 
 
 ## Local setup
 
-Requirements: `nvm`, Python 3.6.
+Requirements: `nvm`, Python 3.9.
 
 ```sh
 # First, clone the repository and install the Node and Python dependencies.
@@ -30,8 +30,9 @@ git clone git@github.com:thibaudcolas/django_admin_tests.git
 cd django_admin_tests
 nvm use
 npm install
-virtualenv -p python3.6 venv
-source venv/bin/activate
+virtualenv -p python3.9 .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 # Then, set up the demo site
 ./manage.py migrate
