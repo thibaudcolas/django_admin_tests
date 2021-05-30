@@ -33,7 +33,7 @@ npm install
 virtualenv -p python3.9 .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 # Then, set up the demo site
 ./manage.py migrate
 ./manage.py loaddata fixtures.json
