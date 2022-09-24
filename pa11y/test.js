@@ -158,7 +158,7 @@ const run = async () => {
           error: console.error,
           info: console.log,
         },
-        runners: ["axe", "htmlcs"],
+        runners: ["axe"],
         actions: scenario.actions || [],
         viewport: scenario.viewport || {
           width: 1024,

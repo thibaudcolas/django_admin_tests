@@ -8,7 +8,7 @@
 ## Contents
 
 - Demo site set up with `django-admin startproject django_admin_tests`, with Polls app from the Django tutorial
-- Automated accessibility tests of the Django admin with Axe and HTML CodeSniffer via [Pa11y](https://pa11y.org/), for a range of predefined [scenarios](./pa11y/scenarios.js).
+- Automated accessibility tests of the Django admin with Axe via [Pa11y](https://pa11y.org/), for a range of predefined [scenarios](./pa11y/scenarios.js).
 - Automated [Lighthouse](https://github.com/GoogleChrome/lighthouse) accessibility reports for all page-level scenarios.
 - Bespoke [report generation](http://thibaudcolas.github.io/django_admin_tests/) based on the test results.
 
