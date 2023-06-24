@@ -17,7 +17,9 @@
 
     <button type="Submit">Submit</button>
 
-    {% if as_type == "p" %}
+    {% if as_type == "div" %}
+    {{ form.as_div }}
+    {% elif as_type == "p" %}
     {{ form.as_p }}
     {% elif as_type == "ul" %}
       <ul>

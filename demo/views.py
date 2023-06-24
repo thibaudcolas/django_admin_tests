@@ -3,7 +3,7 @@ from django.shortcuts import render
 from .forms import ExampleForm
 
 
-def example_form(request, as_type="p"):
+def example_form(request, as_type="div"):
     if request.method == "POST":
         form = ExampleForm(request.POST)
         form.add_error(None, "An example non-field error.")

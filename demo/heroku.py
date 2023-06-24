@@ -1,7 +1,7 @@
 import os
 import dj_database_url
 
-from .settings import *
+from demo.settings import *
 
 
 env = os.environ.copy()

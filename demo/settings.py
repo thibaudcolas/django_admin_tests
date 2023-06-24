@@ -10,11 +10,9 @@ SECRET_KEY = os.environ.get(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "1").lower() in {"1", "on", "y", "yes", "true"}
+DEBUG = True
 
-ALLOWED_HOSTS = []
-if allowed_hosts := os.environ.get("ALLOWED_HOSTS"):
-    ALLOWED_HOSTS = allowed_hosts.split(",")
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -66,12 +64,17 @@ WSGI_APPLICATION = "demo.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+if os.environ.get("DATABASE_URL"):
+    import dj_database_url
+
+    DATABASES = {"default": dj_database_url.config()}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
     }
-}
 
 
 # Password validation
@@ -117,4 +120,19 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# This is where Django will put files collected from application directories
+# and custom directories set in "STATICFILES_DIRS" when
+# using "django-admin collectstatic" command.
+# https://docs.djangoproject.com/en/stable/ref/settings/#static-root
+STATIC_ROOT = BASE_DIR / "static"
+
+#########################################
+# Custom settings
+
+# Required for automated tests.
+SESSION_COOKIE_HTTPONLY = False
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
 SITE_ID = 1
+

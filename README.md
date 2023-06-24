@@ -1,13 +1,40 @@
 # [Django admin tests](http://thibaudcolas.github.io/django_admin_tests/) [![Build status](https://github.com/thibaudcolas/django_admin_tests/workflows/CI/badge.svg)](https://github.com/thibaudcolas/django_admin_tests/actions)
 
-> Automated accessibility CI tests for Django, based on Pa11y and Lighthouse, inspired by [wagtail-tooling](https://github.com/thibaudcolas/wagtail-tooling). [View latest report](http://thibaudcolas.github.io/django_admin_tests/)
+> Sample Django project including automated accessibility CI tests for Django, based on Pa11y and Lighthouse, inspired by [wagtail-tooling](https://github.com/thibaudcolas/wagtail-tooling). [View latest report](http://thibaudcolas.github.io/django_admin_tests/)
 
 - django-developers discussion: [Admin accessibility](https://groups.google.com/g/django-developers/c/FsBrNGTxvCA)
 - Demo report: [Django admin tests report | Pa11y + Lighthouse](http://thibaudcolas.github.io/django_admin_tests/)
 
+## Using the demo
+
+1. Clone this repo.
+2. `pip install -r requirements.txt`
+3. `./manage.py migrate` -- may not be necessary.
+4. ./manage.py runserver
+
+You can create your own superuser or use the one already existing:
+
+- Username: `admin`
+- Password: `correcthorsebatterystaple`
+
+There is already a database included with data. If you want to add more data,
+there is a manageent command for getting data from the Spotify API:
+
+`./manage.py import_data <artist_id_1> <artist_id_2> ...`
+
+To use this you need to set up a Spotify app on their website and set the
+following environment variables:
+
+- `SPOTIPY_CLIENT_ID`
+- `SPOTIPY_CLIENT_SECRET`
+
+It can take a while and it might be a good idea to fetch only one artist at
+a time to avoid rate limits or other issues. Not every album / track will be
+downloaded -- just whatever is on the first page of results for each.
+
 ## Contents
 
-- Demo site set up with `django-admin startproject django_admin_tests`, with Polls app from the Django tutorial
+- Demo site set up by [@knyghty](https://github.com/knyghty/django-admin-demo) for Django development.
 - Automated accessibility tests of the Django admin with Axe via [Pa11y](https://pa11y.org/), for a range of predefined [scenarios](./pa11y/scenarios.js).
 - Automated [Lighthouse](https://github.com/GoogleChrome/lighthouse) accessibility reports for all page-level scenarios.
 - Bespoke [report generation](http://thibaudcolas.github.io/django_admin_tests/) based on the test results.
