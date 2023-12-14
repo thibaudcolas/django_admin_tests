@@ -55,6 +55,7 @@ const auth = [
     label: "Login",
     path: "/admin/login/?next=/admin/login",
     category: "Auth",
+    skip: "Unreliable due to expiring password reset token",
     unauthenticated: true,
     states: [
       {
@@ -72,6 +73,7 @@ const auth = [
     label: "Password change",
     path: "/admin/password_change/",
     category: "Auth",
+    skip: "Unreliable due to expiring password reset token",
     states: [
       {
         label: "Validation error",

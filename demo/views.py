@@ -1,7 +1,17 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from django.conf import settings
 
 from .forms import ExampleForm
 
+def variant_home(request):
+    return render(
+        request,
+        "demo/variant_home.html",
+        {
+            "version_number": settings.VERSION_NUMBER,
+            "variant": settings.VARIANT,
+        }
+    )
 
 def example_form(request, as_type="div"):
     if request.method == "POST":
@@ -12,6 +22,6 @@ def example_form(request, as_type="div"):
 
     return render(
         request,
-        "django_admin_tests/example_form.html",
+        "demo/example_form.html",
         {"form": form, "as_type": as_type},
     )

@@ -6,7 +6,7 @@ const lighthouse = require("lighthouse");
 
 const scenarios = require("./scenarios");
 
-const SITE_ROOT = "http://localhost:8000";
+const SITE_ROOT = "https://static-django-demo.netlify.app/django_admin_tests/v5.0/english";
 
 let views = [];
 
@@ -42,6 +42,19 @@ const shouldTest = (s) => {
 views = views.filter(shouldTest);
 
 const getAuthCookie = async (browser) => {
+  return {
+    name: "sessionid",
+    domain: "localhost",
+    path: "/",
+    value: "potato",
+    expirationDate: 1798790400,
+    hostOnly: false,
+    httpOnly: false,
+    secure: false,
+    session: false,
+    sameSite: "no_restriction",
+  };
+
   let page = await browser.newPage();
   await page.deleteCookie({
     name: "sessionid",
@@ -161,8 +174,8 @@ const run = async () => {
         runners: ["axe"],
         actions: scenario.actions || [],
         viewport: scenario.viewport || {
-          width: 1024,
-          height: 768,
+          width: 1280,
+          height: 800,
           deviceScaleFactor: 1,
           isMobile: false,
         },

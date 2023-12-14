@@ -99,8 +99,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/dev/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
-
 TIME_ZONE = "UTC"
 
 USE_I18N = True
@@ -136,3 +134,31 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 SITE_ID = 1
 
+VERSION_NUMBERS = {
+    "v5.0": "v5.0 (rc1)",
+    "v4.2": "v4.2",
+    "v4.1": "v4.1",
+    "v4.0": "v4.0",
+    "v3.2": "v3.2",
+    "v3.1": "v3.1",
+    "v3.0": "v3.0",
+    "v2.2": "v2.2",
+    "v2.1": "v2.1",
+    "v2.0": "v2.0",
+    "v1.2": "v1.2",
+    "v1.1": "v1.1",
+    "v1.0": "v1.0",
+}
+
+VARIANTS = [
+    "English",
+    "German",
+    "Arabic",
+    "Dark",
+]
+
+LANGUAGE_CODE = "en-us"
+VERSION_NUMBER = list(VERSION_NUMBERS.keys())[0]
+VARIANT = VARIANTS[0]
+
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 1200

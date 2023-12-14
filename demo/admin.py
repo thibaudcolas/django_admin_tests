@@ -17,6 +17,7 @@ class ArtistAdmin(admin.ModelAdmin):
     inlines = [ReleaseInline]
     readonly_fields = ["id"]
     search_fields = ["name"]
+    list_per_page = 100
 
 
 @admin.register(Release)
@@ -29,15 +30,18 @@ class ReleaseAdmin(admin.ModelAdmin):
     list_filter = ["type"]
     readonly_fields = ["id"]
     search_fields = ["title", "artist__name"]
+    list_per_page = 100
 
 
 @admin.register(ReleaseTrack)
 class ReleaseTrackAdmin(admin.ModelAdmin):
     autocomplete_fields = ["release", "track"]
     search_fields = ["release__title", "track__title", "release__artist__name"]
+    list_per_page = 100
 
 
 @admin.register(Track)
 class TrackAdmin(admin.ModelAdmin):
     readonly_fields = ["id"]
     search_fields = ["artists__name", "title"]
+    list_per_page = 50

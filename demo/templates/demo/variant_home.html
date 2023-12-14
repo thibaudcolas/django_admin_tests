@@ -1,0 +1,40 @@
+{% extends "demo/base.html" %}
+{% block title %}{{ version_number }} - {{ variant }}{% endblock %}
+{% block h1 %}{{ version_number }} - {{ variant }}{% endblock %}
+
+{% block content %}
+  <h2>Forms</h2>
+  <ul>
+    <li><a href="forms/example_form/div/">forms/example_form/div/</a></li>
+    <li><a href="forms/example_form/p/">forms/example_form/p/</a></li>
+    <li><a href="forms/example_form/ul/">forms/example_form/ul/</a></li>
+    <li><a href="forms/example_form/table/">forms/example_form/table/</a></li>
+  </ul>
+  <h2>Defaults</h2>
+  <ul>
+    <li><a href="debug/default_urlconf/">debug/default_urlconf/</a></li>
+    <li><a href="defaults/404/">defaults/404/</a></li>
+    <li><a href="defaults/500/">defaults/500/</a></li>
+    <li><a href="defaults/403/">defaults/403/</a></li>
+    <li><a href="defaults/400/">defaults/400/</a></li>
+    <li><a href="defaults/csrf_failure/">defaults/csrf_failure/</a></li>
+    <li><a href="defaults/directory_index/">defaults/directory_index/</a></li>
+  </ul>
+  <h2>Auth</h2>
+  <ul>
+    <li><a href="admin/password_reset/">admin/password_reset/</a></li>
+    <li><a href="admin/password_reset/done/">admin/password_reset/done/</a></li>
+    <li><a href="reset/uidb64/token/">reset/uidb64/token/</a></li>
+    <li><a href="reset/done/">reset/done/</a></li>
+  </ul>
+  <h2>Flatpages</h2>
+  <ul>
+    <li><a href="flatpages/">flatpages/</a></li>
+    <li><a href="flatpages/test/flat/">flatpages/test/flat/</a></li>
+  </ul>
+  <h2>Admin</h2>
+  <ul>
+    <li><a href="admin/docs/">admin/docs/</a></li>
+    <li><a href="admin/">admin/</a></li>
+  </ul>
+{% endblock %}
