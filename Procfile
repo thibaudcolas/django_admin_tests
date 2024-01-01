@@ -1,2 +1,2 @@
-web: gunicorn django_admin_tests.wsgi
+web: gunicorn demo.wsgi
 release: ./manage.py migrate && ./manage.py loaddata fixtures.json
