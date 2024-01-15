@@ -6,3 +6,4 @@ spotipy
 gunicorn==20.0.4
 dj_database_url==0.5.0
 psycopg[binary]==3.1.17
+django-debug-toolbar
