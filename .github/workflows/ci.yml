@@ -24,11 +24,12 @@ jobs:
       - run: ./manage.py runserver &
       - run: ./manage.py collectstatic --noinput
       - run: ./snapshot/backup.sh
+      - run: cp -R ./static/* ./django_admin_tests/django_admin_tests/v5.1/english/static
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: snapshot/django_admin_tests/django_admin_tests
- deploy:
+          path: django_admin_tests/django_admin_tests
+  deploy:
     needs: test
     runs-on: ubuntu-latest
     permissions:

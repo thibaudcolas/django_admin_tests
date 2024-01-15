@@ -30,4 +30,4 @@ wget --content-on-error --no-host-directories -P ./django_admin_tests --mirror $
 wget --content-on-error --no-host-directories -P ./django_admin_tests --mirror $HOST/django_admin_tests/$VERSION/$VARIANT/defaults/403/
 wget --content-on-error --no-host-directories -P ./django_admin_tests --mirror $HOST/django_admin_tests/$VERSION/$VARIANT/defaults/400/
 wget --content-on-error --no-host-directories -P ./django_admin_tests --mirror $HOST/django_admin_tests/$VERSION/$VARIANT/defaults/csrf_failure/
-cp -R ../static/* ./django_admin_tests/django_admin_tests/$VERSION/$VARIANT/static
+
