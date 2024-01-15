@@ -149,3 +149,5 @@ lighthouse
 .vscode
 node_modules
 .DS_Store
+snapshot/django_admin_tests
+static

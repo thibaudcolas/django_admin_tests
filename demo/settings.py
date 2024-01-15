@@ -1,6 +1,8 @@
 import os
 from pathlib import Path
 
+from django.utils.version import get_version
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -14,10 +16,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
+
 # Application definition
 
 INSTALLED_APPS = [
     "demo",
+    "debug_toolbar",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -31,11 +40,13 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "demo.middleware.AutoLoginMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
@@ -80,20 +91,7 @@ else:
 # Password validation
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
 
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
-    },
-]
+AUTH_PASSWORD_VALIDATORS = []
 
 
 # Internationalization
@@ -107,11 +105,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/dev/howto/static-files/
-
-STATIC_URL = "static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-auto-field
@@ -135,7 +128,8 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 SITE_ID = 1
 
 VERSION_NUMBERS = {
-    "v5.0": "v5.0 (rc1)",
+    "v5.1": f"v{get_version()}",
+    "v5.0": "v5.0",
     "v4.2": "v4.2",
     "v4.1": "v4.1",
     "v4.0": "v4.0",
@@ -143,22 +137,23 @@ VERSION_NUMBERS = {
     "v3.1": "v3.1",
     "v3.0": "v3.0",
     "v2.2": "v2.2",
-    "v2.1": "v2.1",
-    "v2.0": "v2.0",
-    "v1.2": "v1.2",
-    "v1.1": "v1.1",
-    "v1.0": "v1.0",
 }
 
 VARIANTS = [
     "English",
     "German",
     "Arabic",
-    "Dark",
 ]
 
-LANGUAGE_CODE = "en-us"
-VERSION_NUMBER = list(VERSION_NUMBERS.keys())[0]
-VARIANT = VARIANTS[0]
+LANGUAGE_CODE = os.environ.get("LANGUAGE_CODE", "en-us")
+VERSION_NUMBER = os.environ.get("VERSION_NUMBER", list(VERSION_NUMBERS.keys())[0])
+VARIANT = os.environ.get("VARIANT", VARIANTS[0])
 
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 1200
+
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TOOLBAR_CALLBACK': lambda request: "admin/" not in request.path,
+}
+
+
+STATIC_URL = f"django_admin_tests/{VERSION_NUMBER}/{VARIANT.lower()}/static/"

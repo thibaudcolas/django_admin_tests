@@ -8,6 +8,7 @@ from django.contrib.auth import views as auth_views
 from django.views.static import directory_index
 from django.views.csrf import csrf_failure
 from demo.views import example_form, variant_home
+from demo.admin import admin_site
 
 def page_not_found(request):
     raise Http404("Test 404 view")
@@ -61,6 +62,6 @@ urlpatterns = [
         auth_views.PasswordResetCompleteView.as_view(),
         name="password_reset_complete",
     ),
-    path("admin/docs/", include("django.contrib.admindocs.urls")),
-    path("admin/", admin.site.urls),
+    path("admin/doc/", include("django.contrib.admindocs.urls")),
+    path("admin/", admin_site.urls),
 ]
