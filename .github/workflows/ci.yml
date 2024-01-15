@@ -19,10 +19,10 @@ jobs:
       - if: steps.pip-cache.outputs.cache-hit != 'true'
         run: python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
       - run: source .venv/bin/activate && pip install -e git+https://github.com/django/django.git@main#egg=django
-      - run: ./manage.py makemigrations --check
-      - run: ./manage.py migrate --noinput
-      - run: ./manage.py runserver &
-      - run: ./manage.py collectstatic --noinput
+      - run: source .venv/bin/activate && ./manage.py makemigrations --check
+      - run: source .venv/bin/activate && ./manage.py migrate --noinput
+      - run: source .venv/bin/activate && ./manage.py runserver &
+      - run: source .venv/bin/activate && ./manage.py collectstatic --noinput
       - run: ./snapshot/backup.sh
       - run: cp -R ./static/* ./django_admin_tests/django_admin_tests/v5.1/english/static
       - uses: actions/configure-pages@v4
