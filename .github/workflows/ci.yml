@@ -3,8 +3,9 @@ on:
   push:
     branches-ignore:
       - "gh-pages"
+  pull_request:
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -18,7 +19,12 @@ jobs:
           key: ${{ runner.os }}-pip-v2-${{ hashFiles('**/runtime.txt') }}-${{ hashFiles('**/requirements.txt') }}
       - if: steps.pip-cache.outputs.cache-hit != 'true'
         run: python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
-      - run: source .venv/bin/activate && pip install -e git+https://github.com/django/django.git@main#egg=django
+      - run: >
+          if [ -z "${GITHUB_HEAD_REF}" ]; then
+            source .venv/bin/activate && pip install -e git+https://github.com/django/django.git@main#egg=django
+          else
+            source .venv/bin/activate && pip install -e git+https://github.com/django/django.git@refs/pull/$GITHUB_HEAD_REF/head#egg=django
+          fi
       - run: source .venv/bin/activate && ./manage.py makemigrations --check
       - run: source .venv/bin/activate && ./manage.py migrate --noinput
       - run: source .venv/bin/activate && ./manage.py runserver &
@@ -29,8 +35,13 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: django_admin_tests/django_admin_tests
+      - uses: actions/upload-artifact@v4
+        with:
+          name: snapshot
+          path: django_admin_tests/django_admin_tests
+          retention-days: 1
   deploy:
-    needs: test
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -41,3 +52,19 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
       - uses: actions/deploy-pages@v4
+  deploy_preview:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    if: github.event_name == 'pull_request' && github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: snapshot
+      - uses: JamesIves/github-pages-deploy-action@v4.4.3
+        with:
+          branch: preview-${{ github.head_ref }}
+          folder: django_admin_tests
+          clean: true
