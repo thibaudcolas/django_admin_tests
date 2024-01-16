@@ -1,3 +1,5 @@
+Preview for https://github.com/django/django/pull/17489
+
 # [Django admin tests](http://thibaudcolas.github.io/django_admin_tests/) [![Build status](https://github.com/thibaudcolas/django_admin_tests/workflows/CI/badge.svg)](https://github.com/thibaudcolas/django_admin_tests/actions)
 
 > Sample Django project including automated accessibility CI tests for Django, based on Pa11y and Lighthouse, inspired by [wagtail-tooling](https://github.com/thibaudcolas/wagtail-tooling). [View latest report](http://thibaudcolas.github.io/django_admin_tests/)
