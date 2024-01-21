@@ -1,5 +1,8 @@
 name: CI
 on:
+  schedule:
+    # https://crontab.guru/#20_3_*_*_2,5
+    - cron:  '20 3 * * 2,5'
   push:
     branches-ignore:
       - "gh-pages"
@@ -43,6 +46,12 @@ jobs:
           name: snapshot
           path: django_admin_tests/django_admin_tests
           retention-days: 1
+      - if: "${{ github.event.inputs.pr == '' }}"
+        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        with:
+          branch: gh-pages
+          folder: django_admin_tests
+          clean: true
       - if: "${{ github.event.inputs.pr != '' }}"
         uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
