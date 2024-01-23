@@ -11,18 +11,34 @@ from demo.views import example_form, variant_home
 from demo.admin import admin_site
 
 def page_not_found(request):
+    request.META = {
+        "SERVER_NAME": "Hello",
+        "SERVER_PORT": 1337,
+    }
     raise Http404("Test 404 view")
 
 
 def server_error(request):
+    request.META = {
+        "SERVER_NAME": "Hello",
+        "SERVER_PORT": 1337,
+    }
     raise TypeError("Test 500 view")
 
 
 def permission_denied(request):
+    request.META = {
+        "SERVER_NAME": "Hello",
+        "SERVER_PORT": 1337,
+    }
     raise PermissionDenied("Test 403 view")
 
 
 def bad_request(request):
+    request.META = {
+        "SERVER_NAME": "Hello",
+        "SERVER_PORT": 1337,
+    }
     raise SuspiciousOperation("Test 400 view")
 
 
