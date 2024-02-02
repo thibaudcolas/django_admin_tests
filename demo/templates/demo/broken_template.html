@@ -1,0 +1,8 @@
+{% extends "demo/base.html" %}
+{% block title %}Broken template{% endblock %}
+{% block h1 %}Broken template{% endblock %}
+
+{% block content %}
+  <p>This is a test.</p>
+  <p>{% unknown_tag_name_foo %}</p>
+{% endblock %}
