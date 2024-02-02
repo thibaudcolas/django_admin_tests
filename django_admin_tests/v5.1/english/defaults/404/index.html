@@ -9,9 +9,9 @@
     body * { padding:10px 20px; }
     body * * { padding:0; }
     body { font:small sans-serif; background:#eee; color:#000; }
-    body>div { border-bottom:1px solid #ddd; }
+    body > :where(header, main, footer) { border-bottom:1px solid #ddd; }
     h1 { font-weight:normal; margin-bottom:.4em; }
-    h1 span { font-size:60%; color:#666; font-weight:normal; }
+    h1 small { font-size:60%; color:#666; font-weight:normal; }
     table { border:none; border-collapse: collapse; width:100%; }
     td, th { vertical-align:top; padding:2px 3px; }
     th { width:12em; text-align:right; color:#666; padding-right:.5em; }
@@ -24,27 +24,28 @@
   </style>
 </head>
 <body>
-  <div id="summary">
-    <h1>Page not found <span>(404)</span></h1>
+  <header id="summary">
+    <h1>Page not found <small>(404)</small></h1>
     <pre class="exception_value">Test 404 view</pre>
     <table class="meta">
       <tr>
-        <th>Request Method:</th>
+        <th scope="row">Request Method:</th>
         <td></td>
       </tr>
       <tr>
-        <th>Request URL:</th>
+        <th scope="row">Request URL:</th>
         <td>http://Hello:1337/django_admin_tests/v5.1/english/defaults/404/</td>
       </tr>
       
       <tr>
-        <th>Raised by:</th>
+        <th scope="row">Raised by:</th>
         <td>demo.demo_urls.page_not_found</td>
       </tr>
       
     </table>
-  </div>
-  <div id="info">
+  </header>
+
+  <main id="info">
     
       <p>
       Using the URLconf defined in <code>demo.urls</code>,
@@ -54,69 +55,93 @@
         
           <li>
             
+              <code>
                 
                 [name='root']
+              </code>
             
           </li>
         
           <li>
             
+              <code>
                 django_admin_tests/
                 [name='home']
+              </code>
             
           </li>
         
           <li>
             
+              <code>
                 django_admin_tests/v5.1/
                 [name='version_home']
+              </code>
             
           </li>
         
           <li>
             
+              <code>
                 django_admin_tests/latest/english/
                 
+              </code>
             
           </li>
         
           <li>
             
+              <code>
                 django_admin_tests/v5.1/english/
                 
+              </code>
             
+              <code>
                 
                 [name='variant_home']
+              </code>
             
           </li>
         
           <li>
             
+              <code>
                 django_admin_tests/v5.1/english/
                 
+              </code>
             
+              <code>
                 forms/example_form/&lt;as_type&gt;/
                 
+              </code>
             
           </li>
         
           <li>
             
+              <code>
                 django_admin_tests/v5.1/english/
                 
+              </code>
             
+              <code>
                 debug/default_urlconf/
                 
+              </code>
             
           </li>
         
           <li>
             
+              <code>
                 django_admin_tests/v5.1/english/
                 
+              </code>
             
+              <code>
                 defaults/404/
                 
+              </code>
             
           </li>
         
@@ -128,15 +153,15 @@
         matched the last one.
       </p>
     
-  </div>
+  </main>
 
-  <div id="explanation">
+  <footer id="explanation">
     <p>
       You’re seeing this error because you have <code>DEBUG = True</code> in
       your Django settings file. Change that to <code>False</code>, and Django
       will display a standard 404 page.
     </p>
-  </div>
+  </footer>
 
 
 <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/debug_toolbar/css/print.css" media="print">
@@ -182,7 +207,7 @@
   Versions
   
     
-      <br><small>Django 5.1.dev20240129181843</small>
+      <br><small>Django 5.1.dev20240201173443</small>
     
   
   
@@ -201,7 +226,7 @@
   Time
   
     
-      <br><small>CPU: 9.71ms (9.71ms)</small>
+      <br><small>CPU: 9.66ms (9.64ms)</small>
     
   
   
@@ -436,7 +461,7 @@
       <tr>
         <td>Django</td>
         <td></td>
-        <td>5.1.dev20240129181843</td>
+        <td>5.1.dev20240201173443</td>
       </tr>
     
       <tr>
@@ -488,27 +513,27 @@
     
       <tr>
         <td>User CPU time</td>
-        <td>5.101 msec</td>
+        <td>9.661 msec</td>
       </tr>
     
       <tr>
         <td>System CPU time</td>
-        <td>4.612 msec</td>
+        <td>0.000 msec</td>
       </tr>
     
       <tr>
         <td>Total CPU time</td>
-        <td>9.713 msec</td>
+        <td>9.661 msec</td>
       </tr>
     
       <tr>
         <td>Elapsed time</td>
-        <td>9.713 msec</td>
+        <td>9.645 msec</td>
       </tr>
     
       <tr>
         <td>Context switches</td>
-        <td>2 voluntary, 1 involuntary</td>
+        <td>4 voluntary, 0 involuntary</td>
       </tr>
     
   </tbody>
@@ -768,7 +793,7 @@
     
       <tr>
         <td>DEBUG_TOOLBAR_CONFIG</td>
-        <td><code>{&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7fb4dcf7f420&gt;}</code></td>
+        <td><code>{&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7f3dd08e7420&gt;}</code></td>
       </tr>
     
       <tr>
@@ -1487,7 +1512,7 @@
  &#x27;v4.1&#x27;: &#x27;v4.1&#x27;,
  &#x27;v4.2&#x27;: &#x27;v4.2&#x27;,
  &#x27;v5.0&#x27;: &#x27;v5.0&#x27;,
- &#x27;v5.1&#x27;: &#x27;v5.1.dev20240129181843&#x27;}</code></td>
+ &#x27;v5.1&#x27;: &#x27;v5.1.dev20240201173443&#x27;}</code></td>
       </tr>
     
       <tr>
@@ -1579,7 +1604,7 @@
     
       <tr>
         <td>Content-Length</td>
-        <td>3574</td>
+        <td>4171</td>
       </tr>
     
       <tr>
@@ -1845,23 +1870,13 @@
         </tr>
       
         <tr>
-          <td>debug_toolbar/js/utils.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/js/utils.js</td>
-        </tr>
-      
-        <tr>
-          <td>debug_toolbar/js/history.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/js/history.js</td>
-        </tr>
-      
-        <tr>
           <td>debug_toolbar/js/redirect.js</td>
           <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/js/redirect.js</td>
         </tr>
       
         <tr>
-          <td>debug_toolbar/js/timer.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/js/timer.js</td>
+          <td>debug_toolbar/js/utils.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/js/utils.js</td>
         </tr>
       
         <tr>
@@ -1870,38 +1885,13 @@
         </tr>
       
         <tr>
-          <td>admin/img/sorting-icons.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/sorting-icons.svg</td>
+          <td>debug_toolbar/js/history.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/js/history.js</td>
         </tr>
       
         <tr>
-          <td>admin/img/README.txt</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/README.txt</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/icon-clock.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-clock.svg</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/calendar-icons.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/calendar-icons.svg</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/search.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/search.svg</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/selector-icons.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/selector-icons.svg</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/icon-alert.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-alert.svg</td>
+          <td>debug_toolbar/js/timer.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/js/timer.js</td>
         </tr>
       
         <tr>
@@ -1910,18 +1900,23 @@
         </tr>
       
         <tr>
-          <td>admin/img/tooltag-arrowright.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/tooltag-arrowright.svg</td>
+          <td>admin/img/icon-calendar.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-calendar.svg</td>
         </tr>
       
         <tr>
-          <td>admin/img/icon-unknown-alt.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-unknown-alt.svg</td>
+          <td>admin/img/icon-yes.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-yes.svg</td>
         </tr>
       
         <tr>
-          <td>admin/img/icon-deletelink.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-deletelink.svg</td>
+          <td>admin/img/sorting-icons.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/sorting-icons.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/icon-clock.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-clock.svg</td>
         </tr>
       
         <tr>
@@ -1930,13 +1925,18 @@
         </tr>
       
         <tr>
-          <td>admin/img/icon-viewlink.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-viewlink.svg</td>
+          <td>admin/img/tooltag-arrowright.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/tooltag-arrowright.svg</td>
         </tr>
       
         <tr>
-          <td>admin/img/icon-calendar.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-calendar.svg</td>
+          <td>admin/img/icon-alert.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-alert.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/selector-icons.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/selector-icons.svg</td>
         </tr>
       
         <tr>
@@ -1945,23 +1945,13 @@
         </tr>
       
         <tr>
-          <td>admin/img/LICENSE</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/LICENSE</td>
-        </tr>
-      
-        <tr>
           <td>admin/img/inline-delete.svg</td>
           <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/inline-delete.svg</td>
         </tr>
       
         <tr>
-          <td>admin/img/icon-addlink.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-addlink.svg</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/tooltag-add.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/tooltag-add.svg</td>
+          <td>admin/img/search.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/search.svg</td>
         </tr>
       
         <tr>
@@ -1970,8 +1960,43 @@
         </tr>
       
         <tr>
-          <td>admin/img/icon-yes.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-yes.svg</td>
+          <td>admin/img/icon-viewlink.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-viewlink.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/icon-addlink.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-addlink.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/icon-unknown-alt.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-unknown-alt.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/LICENSE</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/LICENSE</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/tooltag-add.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/tooltag-add.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/README.txt</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/README.txt</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/calendar-icons.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/calendar-icons.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/icon-deletelink.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-deletelink.svg</td>
         </tr>
       
         <tr>
@@ -1985,58 +2010,8 @@
         </tr>
       
         <tr>
-          <td>admin/css/nav_sidebar.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/nav_sidebar.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/responsive_rtl.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/responsive_rtl.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/widgets.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/widgets.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/responsive.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/responsive.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/base.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/base.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/dark_mode.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/dark_mode.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/changelists.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/changelists.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/forms.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/forms.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/rtl.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/rtl.css</td>
-        </tr>
-      
-        <tr>
           <td>admin/css/login.css</td>
           <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/login.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/autocomplete.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/autocomplete.css</td>
         </tr>
       
         <tr>
@@ -2045,8 +2020,53 @@
         </tr>
       
         <tr>
-          <td>admin/css/vendor/select2/select2.min.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/vendor/select2/select2.min.css</td>
+          <td>admin/css/rtl.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/rtl.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/forms.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/forms.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/widgets.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/widgets.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/autocomplete.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/autocomplete.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/changelists.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/changelists.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/dark_mode.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/dark_mode.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/responsive_rtl.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/responsive_rtl.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/responsive.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/responsive.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/nav_sidebar.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/nav_sidebar.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/base.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/base.css</td>
         </tr>
       
         <tr>
@@ -2060,38 +2080,8 @@
         </tr>
       
         <tr>
-          <td>admin/js/calendar.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/calendar.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/autocomplete.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/autocomplete.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/change_form.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/change_form.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/jquery.init.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/jquery.init.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/SelectBox.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/SelectBox.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/urlify.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/urlify.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/prepopulate.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/prepopulate.js</td>
+          <td>admin/css/vendor/select2/select2.min.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/vendor/select2/select2.min.css</td>
         </tr>
       
         <tr>
@@ -2100,8 +2090,13 @@
         </tr>
       
         <tr>
-          <td>admin/js/cancel.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/cancel.js</td>
+          <td>admin/js/SelectFilter2.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/SelectFilter2.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/prepopulate.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/prepopulate.js</td>
         </tr>
       
         <tr>
@@ -2110,33 +2105,18 @@
         </tr>
       
         <tr>
-          <td>admin/js/SelectFilter2.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/SelectFilter2.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/popup_response.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/popup_response.js</td>
-        </tr>
-      
-        <tr>
           <td>admin/js/prepopulate_init.js</td>
           <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/prepopulate_init.js</td>
         </tr>
       
         <tr>
-          <td>admin/js/inlines.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/inlines.js</td>
+          <td>admin/js/jquery.init.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/jquery.init.js</td>
         </tr>
       
         <tr>
-          <td>admin/js/core.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/core.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/nav_sidebar.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/nav_sidebar.js</td>
+          <td>admin/js/cancel.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/cancel.js</td>
         </tr>
       
         <tr>
@@ -2145,318 +2125,58 @@
         </tr>
       
         <tr>
+          <td>admin/js/inlines.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/inlines.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/autocomplete.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/autocomplete.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/core.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/core.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/urlify.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/urlify.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/nav_sidebar.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/nav_sidebar.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/SelectBox.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/SelectBox.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/popup_response.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/popup_response.js</td>
+        </tr>
+      
+        <tr>
           <td>admin/js/filters.js</td>
           <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/filters.js</td>
         </tr>
       
         <tr>
-          <td>admin/js/vendor/select2/select2.full.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/select2.full.js</td>
+          <td>admin/js/change_form.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/change_form.js</td>
         </tr>
       
         <tr>
-          <td>admin/js/vendor/select2/select2.full.min.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/select2.full.min.js</td>
+          <td>admin/js/calendar.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/calendar.js</td>
         </tr>
       
         <tr>
-          <td>admin/js/vendor/select2/LICENSE.md</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/LICENSE.md</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ro.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ro.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ps.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ps.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/sr-Cyrl.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sr-Cyrl.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/bg.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/bg.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/nl.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/nl.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ms.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ms.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/gl.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/gl.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/hi.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hi.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/nb.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/nb.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/th.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/th.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/uk.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/uk.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ru.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ru.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/he.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/he.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/sr.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sr.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/tr.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/tr.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/de.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/de.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/en.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/en.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/el.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/el.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/km.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/km.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/lt.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/lt.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/cs.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/cs.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/zh-CN.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/zh-CN.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/hr.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hr.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/fi.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/fi.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/sv.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sv.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/es.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/es.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/bs.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/bs.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/vi.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/vi.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/pt.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/pt.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/mk.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/mk.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/is.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/is.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/zh-TW.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/zh-TW.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ar.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ar.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/eu.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/eu.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ko.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ko.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ka.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ka.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/fr.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/fr.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/it.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/it.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/sl.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sl.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/et.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/et.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/hy.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hy.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/pt-BR.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/pt-BR.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/hsb.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hsb.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/tk.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/tk.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/az.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/az.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/bn.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/bn.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ca.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ca.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/da.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/da.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/hu.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hu.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ja.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ja.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/fa.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/fa.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ne.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ne.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/id.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/id.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/sk.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sk.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/dsb.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/dsb.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/sq.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sq.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/pl.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/pl.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/af.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/af.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/lv.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/lv.js</td>
+          <td>admin/js/vendor/jquery/jquery.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/jquery/jquery.js</td>
         </tr>
       
         <tr>
@@ -2470,8 +2190,8 @@
         </tr>
       
         <tr>
-          <td>admin/js/vendor/jquery/jquery.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/jquery/jquery.js</td>
+          <td>admin/js/vendor/xregexp/xregexp.min.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/xregexp/xregexp.min.js</td>
         </tr>
       
         <tr>
@@ -2480,23 +2200,328 @@
         </tr>
       
         <tr>
-          <td>admin/js/vendor/xregexp/xregexp.min.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/xregexp/xregexp.min.js</td>
-        </tr>
-      
-        <tr>
           <td>admin/js/vendor/xregexp/xregexp.js</td>
           <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/xregexp/xregexp.js</td>
         </tr>
       
         <tr>
-          <td>admin/js/admin/DateTimeShortcuts.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js</td>
+          <td>admin/js/vendor/select2/LICENSE.md</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/LICENSE.md</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/select2.full.min.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/select2.full.min.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/select2.full.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/select2.full.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/sv.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sv.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/da.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/da.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/nb.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/nb.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/he.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/he.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/eu.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/eu.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/pt.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/pt.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/tr.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/tr.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/bs.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/bs.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ne.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ne.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/hsb.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hsb.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/el.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/el.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/zh-TW.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/zh-TW.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ka.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ka.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ro.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ro.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/hi.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hi.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/dsb.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/dsb.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/bg.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/bg.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ms.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ms.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/th.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/th.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/cs.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/cs.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ar.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ar.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/lv.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/lv.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/sr.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sr.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/es.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/es.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/nl.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/nl.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/hr.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hr.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/az.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/az.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/it.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/it.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/de.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/de.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/sq.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sq.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/hu.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hu.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/et.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/et.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/pt-BR.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/pt-BR.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/gl.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/gl.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/fi.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/fi.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/zh-CN.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/zh-CN.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/id.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/id.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ko.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ko.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/sr-Cyrl.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sr-Cyrl.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/vi.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/vi.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/lt.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/lt.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/is.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/is.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/mk.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/mk.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ps.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ps.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/en.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/en.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ja.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ja.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/fr.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/fr.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/bn.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/bn.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/km.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/km.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/sk.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sk.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/hy.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hy.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/tk.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/tk.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ca.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ca.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ru.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ru.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/fa.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/fa.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/af.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/af.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/pl.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/pl.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/sl.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sl.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/uk.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/uk.js</td>
         </tr>
       
         <tr>
           <td>admin/js/admin/RelatedObjectLookups.js</td>
           <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/admin/RelatedObjectLookups.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/admin/DateTimeShortcuts.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js</td>
         </tr>
       
     </tbody>
@@ -2530,7 +2555,7 @@
 
   <dl>
     
-      <dt><strong><a class="remoteCall toggleTemplate" href="/debug_toolbar/template_source/?template=None&amp;template_origin=Ijx1bmtub3duIHNvdXJjZT4i:1rUeiT:4bB_6O2EX5I1R5CfxCg-LVuA_BTJSRdFgqvToOshicM">None</a></strong></dt>
+      <dt><strong><a class="remoteCall toggleTemplate" href="/debug_toolbar/template_source/?template=None&amp;template_origin=Ijx1bmtub3duIHNvdXJjZT4i:1rVk9R:DTmiq_N3v0w44y8-25HfZyuoorUaxgL5j0eHZ8Xf0F0">None</a></strong></dt>
       <dd><samp>&lt;unknown source&gt;</samp></dd>
       
         <dd>
@@ -2611,7 +2636,7 @@
                                      &#x27;%d %B, %Y&#x27;],
               &#x27;DEBUG&#x27;: True,
               &#x27;DEBUG_PROPAGATE_EXCEPTIONS&#x27;: False,
-              &#x27;DEBUG_TOOLBAR_CONFIG&#x27;: {&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7fb4dcf7f420&gt;},
+              &#x27;DEBUG_TOOLBAR_CONFIG&#x27;: {&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7f3dd08e7420&gt;},
               &#x27;DECIMAL_SEPARATOR&#x27;: &#x27;.&#x27;,
               &#x27;DEFAULT_AUTO_FIELD&#x27;: &#x27;django.db.models.BigAutoField&#x27;,
               &#x27;DEFAULT_CHARSET&#x27;: &#x27;utf-8&#x27;,
@@ -2862,7 +2887,7 @@
                                   &#x27;v4.1&#x27;: &#x27;v4.1&#x27;,
                                   &#x27;v4.2&#x27;: &#x27;v4.2&#x27;,
                                   &#x27;v5.0&#x27;: &#x27;v5.0&#x27;,
-                                  &#x27;v5.1&#x27;: &#x27;v5.1.dev20240129181843&#x27;},
+                                  &#x27;v5.1&#x27;: &#x27;v5.1.dev20240201173443&#x27;},
               &#x27;WSGI_APPLICATION&#x27;: &#x27;demo.wsgi.application&#x27;,
               &#x27;X_FRAME_OPTIONS&#x27;: &#x27;DENY&#x27;,
               &#x27;YEAR_MONTH_FORMAT&#x27;: &#x27;F Y&#x27;},
