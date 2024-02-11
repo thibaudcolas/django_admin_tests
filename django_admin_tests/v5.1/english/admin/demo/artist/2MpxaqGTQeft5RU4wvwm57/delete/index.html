@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="en-us" dir="ltr">
+<head>
+<title>Are you sure? | Django site admin</title>
+<link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/base.css">
+
+  <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/dark_mode.css">
+
+
+  <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/nav_sidebar.css">
+  <script src="/django_admin_tests/v5.1/english/static/admin/js/nav_sidebar.js" defer></script>
+
+
+
+
+    
+    <script src="/django_admin_tests/v5.1/english/static/admin/js/vendor/jquery/jquery.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/jquery.init.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/core.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/actions.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/urlify.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/prepopulate.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/vendor/xregexp/xregexp.js"></script>
+    <script src="/django_admin_tests/v5.1/english/static/admin/js/cancel.js" async></script>
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=" app-demo model-artist delete-confirmation"
+  data-admin-utc-offset="0">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 4.2.dev20220726073038</a></h1>
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>admin</strong>.
+            
+            
+                
+                    <a href="/">View site</a> /
+                
+                
+                    
+                    
+                        <a href="/django_admin_tests/v5.1/english/admin/doc/">Documentation</a> /
+                    
+                
+                
+                <a href="/django_admin_tests/v5.1/english/admin/password_change/">Change password</a> /
+                
+                <form id="logout-form" method="post" action="/django_admin_tests/v5.1/english/admin/logout/">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="XGDfp7LrD9DwDEmkXen5c72nZTKFtVPXAx9uQ360M0AloTOkMaF9l8YC7Cjowj13">
+                    <button type="submit">Log out</button>
+                </form>
+            
+        </div>
+        
+        
+        
+    </div>
+    
+    <!-- END Header -->
+    
+<div class="breadcrumbs">
+<a href="/django_admin_tests/v5.1/english/admin/">Home</a>
+&rsaquo; <a href="/django_admin_tests/v5.1/english/admin/demo/">Demo</a>
+&rsaquo; <a href="/django_admin_tests/v5.1/english/admin/demo/artist/">Artists</a>
+&rsaquo; <a href="/django_admin_tests/v5.1/english/admin/demo/artist/2MpxaqGTQeft5RU4wvwm57/change/">Unknown</a>
+&rsaquo; Delete
+</div>
+
+    
+
+    <div class="main" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
+<nav class="sticky" id="nav-sidebar">
+  <input type="search" id="nav-filter"
+         placeholder="Start typing to filter…"
+         aria-label="Filter navigation items">
+  
+
+
+  
+    <div class="app-admin module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/admin/" class="section" title="Models in the Administration application">Administration</a>
+        </caption>
+        
+          <tr class="model-logentry">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/admin/logentry/">Log entries</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/admin/logentry/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-auth module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
+        </caption>
+        
+          <tr class="model-group">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/auth/group/">Groups</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/auth/group/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-permission">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/auth/permission/">Permissions</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/auth/permission/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-user">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/auth/user/">Users</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/auth/user/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-contenttypes module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/contenttypes/" class="section" title="Models in the Content Types application">Content Types</a>
+        </caption>
+        
+          <tr class="model-contenttype">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/contenttypes/contenttype/">Content types</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/contenttypes/contenttype/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-demo module current-app">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/demo/" class="section" title="Models in the Demo application">Demo</a>
+        </caption>
+        
+          <tr class="model-artist current-model">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/artist/" aria-current="page">Artists</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/demo/artist/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-releasetrack">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/releasetrack/">Release tracks</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/demo/releasetrack/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-release">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/release/">Releases</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/demo/release/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-track">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/track/">Tracks</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/demo/track/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-flatpages module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/flatpages/" class="section" title="Models in the Flat Pages application">Flat Pages</a>
+        </caption>
+        
+          <tr class="model-flatpage">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/">Flat pages</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-redirects module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/redirects/" class="section" title="Models in the Redirects application">Redirects</a>
+        </caption>
+        
+          <tr class="model-redirect">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/">Redirects</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-sessions module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/sessions/" class="section" title="Models in the Sessions application">Sessions</a>
+        </caption>
+        
+          <tr class="model-session">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/sessions/session/">Sessions</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/sessions/session/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-sites module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/sites/" class="section" title="Models in the Sites application">Sites</a>
+        </caption>
+        
+          <tr class="model-site">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/sites/site/">Sites</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/sites/site/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+
+
+</nav>
+
+        
+      
+      <div class="content">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="colM">
+          
+          <h1>Are you sure?</h1>
+          
+          
+
+    <p>Are you sure you want to delete the artist "Unknown"? All of the following related items will be deleted:</p>
+    
+<h2>Summary</h2>
+<ul>
+    
+    <li>Artists: 1</li>
+    
+</ul>
+
+    <h2>Objects</h2>
+    <ul>	<li>Artist: <a href="/django_admin_tests/v5.1/english/admin/demo/artist/2MpxaqGTQeft5RU4wvwm57/change/">Unknown</a></li></ul>
+    <form method="post"><input type="hidden" name="csrfmiddlewaretoken" value="XGDfp7LrD9DwDEmkXen5c72nZTKFtVPXAx9uQ360M0AloTOkMaF9l8YC7Cjowj13">
+    <div>
+    <input type="hidden" name="post" value="yes">
+    
+    
+    <input type="submit" value="Yes, I’m sure">
+    <a href="#" class="button cancel-link">No, take me back</a>
+    </div>
+    </form>
+
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        <div id="footer"></div>
+      </div>
+    </div>
+</div>
+<!-- END Container -->
+</body>
+</html>

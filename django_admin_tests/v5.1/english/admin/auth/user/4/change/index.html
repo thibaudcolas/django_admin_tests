@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+
+<html lang="en-us" dir="ltr">
+<head>
+<title>renameduser_newname | Change user | Django site admin</title>
+<link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/base.css">
+
+  <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/dark_mode.css">
+
+
+  <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/nav_sidebar.css">
+  <script src="/django_admin_tests/v5.1/english/static/admin/js/nav_sidebar.js" defer></script>
+
+<link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/forms.css">
+
+
+<script src="/django_admin_tests/v5.1/english/admin/jsi18n/"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/vendor/jquery/jquery.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/calendar.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/jquery.init.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/admin/DateTimeShortcuts.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/core.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/SelectBox.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/actions.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/SelectFilter2.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/urlify.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/prepopulate.js"></script>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/vendor/xregexp/xregexp.js"></script>
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=" app-auth model-user change-form"
+  data-admin-utc-offset="0">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 4.2.dev20220726073038</a></h1>
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>admin</strong>.
+            
+            
+                
+                    <a href="/">View site</a> /
+                
+                
+                    
+                    
+                        <a href="/django_admin_tests/v5.1/english/admin/doc/">Documentation</a> /
+                    
+                
+                
+                <a href="/django_admin_tests/v5.1/english/admin/password_change/">Change password</a> /
+                
+                <form id="logout-form" method="post" action="/django_admin_tests/v5.1/english/admin/logout/">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="8f6azoz2KQMbru6KelF9CGtsbnGe1U47GIihkRojctp4CRxlawunnpAZoMwTN22t">
+                    <button type="submit">Log out</button>
+                </form>
+            
+        </div>
+        
+        
+        
+    </div>
+    
+    <!-- END Header -->
+    
+<div class="breadcrumbs">
+<a href="/django_admin_tests/v5.1/english/admin/">Home</a>
+&rsaquo; <a href="/django_admin_tests/v5.1/english/admin/auth/">Authentication and Authorization</a>
+&rsaquo; <a href="/django_admin_tests/v5.1/english/admin/auth/user/">Users</a>
+&rsaquo; renameduser_newname
+</div>
+
+    
+
+    <div class="main" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
+<nav class="sticky" id="nav-sidebar">
+  <input type="search" id="nav-filter"
+         placeholder="Start typing to filter…"
+         aria-label="Filter navigation items">
+  
+
+
+  
+    <div class="app-admin module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/admin/" class="section" title="Models in the Administration application">Administration</a>
+        </caption>
+        
+          <tr class="model-logentry">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/admin/logentry/">Log entries</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/admin/logentry/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-auth module current-app">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
+        </caption>
+        
+          <tr class="model-group">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/auth/group/">Groups</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/auth/group/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-permission">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/auth/permission/">Permissions</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/auth/permission/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-user current-model">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/auth/user/" aria-current="page">Users</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/auth/user/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-contenttypes module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/contenttypes/" class="section" title="Models in the Content Types application">Content Types</a>
+        </caption>
+        
+          <tr class="model-contenttype">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/contenttypes/contenttype/">Content types</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/contenttypes/contenttype/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-demo module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/demo/" class="section" title="Models in the Demo application">Demo</a>
+        </caption>
+        
+          <tr class="model-artist">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/artist/">Artists</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/demo/artist/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-releasetrack">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/releasetrack/">Release tracks</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/demo/releasetrack/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-release">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/release/">Releases</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/demo/release/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-track">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/track/">Tracks</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/demo/track/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-flatpages module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/flatpages/" class="section" title="Models in the Flat Pages application">Flat Pages</a>
+        </caption>
+        
+          <tr class="model-flatpage">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/">Flat pages</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-redirects module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/redirects/" class="section" title="Models in the Redirects application">Redirects</a>
+        </caption>
+        
+          <tr class="model-redirect">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/">Redirects</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-sessions module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/sessions/" class="section" title="Models in the Sessions application">Sessions</a>
+        </caption>
+        
+          <tr class="model-session">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/sessions/session/">Sessions</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/sessions/session/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-sites module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/sites/" class="section" title="Models in the Sites application">Sites</a>
+        </caption>
+        
+          <tr class="model-site">
+            
+              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/sites/site/">Sites</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/v5.1/english/admin/sites/site/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+
+
+</nav>
+
+        
+      
+      <div class="content">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="colM">
+          
+          <h1>Change user</h1>
+          <h2>renameduser_newname</h2>
+          <div id="content-main">
+
+
+  <ul class="object-tools">
+    
+      
+
+<li>
+    
+    <a href="/django_admin_tests/v5.1/english/admin/auth/user/4/history/" class="historylink">History</a>
+</li>
+
+
+
+    
+  </ul>
+
+
+<form method="post" id="user_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="8f6azoz2KQMbru6KelF9CGtsbnGe1U47GIihkRojctp4CRxlawunnpAZoMwTN22t">
+<div>
+
+
+
+
+
+
+
+  <fieldset class="module aligned ">
+    
+    
+    
+        <div class="form-row field-username">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required" for="id_username">Username:</label>
+                        
+                            <input type="text" name="username" value="renameduser_newname" class="vTextField" maxlength="150" autocapitalize="none" autocomplete="username" required id="id_username">
+                        
+                    
+                    
+                        <div class="help" id="id_username_helptext">
+                          Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
+                        </div>
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-password">
+            
+            
+                <div>
+                    
+                    
+                        <label>Password:</label>
+                        
+                            <div disabled id="id_password">
+
+<strong>algorithm</strong>: pbkdf2_sha256
+
+<strong>iterations</strong>: 720000
+
+<strong>salt</strong>: YMVNuM****************
+
+<strong>hash</strong>: tRWaxK**************************************
+
+</div>
+                        
+                    
+                    
+                        <div class="help">
+                          Raw passwords are not stored, so there is no way to see this user’s password, but you can change the password using <a href="../password/">this form</a>.
+                        </div>
+                    
+                </div>
+            
+        </div>
+    
+</fieldset>
+
+
+  <fieldset class="module aligned ">
+    <h2>Personal info</h2>
+    
+    
+        <div class="form-row field-first_name">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_first_name">First name:</label>
+                        
+                            <input type="text" name="first_name" class="vTextField" maxlength="150" id="id_first_name">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-last_name">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_last_name">Last name:</label>
+                        
+                            <input type="text" name="last_name" class="vTextField" maxlength="150" id="id_last_name">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-email">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_email">Email address:</label>
+                        
+                            <input type="email" name="email" class="vTextField" maxlength="254" id="id_email">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+</fieldset>
+
+
+  <fieldset class="module aligned ">
+    <h2>Permissions</h2>
+    
+    
+        <div class="form-row field-is_active">
+            
+            
+                <div class="checkbox-row">
+                    
+                    
+                        <input type="checkbox" name="is_active" id="id_is_active" checked><label class="vCheckboxLabel" for="id_is_active">Active</label>
+                    
+                    
+                        <div class="help" id="id_is_active_helptext">
+                          Designates whether this user should be treated as active. Unselect this instead of deleting accounts.
+                        </div>
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-is_staff">
+            
+            
+                <div class="checkbox-row">
+                    
+                    
+                        <input type="checkbox" name="is_staff" id="id_is_staff"><label class="vCheckboxLabel" for="id_is_staff">Staff status</label>
+                    
+                    
+                        <div class="help" id="id_is_staff_helptext">
+                          Designates whether the user can log into this admin site.
+                        </div>
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-is_superuser">
+            
+            
+                <div class="checkbox-row">
+                    
+                    
+                        <input type="checkbox" name="is_superuser" id="id_is_superuser"><label class="vCheckboxLabel" for="id_is_superuser">Superuser status</label>
+                    
+                    
+                        <div class="help" id="id_is_superuser_helptext">
+                          Designates that this user has all permissions without explicitly assigning them.
+                        </div>
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-groups">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_groups">Groups:</label>
+                        
+                            <div class="related-widget-wrapper" data-model-ref="group">
+    <select name="groups" id="id_groups" multiple class="selectfilter" data-field-name="groups" data-is-stacked="0">
+  <option value="1">Editors</option>
+
+</select>
+    
+        <a class="related-widget-wrapper-link add-related" id="add_id_groups"
+            data-popup="yes"
+            href="/django_admin_tests/v5.1/english/admin/auth/group/add/?_to_field=id&amp;_popup=1"
+            title="Add another group"><img src="/django_admin_tests/v5.1/english/static/admin/img/icon-addlink.svg" alt="Add"></a>
+    
+</div>
+                        
+                    
+                    
+                        <div class="help" id="id_groups_helptext">
+                          The groups this user belongs to. A user will get all permissions granted to each of their groups. Hold down “Control”, or “Command” on a Mac, to select more than one.
+                        </div>
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-user_permissions">
+            
+            
+                <div>
+                    
+                    
+                        <label for="id_user_permissions">User permissions:</label>
+                        
+                            <div class="related-widget-wrapper" data-model-ref="permission">
+    <select name="user_permissions" id="id_user_permissions" multiple class="selectfilter" data-field-name="user permissions" data-is-stacked="0">
+  <option value="1">admin | log entry | Can add log entry</option>
+
+  <option value="2">admin | log entry | Can change log entry</option>
+
+  <option value="3">admin | log entry | Can delete log entry</option>
+
+  <option value="4">admin | log entry | Can view log entry</option>
+
+  <option value="9">auth | group | Can add group</option>
+
+  <option value="10">auth | group | Can change group</option>
+
+  <option value="11">auth | group | Can delete group</option>
+
+  <option value="12">auth | group | Can view group</option>
+
+  <option value="5">auth | permission | Can add permission</option>
+
+  <option value="6">auth | permission | Can change permission</option>
+
+  <option value="7">auth | permission | Can delete permission</option>
+
+  <option value="8">auth | permission | Can view permission</option>
+
+  <option value="13">auth | user | Can add user</option>
+
+  <option value="14">auth | user | Can change user</option>
+
+  <option value="15">auth | user | Can delete user</option>
+
+  <option value="16">auth | user | Can view user</option>
+
+  <option value="17">contenttypes | content type | Can add content type</option>
+
+  <option value="18">contenttypes | content type | Can change content type</option>
+
+  <option value="19">contenttypes | content type | Can delete content type</option>
+
+  <option value="20">contenttypes | content type | Can view content type</option>
+
+  <option value="41">demo | artist | Can add artist</option>
+
+  <option value="42">demo | artist | Can change artist</option>
+
+  <option value="43">demo | artist | Can delete artist</option>
+
+  <option value="44">demo | artist | Can view artist</option>
+
+  <option value="37">demo | release | Can add release</option>
+
+  <option value="38">demo | release | Can change release</option>
+
+  <option value="39">demo | release | Can delete release</option>
+
+  <option value="40">demo | release | Can view release</option>
+
+  <option value="49">demo | release track | Can add release track</option>
+
+  <option value="50">demo | release track | Can change release track</option>
+
+  <option value="51">demo | release track | Can delete release track</option>
+
+  <option value="52">demo | release track | Can view release track</option>
+
+  <option value="45">demo | track | Can add track</option>
+
+  <option value="46">demo | track | Can change track</option>
+
+  <option value="47">demo | track | Can delete track</option>
+
+  <option value="48">demo | track | Can view track</option>
+
+  <option value="33">flatpages | flat page | Can add flat page</option>
+
+  <option value="34">flatpages | flat page | Can change flat page</option>
+
+  <option value="35">flatpages | flat page | Can delete flat page</option>
+
+  <option value="36">flatpages | flat page | Can view flat page</option>
+
+  <option value="25">redirects | redirect | Can add redirect</option>
+
+  <option value="26">redirects | redirect | Can change redirect</option>
+
+  <option value="27">redirects | redirect | Can delete redirect</option>
+
+  <option value="28">redirects | redirect | Can view redirect</option>
+
+  <option value="21">sessions | session | Can add session</option>
+
+  <option value="22">sessions | session | Can change session</option>
+
+  <option value="23">sessions | session | Can delete session</option>
+
+  <option value="24">sessions | session | Can view session</option>
+
+  <option value="29">sites | site | Can add site</option>
+
+  <option value="30">sites | site | Can change site</option>
+
+  <option value="31">sites | site | Can delete site</option>
+
+  <option value="32">sites | site | Can view site</option>
+
+</select>
+    
+        <a class="related-widget-wrapper-link add-related" id="add_id_user_permissions"
+            data-popup="yes"
+            href="/django_admin_tests/v5.1/english/admin/auth/permission/add/?_to_field=id&amp;_popup=1"
+            title="Add another permission"><img src="/django_admin_tests/v5.1/english/static/admin/img/icon-addlink.svg" alt="Add"></a>
+    
+</div>
+                        
+                    
+                    
+                        <div class="help" id="id_user_permissions_helptext">
+                          Specific permissions for this user. Hold down “Control”, or “Command” on a Mac, to select more than one.
+                        </div>
+                    
+                </div>
+            
+        </div>
+    
+</fieldset>
+
+
+  <fieldset class="module aligned ">
+    <h2>Important dates</h2>
+    
+    
+        <div class="form-row field-last_login">
+            
+            
+                <div>
+                    
+                    
+                        <label>Last login:</label>
+                        
+                            <p class="datetime">
+  Date: <input type="text" name="last_login_0" class="vDateField" size="10" id="id_last_login_0">
+
+<br>
+  Time: <input type="text" name="last_login_1" class="vTimeField" size="8" id="id_last_login_1">
+
+
+</p>
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+        <div class="form-row field-date_joined">
+            
+            
+                <div>
+                    
+                    
+                        <label class="required">Date joined:</label>
+                        
+                            <p class="datetime">
+  Date: <input type="text" name="date_joined_0" value="2023-10-16" class="vDateField" size="10" required id="id_date_joined_0">
+
+<br>
+  Time: <input type="text" name="date_joined_1" value="07:26:49" class="vTimeField" size="8" required id="id_date_joined_1">
+
+
+</p><input type="hidden" name="initial-date_joined_0" value="2023-10-16" id="initial-id_date_joined_0"><input type="hidden" name="initial-date_joined_1" value="07:26:49" id="initial-id_date_joined_1">
+                        
+                    
+                    
+                </div>
+            
+        </div>
+    
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="submit-row">
+
+<input type="submit" value="Save" class="default" name="_save">
+
+<input type="submit" value="Save and add another" name="_addanother">
+<input type="submit" value="Save and continue editing" name="_continue">
+
+
+    
+    <p class="deletelink-box"><a href="/django_admin_tests/v5.1/english/admin/auth/user/4/delete/" class="deletelink">Delete</a></p>
+
+
+</div>
+
+
+
+    <script id="django-admin-form-add-constants"
+            src="/django_admin_tests/v5.1/english/static/admin/js/change_form.js"
+            
+            async>
+    </script>
+
+
+
+
+<script id="django-admin-prepopulated-fields-constants"
+        src="/django_admin_tests/v5.1/english/static/admin/js/prepopulate_init.js"
+        data-prepopulated-fields="[]">
+</script>
+
+
+</div>
+</form></div>
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        <div id="footer"></div>
+      </div>
+    </div>
+</div>
+<!-- END Container -->
+</body>
+</html>
