@@ -17,7 +17,6 @@
 
 <script src="/django_admin_tests/v5.1/english/admin/jsi18n/"></script>
 <script src="/django_admin_tests/v5.1/english/static/admin/js/vendor/jquery/jquery.js"></script>
-<script src="/django_admin_tests/v5.1/english/static/admin/js/collapse.js"></script>
 <script src="/django_admin_tests/v5.1/english/static/admin/js/jquery.init.js"></script>
 <script src="/django_admin_tests/v5.1/english/static/admin/js/core.js"></script>
 <script src="/django_admin_tests/v5.1/english/static/admin/js/admin/RelatedObjectLookups.js"></script>
@@ -46,7 +45,7 @@
       <header id="header">
         <div id="branding">
         
-<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.1.dev20240212142111</a></div>
+<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.2.dev20240528104407</a></div>
 
 
         </div>
@@ -71,14 +70,14 @@
                 <a href="/django_admin_tests/v5.1/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/v5.1/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="vxc89a4cetcSEA7zNwUOJZhuRcoqAoDNH0mnStxL3UMSdjlftP9WSIYsL4fEF1WH">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="TYvYhSqgDWTuxeX19cf61mKX90D6l7EVA10QaZqrgAwPtrz4kCVhHXhcgGzPoUwG">
                     <button type="submit">Log out</button>
                 </form>
                 
 <button class="theme-toggle">
-  <div class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</div>
-  <div class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</div>
-  <div class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</div>
+  <span class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</span>
+  <span class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</span>
+  <span class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</span>
   <svg aria-hidden="true" class="theme-icon-when-auto">
     <use xlink:href="#icon-auto" />
   </svg>
@@ -438,7 +437,7 @@
   </ul>
 
 
-<form method="post" id="flatpage_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="vxc89a4cetcSEA7zNwUOJZhuRcoqAoDNH0mnStxL3UMSdjlftP9WSIYsL4fEF1WH">
+<form method="post" id="flatpage_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="TYvYhSqgDWTuxeX19cf61mKX90D6l7EVA10QaZqrgAwPtrz4kCVhHXhcgGzPoUwG">
 <div>
 
 
@@ -447,7 +446,8 @@
 
 
 
-  <fieldset class="module aligned ">
+  
+<fieldset class="module aligned ">
     
     
     
@@ -547,11 +547,18 @@ Hello, world!</textarea>
             
         </div>
     
+    
 </fieldset>
 
 
-  <fieldset class="module aligned collapse">
-    <h2>Advanced options</h2>
+
+  
+<fieldset class="module aligned collapse" aria-labelledby="fieldset-0-advanced-options-1-heading">
+    
+        <details><summary>
+        <h2 id="fieldset-0-advanced-options-1-heading" class="fieldset-heading">Advanced options</h2>
+        </summary>
+    
     
     
         <div class="form-row field-registration_required">
@@ -597,7 +604,9 @@ Hello, world!</textarea>
             
         </div>
     
+    </details>
 </fieldset>
+
 
 
 

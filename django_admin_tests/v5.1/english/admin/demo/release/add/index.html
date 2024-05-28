@@ -53,7 +53,7 @@
       <header id="header">
         <div id="branding">
         
-<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.1.dev20240212142111</a></div>
+<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.2.dev20240528104407</a></div>
 
 
         </div>
@@ -78,14 +78,14 @@
                 <a href="/django_admin_tests/v5.1/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/v5.1/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="p2NP3go6d7EGCxY6o1zvuXlWCUf4QxINiXnPt8nmYhdjCon4qGqDGOycgGXqNZ0I">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="eIsTXW6JF6kvfr0zQLnl2iWD375n0Ur6CeQBiMJcqDrkL7BrE0OEVd85UOmsKeAH">
                     <button type="submit">Log out</button>
                 </form>
                 
 <button class="theme-toggle">
-  <div class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</div>
-  <div class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</div>
-  <div class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</div>
+  <span class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</span>
+  <span class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</span>
+  <span class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</span>
   <svg aria-hidden="true" class="theme-icon-when-auto">
     <use xlink:href="#icon-auto" />
   </svg>
@@ -431,7 +431,7 @@
 
 
 
-<form method="post" id="release_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="p2NP3go6d7EGCxY6o1zvuXlWCUf4QxINiXnPt8nmYhdjCon4qGqDGOycgGXqNZ0I">
+<form method="post" id="release_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="eIsTXW6JF6kvfr0zQLnl2iWD375n0Ur6CeQBiMJcqDrkL7BrE0OEVd85UOmsKeAH">
 <div>
 
 
@@ -440,7 +440,8 @@
 
 
 
-  <fieldset class="module aligned ">
+  
+<fieldset class="module aligned ">
     
     
     
@@ -566,7 +567,9 @@
             
         </div>
     
+    
 </fieldset>
+
 
 
 
@@ -581,10 +584,14 @@
      data-inline-formset="{&quot;name&quot;: &quot;#releasetrack_set&quot;, &quot;options&quot;: {&quot;prefix&quot;: &quot;releasetrack_set&quot;, &quot;addText&quot;: &quot;Add another Release track&quot;, &quot;deleteText&quot;: &quot;Remove&quot;}}">
   <div class="tabular inline-related last-related">
 <input type="hidden" name="releasetrack_set-TOTAL_FORMS" value="3" id="id_releasetrack_set-TOTAL_FORMS"><input type="hidden" name="releasetrack_set-INITIAL_FORMS" value="0" id="id_releasetrack_set-INITIAL_FORMS"><input type="hidden" name="releasetrack_set-MIN_NUM_FORMS" value="0" id="id_releasetrack_set-MIN_NUM_FORMS"><input type="hidden" name="releasetrack_set-MAX_NUM_FORMS" value="1000" id="id_releasetrack_set-MAX_NUM_FORMS">
-<fieldset class="module ">
-   
-     <h2>Release tracks</h2>
-   
+<fieldset class="module " aria-labelledby="releasetrack_set-heading">
+  
+  <h2 id="releasetrack_set-heading" class="inline-heading">
+  
+    Release tracks
+  
+  </h2>
+  
    
    <table>
      <thead><tr>
@@ -1853,6 +1860,7 @@
      
      </tbody>
    </table>
+  
 </fieldset>
   </div>
 </div>

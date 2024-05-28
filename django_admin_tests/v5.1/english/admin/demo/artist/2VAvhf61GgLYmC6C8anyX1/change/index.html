@@ -48,7 +48,7 @@
       <header id="header">
         <div id="branding">
         
-<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.1.dev20240212142111</a></div>
+<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.2.dev20240528104407</a></div>
 
 
         </div>
@@ -73,14 +73,14 @@
                 <a href="/django_admin_tests/v5.1/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/v5.1/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="DsbmpZR1rYuMNQp0IqR0yG4MpYt5CLnZAZfxDwQc3BHMdhebWfYafc59xRLynxm0">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="myQNwRdEusxJm1ca3ma5yoEaVGtzZM2hvLuCpRASxynuei5vU760g9BaWkmnkcgx">
                     <button type="submit">Log out</button>
                 </form>
                 
 <button class="theme-toggle">
-  <div class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</div>
-  <div class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</div>
-  <div class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</div>
+  <span class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</span>
+  <span class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</span>
+  <span class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</span>
   <svg aria-hidden="true" class="theme-icon-when-auto">
     <use xlink:href="#icon-auto" />
   </svg>
@@ -440,7 +440,7 @@
   </ul>
 
 
-<form method="post" id="artist_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="DsbmpZR1rYuMNQp0IqR0yG4MpYt5CLnZAZfxDwQc3BHMdhebWfYafc59xRLynxm0">
+<form method="post" id="artist_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="myQNwRdEusxJm1ca3ma5yoEaVGtzZM2hvLuCpRASxynuei5vU760g9BaWkmnkcgx">
 <div>
 
 
@@ -449,7 +449,8 @@
 
 
 
-  <fieldset class="module aligned ">
+  
+<fieldset class="module aligned ">
     
     
     
@@ -491,7 +492,9 @@
             
         </div>
     
+    
 </fieldset>
+
 
 
 
@@ -505,9 +508,13 @@
      id="releases-group"
      data-inline-type="stacked"
      data-inline-formset="{&quot;name&quot;: &quot;#releases&quot;, &quot;options&quot;: {&quot;prefix&quot;: &quot;releases&quot;, &quot;addText&quot;: &quot;Add another Release&quot;, &quot;deleteText&quot;: &quot;Remove&quot;}}">
-<fieldset class="module ">
+<fieldset class="module " aria-labelledby="releases-heading">
   
-    <h2>Releases</h2>
+  <h2 id="releases-heading" class="inline-heading">
+  
+    Releases
+  
+  </h2>
   
 <input type="hidden" name="releases-TOTAL_FORMS" value="5" id="id_releases-TOTAL_FORMS"><input type="hidden" name="releases-INITIAL_FORMS" value="2" id="id_releases-INITIAL_FORMS"><input type="hidden" name="releases-MIN_NUM_FORMS" value="0" id="id_releases-MIN_NUM_FORMS"><input type="hidden" name="releases-MAX_NUM_FORMS" value="1000" id="id_releases-MAX_NUM_FORMS">
 
@@ -519,8 +526,11 @@
     <span class="delete"><input type="checkbox" name="releases-0-DELETE" id="id_releases-0-DELETE"> <label class="vCheckboxLabel inline" for="id_releases-0-DELETE">Delete</label></span>
   </h3>
   
+
   
-    <fieldset class="module aligned ">
+    
+      
+<fieldset class="module aligned ">
     
     
     
@@ -613,9 +623,13 @@
             
         </div>
     
+    
 </fieldset>
 
+
+    
   
+
   
   <input type="hidden" name="releases-0-artist" value="2VAvhf61GgLYmC6C8anyX1" id="id_releases-0-artist">
 </div><div class="inline-related has_original" id="releases-1">
@@ -625,8 +639,11 @@
     <span class="delete"><input type="checkbox" name="releases-1-DELETE" id="id_releases-1-DELETE"> <label class="vCheckboxLabel inline" for="id_releases-1-DELETE">Delete</label></span>
   </h3>
   
+
   
-    <fieldset class="module aligned ">
+    
+      
+<fieldset class="module aligned ">
     
     
     
@@ -719,9 +736,13 @@
             
         </div>
     
+    
 </fieldset>
 
+
+    
   
+
   
   <input type="hidden" name="releases-1-artist" value="2VAvhf61GgLYmC6C8anyX1" id="id_releases-1-artist">
 </div><div class="inline-related" id="releases-2">
@@ -730,8 +751,11 @@
     
   </h3>
   
+
   
-    <fieldset class="module aligned ">
+    
+      
+<fieldset class="module aligned ">
     
     
     
@@ -824,9 +848,13 @@
             
         </div>
     
+    
 </fieldset>
 
+
+    
   
+
   
   <input type="hidden" name="releases-2-artist" value="2VAvhf61GgLYmC6C8anyX1" id="id_releases-2-artist">
 </div><div class="inline-related" id="releases-3">
@@ -835,8 +863,11 @@
     
   </h3>
   
+
   
-    <fieldset class="module aligned ">
+    
+      
+<fieldset class="module aligned ">
     
     
     
@@ -929,9 +960,13 @@
             
         </div>
     
+    
 </fieldset>
 
+
+    
   
+
   
   <input type="hidden" name="releases-3-artist" value="2VAvhf61GgLYmC6C8anyX1" id="id_releases-3-artist">
 </div><div class="inline-related" id="releases-4">
@@ -940,8 +975,11 @@
     
   </h3>
   
+
   
-    <fieldset class="module aligned ">
+    
+      
+<fieldset class="module aligned ">
     
     
     
@@ -1034,9 +1072,13 @@
             
         </div>
     
+    
 </fieldset>
 
+
+    
   
+
   
   <input type="hidden" name="releases-4-artist" value="2VAvhf61GgLYmC6C8anyX1" id="id_releases-4-artist">
 </div><div class="inline-related empty-form last-related" id="releases-empty">
@@ -1045,8 +1087,11 @@
     
   </h3>
   
+
   
-    <fieldset class="module aligned ">
+    
+      
+<fieldset class="module aligned ">
     
     
     
@@ -1139,12 +1184,17 @@
             
         </div>
     
+    
 </fieldset>
 
+
+    
   
+
   
   <input type="hidden" name="releases-__prefix__-artist" value="2VAvhf61GgLYmC6C8anyX1" id="id_releases-__prefix__-artist">
 </div>
+  
 </fieldset>
 </div>
 

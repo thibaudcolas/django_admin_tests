@@ -49,7 +49,7 @@
       <header id="header">
         <div id="branding">
         
-<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.1.dev20240212142111</a></div>
+<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.2.dev20240528104407</a></div>
 
 
         </div>
@@ -74,14 +74,14 @@
                 <a href="/django_admin_tests/v5.1/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/v5.1/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="sSQNJSOYHnQTeDSajrOz5ZZUIUuN6DmbEl02sbhxwOqTNm6QZK3HeIGSCMl1bgF5">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="ad0r1nczST3dCsy7DFZRcY4stb9O6nUORgvjUucKvxGyyFaaO5F2SzBHAR5x9aMz">
                     <button type="submit">Log out</button>
                 </form>
                 
 <button class="theme-toggle">
-  <div class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</div>
-  <div class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</div>
-  <div class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</div>
+  <span class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</span>
+  <span class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</span>
+  <span class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</span>
   <svg aria-hidden="true" class="theme-icon-when-auto">
     <use xlink:href="#icon-auto" />
   </svg>
@@ -441,7 +441,7 @@
   </ul>
 
 
-<form method="post" id="user_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="sSQNJSOYHnQTeDSajrOz5ZZUIUuN6DmbEl02sbhxwOqTNm6QZK3HeIGSCMl1bgF5">
+<form method="post" id="user_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="ad0r1nczST3dCsy7DFZRcY4stb9O6nUORgvjUucKvxGyyFaaO5F2SzBHAR5x9aMz">
 <div>
 
 
@@ -450,7 +450,8 @@
 
 
 
-  <fieldset class="module aligned ">
+  
+<fieldset class="module aligned ">
     
     
     
@@ -487,22 +488,25 @@
                                 <label>Password:</label>
                                 
                                     <div disabled aria-describedby="id_password_helptext" id="id_password">
-
-<strong>algorithm</strong>: <bdi>pbkdf2_sha256</bdi>
-
-<strong>iterations</strong>: <bdi>870000</bdi>
-
-<strong>salt</strong>: <bdi>0s66tW****************</bdi>
-
-<strong>hash</strong>: <bdi>jakm1Z**************************************</bdi>
-
+  <p>
+    
+    <strong>algorithm</strong>: <bdi>pbkdf2_sha256</bdi>
+    
+    <strong>iterations</strong>: <bdi>870000</bdi>
+    
+    <strong>salt</strong>: <bdi>0s66tW****************</bdi>
+    
+    <strong>hash</strong>: <bdi>jakm1Z**************************************</bdi>
+    
+  </p>
+  <p><a class="button" href="../password/">Reset password</a></p>
 </div>
                                 
                             
                         </div>
                     
                         <div class="help">
-                            <div>Raw passwords are not stored, so there is no way to see this user’s password, but you can change the password using <a href="../../1/password/">this form</a>.</div>
+                            <div>Raw passwords are not stored, so there is no way to see the user’s password.</div>
                         </div>
                     
                 </div>
@@ -510,11 +514,18 @@
             
         </div>
     
+    
 </fieldset>
 
 
-  <fieldset class="module aligned ">
-    <h2>Personal info</h2>
+
+  
+<fieldset class="module aligned " aria-labelledby="fieldset-0-personal-info-1-heading">
+    
+        
+        <h2 id="fieldset-0-personal-info-1-heading" class="fieldset-heading">Personal info</h2>
+        
+    
     
     
         <div class="form-row field-first_name">
@@ -574,11 +585,18 @@
             
         </div>
     
+    
 </fieldset>
 
 
-  <fieldset class="module aligned ">
-    <h2>Permissions</h2>
+
+  
+<fieldset class="module aligned " aria-labelledby="fieldset-0-permissions-2-heading">
+    
+        
+        <h2 id="fieldset-0-permissions-2-heading" class="fieldset-heading">Permissions</h2>
+        
+    
     
     
         <div class="form-row field-is_active">
@@ -811,11 +829,18 @@
             
         </div>
     
+    
 </fieldset>
 
 
-  <fieldset class="module aligned ">
-    <h2>Important dates</h2>
+
+  
+<fieldset class="module aligned " aria-labelledby="fieldset-0-important-dates-3-heading">
+    
+        
+        <h2 id="fieldset-0-important-dates-3-heading" class="fieldset-heading">Important dates</h2>
+        
+    
     
     
         <div class="form-row field-last_login">
@@ -828,10 +853,10 @@
                                 <label>Last login:</label>
                                 
                                     <p class="datetime">
-  Date: <input type="text" name="last_login_0" value="2024-02-13" class="vDateField" size="10" id="id_last_login_0">
+  Date: <input type="text" name="last_login_0" value="2024-05-28" class="vDateField" size="10" id="id_last_login_0">
 
 <br>
-  Time: <input type="text" name="last_login_1" value="03:23:11" class="vTimeField" size="8" id="id_last_login_1">
+  Time: <input type="text" name="last_login_1" value="13:11:52" class="vTimeField" size="8" id="id_last_login_1">
 
 
 </p>
@@ -870,7 +895,9 @@
             
         </div>
     
+    
 </fieldset>
+
 
 
 

@@ -35,7 +35,7 @@
       <header id="header">
         <div id="branding">
         
-<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.1.dev20240212142111</a></div>
+<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.2.dev20240528104407</a></div>
 
 
         </div>
@@ -49,14 +49,14 @@
             
   <a href="/django_admin_tests/v5.1/english/admin/doc/">Documentation</a> /  Change password /
   <form id="logout-form" method="post" action="/django_admin_tests/v5.1/english/admin/logout/">
-    <input type="hidden" name="csrfmiddlewaretoken" value="3t3ikJvPqDmYjyJH37BzG9L7XdmLuvvIBAUVIJLwxNlf50FCtph0WQkTcVm2NKUr">
+    <input type="hidden" name="csrfmiddlewaretoken" value="QwdBkAfZWrx7MaStqusQi3UZLnDlxi1LRJjzBXdWUhxLAH4EDODCtYq4xQVyb3FD">
     <button type="submit">Log out</button>
   </form>
   
 <button class="theme-toggle">
-  <div class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</div>
-  <div class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</div>
-  <div class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</div>
+  <span class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</span>
+  <span class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</span>
+  <span class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</span>
   <svg aria-hidden="true" class="theme-icon-when-auto">
     <use xlink:href="#icon-auto" />
   </svg>
@@ -398,7 +398,7 @@
           
           <div id="content-main">
 
-<form method="post"><input type="hidden" name="csrfmiddlewaretoken" value="3t3ikJvPqDmYjyJH37BzG9L7XdmLuvvIBAUVIJLwxNlf50FCtph0WQkTcVm2NKUr">
+<form method="post"><input type="hidden" name="csrfmiddlewaretoken" value="QwdBkAfZWrx7MaStqusQi3UZLnDlxi1LRJjzBXdWUhxLAH4EDODCtYq4xQVyb3FD">
 <div>
 
 
@@ -414,13 +414,15 @@
 
 <div class="form-row">
     
-    <div class="flex-container"><label for="id_new_password1" class="required">New password:</label> <input type="password" name="new_password1" autocomplete="new-password" required id="id_new_password1"></div>
+    <div class="flex-container"><label for="id_new_password1">New password:</label> <input type="password" name="new_password1" autocomplete="new-password" id="id_new_password1"></div>
     
 </div>
 
 <div class="form-row">
     
-    <div class="flex-container"><label for="id_new_password2" class="required">New password confirmation:</label> <input type="password" name="new_password2" autocomplete="new-password" required id="id_new_password2"></div>
+    <div class="flex-container"><label for="id_new_password2">New password confirmation:</label> <input type="password" name="new_password2" autocomplete="new-password" aria-describedby="id_new_password2_helptext" id="id_new_password2"></div>
+    
+    <div class="help" id="id_new_password2_helptext">Enter the same password as before, for verification.</div>
     
 </div>
 

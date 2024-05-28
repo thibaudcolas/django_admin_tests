@@ -12,7 +12,11 @@
   <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/nav_sidebar.css">
   <script src="/django_admin_tests/v5.1/english/static/admin/js/nav_sidebar.js" defer></script>
 
-<link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/forms.css">
+
+  
+  <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/forms.css">
+  <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/unusable_password_field.css">
+
 
 
 
@@ -35,7 +39,7 @@
       <header id="header">
         <div id="branding">
         
-<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.1.dev20240212142111</a></div>
+<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.2.dev20240528104407</a></div>
 
 
         </div>
@@ -60,14 +64,14 @@
                 <a href="/django_admin_tests/v5.1/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/v5.1/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="0j3UJkHozg0TcDw9zReGwqhKQVgeVuxCXQ75XRGzbTdTC4lkNGlQdWi7YOyHGgwD">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="cVeEmMk9Y4VW3KwfO4110Mw339QZi2BJl8StfMHn1aLHV1pAFPXWIxt34NJNDsPZ">
                     <button type="submit">Log out</button>
                 </form>
                 
 <button class="theme-toggle">
-  <div class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</div>
-  <div class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</div>
-  <div class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</div>
+  <span class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</span>
+  <span class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</span>
+  <span class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</span>
   <svg aria-hidden="true" class="theme-icon-when-auto">
     <use xlink:href="#icon-auto" />
   </svg>
@@ -411,7 +415,7 @@
           <h1>Change password: newuser</h1>
           
           <div id="content-main">
-<form method="post" id="user_form"><input type="hidden" name="csrfmiddlewaretoken" value="0j3UJkHozg0TcDw9zReGwqhKQVgeVuxCXQ75XRGzbTdTC4lkNGlQdWi7YOyHGgwD">
+<form method="post" id="user_form"><input type="hidden" name="csrfmiddlewaretoken" value="cVeEmMk9Y4VW3KwfO4110Mw339QZi2BJl8StfMHn1aLHV1pAFPXWIxt34NJNDsPZ">
 <input type="text" name="username" value="newuser" class="hidden">
 <div>
 
@@ -419,17 +423,37 @@
 
 <p>Enter a new password for the user <strong>newuser</strong>.</p>
 
+
 <fieldset class="module aligned">
 
 <div class="form-row">
   
-  <div class="flex-container"><label for="id_password1" class="required">Password:</label> <input type="password" name="password1" autocomplete="new-password" autofocus required id="id_password1"></div>
+  <div class="flex-container"><label>Password-based authentication:</label> <div id="id_usable_password" class="radiolist inline"><div>
+    <label for="id_usable_password_0"><input type="radio" name="usable_password" value="true" class="radiolist inline" id="id_usable_password_0" checked>
+ Enabled</label>
+
+</div><div>
+    <label for="id_usable_password_1"><input type="radio" name="usable_password" value="false" class="radiolist inline" id="id_usable_password_1">
+ Disabled</label>
+
+</div>
+</div></div>
+  
+  <div class="help">
+    <p>Whether the user will be able to authenticate using a password or not. If disabled, they may still be able to authenticate using other backends, such as Single Sign-On or LDAP.<ul id="id_unusable_warning" class="messagelist"><li class="warning">If disabled, the current password for this user will be lost.</li></ul></p>
+  </div>
   
 </div>
 
-<div class="form-row">
+<div class="form-row field-password1">
   
-  <div class="flex-container"><label for="id_password2" class="required">Password (again):</label> <input type="password" name="password2" autocomplete="new-password" required aria-describedby="id_password2_helptext" id="id_password2"></div>
+  <div class="flex-container"><label for="id_password1">Password:</label> <input type="password" name="password1" autocomplete="new-password" autofocus id="id_password1"></div>
+  
+</div>
+
+<div class="form-row field-password2">
+  
+  <div class="flex-container"><label for="id_password2">Password confirmation:</label> <input type="password" name="password2" autocomplete="new-password" aria-describedby="id_password2_helptext" id="id_password2"></div>
   
   <div class="help" id="id_password2_helptext">Enter the same password as before, for verification.</div>
   
@@ -438,11 +462,15 @@
 </fieldset>
 
 <div class="submit-row">
-<input type="submit" value="Change password" class="default">
+  
+  <input type="submit" name="set-password" value="Change password" class="default set-password">
+  <input type="submit" name="unset-password" value="Disable password-based authentication" class="unset-password">
+  
 </div>
 
 </div>
 </form></div>
+<script src="/django_admin_tests/v5.1/english/static/admin/js/unusable_password_field.js" defer></script>
 
           
           <br class="clear">
