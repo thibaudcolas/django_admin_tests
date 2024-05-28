@@ -85,6 +85,22 @@ node pa11y/report.js
 - `screenshots/` contains the screenshots for all scenarios (including sub-state scenarios).
 - `ligthhouse/` contains the Lighthouse reports for all scenarios (including sub-state scenarios, but without any browser interaction taken into account).
 
+## Django pull request previews
+
+Via a [custom GitHub Actions workflow](./.github/workflows/ci.yml), this repository will automatically generate the Django admin for a given Django pull request. The generated admin HTML is stored as a git branch, for separate static file hosting to pick up.
+
+View the latest Django admin HTML: <https://django-admin-tests.pages.dev/>
+
+For a specific pull request,
+
+1. View [available branches](https://github.com/thibaudcolas/django_admin_tests/branches).
+2. If there is a branch named `preview-<PR number>`, access its admin preview at `https://preview-< PR number >.django-admin-tests.pages.dev/django_admin_tests/v5.1/english/admin/`.
+
+If you want to generate a preview for a specific pull request,
+
+1. Go to the [CI workflow](https://github.com/thibaudcolas/django_admin_tests/actions/workflows/ci.yml)
+2. Click "Run workflow" and provide a pull request number.
+
 ## Scope for audits
 
 ### Django admin
@@ -117,6 +133,8 @@ To be refined
 - [cookiecutter-django](https://github.com/pydanny/cookiecutter-django)
 - [django-recaptcha](https://github.com/praekelt/django-recaptcha)
 - [django-phonenumber-field](https://github.com/stefanfoulis/django-phonenumber-field)
+
+Review a list of [Django packages with a UI](https://docs.google.com/spreadsheets/d/1CnBjurD7WE0NDXt-KU_Y3p_VABLNKf3pSuDSDUfoSpU/edit#gid=2123808835).
 
 ### Docs
 
