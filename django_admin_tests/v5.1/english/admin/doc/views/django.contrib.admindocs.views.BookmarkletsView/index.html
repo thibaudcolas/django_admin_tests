@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="en-us" dir="ltr">
+<head>
+<title>View: django.contrib.admindocs.views.BookmarkletsView</title>
+<link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/base.css">
+
+  <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/dark_mode.css">
+  <script src="/django_admin_tests/v5.1/english/static/admin/js/theme.js"></script>
+
+
+  <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/nav_sidebar.css">
+  <script src="/django_admin_tests/v5.1/english/static/admin/js/nav_sidebar.js" defer></script>
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=""
+  data-admin-utc-offset="0">
+<a href="#content-start" class="skip-to-content-link">Skip to main content</a>
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+      <header id="header">
+        <div id="branding">
+        
+<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration</a></div>
+
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>admin</strong>.
+            
+            
+                
+                    <a href="/">View site</a> /
+                
+                
+                    
+                    
+                        <a href="/django_admin_tests/v5.1/english/admin/doc/">Documentation</a> /
+                    
+                
+                
+                <a href="/django_admin_tests/v5.1/english/admin/password_change/">Change password</a> /
+                
+                <form id="logout-form" method="post" action="/django_admin_tests/v5.1/english/admin/logout/">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="j9pAjojWtfx9r0Wnpn7SCPytqFxcAAOf6FmJWrD4YB4XokHQgWhQfmcyauOBIhwA">
+                    <button type="submit">Log out</button>
+                </form>
+                
+<button class="theme-toggle">
+  <span class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</span>
+  <span class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</span>
+  <span class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</span>
+  <svg aria-hidden="true" class="theme-icon-when-auto">
+    <use xlink:href="#icon-auto" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-dark">
+    <use xlink:href="#icon-moon" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-light">
+    <use xlink:href="#icon-sun" />
+  </svg>
+</button>
+
+            
+        </div>
+        
+        
+        
+      </header>
+    
+    <!-- END Header -->
+    
+      <nav aria-label="Breadcrumbs">
+        
+<div class="breadcrumbs">
+<a href="/django_admin_tests/v5.1/english/admin/">Home</a>
+&rsaquo; <a href="/django_admin_tests/v5.1/english/admin/doc/">Documentation</a>
+&rsaquo; <a href="/django_admin_tests/v5.1/english/admin/doc/views/">Views</a>
+&rsaquo; django.contrib.admindocs.views.BookmarkletsView
+</div>
+
+      </nav>
+    
+    
+
+    <div class="main" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
+<nav class="sticky" id="nav-sidebar" aria-label="Sidebar">
+  <input type="search" id="nav-filter"
+         placeholder="Start typing to filter…"
+         aria-label="Filter navigation items">
+  
+
+
+  
+    <div class="app-auth module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
+        </caption>
+        
+          
+            <tr class="model-group">
+              <th scope="row" id="auth-group">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/auth/group/">Groups</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/auth/group/add/" class="addlink" aria-describedby="auth-group">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-user">
+              <th scope="row" id="auth-user">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/auth/user/">Users</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/auth/user/add/" class="addlink" aria-describedby="auth-user">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-flatpages module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/flatpages/" class="section" title="Models in the Flat Pages application">Flat Pages</a>
+        </caption>
+        
+          
+            <tr class="model-flatpage">
+              <th scope="row" id="flatpages-flatpage">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/">Flat pages</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/add/" class="addlink" aria-describedby="flatpages-flatpage">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-redirects module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/redirects/" class="section" title="Models in the Redirects application">Redirects</a>
+        </caption>
+        
+          
+            <tr class="model-redirect">
+              <th scope="row" id="redirects-redirect">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/">Redirects</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/add/" class="addlink" aria-describedby="redirects-redirect">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-sites module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/sites/" class="section" title="Models in the Sites application">Sites</a>
+        </caption>
+        
+          
+            <tr class="model-site">
+              <th scope="row" id="sites-site">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/sites/site/">Sites</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/sites/site/add/" class="addlink" aria-describedby="sites-site">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+
+
+</nav>
+
+        
+      
+      <main id="content-start" class="content" tabindex="-1">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="colM">
+          
+          
+          
+          
+
+<h1>django.contrib.admindocs.views.BookmarkletsView</h1>
+
+<h2 class="subhead"></h2>
+
+
+
+
+
+
+
+<p><a href="/django_admin_tests/v5.1/english/admin/doc/views/">&lsaquo; Back to View documentation</a></p>
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+      </main>
+    </div>
+    <footer id="footer"></footer>
+</div>
+<!-- END Container -->
+
+<!-- SVGs -->
+<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>
+</svg>
+<!-- END SVGs -->
+</body>
+</html>
