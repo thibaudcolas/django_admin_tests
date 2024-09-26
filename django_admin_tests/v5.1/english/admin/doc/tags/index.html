@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+
+<html lang="en-us" dir="ltr">
+<head>
+<title>Template tags</title>
+<link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/base.css">
+
+  <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/dark_mode.css">
+  <script src="/django_admin_tests/v5.1/english/static/admin/js/theme.js"></script>
+
+
+  <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/nav_sidebar.css">
+  <script src="/django_admin_tests/v5.1/english/static/admin/js/nav_sidebar.js" defer></script>
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=""
+  data-admin-utc-offset="0">
+<a href="#content-start" class="skip-to-content-link">Skip to main content</a>
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+      <header id="header">
+        <div id="branding">
+        
+<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration</a></div>
+
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>admin</strong>.
+            
+            
+                
+                    <a href="/">View site</a> /
+                
+                
+                    
+                    
+                        <a href="/django_admin_tests/v5.1/english/admin/doc/">Documentation</a> /
+                    
+                
+                
+                <a href="/django_admin_tests/v5.1/english/admin/password_change/">Change password</a> /
+                
+                <form id="logout-form" method="post" action="/django_admin_tests/v5.1/english/admin/logout/">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="jHBHLwEmPL3har6Q0sCH4vf1CkYKFK0AGjP0s9vqQFTruOm1JYEMHgss3mVaMNDQ">
+                    <button type="submit">Log out</button>
+                </form>
+                
+<button class="theme-toggle">
+  <span class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</span>
+  <span class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</span>
+  <span class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</span>
+  <svg aria-hidden="true" class="theme-icon-when-auto">
+    <use xlink:href="#icon-auto" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-dark">
+    <use xlink:href="#icon-moon" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-light">
+    <use xlink:href="#icon-sun" />
+  </svg>
+</button>
+
+            
+        </div>
+        
+        
+        
+      </header>
+    
+    <!-- END Header -->
+    
+      <nav aria-label="Breadcrumbs">
+        
+<div class="breadcrumbs">
+<a href="/django_admin_tests/v5.1/english/admin/">Home</a>
+&rsaquo; <a href="/django_admin_tests/v5.1/english/admin/doc/">Documentation</a>
+&rsaquo; Tags
+</div>
+
+      </nav>
+    
+    
+
+    <div class="main" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
+<nav class="sticky" id="nav-sidebar" aria-label="Sidebar">
+  <input type="search" id="nav-filter"
+         placeholder="Start typing to filter…"
+         aria-label="Filter navigation items">
+  
+
+
+  
+    <div class="app-auth module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-group">
+              <th scope="row" id="auth-group">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/auth/group/">Groups</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/auth/group/add/" class="addlink" aria-describedby="auth-group">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-user">
+              <th scope="row" id="auth-user">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/auth/user/">Users</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/auth/user/add/" class="addlink" aria-describedby="auth-user">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-flatpages module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/flatpages/" class="section" title="Models in the Flat Pages application">Flat Pages</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-flatpage">
+              <th scope="row" id="flatpages-flatpage">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/">Flat pages</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/add/" class="addlink" aria-describedby="flatpages-flatpage">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-redirects module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/redirects/" class="section" title="Models in the Redirects application">Redirects</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-redirect">
+              <th scope="row" id="redirects-redirect">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/">Redirects</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/add/" class="addlink" aria-describedby="redirects-redirect">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-sites module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/v5.1/english/admin/sites/" class="section" title="Models in the Sites application">Sites</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-site">
+              <th scope="row" id="sites-site">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/sites/site/">Sites</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/sites/site/add/" class="addlink" aria-describedby="sites-site">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+
+
+</nav>
+
+        
+      
+      <main id="content-start" class="content" tabindex="-1">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="colSM">
+          
+          
+          
+          
+
+<h1>Template tag documentation</h1>
+
+<div id="content-main">
+
+
+<div class="module">
+    <h2>Built-in tags</h2>
+    
+    
+    <h3 id="built_in-autoescape">autoescape</h3>
+    <h4>Force autoescape behavior for this block.
+</h4>
+    
+    <hr>
+    
+    <h3 id="built_in-block">block</h3>
+    <h4>Define a block that can be overridden by child templates.
+</h4>
+    
+    <hr>
+    
+    <h3 id="built_in-comment">comment</h3>
+    <h4>Ignore everything between {% comment %} and {% endcomment %}.
+</h4>
+    
+    <hr>
+    
+    <h3 id="built_in-csrf_token">csrf_token</h3>
+    <h4></h4>
+    
+    <hr>
+    
+    <h3 id="built_in-cycle">cycle</h3>
+    <h4>Cycle among the given strings each time this tag is encountered.
+</h4>
+    <p>Within a loop, cycles among the given strings each time through
+the loop:</p>
+<pre class="literal-block">
+{% for o in some_list %}
+    &lt;tr class=&quot;{% cycle 'row1' 'row2' %}&quot;&gt;
+        ...
+    &lt;/tr&gt;
+{% endfor %}
+</pre>
+<p>Outside of a loop, give the values a unique name the first time you call
+it, then use that name each successive time through:</p>
+<pre class="literal-block">
+&lt;tr class=&quot;{% cycle 'row1' 'row2' 'row3' as rowcolors %}&quot;&gt;...&lt;/tr&gt;
+&lt;tr class=&quot;{% cycle rowcolors %}&quot;&gt;...&lt;/tr&gt;
+&lt;tr class=&quot;{% cycle rowcolors %}&quot;&gt;...&lt;/tr&gt;
+</pre>
+<p>You can use any number of values, separated by spaces. Commas can also
+be used to separate values; if a comma is used, the cycle values are
+interpreted as literal strings.</p>
+<p>The optional flag &quot;silent&quot; can be used to prevent the cycle declaration
+from returning any value:</p>
+<pre class="literal-block">
+{% for o in some_list %}
+    {% cycle 'row1' 'row2' as rowcolors silent %}
+    &lt;tr class=&quot;{{ rowcolors }}&quot;&gt;{% include &quot;subtemplate.html &quot; %}&lt;/tr&gt;
+{% endfor %}
+</pre>
+
+    <hr>
+    
+    <h3 id="built_in-debug">debug</h3>
+    <h4>Output a whole load of debugging information, including the current
+context and imported modules.
+</h4>
+    <p>Sample usage:</p>
+<pre class="literal-block">
+&lt;pre&gt;
+    {% debug %}
+&lt;/pre&gt;
+</pre>
+
+    <hr>
+    
+    <h3 id="built_in-extends">extends</h3>
+    <h4>Signal that this template extends a parent template.
+</h4>
+    <p>This tag may be used in two ways: <tt class="docutils literal">{% extends &quot;base&quot; %}</tt> (with quotes)
+uses the literal value &quot;base&quot; as the name of the parent template to extend,
+or <tt class="docutils literal">{% extends variable %}</tt> uses the value of <tt class="docutils literal">variable</tt> as either the
+name of the parent template to extend (if it evaluates to a string) or as
+the parent template itself (if it evaluates to a Template object).</p>
+
+    <hr>
+    
+    <h3 id="built_in-filter">filter</h3>
+    <h4>Filter the contents of the block through variable filters.
+</h4>
+    <p>Filters can also be piped through each other, and they can have
+arguments -- just like in variable syntax.</p>
+<p>Sample usage:</p>
+<pre class="literal-block">
+{% filter force_escape|lower %}
+    This text will be HTML-escaped, and will appear in lowercase.
+{% endfilter %}
+</pre>
+<p>Note that the <tt class="docutils literal">escape</tt> and <tt class="docutils literal">safe</tt> filters are not acceptable arguments.
+Instead, use the <tt class="docutils literal">autoescape</tt> tag to manage autoescaping for blocks of
+template code.</p>
+
+    <hr>
+    
+    <h3 id="built_in-firstof">firstof</h3>
+    <h4>Output the first variable passed that is not False.
+</h4>
+    <p>Output nothing if all the passed variables are False.</p>
+<p>Sample usage:</p>
+<pre class="literal-block">
+{% firstof var1 var2 var3 as myvar %}
+</pre>
+<p>This is equivalent to:</p>
+<pre class="literal-block">
+{% if var1 %}
+    {{ var1 }}
+{% elif var2 %}
+    {{ var2 }}
+{% elif var3 %}
+    {{ var3 }}
+{% endif %}
+</pre>
+<p>but much cleaner!</p>
+<p>You can also use a literal string as a fallback value in case all
+passed variables are False:</p>
+<pre class="literal-block">
+{% firstof var1 var2 var3 &quot;fallback value&quot; %}
+</pre>
+<p>If you want to disable auto-escaping of variables you can use:</p>
+<pre class="literal-block">
+{% autoescape off %}
+    {% firstof var1 var2 var3 &quot;&lt;strong&gt;fallback value&lt;/strong&gt;&quot; %}
+{% autoescape %}
+</pre>
+<p>Or if only some variables should be escaped, you can use:</p>
+<pre class="literal-block">
+{% firstof var1 var2|safe var3 &quot;&lt;strong&gt;fallback value&lt;/strong&gt;&quot;|safe %}
+</pre>
+
+    <hr>
+    
+    <h3 id="built_in-for">for</h3>
+    <h4>Loop over each item in an array.
+</h4>
+    <p>For example, to display a list of athletes given <tt class="docutils literal">athlete_list</tt>:</p>
+<pre class="literal-block">
+&lt;ul&gt;
+{% for athlete in athlete_list %}
+    &lt;li&gt;{{ athlete.name }}&lt;/li&gt;
+{% endfor %}
+&lt;/ul&gt;
+</pre>
+<p>You can loop over a list in reverse by using
+<tt class="docutils literal">{% for obj in list reversed %}</tt>.</p>
+<p>You can also unpack multiple values from a two-dimensional array:</p>
+<pre class="literal-block">
+{% for key,value in dict.items %}
+    {{ key }}: {{ value }}
+{% endfor %}
+</pre>
+<p>The <tt class="docutils literal">for</tt> tag can take an optional <tt class="docutils literal">{% empty %}</tt> clause that will
+be displayed if the given array is empty or could not be found:</p>
+<pre class="literal-block">
+&lt;ul&gt;
+  {% for athlete in athlete_list %}
+    &lt;li&gt;{{ athlete.name }}&lt;/li&gt;
+  {% empty %}
+    &lt;li&gt;Sorry, no athletes in this list.&lt;/li&gt;
+  {% endfor %}
+&lt;ul&gt;
+</pre>
+<p>The above is equivalent to -- but shorter, cleaner, and possibly faster
+than -- the following:</p>
+<pre class="literal-block">
+&lt;ul&gt;
+  {% if athlete_list %}
+    {% for athlete in athlete_list %}
+      &lt;li&gt;{{ athlete.name }}&lt;/li&gt;
+    {% endfor %}
+  {% else %}
+    &lt;li&gt;Sorry, no athletes in this list.&lt;/li&gt;
+  {% endif %}
+&lt;/ul&gt;
+</pre>
+<p>The for loop sets a number of variables available within the loop:</p>
+<blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="65%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Variable</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><tt class="docutils literal">forloop.counter</tt></td>
+<td>The current iteration of the loop (1-indexed)</td>
+</tr>
+<tr><td><tt class="docutils literal">forloop.counter0</tt></td>
+<td>The current iteration of the loop (0-indexed)</td>
+</tr>
+<tr><td><tt class="docutils literal">forloop.revcounter</tt></td>
+<td>The number of iterations from the end of the
+loop (1-indexed)</td>
+</tr>
+<tr><td><tt class="docutils literal">forloop.revcounter0</tt></td>
+<td>The number of iterations from the end of the
+loop (0-indexed)</td>
+</tr>
+<tr><td><tt class="docutils literal">forloop.first</tt></td>
+<td>True if this is the first time through the loop</td>
+</tr>
+<tr><td><tt class="docutils literal">forloop.last</tt></td>
+<td>True if this is the last time through the loop</td>
+</tr>
+<tr><td><tt class="docutils literal">forloop.parentloop</tt></td>
+<td>For nested loops, this is the loop &quot;above&quot; the
+current one</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+
+    <hr>
+    
+    <h3 id="built_in-if">if</h3>
+    <h4>Evaluate a variable, and if that variable is &quot;true&quot; (i.e., exists, is not
+empty, and is not a false boolean value), output the contents of the block:
+</h4>
+    <pre class="literal-block">
+{% if athlete_list %}
+    Number of athletes: {{ athlete_list|count }}
+{% elif athlete_in_locker_room_list %}
+    Athletes should be out of the locker room soon!
+{% else %}
+    No athletes.
+{% endif %}
+</pre>
+<p>In the above, if <tt class="docutils literal">athlete_list</tt> is not empty, the number of athletes will
+be displayed by the <tt class="docutils literal">{{ athlete_list|count }}</tt> variable.</p>
+<p>The <tt class="docutils literal">if</tt> tag may take one or several `` {% elif %}`` clauses, as well as
+an <tt class="docutils literal">{% else %}</tt> clause that will be displayed if all previous conditions
+fail. These clauses are optional.</p>
+<p><tt class="docutils literal">if</tt> tags may use <tt class="docutils literal">or</tt>, <tt class="docutils literal">and</tt> or <tt class="docutils literal">not</tt> to test a number of
+variables or to negate a given variable:</p>
+<pre class="literal-block">
+{% if not athlete_list %}
+    There are no athletes.
+{% endif %}
+
+{% if athlete_list or coach_list %}
+    There are some athletes or some coaches.
+{% endif %}
+
+{% if athlete_list and coach_list %}
+    Both athletes and coaches are available.
+{% endif %}
+
+{% if not athlete_list or coach_list %}
+    There are no athletes, or there are some coaches.
+{% endif %}
+
+{% if athlete_list and not coach_list %}
+    There are some athletes and absolutely no coaches.
+{% endif %}
+</pre>
+<p>Comparison operators are also available, and the use of filters is also
+allowed, for example:</p>
+<pre class="literal-block">
+{% if articles|length &gt;= 5 %}...{% endif %}
+</pre>
+<p>Arguments and operators _must_ have a space between them, so
+<tt class="docutils literal">{% if 1&gt;2 %}</tt> is not a valid if tag.</p>
+<p>All supported operators are: <tt class="docutils literal">or</tt>, <tt class="docutils literal">and</tt>, <tt class="docutils literal">in</tt>, <tt class="docutils literal">not in</tt>
+<tt class="docutils literal">==</tt>, <tt class="docutils literal">!=</tt>, <tt class="docutils literal">&gt;</tt>, <tt class="docutils literal">&gt;=</tt>, <tt class="docutils literal">&lt;</tt> and <tt class="docutils literal">&lt;=</tt>.</p>
+<p>Operator precedence follows Python.</p>
+
+    <hr>
+    
+    <h3 id="built_in-ifchanged">ifchanged</h3>
+    <h4>Check if a value has changed from the last iteration of a loop.
+</h4>
+    <p>The <tt class="docutils literal">{% ifchanged %}</tt> block tag is used within a loop. It has two
+possible uses.</p>
+<ol class="arabic">
+<li><p class="first">Check its own rendered contents against its previous state and only
+displays the content if it has changed. For example, this displays a
+list of days, only displaying the month if it changes:</p>
+<pre class="literal-block">
+&lt;h1&gt;Archive for {{ year }}&lt;/h1&gt;
+
+{% for date in days %}
+    {% ifchanged %}&lt;h3&gt;{{ date|date:&quot;F&quot; }}&lt;/h3&gt;{% endifchanged %}
+    &lt;a href=&quot;{{ date|date:&quot;M/d&quot;|lower }}/&quot;&gt;{{ date|date:&quot;j&quot; }}&lt;/a&gt;
+{% endfor %}
+</pre>
+</li>
+<li><p class="first">If given one or more variables, check whether any variable has changed.
+For example, the following shows the date every time it changes, while
+showing the hour if either the hour or the date has changed:</p>
+<pre class="literal-block">
+{% for date in days %}
+    {% ifchanged date.date %} {{ date.date }} {% endifchanged %}
+    {% ifchanged date.hour date.date %}
+        {{ date.hour }}
+    {% endifchanged %}
+{% endfor %}
+</pre>
+</li>
+</ol>
+
+    <hr>
+    
+    <h3 id="built_in-include">include</h3>
+    <h4>Load a template and render it with the current context. You can pass
+additional context using keyword arguments.
+</h4>
+    <p>Example:</p>
+<pre class="literal-block">
+{% include &quot;foo/some_include&quot; %}
+{% include &quot;foo/some_include&quot; with bar=&quot;BAZZ!&quot; baz=&quot;BING!&quot; %}
+</pre>
+<p>Use the <tt class="docutils literal">only</tt> argument to exclude the current context when rendering
+the included template:</p>
+<pre class="literal-block">
+{% include &quot;foo/some_include&quot; only %}
+{% include &quot;foo/some_include&quot; with bar=&quot;1&quot; only %}
+</pre>
+
+    <hr>
+    
+    <h3 id="built_in-load">load</h3>
+    <h4>Load a custom template tag library into the parser.
+</h4>
+    <p>For example, to load the template tags in
+<tt class="docutils literal">django/templatetags/news/photos.py</tt>:</p>
+<pre class="literal-block">
+{% load news.photos %}
+</pre>
+<p>Can also be used to load an individual tag/filter from
+a library:</p>
+<pre class="literal-block">
+{% load byline from news %}
+</pre>
+
+    <hr>
+    
+    <h3 id="built_in-lorem">lorem</h3>
+    <h4>Create random Latin text useful for providing test data in templates.
+</h4>
+    <p>Usage format:</p>
+<pre class="literal-block">
+{% lorem [count] [method] [random] %}
+</pre>
+<p><tt class="docutils literal">count</tt> is a number (or variable) containing the number of paragraphs or
+words to generate (default is 1).</p>
+<p><tt class="docutils literal">method</tt> is either <tt class="docutils literal">w</tt> for words, <tt class="docutils literal">p</tt> for HTML paragraphs, <tt class="docutils literal">b</tt> for
+plain-text paragraph blocks (default is <tt class="docutils literal">b</tt>).</p>
+<p><tt class="docutils literal">random</tt> is the word <tt class="docutils literal">random</tt>, which if given, does not use the common
+paragraph (starting &quot;Lorem ipsum dolor sit amet, consectetuer...&quot;).</p>
+<p>Examples:</p>
+<ul class="simple">
+<li><tt class="docutils literal">{% lorem %}</tt> outputs the common &quot;lorem ipsum&quot; paragraph</li>
+<li><tt class="docutils literal">{% lorem 3 p %}</tt> outputs the common &quot;lorem ipsum&quot; paragraph
+and two random paragraphs each wrapped in HTML <tt class="docutils literal">&lt;p&gt;</tt> tags</li>
+<li><tt class="docutils literal">{% lorem 2 w random %}</tt> outputs two random latin words</li>
+</ul>
+
+    <hr>
+    
+    <h3 id="built_in-now">now</h3>
+    <h4>Display the date, formatted according to the given string.
+</h4>
+    <p>Use the same format as PHP's <tt class="docutils literal">date()</tt> function; see <a class="reference external" href="https://php.net/date">https://php.net/date</a>
+for all the possible values.</p>
+<p>Sample usage:</p>
+<pre class="literal-block">
+It is {% now &quot;jS F Y H:i&quot; %}
+</pre>
+
+    <hr>
+    
+    <h3 id="built_in-querystring">querystring</h3>
+    <h4>Add, remove, and change parameters of a QueryDict and return the result
+as a query string. If the query_dict argument is not provided, default
+to request.GET.
+</h4>
+    <p>For example:</p>
+<pre class="literal-block">
+{% querystring foo=3 %}
+</pre>
+<p>To remove a key:</p>
+<pre class="literal-block">
+{% querystring foo=None %}
+</pre>
+<p>To use with pagination:</p>
+<pre class="literal-block">
+{% querystring page=page_obj.next_page_number %}
+</pre>
+<p>A custom <tt class="docutils literal">QueryDict</tt> can also be used:</p>
+<pre class="literal-block">
+{% querystring my_query_dict foo=3 %}
+</pre>
+
+    <hr>
+    
+    <h3 id="built_in-regroup">regroup</h3>
+    <h4>Regroup a list of alike objects by a common attribute.
+</h4>
+    <p>This complex tag is best illustrated by use of an example: say that
+<tt class="docutils literal">musicians</tt> is a list of <tt class="docutils literal">Musician</tt> objects that have <tt class="docutils literal">name</tt> and
+<tt class="docutils literal">instrument</tt> attributes, and you'd like to display a list that
+looks like:</p>
+<blockquote>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>Guitar:</dt>
+<dd><ul class="first last">
+<li>Django Reinhardt</li>
+<li>Emily Remler</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Piano:</dt>
+<dd><ul class="first last">
+<li>Lovie Austin</li>
+<li>Bud Powell</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Trumpet:</dt>
+<dd><ul class="first last">
+<li>Duke Ellington</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+<p>The following snippet of template code would accomplish this dubious task:</p>
+<pre class="literal-block">
+{% regroup musicians by instrument as grouped %}
+&lt;ul&gt;
+{% for group in grouped %}
+    &lt;li&gt;{{ group.grouper }}
+    &lt;ul&gt;
+        {% for musician in group.list %}
+        &lt;li&gt;{{ musician.name }}&lt;/li&gt;
+        {% endfor %}
+    &lt;/ul&gt;
+{% endfor %}
+&lt;/ul&gt;
+</pre>
+<p>As you can see, <tt class="docutils literal">{% regroup %}</tt> populates a variable with a list of
+objects with <tt class="docutils literal">grouper</tt> and <tt class="docutils literal">list</tt> attributes. <tt class="docutils literal">grouper</tt> contains the
+item that was grouped by; <tt class="docutils literal">list</tt> contains the list of objects that share
+that <tt class="docutils literal">grouper</tt>. In this case, <tt class="docutils literal">grouper</tt> would be <tt class="docutils literal">Guitar</tt>, <tt class="docutils literal">Piano</tt>
+and <tt class="docutils literal">Trumpet</tt>, and <tt class="docutils literal">list</tt> is the list of musicians who play this
+instrument.</p>
+<p>Note that <tt class="docutils literal">{% regroup %}</tt> does not work when the list to be grouped is not
+sorted by the key you are grouping by! This means that if your list of
+musicians was not sorted by instrument, you'd need to make sure it is sorted
+before using it, i.e.:</p>
+<pre class="literal-block">
+{% regroup musicians|dictsort:&quot;instrument&quot; by instrument as grouped %}
+</pre>
+
+    <hr>
+    
+    <h3 id="built_in-resetcycle">resetcycle</h3>
+    <h4>Reset a cycle tag.
+</h4>
+    <p>If an argument is given, reset the last rendered cycle tag whose name
+matches the argument, else reset the last rendered cycle tag (named or
+unnamed).</p>
+
+    <hr>
+    
+    <h3 id="built_in-spaceless">spaceless</h3>
+    <h4>Remove whitespace between HTML tags, including tab and newline characters.
+</h4>
+    <p>Example usage:</p>
+<pre class="literal-block">
+{% spaceless %}
+    &lt;p&gt;
+        &lt;a href=&quot;foo/&quot;&gt;Foo&lt;/a&gt;
+    &lt;/p&gt;
+{% endspaceless %}
+</pre>
+<p>This example returns this HTML:</p>
+<pre class="literal-block">
+&lt;p&gt;&lt;a href=&quot;foo/&quot;&gt;Foo&lt;/a&gt;&lt;/p&gt;
+</pre>
+<p>Only space between <em>tags</em> is normalized -- not space between tags and text.
+In this example, the space around <tt class="docutils literal">Hello</tt> isn't stripped:</p>
+<pre class="literal-block">
+{% spaceless %}
+    &lt;strong&gt;
+        Hello
+    &lt;/strong&gt;
+{% endspaceless %}
+</pre>
+
+    <hr>
+    
+    <h3 id="built_in-templatetag">templatetag</h3>
+    <h4>Output one of the bits used to compose template tags.
+</h4>
+    <p>Since the template system has no concept of &quot;escaping&quot;, to display one of
+the bits used in template tags, you must use the <tt class="docutils literal">{% templatetag %}</tt> tag.</p>
+<p>The argument tells which template bit to output:</p>
+<blockquote>
+<table border="1" class="docutils">
+<colgroup>
+<col width="72%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Argument</th>
+<th class="head">Outputs</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><tt class="docutils literal">openblock</tt></td>
+<td><tt class="docutils literal">{%</tt></td>
+</tr>
+<tr><td><tt class="docutils literal">closeblock</tt></td>
+<td><tt class="docutils literal">%}</tt></td>
+</tr>
+<tr><td><tt class="docutils literal">openvariable</tt></td>
+<td><tt class="docutils literal">{{</tt></td>
+</tr>
+<tr><td><tt class="docutils literal">closevariable</tt></td>
+<td><tt class="docutils literal">}}</tt></td>
+</tr>
+<tr><td><tt class="docutils literal">openbrace</tt></td>
+<td><tt class="docutils literal">{</tt></td>
+</tr>
+<tr><td><tt class="docutils literal">closebrace</tt></td>
+<td><tt class="docutils literal">}</tt></td>
+</tr>
+<tr><td><tt class="docutils literal">opencomment</tt></td>
+<td><tt class="docutils literal">{#</tt></td>
+</tr>
+<tr><td><tt class="docutils literal">closecomment</tt></td>
+<td><tt class="docutils literal">#}</tt></td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+
+    <hr>
+    
+    <h3 id="built_in-url">url</h3>
+    <h4>Return an absolute URL matching the given view with its parameters.
+</h4>
+    <p>This is a way to define links that aren't tied to a particular URL
+configuration:</p>
+<pre class="literal-block">
+{% url &quot;url_name&quot; arg1 arg2 %}
+
+or
+
+{% url &quot;url_name&quot; name1=value1 name2=value2 %}
+</pre>
+<p>The first argument is a URL pattern name. Other arguments are
+space-separated values that will be filled in place of positional and
+keyword arguments in the URL. Don't mix positional and keyword arguments.
+All arguments for the URL must be present.</p>
+<p>For example, if you have a view <tt class="docutils literal">app_name.views.client_details</tt> taking
+the client's id and the corresponding line in a URLconf looks like this:</p>
+<pre class="literal-block">
+path('client/&lt;int:id&gt;/', views.client_details, name='client-detail-view')
+</pre>
+<p>and this app's URLconf is included into the project's URLconf under some
+path:</p>
+<pre class="literal-block">
+path('clients/', include('app_name.urls'))
+</pre>
+<p>then in a template you can create a link for a certain client like this:</p>
+<pre class="literal-block">
+{% url &quot;client-detail-view&quot; client.id %}
+</pre>
+<p>The URL will look like <tt class="docutils literal">/clients/client/123/</tt>.</p>
+<p>The first argument may also be the name of a template variable that will be
+evaluated to obtain the view name or the URL name, e.g.:</p>
+<pre class="literal-block">
+{% with url_name=&quot;client-detail-view&quot; %}
+{% url url_name client.id %}
+{% endwith %}
+</pre>
+
+    <hr>
+    
+    <h3 id="built_in-verbatim">verbatim</h3>
+    <h4>Stop the template engine from rendering the contents of this block tag.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% verbatim %}
+    {% don't process this %}
+{% endverbatim %}
+</pre>
+<p>You can also designate a specific closing tag block (allowing the
+unrendered use of <tt class="docutils literal">{% endverbatim %}</tt>):</p>
+<pre class="literal-block">
+{% verbatim myblock %}
+    ...
+{% endverbatim myblock %}
+</pre>
+
+    <hr>
+    
+    <h3 id="built_in-widthratio">widthratio</h3>
+    <h4>For creating bar charts and such. Calculate the ratio of a given value to a
+maximum value, and then apply that ratio to a constant.
+</h4>
+    <p>For example:</p>
+<pre class="literal-block">
+&lt;img src=&quot;bar.png&quot; alt=&quot;Bar&quot;
+     height=&quot;10&quot; width=&quot;{% widthratio this_value max_value max_width %}&quot;&gt;
+</pre>
+<p>If <tt class="docutils literal">this_value</tt> is 175, <tt class="docutils literal">max_value</tt> is 200, and <tt class="docutils literal">max_width</tt> is 100,
+the image in the above example will be 88 pixels wide
+(because 175/200 = .875; .875 * 100 = 87.5 which is rounded up to 88).</p>
+<p>In some cases you might want to capture the result of widthratio in a
+variable. It can be useful for instance in a blocktranslate like this:</p>
+<pre class="literal-block">
+{% widthratio this_value max_value max_width as width %}
+{% blocktranslate %}The width is: {{ width }}{% endblocktranslate %}
+</pre>
+
+    <hr>
+    
+    <h3 id="built_in-with">with</h3>
+    <h4>Add one or more values to the context (inside of this block) for caching
+and easy access.
+</h4>
+    <p>For example:</p>
+<pre class="literal-block">
+{% with total=person.some_sql_method %}
+    {{ total }} object{{ total|pluralize }}
+{% endwith %}
+</pre>
+<p>Multiple values can be added to the context:</p>
+<pre class="literal-block">
+{% with foo=1 bar=2 %}
+    ...
+{% endwith %}
+</pre>
+<p>The legacy format of <tt class="docutils literal">{% with person.some_sql_method as total %}</tt> is
+still accepted.</p>
+
+    
+    
+</div>
+
+<div class="module">
+    <h2>admin_list</h2>
+    <p class="small quiet">To use these tags, put <code>{% load admin_list %}</code> in your template before using the tag.</p><hr>
+    
+    <h3 id="admin_list-admin_actions">admin_actions</h3>
+    <h4></h4>
+    
+    <hr>
+    
+    <h3 id="admin_list-admin_list_filter">admin_list_filter</h3>
+    <h4></h4>
+    
+    <hr>
+    
+    <h3 id="admin_list-change_list_object_tools">change_list_object_tools</h3>
+    <h4>Display the row of change list object tools.
+</h4>
+    
+    <hr>
+    
+    <h3 id="admin_list-date_hierarchy">date_hierarchy</h3>
+    <h4></h4>
+    
+    <hr>
+    
+    <h3 id="admin_list-pagination">pagination</h3>
+    <h4></h4>
+    
+    <hr>
+    
+    <h3 id="admin_list-paginator_number">paginator_number</h3>
+    <h4>Generate an individual page index link in a paginated list.
+</h4>
+    
+    <hr>
+    
+    <h3 id="admin_list-result_list">result_list</h3>
+    <h4></h4>
+    
+    <hr>
+    
+    <h3 id="admin_list-search_form">search_form</h3>
+    <h4></h4>
+    
+    
+    
+</div>
+
+<div class="module">
+    <h2>admin_modify</h2>
+    <p class="small quiet">To use these tags, put <code>{% load admin_modify %}</code> in your template before using the tag.</p><hr>
+    
+    <h3 id="admin_modify-change_form_object_tools">change_form_object_tools</h3>
+    <h4>Display the row of change form object tools.
+</h4>
+    
+    <hr>
+    
+    <h3 id="admin_modify-prepopulated_fields_js">prepopulated_fields_js</h3>
+    <h4></h4>
+    
+    <hr>
+    
+    <h3 id="admin_modify-submit_row">submit_row</h3>
+    <h4></h4>
+    
+    
+    
+</div>
+
+<div class="module">
+    <h2>admin_urls</h2>
+    <p class="small quiet">To use these tags, put <code>{% load admin_urls %}</code> in your template before using the tag.</p><hr>
+    
+    <h3 id="admin_urls-add_preserved_filters">add_preserved_filters</h3>
+    <h4></h4>
+    
+    
+    
+</div>
+
+<div class="module">
+    <h2>cache</h2>
+    <p class="small quiet">To use these tags, put <code>{% load cache %}</code> in your template before using the tag.</p><hr>
+    
+    <h3 id="cache-cache">cache</h3>
+    <h4>This will cache the contents of a template fragment for a given amount
+of time.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% load cache %}
+{% cache [expire_time] [fragment_name] %}
+    .. some expensive processing ..
+{% endcache %}
+</pre>
+<p>This tag also supports varying by a list of arguments:</p>
+<pre class="literal-block">
+{% load cache %}
+{% cache [expire_time] [fragment_name] [var1] [var2] .. %}
+    .. some expensive processing ..
+{% endcache %}
+</pre>
+<p>Optionally the cache to use may be specified thus:</p>
+<pre class="literal-block">
+{% cache ....  using=&quot;cachename&quot; %}
+</pre>
+<p>Each unique set of arguments will result in a unique cache entry.</p>
+
+    
+    
+</div>
+
+<div class="module">
+    <h2>flatpages</h2>
+    <p class="small quiet">To use these tags, put <code>{% load flatpages %}</code> in your template before using the tag.</p><hr>
+    
+    <h3 id="flatpages-get_flatpages">get_flatpages</h3>
+    <h4>Retrieve all flatpage objects available for the current site and
+visible to the specific user (or visible to all users if no user is
+specified). Populate the template context with them in a variable
+whose name is defined by the as clause.
+</h4>
+    <p>An optional <tt class="docutils literal">for</tt> clause controls the user whose permissions are used in
+determining which flatpages are visible.</p>
+<p>An optional argument, <tt class="docutils literal">starts_with</tt>, limits the returned flatpages to
+those beginning with a particular base URL. This argument can be a variable
+or a string, as it resolves from the template context.</p>
+<p>Syntax:</p>
+<pre class="literal-block">
+{% get_flatpages ['url_starts_with'] [for user] as context_name %}
+</pre>
+<p>Example usage:</p>
+<pre class="literal-block">
+{% get_flatpages as flatpages %}
+{% get_flatpages for someuser as flatpages %}
+{% get_flatpages '/about/' as about_pages %}
+{% get_flatpages prefix as about_pages %}
+{% get_flatpages '/about/' for someuser as about_pages %}
+</pre>
+
+    
+    
+</div>
+
+<div class="module">
+    <h2>i18n</h2>
+    <p class="small quiet">To use these tags, put <code>{% load i18n %}</code> in your template before using the tag.</p><hr>
+    
+    <h3 id="i18n-blocktrans">blocktrans</h3>
+    <h4>Translate a block of text with parameters.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% blocktranslate with bar=foo|filter boo=baz|filter %}
+This is {{ bar }} and {{ boo }}.
+{% endblocktranslate %}
+</pre>
+<p>Additionally, this supports pluralization:</p>
+<pre class="literal-block">
+{% blocktranslate count count=var|length %}
+There is {{ count }} object.
+{% plural %}
+There are {{ count }} objects.
+{% endblocktranslate %}
+</pre>
+<p>This is much like ngettext, only in template syntax.</p>
+<p>The &quot;var as value&quot; legacy format is still supported:</p>
+<pre class="literal-block">
+{% blocktranslate with foo|filter as bar and baz|filter as boo %}
+{% blocktranslate count var|length as count %}
+</pre>
+<p>The translated string can be stored in a variable using <a class="reference external" href="/django_admin_tests/v5.1/english/admin/doc/tags/#asvar">asvar</a>:</p>
+<pre class="literal-block">
+{% blocktranslate with bar=foo|filter boo=baz|filter asvar var %}
+This is {{ bar }} and {{ boo }}.
+{% endblocktranslate %}
+{{ var }}
+</pre>
+<p>Contextual translations are supported:</p>
+<pre class="literal-block">
+{% blocktranslate with bar=foo|filter context &quot;greeting&quot; %}
+    This is {{ bar }}.
+{% endblocktranslate %}
+</pre>
+<p>This is equivalent to calling pgettext/npgettext instead of
+(u)gettext/(u)ngettext.</p>
+
+    <hr>
+    
+    <h3 id="i18n-blocktranslate">blocktranslate</h3>
+    <h4>Translate a block of text with parameters.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% blocktranslate with bar=foo|filter boo=baz|filter %}
+This is {{ bar }} and {{ boo }}.
+{% endblocktranslate %}
+</pre>
+<p>Additionally, this supports pluralization:</p>
+<pre class="literal-block">
+{% blocktranslate count count=var|length %}
+There is {{ count }} object.
+{% plural %}
+There are {{ count }} objects.
+{% endblocktranslate %}
+</pre>
+<p>This is much like ngettext, only in template syntax.</p>
+<p>The &quot;var as value&quot; legacy format is still supported:</p>
+<pre class="literal-block">
+{% blocktranslate with foo|filter as bar and baz|filter as boo %}
+{% blocktranslate count var|length as count %}
+</pre>
+<p>The translated string can be stored in a variable using <a class="reference external" href="/django_admin_tests/v5.1/english/admin/doc/tags/#asvar">asvar</a>:</p>
+<pre class="literal-block">
+{% blocktranslate with bar=foo|filter boo=baz|filter asvar var %}
+This is {{ bar }} and {{ boo }}.
+{% endblocktranslate %}
+{{ var }}
+</pre>
+<p>Contextual translations are supported:</p>
+<pre class="literal-block">
+{% blocktranslate with bar=foo|filter context &quot;greeting&quot; %}
+    This is {{ bar }}.
+{% endblocktranslate %}
+</pre>
+<p>This is equivalent to calling pgettext/npgettext instead of
+(u)gettext/(u)ngettext.</p>
+
+    <hr>
+    
+    <h3 id="i18n-get_available_languages">get_available_languages</h3>
+    <h4>Store a list of available languages in the context.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% get_available_languages as languages %}
+{% for language in languages %}
+...
+{% endfor %}
+</pre>
+<p>This puts settings.LANGUAGES into the named variable.</p>
+
+    <hr>
+    
+    <h3 id="i18n-get_current_language">get_current_language</h3>
+    <h4>Store the current language in the context.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% get_current_language as language %}
+</pre>
+<p>This fetches the currently active language and puts its value into the
+<tt class="docutils literal">language</tt> context variable.</p>
+
+    <hr>
+    
+    <h3 id="i18n-get_current_language_bidi">get_current_language_bidi</h3>
+    <h4>Store the current language layout in the context.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% get_current_language_bidi as bidi %}
+</pre>
+<p>This fetches the currently active language's layout and puts its value into
+the <tt class="docutils literal">bidi</tt> context variable. True indicates right-to-left layout,
+otherwise left-to-right.</p>
+
+    <hr>
+    
+    <h3 id="i18n-get_language_info">get_language_info</h3>
+    <h4>Store the language information dictionary for the given language code in a
+context variable.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% get_language_info for LANGUAGE_CODE as l %}
+{{ l.code }}
+{{ l.name }}
+{{ l.name_translated }}
+{{ l.name_local }}
+{{ l.bidi|yesno:&quot;bi-directional,uni-directional&quot; }}
+</pre>
+
+    <hr>
+    
+    <h3 id="i18n-get_language_info_list">get_language_info_list</h3>
+    <h4>Store a list of language information dictionaries for the given language
+codes in a context variable. The language codes can be specified either as
+a list of strings or a settings.LANGUAGES style list (or any sequence of
+sequences whose first items are language codes).
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% get_language_info_list for LANGUAGES as langs %}
+{% for l in langs %}
+  {{ l.code }}
+  {{ l.name }}
+  {{ l.name_translated }}
+  {{ l.name_local }}
+  {{ l.bidi|yesno:&quot;bi-directional,uni-directional&quot; }}
+{% endfor %}
+</pre>
+
+    <hr>
+    
+    <h3 id="i18n-language">language</h3>
+    <h4>Enable the given language just for this block.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% language &quot;de&quot; %}
+    This is {{ bar }} and {{ boo }}.
+{% endlanguage %}
+</pre>
+
+    <hr>
+    
+    <h3 id="i18n-trans">trans</h3>
+    <h4>Mark a string for translation and translate the string for the current
+language.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% translate &quot;this is a test&quot; %}
+</pre>
+<p>This marks the string for translation so it will be pulled out by
+makemessages into the .po files and runs the string through the translation
+engine.</p>
+<p>There is a second form:</p>
+<pre class="literal-block">
+{% translate &quot;this is a test&quot; noop %}
+</pre>
+<p>This marks the string for translation, but returns the string unchanged.
+Use it when you need to store values into forms that should be translated
+later on.</p>
+<p>You can use variables instead of constant strings
+to translate stuff you marked somewhere else:</p>
+<pre class="literal-block">
+{% translate variable %}
+</pre>
+<p>This tries to translate the contents of the variable <tt class="docutils literal">variable</tt>. Make
+sure that the string in there is something that is in the .po file.</p>
+<p>It is possible to store the translated string into a variable:</p>
+<pre class="literal-block">
+{% translate &quot;this is a test&quot; as var %}
+{{ var }}
+</pre>
+<p>Contextual translations are also supported:</p>
+<pre class="literal-block">
+{% translate &quot;this is a test&quot; context &quot;greeting&quot; %}
+</pre>
+<p>This is equivalent to calling pgettext instead of (u)gettext.</p>
+
+    <hr>
+    
+    <h3 id="i18n-translate">translate</h3>
+    <h4>Mark a string for translation and translate the string for the current
+language.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% translate &quot;this is a test&quot; %}
+</pre>
+<p>This marks the string for translation so it will be pulled out by
+makemessages into the .po files and runs the string through the translation
+engine.</p>
+<p>There is a second form:</p>
+<pre class="literal-block">
+{% translate &quot;this is a test&quot; noop %}
+</pre>
+<p>This marks the string for translation, but returns the string unchanged.
+Use it when you need to store values into forms that should be translated
+later on.</p>
+<p>You can use variables instead of constant strings
+to translate stuff you marked somewhere else:</p>
+<pre class="literal-block">
+{% translate variable %}
+</pre>
+<p>This tries to translate the contents of the variable <tt class="docutils literal">variable</tt>. Make
+sure that the string in there is something that is in the .po file.</p>
+<p>It is possible to store the translated string into a variable:</p>
+<pre class="literal-block">
+{% translate &quot;this is a test&quot; as var %}
+{{ var }}
+</pre>
+<p>Contextual translations are also supported:</p>
+<pre class="literal-block">
+{% translate &quot;this is a test&quot; context &quot;greeting&quot; %}
+</pre>
+<p>This is equivalent to calling pgettext instead of (u)gettext.</p>
+
+    
+    
+</div>
+
+<div class="module">
+    <h2>l10n</h2>
+    <p class="small quiet">To use these tags, put <code>{% load l10n %}</code> in your template before using the tag.</p><hr>
+    
+    <h3 id="l10n-localize">localize</h3>
+    <h4>Force or prevents localization of values.
+</h4>
+    <p>Sample usage:</p>
+<pre class="literal-block">
+{% localize off %}
+    var pi = {{ 3.1415 }};
+{% endlocalize %}
+</pre>
+
+    
+    
+</div>
+
+<div class="module">
+    <h2>log</h2>
+    <p class="small quiet">To use these tags, put <code>{% load log %}</code> in your template before using the tag.</p><hr>
+    
+    <h3 id="log-get_admin_log">get_admin_log</h3>
+    <h4>Populate a template variable with the admin log for the given criteria.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% get_admin_log [limit] as [varname] for_user [context_var_with_user_obj] %}
+</pre>
+<p>Examples:</p>
+<pre class="literal-block">
+{% get_admin_log 10 as admin_log for_user 23 %}
+{% get_admin_log 10 as admin_log for_user user %}
+{% get_admin_log 10 as admin_log %}
+</pre>
+<p>Note that <tt class="docutils literal">context_var_containing_user_obj</tt> can be a hard-coded integer
+(user ID) or the name of a template context variable containing the user
+object whose ID you want.</p>
+
+    
+    
+</div>
+
+<div class="module">
+    <h2>static</h2>
+    <p class="small quiet">To use these tags, put <code>{% load static %}</code> in your template before using the tag.</p><hr>
+    
+    <h3 id="static-get_media_prefix">get_media_prefix</h3>
+    <h4>Populate a template variable with the media prefix,
+settings.MEDIA_URL.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% get_media_prefix [as varname] %}
+</pre>
+<p>Examples:</p>
+<pre class="literal-block">
+{% get_media_prefix %}
+{% get_media_prefix as media_prefix %}
+</pre>
+
+    <hr>
+    
+    <h3 id="static-get_static_prefix">get_static_prefix</h3>
+    <h4>Populate a template variable with the static prefix,
+settings.STATIC_URL.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% get_static_prefix [as varname] %}
+</pre>
+<p>Examples:</p>
+<pre class="literal-block">
+{% get_static_prefix %}
+{% get_static_prefix as static_prefix %}
+</pre>
+
+    <hr>
+    
+    <h3 id="static-static">static</h3>
+    <h4>Join the given path with the STATIC_URL setting.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% static path [as varname] %}
+</pre>
+<p>Examples:</p>
+<pre class="literal-block">
+{% static &quot;myapp/css/base.css&quot; %}
+{% static variable_with_path %}
+{% static &quot;myapp/css/base.css&quot; as admin_base_css %}
+{% static variable_with_path as varname %}
+</pre>
+
+    
+    
+</div>
+
+<div class="module">
+    <h2>tz</h2>
+    <p class="small quiet">To use these tags, put <code>{% load tz %}</code> in your template before using the tag.</p><hr>
+    
+    <h3 id="tz-get_current_timezone">get_current_timezone</h3>
+    <h4>Store the name of the current time zone in the context.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% get_current_timezone as TIME_ZONE %}
+</pre>
+<p>This will fetch the currently active time zone and put its name
+into the <tt class="docutils literal">TIME_ZONE</tt> context variable.</p>
+
+    <hr>
+    
+    <h3 id="tz-localtime">localtime</h3>
+    <h4>Force or prevent conversion of datetime objects to local time,
+regardless of the value of settings.USE_TZ.
+</h4>
+    <p>Sample usage:</p>
+<pre class="literal-block">
+{% localtime off %}{{ value_in_utc }}{% endlocaltime %}
+</pre>
+
+    <hr>
+    
+    <h3 id="tz-timezone">timezone</h3>
+    <h4>Enable a given time zone just for this block.
+</h4>
+    <p>The <tt class="docutils literal">timezone</tt> argument must be an instance of a <tt class="docutils literal">tzinfo</tt> subclass, a
+time zone name, or <tt class="docutils literal">None</tt>. If it is <tt class="docutils literal">None</tt>, the default time zone is
+used within the block.</p>
+<p>Sample usage:</p>
+<pre class="literal-block">
+{% timezone &quot;Europe/Paris&quot; %}
+    It is {{ now }} in Paris.
+{% endtimezone %}
+</pre>
+
+    
+    
+</div>
+
+</div>
+
+
+          
+
+<div id="content-related">
+
+
+
+<div class="module">
+    <h2>Built-in tags</h2>
+    <ul>
+    
+        <li><a href="#built_in-autoescape">autoescape</a></li>
+    
+        <li><a href="#built_in-block">block</a></li>
+    
+        <li><a href="#built_in-comment">comment</a></li>
+    
+        <li><a href="#built_in-csrf_token">csrf_token</a></li>
+    
+        <li><a href="#built_in-cycle">cycle</a></li>
+    
+        <li><a href="#built_in-debug">debug</a></li>
+    
+        <li><a href="#built_in-extends">extends</a></li>
+    
+        <li><a href="#built_in-filter">filter</a></li>
+    
+        <li><a href="#built_in-firstof">firstof</a></li>
+    
+        <li><a href="#built_in-for">for</a></li>
+    
+        <li><a href="#built_in-if">if</a></li>
+    
+        <li><a href="#built_in-ifchanged">ifchanged</a></li>
+    
+        <li><a href="#built_in-include">include</a></li>
+    
+        <li><a href="#built_in-load">load</a></li>
+    
+        <li><a href="#built_in-lorem">lorem</a></li>
+    
+        <li><a href="#built_in-now">now</a></li>
+    
+        <li><a href="#built_in-querystring">querystring</a></li>
+    
+        <li><a href="#built_in-regroup">regroup</a></li>
+    
+        <li><a href="#built_in-resetcycle">resetcycle</a></li>
+    
+        <li><a href="#built_in-spaceless">spaceless</a></li>
+    
+        <li><a href="#built_in-templatetag">templatetag</a></li>
+    
+        <li><a href="#built_in-url">url</a></li>
+    
+        <li><a href="#built_in-verbatim">verbatim</a></li>
+    
+        <li><a href="#built_in-widthratio">widthratio</a></li>
+    
+        <li><a href="#built_in-with">with</a></li>
+    
+    </ul>
+</div>
+
+<div class="module">
+    <h2>admin_list</h2>
+    <ul>
+    
+        <li><a href="#admin_list-admin_actions">admin_actions</a></li>
+    
+        <li><a href="#admin_list-admin_list_filter">admin_list_filter</a></li>
+    
+        <li><a href="#admin_list-change_list_object_tools">change_list_object_tools</a></li>
+    
+        <li><a href="#admin_list-date_hierarchy">date_hierarchy</a></li>
+    
+        <li><a href="#admin_list-pagination">pagination</a></li>
+    
+        <li><a href="#admin_list-paginator_number">paginator_number</a></li>
+    
+        <li><a href="#admin_list-result_list">result_list</a></li>
+    
+        <li><a href="#admin_list-search_form">search_form</a></li>
+    
+    </ul>
+</div>
+
+<div class="module">
+    <h2>admin_modify</h2>
+    <ul>
+    
+        <li><a href="#admin_modify-change_form_object_tools">change_form_object_tools</a></li>
+    
+        <li><a href="#admin_modify-prepopulated_fields_js">prepopulated_fields_js</a></li>
+    
+        <li><a href="#admin_modify-submit_row">submit_row</a></li>
+    
+    </ul>
+</div>
+
+<div class="module">
+    <h2>admin_urls</h2>
+    <ul>
+    
+        <li><a href="#admin_urls-add_preserved_filters">add_preserved_filters</a></li>
+    
+    </ul>
+</div>
+
+<div class="module">
+    <h2>cache</h2>
+    <ul>
+    
+        <li><a href="#cache-cache">cache</a></li>
+    
+    </ul>
+</div>
+
+<div class="module">
+    <h2>flatpages</h2>
+    <ul>
+    
+        <li><a href="#flatpages-get_flatpages">get_flatpages</a></li>
+    
+    </ul>
+</div>
+
+<div class="module">
+    <h2>i18n</h2>
+    <ul>
+    
+        <li><a href="#i18n-blocktrans">blocktrans</a></li>
+    
+        <li><a href="#i18n-blocktranslate">blocktranslate</a></li>
+    
+        <li><a href="#i18n-get_available_languages">get_available_languages</a></li>
+    
+        <li><a href="#i18n-get_current_language">get_current_language</a></li>
+    
+        <li><a href="#i18n-get_current_language_bidi">get_current_language_bidi</a></li>
+    
+        <li><a href="#i18n-get_language_info">get_language_info</a></li>
+    
+        <li><a href="#i18n-get_language_info_list">get_language_info_list</a></li>
+    
+        <li><a href="#i18n-language">language</a></li>
+    
+        <li><a href="#i18n-trans">trans</a></li>
+    
+        <li><a href="#i18n-translate">translate</a></li>
+    
+    </ul>
+</div>
+
+<div class="module">
+    <h2>l10n</h2>
+    <ul>
+    
+        <li><a href="#l10n-localize">localize</a></li>
+    
+    </ul>
+</div>
+
+<div class="module">
+    <h2>log</h2>
+    <ul>
+    
+        <li><a href="#log-get_admin_log">get_admin_log</a></li>
+    
+    </ul>
+</div>
+
+<div class="module">
+    <h2>static</h2>
+    <ul>
+    
+        <li><a href="#static-get_media_prefix">get_media_prefix</a></li>
+    
+        <li><a href="#static-get_static_prefix">get_static_prefix</a></li>
+    
+        <li><a href="#static-static">static</a></li>
+    
+    </ul>
+</div>
+
+<div class="module">
+    <h2>tz</h2>
+    <ul>
+    
+        <li><a href="#tz-get_current_timezone">get_current_timezone</a></li>
+    
+        <li><a href="#tz-localtime">localtime</a></li>
+    
+        <li><a href="#tz-timezone">timezone</a></li>
+    
+    </ul>
+</div>
+
+
+</div>
+
+
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+      </main>
+    </div>
+    <footer id="footer"></footer>
+</div>
+<!-- END Container -->
+
+<!-- SVGs -->
+<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>
+</svg>
+<!-- END SVGs -->
+
+</body>
+</html>
