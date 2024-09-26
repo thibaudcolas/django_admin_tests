@@ -5,12 +5,12 @@
   <meta name="robots" content="NONE,NOARCHIVE">
   <title>UnicodeEncodeError
           at /django_admin_tests/v5.1/english/defaults/500-unicode/</title>
-  <style type="text/css">
+  <style>
     html * { padding:0; margin:0; }
     body * { padding:10px 20px; }
     body * * { padding:0; }
-    body { font:small sans-serif; background-color:#fff; color:#000; }
-    body>div { border-bottom:1px solid #ddd; }
+    body { font-family: sans-serif; background-color:#fff; color:#000; }
+    body > :where(header, main, footer) { border-bottom:1px solid #ddd; }
     h1 { font-weight:normal; }
     h2 { margin-bottom:.8em; }
     h3 { margin:1em 0 .5em 0; }
@@ -21,7 +21,7 @@
     tbody td, tbody th { vertical-align:top; padding:2px 3px; }
     thead th {
       padding:1px 6px 1px 3px; background:#fefefe; text-align:left;
-      font-weight:normal; font-size:11px; border:1px solid #ddd;
+      font-weight:normal; font-size: 0.6875rem; border:1px solid #ddd;
     }
     tbody th { width:12em; text-align:right; color:#666; padding-right:.5em; }
     table.vars { margin:5px 10px 2px 40px; width: auto; }
@@ -47,6 +47,8 @@
     .user div.commands a { color: black; }
     #summary { background: #ffc; }
     #summary h2 { font-weight: normal; color: #666; }
+    #info { padding: 0; }
+    #info > * { padding:10px 20px; }
     #explanation { background:#eee; }
     #template, #template-not-exist { background:#f6f6f6; }
     #template-not-exist ul { margin: 0 0 10px 20px; }
@@ -59,9 +61,9 @@
     #requestinfo h3 { margin-bottom:-1em; }
     .error { background: #ffc; }
     .specific { color:#cc3300; font-weight:bold; }
-    h2 span.commands { font-size:.7em; font-weight:normal; }
+    h2 span.commands { font-size: 0.7rem; font-weight:normal; }
     span.commands a:link {color:#5E5694;}
-    pre.exception_value { font-family: sans-serif; color: #575757; font-size: 1.5em; margin: 10px 0 10px 0; }
+    pre.exception_value { font-family: sans-serif; color: #575757; font-size: 1.5rem; margin: 10px 0 10px 0; }
     .append-bottom { margin-bottom: 10px; }
     .fname { user-select: all; }
   </style>
@@ -97,71 +99,74 @@
   
 </head>
 <body>
-<div id="summary">
+<header id="summary">
   <h1>UnicodeEncodeError
        at /django_admin_tests/v5.1/english/defaults/500-unicode/</h1>
   <pre class="exception_value">&#x27;ascii&#x27; codec can&#x27;t encode characters in position 1-2: ordinal not in range(128), HTTP response headers must be in ascii format</pre>
   <table class="meta">
 
     <tr>
-      <th>Request Method:</th>
+      <th scope="row">Request Method:</th>
       <td></td>
     </tr>
     <tr>
-      <th>Request URL:</th>
+      <th scope="row">Request URL:</th>
       <td>http://Hello:1337/django_admin_tests/v5.1/english/defaults/500-unicode/</td>
     </tr>
 
     <tr>
-      <th>Django Version:</th>
-      <td>5.0.dev20240120035924</td>
+      <th scope="row">Django Version:</th>
+      <td>5.2.dev20240926151433</td>
     </tr>
 
     <tr>
-      <th>Exception Type:</th>
+      <th scope="row">Exception Type:</th>
       <td>UnicodeEncodeError</td>
     </tr>
 
 
     <tr>
-      <th>Exception Value:</th>
+      <th scope="row">Exception Value:</th>
       <td><pre>&#x27;ascii&#x27; codec can&#x27;t encode characters in position 1-2: ordinal not in range(128), HTTP response headers must be in ascii format</pre></td>
     </tr>
 
 
     <tr>
-      <th>Exception Location:</th>
+      <th scope="row">Exception Location:</th>
       <td><span class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/http/response.py</span>, line 52, in _convert_to_charset</td>
     </tr>
 
 
     <tr>
-      <th>Raised during:</th>
+      <th scope="row">Raised during:</th>
       <td>demo.demo_urls.server_error_unicode</td>
     </tr>
 
     <tr>
-      <th>Python Executable:</th>
+      <th scope="row">Python Executable:</th>
       <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/bin/python</td>
     </tr>
     <tr>
-      <th>Python Version:</th>
-      <td>3.12.1</td>
+      <th scope="row">Python Version:</th>
+      <td>3.12.6</td>
     </tr>
     <tr>
-      <th>Python Path:</th>
-      <td><pre>[&#x27;/home/runner/work/django_admin_tests/django_admin_tests&#x27;,
- &#x27;/opt/hostedtoolcache/Python/3.12.1/x64/lib/python312.zip&#x27;,
- &#x27;/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12&#x27;,
- &#x27;/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/lib-dynload&#x27;,
- &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages&#x27;]</pre></td>
+      <th scope="row">Python Path:</th>
+      <td><pre><code>[&#x27;/home/runner/work/django_admin_tests/django_admin_tests&#x27;,
+ &#x27;/opt/hostedtoolcache/Python/3.12.6/x64/lib/python312.zip&#x27;,
+ &#x27;/opt/hostedtoolcache/Python/3.12.6/x64/lib/python3.12&#x27;,
+ &#x27;/opt/hostedtoolcache/Python/3.12.6/x64/lib/python3.12/lib-dynload&#x27;,
+ &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages&#x27;,
+ &#x27;__editable__.Django-5.2.dev20240926151433.finder.__path_hook__&#x27;]</code></pre></td>
     </tr>
     <tr>
-      <th>Server time:</th>
-      <td>Thu, 08 Feb 2024 19:29:36 +0000</td>
+      <th scope="row">Server time:</th>
+      <td>Thu, 26 Sep 2024 15:32:17 +0000</td>
     </tr>
   </table>
-</div>
+</header>
+
+<main id="info">
 
 <div id="unicode-hint">
     <h2>Unicode error hint</h2>
@@ -185,44 +190,44 @@
           
 
           
-            <div class="context" id="c140458682760256">
+            <div class="context" id="c140218062468352">
               
-                <ol start="48" class="pre-context" id="pre140458682760256">
+                <ol start="48" class="pre-context" id="pre140218062468352">
                 
-                  <li onclick="toggle('pre140458682760256', 'post140458682760256')"><pre></pre></li>
+                  <li onclick="toggle('pre140218062468352', 'post140218062468352')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140458682760256', 'post140458682760256')"><pre>        return inner</pre></li>
+                  <li onclick="toggle('pre140218062468352', 'post140218062468352')"><pre>        return inner</pre></li>
                 
-                  <li onclick="toggle('pre140458682760256', 'post140458682760256')"><pre>    else:</pre></li>
+                  <li onclick="toggle('pre140218062468352', 'post140218062468352')"><pre>    else:</pre></li>
                 
-                  <li onclick="toggle('pre140458682760256', 'post140458682760256')"><pre></pre></li>
+                  <li onclick="toggle('pre140218062468352', 'post140218062468352')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140458682760256', 'post140458682760256')"><pre>        @wraps(get_response)</pre></li>
+                  <li onclick="toggle('pre140218062468352', 'post140218062468352')"><pre>        @wraps(get_response)</pre></li>
                 
-                  <li onclick="toggle('pre140458682760256', 'post140458682760256')"><pre>        def inner(request):</pre></li>
+                  <li onclick="toggle('pre140218062468352', 'post140218062468352')"><pre>        def inner(request):</pre></li>
                 
-                  <li onclick="toggle('pre140458682760256', 'post140458682760256')"><pre>            try:</pre></li>
+                  <li onclick="toggle('pre140218062468352', 'post140218062468352')"><pre>            try:</pre></li>
                 
                 </ol>
               
               <ol start="55" class="context-line">
-                <li onclick="toggle('pre140458682760256', 'post140458682760256')"><pre>                response = get_response(request)
+                <li onclick="toggle('pre140218062468352', 'post140218062468352')"><pre>                response = get_response(request)
                                ^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='56' class="post-context" id="post140458682760256">
+                <ol start='56' class="post-context" id="post140218062468352">
                   
-                  <li onclick="toggle('pre140458682760256', 'post140458682760256')"><pre>            except Exception as exc:</pre></li>
+                  <li onclick="toggle('pre140218062468352', 'post140218062468352')"><pre>            except Exception as exc:</pre></li>
                   
-                  <li onclick="toggle('pre140458682760256', 'post140458682760256')"><pre>                response = response_for_exception(request, exc)</pre></li>
+                  <li onclick="toggle('pre140218062468352', 'post140218062468352')"><pre>                response = response_for_exception(request, exc)</pre></li>
                   
-                  <li onclick="toggle('pre140458682760256', 'post140458682760256')"><pre>            return response</pre></li>
+                  <li onclick="toggle('pre140218062468352', 'post140218062468352')"><pre>            return response</pre></li>
                   
-                  <li onclick="toggle('pre140458682760256', 'post140458682760256')"><pre></pre></li>
+                  <li onclick="toggle('pre140218062468352', 'post140218062468352')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140458682760256', 'post140458682760256')"><pre>        return inner</pre></li>
+                  <li onclick="toggle('pre140218062468352', 'post140218062468352')"><pre>        return inner</pre></li>
                   
-                  <li onclick="toggle('pre140458682760256', 'post140458682760256')"><pre></pre></li>
+                  <li onclick="toggle('pre140218062468352', 'post140218062468352')"><pre></pre></li>
                   
               </ol>
               
@@ -234,11 +239,11 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140458682760256">
+            <table class="vars" id="v140218062468352">
               <thead>
                 <tr>
-                  <th>Variable</th>
-                  <th>Value</th>
+                  <th scope="col">Variable</th>
+                  <th scope="col">Value</th>
                 </tr>
               </thead>
               <tbody>
@@ -250,7 +255,7 @@
                 
                   <tr>
                     <td>get_response</td>
-                    <td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fbf1c8a18e0&gt;&gt;</pre></td>
+                    <td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x7f8711e852b0&gt;&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -271,44 +276,44 @@
           
 
           
-            <div class="context" id="c140458682759424">
+            <div class="context" id="c140218062459008">
               
-                <ol start="190" class="pre-context" id="pre140458682759424">
+                <ol start="190" class="pre-context" id="pre140218062459008">
                 
-                  <li onclick="toggle('pre140458682759424', 'post140458682759424')"><pre></pre></li>
+                  <li onclick="toggle('pre140218062459008', 'post140218062459008')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140458682759424', 'post140458682759424')"><pre>        if response is None:</pre></li>
+                  <li onclick="toggle('pre140218062459008', 'post140218062459008')"><pre>        if response is None:</pre></li>
                 
-                  <li onclick="toggle('pre140458682759424', 'post140458682759424')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
+                  <li onclick="toggle('pre140218062459008', 'post140218062459008')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
                 
-                  <li onclick="toggle('pre140458682759424', 'post140458682759424')"><pre>            # If it is an asynchronous view, run it in a subthread.</pre></li>
+                  <li onclick="toggle('pre140218062459008', 'post140218062459008')"><pre>            # If it is an asynchronous view, run it in a subthread.</pre></li>
                 
-                  <li onclick="toggle('pre140458682759424', 'post140458682759424')"><pre>            if iscoroutinefunction(wrapped_callback):</pre></li>
+                  <li onclick="toggle('pre140218062459008', 'post140218062459008')"><pre>            if iscoroutinefunction(wrapped_callback):</pre></li>
                 
-                  <li onclick="toggle('pre140458682759424', 'post140458682759424')"><pre>                wrapped_callback = async_to_sync(wrapped_callback)</pre></li>
+                  <li onclick="toggle('pre140218062459008', 'post140218062459008')"><pre>                wrapped_callback = async_to_sync(wrapped_callback)</pre></li>
                 
-                  <li onclick="toggle('pre140458682759424', 'post140458682759424')"><pre>            try:</pre></li>
+                  <li onclick="toggle('pre140218062459008', 'post140218062459008')"><pre>            try:</pre></li>
                 
                 </ol>
               
               <ol start="197" class="context-line">
-                <li onclick="toggle('pre140458682759424', 'post140458682759424')"><pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)
+                <li onclick="toggle('pre140218062459008', 'post140218062459008')"><pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)
                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='198' class="post-context" id="post140458682759424">
+                <ol start='198' class="post-context" id="post140218062459008">
                   
-                  <li onclick="toggle('pre140458682759424', 'post140458682759424')"><pre>            except Exception as e:</pre></li>
+                  <li onclick="toggle('pre140218062459008', 'post140218062459008')"><pre>            except Exception as e:</pre></li>
                   
-                  <li onclick="toggle('pre140458682759424', 'post140458682759424')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
+                  <li onclick="toggle('pre140218062459008', 'post140218062459008')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
                   
-                  <li onclick="toggle('pre140458682759424', 'post140458682759424')"><pre>                if response is None:</pre></li>
+                  <li onclick="toggle('pre140218062459008', 'post140218062459008')"><pre>                if response is None:</pre></li>
                   
-                  <li onclick="toggle('pre140458682759424', 'post140458682759424')"><pre>                    raise</pre></li>
+                  <li onclick="toggle('pre140218062459008', 'post140218062459008')"><pre>                    raise</pre></li>
                   
-                  <li onclick="toggle('pre140458682759424', 'post140458682759424')"><pre></pre></li>
+                  <li onclick="toggle('pre140218062459008', 'post140218062459008')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140458682759424', 'post140458682759424')"><pre>        # Complain if the view returned None (a common error).</pre></li>
+                  <li onclick="toggle('pre140218062459008', 'post140218062459008')"><pre>        # Complain if the view returned None (a common error).</pre></li>
                   
               </ol>
               
@@ -320,18 +325,18 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140458682759424">
+            <table class="vars" id="v140218062459008">
               <thead>
                 <tr>
-                  <th>Variable</th>
-                  <th>Value</th>
+                  <th scope="col">Variable</th>
+                  <th scope="col">Value</th>
                 </tr>
               </thead>
               <tbody>
                 
                   <tr>
                     <td>callback</td>
-                    <td class="code"><pre>&lt;function server_error_unicode at 0x7fbf1a308860&gt;</pre></td>
+                    <td class="code"><pre>&lt;function server_error_unicode at 0x7f8710959300&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -361,12 +366,12 @@
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fbf1c8a18e0&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x7f8711e852b0&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>wrapped_callback</td>
-                    <td class="code"><pre>&lt;function server_error_unicode at 0x7fbf1a308860&gt;</pre></td>
+                    <td class="code"><pre>&lt;function server_error_unicode at 0x7f8710959300&gt;</pre></td>
                   </tr>
                 
               </tbody>
@@ -382,44 +387,44 @@
           
 
           
-            <div class="context" id="c140458682759872">
+            <div class="context" id="c140218062464000">
               
-                <ol start="48" class="pre-context" id="pre140458682759872">
+                <ol start="48" class="pre-context" id="pre140218062464000">
                 
-                  <li onclick="toggle('pre140458682759872', 'post140458682759872')"><pre>def server_error_unicode(request):</pre></li>
+                  <li onclick="toggle('pre140218062464000', 'post140218062464000')"><pre>def server_error_unicode(request):</pre></li>
                 
-                  <li onclick="toggle('pre140458682759872', 'post140458682759872')"><pre>    request.META = {</pre></li>
+                  <li onclick="toggle('pre140218062464000', 'post140218062464000')"><pre>    request.META = {</pre></li>
                 
-                  <li onclick="toggle('pre140458682759872', 'post140458682759872')"><pre>        &quot;SERVER_NAME&quot;: &quot;Hello&quot;,</pre></li>
+                  <li onclick="toggle('pre140218062464000', 'post140218062464000')"><pre>        &quot;SERVER_NAME&quot;: &quot;Hello&quot;,</pre></li>
                 
-                  <li onclick="toggle('pre140458682759872', 'post140458682759872')"><pre>        &quot;SERVER_PORT&quot;: 1337,</pre></li>
+                  <li onclick="toggle('pre140218062464000', 'post140218062464000')"><pre>        &quot;SERVER_PORT&quot;: 1337,</pre></li>
                 
-                  <li onclick="toggle('pre140458682759872', 'post140458682759872')"><pre>    }</pre></li>
+                  <li onclick="toggle('pre140218062464000', 'post140218062464000')"><pre>    }</pre></li>
                 
-                  <li onclick="toggle('pre140458682759872', 'post140458682759872')"><pre>    # Raise a UnicodeError</pre></li>
+                  <li onclick="toggle('pre140218062464000', 'post140218062464000')"><pre>    # Raise a UnicodeError</pre></li>
                 
-                  <li onclick="toggle('pre140458682759872', 'post140458682759872')"><pre>    r = HttpResponse()</pre></li>
+                  <li onclick="toggle('pre140218062464000', 'post140218062464000')"><pre>    r = HttpResponse()</pre></li>
                 
                 </ol>
               
               <ol start="55" class="context-line">
-                <li onclick="toggle('pre140458682759872', 'post140458682759872')"><pre>    r.headers.__setitem__(&quot;føø&quot;, &quot;bar&quot;)
+                <li onclick="toggle('pre140218062464000', 'post140218062464000')"><pre>    r.headers.__setitem__(&quot;føø&quot;, &quot;bar&quot;)
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='56' class="post-context" id="post140458682759872">
+                <ol start='56' class="post-context" id="post140218062464000">
                   
-                  <li onclick="toggle('pre140458682759872', 'post140458682759872')"><pre></pre></li>
+                  <li onclick="toggle('pre140218062464000', 'post140218062464000')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140458682759872', 'post140458682759872')"><pre></pre></li>
+                  <li onclick="toggle('pre140218062464000', 'post140218062464000')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140458682759872', 'post140458682759872')"><pre>def server_error_plaintext(request):</pre></li>
+                  <li onclick="toggle('pre140218062464000', 'post140218062464000')"><pre>def server_error_plaintext(request):</pre></li>
                   
-                  <li onclick="toggle('pre140458682759872', 'post140458682759872')"><pre>    request.META = {</pre></li>
+                  <li onclick="toggle('pre140218062464000', 'post140218062464000')"><pre>    request.META = {</pre></li>
                   
-                  <li onclick="toggle('pre140458682759872', 'post140458682759872')"><pre>        &quot;SERVER_NAME&quot;: &quot;Hello&quot;,</pre></li>
+                  <li onclick="toggle('pre140218062464000', 'post140218062464000')"><pre>        &quot;SERVER_NAME&quot;: &quot;Hello&quot;,</pre></li>
                   
-                  <li onclick="toggle('pre140458682759872', 'post140458682759872')"><pre>        &quot;SERVER_PORT&quot;: 1337,</pre></li>
+                  <li onclick="toggle('pre140218062464000', 'post140218062464000')"><pre>        &quot;SERVER_PORT&quot;: 1337,</pre></li>
                   
               </ol>
               
@@ -431,11 +436,11 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140458682759872">
+            <table class="vars" id="v140218062464000">
               <thead>
                 <tr>
-                  <th>Variable</th>
-                  <th>Value</th>
+                  <th scope="col">Variable</th>
+                  <th scope="col">Value</th>
                 </tr>
               </thead>
               <tbody>
@@ -463,44 +468,44 @@
           
 
           
-            <div class="context" id="c140458682759360">
+            <div class="context" id="c140218062469056">
               
-                <ol start="79" class="pre-context" id="pre140458682759360">
+                <ol start="79" class="pre-context" id="pre140218062469056">
                 
-                  <li onclick="toggle('pre140458682759360', 'post140458682759360')"><pre>                raise</pre></li>
+                  <li onclick="toggle('pre140218062469056', 'post140218062469056')"><pre>                raise</pre></li>
                 
-                  <li onclick="toggle('pre140458682759360', 'post140458682759360')"><pre>        return value</pre></li>
+                  <li onclick="toggle('pre140218062469056', 'post140218062469056')"><pre>        return value</pre></li>
                 
-                  <li onclick="toggle('pre140458682759360', 'post140458682759360')"><pre></pre></li>
+                  <li onclick="toggle('pre140218062469056', 'post140218062469056')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140458682759360', 'post140458682759360')"><pre>    def __delitem__(self, key):</pre></li>
+                  <li onclick="toggle('pre140218062469056', 'post140218062469056')"><pre>    def __delitem__(self, key):</pre></li>
                 
-                  <li onclick="toggle('pre140458682759360', 'post140458682759360')"><pre>        self.pop(key)</pre></li>
+                  <li onclick="toggle('pre140218062469056', 'post140218062469056')"><pre>        self.pop(key)</pre></li>
                 
-                  <li onclick="toggle('pre140458682759360', 'post140458682759360')"><pre></pre></li>
+                  <li onclick="toggle('pre140218062469056', 'post140218062469056')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140458682759360', 'post140458682759360')"><pre>    def __setitem__(self, key, value):</pre></li>
+                  <li onclick="toggle('pre140218062469056', 'post140218062469056')"><pre>    def __setitem__(self, key, value):</pre></li>
                 
                 </ol>
               
               <ol start="86" class="context-line">
-                <li onclick="toggle('pre140458682759360', 'post140458682759360')"><pre>        key = self._convert_to_charset(key, &quot;ascii&quot;)
+                <li onclick="toggle('pre140218062469056', 'post140218062469056')"><pre>        key = self._convert_to_charset(key, &quot;ascii&quot;)
                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='87' class="post-context" id="post140458682759360">
+                <ol start='87' class="post-context" id="post140218062469056">
                   
-                  <li onclick="toggle('pre140458682759360', 'post140458682759360')"><pre>        value = self._convert_to_charset(value, &quot;latin-1&quot;, mime_encode=True)</pre></li>
+                  <li onclick="toggle('pre140218062469056', 'post140218062469056')"><pre>        value = self._convert_to_charset(value, &quot;latin-1&quot;, mime_encode=True)</pre></li>
                   
-                  <li onclick="toggle('pre140458682759360', 'post140458682759360')"><pre>        self._store[key.lower()] = (key, value)</pre></li>
+                  <li onclick="toggle('pre140218062469056', 'post140218062469056')"><pre>        self._store[key.lower()] = (key, value)</pre></li>
                   
-                  <li onclick="toggle('pre140458682759360', 'post140458682759360')"><pre></pre></li>
+                  <li onclick="toggle('pre140218062469056', 'post140218062469056')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140458682759360', 'post140458682759360')"><pre>    def pop(self, key, default=None):</pre></li>
+                  <li onclick="toggle('pre140218062469056', 'post140218062469056')"><pre>    def pop(self, key, default=None):</pre></li>
                   
-                  <li onclick="toggle('pre140458682759360', 'post140458682759360')"><pre>        return self._store.pop(key.lower(), default)</pre></li>
+                  <li onclick="toggle('pre140218062469056', 'post140218062469056')"><pre>        return self._store.pop(key.lower(), default)</pre></li>
                   
-                  <li onclick="toggle('pre140458682759360', 'post140458682759360')"><pre></pre></li>
+                  <li onclick="toggle('pre140218062469056', 'post140218062469056')"><pre></pre></li>
                   
               </ol>
               
@@ -512,11 +517,11 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140458682759360">
+            <table class="vars" id="v140218062469056">
               <thead>
                 <tr>
-                  <th>Variable</th>
-                  <th>Value</th>
+                  <th scope="col">Variable</th>
+                  <th scope="col">Value</th>
                 </tr>
               </thead>
               <tbody>
@@ -549,44 +554,44 @@
           
 
           
-            <div class="context" id="c140458682757120">
+            <div class="context" id="c140218062454848">
               
-                <ol start="45" class="pre-context" id="pre140458682757120">
+                <ol start="45" class="pre-context" id="pre140218062454848">
                 
-                  <li onclick="toggle('pre140458682757120', 'post140458682757120')"><pre>        Convert headers key/value to ascii/latin-1 native strings.</pre></li>
+                  <li onclick="toggle('pre140218062454848', 'post140218062454848')"><pre>        Convert headers key/value to ascii/latin-1 native strings.</pre></li>
                 
-                  <li onclick="toggle('pre140458682757120', 'post140458682757120')"><pre>        `charset` must be &#x27;ascii&#x27; or &#x27;latin-1&#x27;. If `mime_encode` is True and</pre></li>
+                  <li onclick="toggle('pre140218062454848', 'post140218062454848')"><pre>        `charset` must be &#x27;ascii&#x27; or &#x27;latin-1&#x27;. If `mime_encode` is True and</pre></li>
                 
-                  <li onclick="toggle('pre140458682757120', 'post140458682757120')"><pre>        `value` can&#x27;t be represented in the given charset, apply MIME-encoding.</pre></li>
+                  <li onclick="toggle('pre140218062454848', 'post140218062454848')"><pre>        `value` can&#x27;t be represented in the given charset, apply MIME-encoding.</pre></li>
                 
-                  <li onclick="toggle('pre140458682757120', 'post140458682757120')"><pre>        &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre140218062454848', 'post140218062454848')"><pre>        &quot;&quot;&quot;</pre></li>
                 
-                  <li onclick="toggle('pre140458682757120', 'post140458682757120')"><pre>        try:</pre></li>
+                  <li onclick="toggle('pre140218062454848', 'post140218062454848')"><pre>        try:</pre></li>
                 
-                  <li onclick="toggle('pre140458682757120', 'post140458682757120')"><pre>            if isinstance(value, str):</pre></li>
+                  <li onclick="toggle('pre140218062454848', 'post140218062454848')"><pre>            if isinstance(value, str):</pre></li>
                 
-                  <li onclick="toggle('pre140458682757120', 'post140458682757120')"><pre>                # Ensure string is valid in given charset</pre></li>
+                  <li onclick="toggle('pre140218062454848', 'post140218062454848')"><pre>                # Ensure string is valid in given charset</pre></li>
                 
                 </ol>
               
               <ol start="52" class="context-line">
-                <li onclick="toggle('pre140458682757120', 'post140458682757120')"><pre>                value.encode(charset)
+                <li onclick="toggle('pre140218062454848', 'post140218062454848')"><pre>                value.encode(charset)
                     ^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='53' class="post-context" id="post140458682757120">
+                <ol start='53' class="post-context" id="post140218062454848">
                   
-                  <li onclick="toggle('pre140458682757120', 'post140458682757120')"><pre>            elif isinstance(value, bytes):</pre></li>
+                  <li onclick="toggle('pre140218062454848', 'post140218062454848')"><pre>            elif isinstance(value, bytes):</pre></li>
                   
-                  <li onclick="toggle('pre140458682757120', 'post140458682757120')"><pre>                # Convert bytestring using given charset</pre></li>
+                  <li onclick="toggle('pre140218062454848', 'post140218062454848')"><pre>                # Convert bytestring using given charset</pre></li>
                   
-                  <li onclick="toggle('pre140458682757120', 'post140458682757120')"><pre>                value = value.decode(charset)</pre></li>
+                  <li onclick="toggle('pre140218062454848', 'post140218062454848')"><pre>                value = value.decode(charset)</pre></li>
                   
-                  <li onclick="toggle('pre140458682757120', 'post140458682757120')"><pre>            else:</pre></li>
+                  <li onclick="toggle('pre140218062454848', 'post140218062454848')"><pre>            else:</pre></li>
                   
-                  <li onclick="toggle('pre140458682757120', 'post140458682757120')"><pre>                value = str(value)</pre></li>
+                  <li onclick="toggle('pre140218062454848', 'post140218062454848')"><pre>                value = str(value)</pre></li>
                   
-                  <li onclick="toggle('pre140458682757120', 'post140458682757120')"><pre>                # Ensure string is valid in given charset.</pre></li>
+                  <li onclick="toggle('pre140218062454848', 'post140218062454848')"><pre>                # Ensure string is valid in given charset.</pre></li>
                   
               </ol>
               
@@ -598,11 +603,11 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140458682757120">
+            <table class="vars" id="v140218062454848">
               <thead>
                 <tr>
-                  <th>Variable</th>
-                  <th>Value</th>
+                  <th scope="col">Variable</th>
+                  <th scope="col">Value</th>
                 </tr>
               </thead>
               <tbody>
@@ -650,8 +655,8 @@ Environment:
 Request Method: 
 Request URL: http://Hello:1337/django_admin_tests/v5.1/english/defaults/500-unicode/
 
-Django Version: 5.0.dev20240120035924
-Python Version: 3.12.1
+Django Version: 5.2.dev20240926151433
+Python Version: 3.12.6
 Installed Applications:
 [&#x27;demo&#x27;,
  &#x27;debug_toolbar&#x27;,
@@ -739,8 +744,8 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
   <table class="req">
     <thead>
       <tr>
-        <th>Variable</th>
-        <th>Value</th>
+        <th scope="col">Variable</th>
+        <th scope="col">Value</th>
       </tr>
     </thead>
     <tbody>
@@ -764,8 +769,8 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
   <table class="req">
     <thead>
       <tr>
-        <th>Setting</th>
-        <th>Value</th>
+        <th scope="col">Setting</th>
+        <th scope="col">Value</th>
       </tr>
     </thead>
     <tbody>
@@ -792,7 +797,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
       
         <tr>
           <td>AUTHENTICATION_BACKENDS</td>
-          <td class="code"><pre>[&#x27;django.contrib.auth.backends.ModelBackend&#x27;]</pre></td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
         </tr>
       
         <tr>
@@ -802,7 +807,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
       
         <tr>
           <td>AUTH_USER_MODEL</td>
-          <td class="code"><pre>&#x27;auth.User&#x27;</pre></td>
+          <td class="code"><pre>&#x27;********************&#x27;</pre></td>
         </tr>
       
         <tr>
@@ -976,7 +981,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
       
         <tr>
           <td>DEBUG_TOOLBAR_CONFIG</td>
-          <td class="code"><pre>{&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7fbf1c483740&gt;}</pre></td>
+          <td class="code"><pre>{&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7f87127b6980&gt;}</pre></td>
         </tr>
       
         <tr>
@@ -1002,11 +1007,6 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         <tr>
           <td>DEFAULT_EXCEPTION_REPORTER_FILTER</td>
           <td class="code"><pre>&#x27;django.views.debug.SafeExceptionReporterFilter&#x27;</pre></td>
-        </tr>
-      
-        <tr>
-          <td>DEFAULT_FILE_STORAGE</td>
-          <td class="code"><pre>&#x27;django.core.files.storage.FileSystemStorage&#x27;</pre></td>
         </tr>
       
         <tr>
@@ -1136,6 +1136,11 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
+          <td>FORMS_URLFIELD_ASSUME_HTTPS</td>
+          <td class="code"><pre>False</pre></td>
+        </tr>
+      
+        <tr>
           <td>FORM_RENDERER</td>
           <td class="code"><pre>&#x27;django.forms.renderers.DjangoTemplates&#x27;</pre></td>
         </tr>
@@ -1260,6 +1265,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
  (&#x27;tr&#x27;, &#x27;Turkish&#x27;),
  (&#x27;tt&#x27;, &#x27;Tatar&#x27;),
  (&#x27;udm&#x27;, &#x27;Udmurt&#x27;),
+ (&#x27;ug&#x27;, &#x27;Uyghur&#x27;),
  (&#x27;uk&#x27;, &#x27;Ukrainian&#x27;),
  (&#x27;ur&#x27;, &#x27;Urdu&#x27;),
  (&#x27;uz&#x27;, &#x27;Uzbek&#x27;),
@@ -1270,7 +1276,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
       
         <tr>
           <td>LANGUAGES_BIDI</td>
-          <td class="code"><pre>[&#x27;he&#x27;, &#x27;ar&#x27;, &#x27;ar-dz&#x27;, &#x27;ckb&#x27;, &#x27;fa&#x27;, &#x27;ur&#x27;]</pre></td>
+          <td class="code"><pre>[&#x27;he&#x27;, &#x27;ar&#x27;, &#x27;ar-dz&#x27;, &#x27;ckb&#x27;, &#x27;fa&#x27;, &#x27;ug&#x27;, &#x27;ur&#x27;]</pre></td>
         </tr>
       
         <tr>
@@ -1583,11 +1589,6 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
-          <td>STATICFILES_STORAGE</td>
-          <td class="code"><pre>&#x27;django.contrib.staticfiles.storage.StaticFilesStorage&#x27;</pre></td>
-        </tr>
-      
-        <tr>
           <td>STATIC_ROOT</td>
           <td class="code"><pre>PosixPath(&#x27;/home/runner/work/django_admin_tests/django_admin_tests/static&#x27;)</pre></td>
         </tr>
@@ -1699,7 +1700,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
  &#x27;v4.1&#x27;: &#x27;v4.1&#x27;,
  &#x27;v4.2&#x27;: &#x27;v4.2&#x27;,
  &#x27;v5.0&#x27;: &#x27;v5.0&#x27;,
- &#x27;v5.1&#x27;: &#x27;v5.0.dev20240120035924&#x27;}</pre></td>
+ &#x27;v5.1&#x27;: &#x27;v5.2.dev20240926151433&#x27;}</pre></td>
         </tr>
       
         <tr>
@@ -1721,14 +1722,16 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
   </table>
 
 </div>
+</main>
 
-  <div id="explanation">
+
+  <footer id="explanation">
     <p>
       You’re seeing this error because you have <code>DEBUG = True</code> in your
       Django settings file. Change that to <code>False</code>, and Django will
       display a standard page generated by the handler for this status code.
     </p>
-  </div>
+  </footer>
 
 
 
@@ -1745,10 +1748,57 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
      data-sidebar-url="/debug_toolbar/history_sidebar/"
      
      data-default-show="true"
-     >
+       data-update-on-fetch="False"
+     data-theme="auto">
   <div class="djdt-hidden" id="djDebugToolbar">
     <ul id="djDebugPanelList">
       <li><a id="djHideToolBarButton" href="#" title="Hide toolbar">Hide »</a></li>
+      <li>
+        <a id="djToggleThemeButton" href="#" title="Toggle Theme">
+          Toggle Theme <svg
+  aria-hidden="true"
+  class="djdt-hidden theme-auto"
+  fill="currentColor"
+  viewBox="0 0 32 32"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M0 16q0 3.264 1.28 6.24t3.392 5.088 5.12 3.424 6.208 1.248q3.264 0 6.24-1.248t5.088-3.424 3.392-5.088 1.28-6.24-1.28-6.208-3.392-5.12-5.088-3.392-6.24-1.28q-3.264 0-6.208 1.28t-5.12 3.392-3.392 5.12-1.28 6.208zM4 16q0-3.264 1.6-6.016t4.384-4.352 6.016-1.632 6.016 1.632 4.384 4.352 1.6 6.016-1.6 6.048-4.384 4.352-6.016 1.6-6.016-1.6-4.384-4.352-1.6-6.048zM16 26.016q2.72 0 5.024-1.344t3.648-3.648 1.344-5.024-1.344-4.992-3.648-3.648-5.024-1.344v20z"
+  ></path>
+</svg>
+<svg
+  aria-hidden="true"
+  class="djdt-hidden theme-light"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M12 1.25C12.4142 1.25 12.75 1.58579 12.75 2V4C12.75 4.41421 12.4142 4.75 12 4.75C11.5858 4.75 11.25 4.41421 11.25 4V2C11.25 1.58579 11.5858 1.25 12 1.25ZM3.66865 3.71609C3.94815 3.41039 4.42255 3.38915 4.72825 3.66865L6.95026 5.70024C7.25596 5.97974 7.2772 6.45413 6.9977 6.75983C6.7182 7.06553 6.2438 7.08677 5.9381 6.80727L3.71609 4.77569C3.41039 4.49619 3.38915 4.02179 3.66865 3.71609ZM20.3314 3.71609C20.6109 4.02179 20.5896 4.49619 20.2839 4.77569L18.0619 6.80727C17.7562 7.08677 17.2818 7.06553 17.0023 6.75983C16.7228 6.45413 16.744 5.97974 17.0497 5.70024L19.2718 3.66865C19.5775 3.38915 20.0518 3.41039 20.3314 3.71609ZM12 7.75C9.65279 7.75 7.75 9.65279 7.75 12C7.75 14.3472 9.65279 16.25 12 16.25C14.3472 16.25 16.25 14.3472 16.25 12C16.25 9.65279 14.3472 7.75 12 7.75ZM6.25 12C6.25 8.82436 8.82436 6.25 12 6.25C15.1756 6.25 17.75 8.82436 17.75 12C17.75 15.1756 15.1756 17.75 12 17.75C8.82436 17.75 6.25 15.1756 6.25 12ZM1.25 12C1.25 11.5858 1.58579 11.25 2 11.25H4C4.41421 11.25 4.75 11.5858 4.75 12C4.75 12.4142 4.41421 12.75 4 12.75H2C1.58579 12.75 1.25 12.4142 1.25 12ZM19.25 12C19.25 11.5858 19.5858 11.25 20 11.25H22C22.4142 11.25 22.75 11.5858 22.75 12C22.75 12.4142 22.4142 12.75 22 12.75H20C19.5858 12.75 19.25 12.4142 19.25 12ZM17.0255 17.0252C17.3184 16.7323 17.7933 16.7323 18.0862 17.0252L20.3082 19.2475C20.6011 19.5404 20.601 20.0153 20.3081 20.3082C20.0152 20.6011 19.5403 20.601 19.2475 20.3081L17.0255 18.0858C16.7326 17.7929 16.7326 17.3181 17.0255 17.0252ZM6.97467 17.0253C7.26756 17.3182 7.26756 17.7931 6.97467 18.086L4.75244 20.3082C4.45955 20.6011 3.98468 20.6011 3.69178 20.3082C3.39889 20.0153 3.39889 19.5404 3.69178 19.2476L5.91401 17.0253C6.2069 16.7324 6.68177 16.7324 6.97467 17.0253ZM12 19.25C12.4142 19.25 12.75 19.5858 12.75 20V22C12.75 22.4142 12.4142 22.75 12 22.75C11.5858 22.75 11.25 22.4142 11.25 22V20C11.25 19.5858 11.5858 19.25 12 19.25Z"
+    fill="currentColor"
+  />
+</svg>
+<svg
+  aria-hidden="true"
+  class="djdt-hidden theme-dark"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
+
+        </a>
+      </li>
       
         
 
@@ -1775,7 +1825,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
   Versions
   
     
-      <br><small>Django 5.0.dev20240120035924</small>
+      <br><small>Django 5.2.dev20240926151433</small>
     
   
   
@@ -1794,7 +1844,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
   Time
   
     
-      <br><small>CPU: 23.66ms (23.66ms)</small>
+      <br><small>CPU: 31.99ms (31.99ms)</small>
     
   
   
@@ -1884,7 +1934,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
 <li id="djdt-StaticFilesPanel" class="djDebugPanelButton">
   <input type="checkbox" data-cookie="djdtStaticFilesPanel" checked title="Disable for next and successive requests">
   
-    <a href="#" title="Static files (133 found, 0 used)" class="StaticFilesPanel">
+    <a href="#" title="Static files (134 found, 0 used)" class="StaticFilesPanel">
   
   Static files
   
@@ -1906,6 +1956,25 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
     <a href="#" title="Templates (1 rendered)" class="TemplatesPanel">
   
   Templates
+  
+    
+      
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-AlertsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtAlertsPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Alerts" class="AlertsPanel">
+  
+  Alerts
   
     
       
@@ -1946,7 +2015,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
   Signals
   
     
-      <br><small>35 receivers of 15 signals</small>
+      <br><small>36 receivers of 15 signals</small>
     
   
   
@@ -2029,19 +2098,19 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
       <tr>
         <td>Django</td>
         <td></td>
-        <td>5.0.dev20240120035924</td>
+        <td>5.2.dev20240926151433</td>
       </tr>
     
       <tr>
         <td>Python</td>
         <td></td>
-        <td>3.12.1</td>
+        <td>3.12.6</td>
       </tr>
     
       <tr>
         <td>debug_toolbar</td>
         <td>Debug Toolbar</td>
-        <td>4.2.0</td>
+        <td>4.4.6</td>
       </tr>
     
   </tbody>
@@ -2081,22 +2150,22 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
     
       <tr>
         <td>User CPU time</td>
-        <td>23.655 msec</td>
+        <td>30.000 msec</td>
       </tr>
     
       <tr>
         <td>System CPU time</td>
-        <td>0.000 msec</td>
+        <td>1.995 msec</td>
       </tr>
     
       <tr>
         <td>Total CPU time</td>
-        <td>23.655 msec</td>
+        <td>31.995 msec</td>
       </tr>
     
       <tr>
         <td>Elapsed time</td>
-        <td>23.661 msec</td>
+        <td>31.989 msec</td>
       </tr>
     
       <tr>
@@ -2177,7 +2246,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
     
       <tr>
         <td>AUTHENTICATION_BACKENDS</td>
-        <td><code>[&#x27;django.contrib.auth.backends.ModelBackend&#x27;]</code></td>
+        <td><code>&#x27;********************&#x27;</code></td>
       </tr>
     
       <tr>
@@ -2187,7 +2256,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
     
       <tr>
         <td>AUTH_USER_MODEL</td>
-        <td><code>&#x27;auth.User&#x27;</code></td>
+        <td><code>&#x27;********************&#x27;</code></td>
       </tr>
     
       <tr>
@@ -2361,7 +2430,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
     
       <tr>
         <td>DEBUG_TOOLBAR_CONFIG</td>
-        <td><code>{&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7fbf1c483740&gt;}</code></td>
+        <td><code>{&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7f87127b6980&gt;}</code></td>
       </tr>
     
       <tr>
@@ -2387,11 +2456,6 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
       <tr>
         <td>DEFAULT_EXCEPTION_REPORTER_FILTER</td>
         <td><code>&#x27;django.views.debug.SafeExceptionReporterFilter&#x27;</code></td>
-      </tr>
-    
-      <tr>
-        <td>DEFAULT_FILE_STORAGE</td>
-        <td><code>&#x27;django.core.files.storage.FileSystemStorage&#x27;</code></td>
       </tr>
     
       <tr>
@@ -2521,6 +2585,11 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
       </tr>
     
       <tr>
+        <td>FORMS_URLFIELD_ASSUME_HTTPS</td>
+        <td><code>False</code></td>
+      </tr>
+    
+      <tr>
         <td>FORM_RENDERER</td>
         <td><code>&#x27;django.forms.renderers.DjangoTemplates&#x27;</code></td>
       </tr>
@@ -2645,6 +2714,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
  (&#x27;tr&#x27;, &#x27;Turkish&#x27;),
  (&#x27;tt&#x27;, &#x27;Tatar&#x27;),
  (&#x27;udm&#x27;, &#x27;Udmurt&#x27;),
+ (&#x27;ug&#x27;, &#x27;Uyghur&#x27;),
  (&#x27;uk&#x27;, &#x27;Ukrainian&#x27;),
  (&#x27;ur&#x27;, &#x27;Urdu&#x27;),
  (&#x27;uz&#x27;, &#x27;Uzbek&#x27;),
@@ -2655,7 +2725,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
     
       <tr>
         <td>LANGUAGES_BIDI</td>
-        <td><code>[&#x27;he&#x27;, &#x27;ar&#x27;, &#x27;ar-dz&#x27;, &#x27;ckb&#x27;, &#x27;fa&#x27;, &#x27;ur&#x27;]</code></td>
+        <td><code>[&#x27;he&#x27;, &#x27;ar&#x27;, &#x27;ar-dz&#x27;, &#x27;ckb&#x27;, &#x27;fa&#x27;, &#x27;ug&#x27;, &#x27;ur&#x27;]</code></td>
       </tr>
     
       <tr>
@@ -2968,11 +3038,6 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
       </tr>
     
       <tr>
-        <td>STATICFILES_STORAGE</td>
-        <td><code>&#x27;django.contrib.staticfiles.storage.StaticFilesStorage&#x27;</code></td>
-      </tr>
-    
-      <tr>
         <td>STATIC_ROOT</td>
         <td><code>PosixPath(&#x27;/home/runner/work/django_admin_tests/django_admin_tests/static&#x27;)</code></td>
       </tr>
@@ -3084,7 +3149,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
  &#x27;v4.1&#x27;: &#x27;v4.1&#x27;,
  &#x27;v4.2&#x27;: &#x27;v4.2&#x27;,
  &#x27;v5.0&#x27;: &#x27;v5.0&#x27;,
- &#x27;v5.1&#x27;: &#x27;v5.0.dev20240120035924&#x27;}</code></td>
+ &#x27;v5.1&#x27;: &#x27;v5.2.dev20240926151433&#x27;}</code></td>
       </tr>
     
       <tr>
@@ -3176,7 +3241,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
     
       <tr>
         <td>Content-Length</td>
-        <td>61328</td>
+        <td>61661</td>
       </tr>
     
       <tr>
@@ -3396,7 +3461,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
   <div id="StaticFilesPanel" class="djdt-panelContent djdt-hidden">
     <div class="djDebugPanelTitle">
       <button type="button" class="djDebugClose">×</button>
-      <h3>Static files (133 found, 0 used)</h3>
+      <h3>Static files (134 found, 0 used)</h3>
     </div>
     <div class="djDebugPanelContent">
       
@@ -3426,7 +3491,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
 
 
 
-  <h4>django.contrib.staticfiles.finders.AppDirectoriesFinder (133 files)</h4>
+  <h4>django.contrib.staticfiles.finders.AppDirectoriesFinder (134 files)</h4>
   <table>
     <thead>
       <tr>
@@ -3437,23 +3502,8 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
     <tbody>
       
         <tr>
-          <td>debug_toolbar/js/history.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/js/history.js</td>
-        </tr>
-      
-        <tr>
           <td>debug_toolbar/js/timer.js</td>
           <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/js/timer.js</td>
-        </tr>
-      
-        <tr>
-          <td>debug_toolbar/js/toolbar.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/js/toolbar.js</td>
-        </tr>
-      
-        <tr>
-          <td>debug_toolbar/js/redirect.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/js/redirect.js</td>
         </tr>
       
         <tr>
@@ -3462,8 +3512,18 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
-          <td>debug_toolbar/css/print.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/css/print.css</td>
+          <td>debug_toolbar/js/history.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/js/history.js</td>
+        </tr>
+      
+        <tr>
+          <td>debug_toolbar/js/redirect.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/js/redirect.js</td>
+        </tr>
+      
+        <tr>
+          <td>debug_toolbar/js/toolbar.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/js/toolbar.js</td>
         </tr>
       
         <tr>
@@ -3472,8 +3532,8 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
-          <td>admin/js/autocomplete.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/autocomplete.js</td>
+          <td>debug_toolbar/css/print.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages/debug_toolbar/static/debug_toolbar/css/print.css</td>
         </tr>
       
         <tr>
@@ -3482,68 +3542,8 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
-          <td>admin/js/prepopulate_init.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/prepopulate_init.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/calendar.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/calendar.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/SelectFilter2.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/SelectFilter2.js</td>
-        </tr>
-      
-        <tr>
           <td>admin/js/urlify.js</td>
           <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/urlify.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/SelectBox.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/SelectBox.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/filters.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/filters.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/prepopulate.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/prepopulate.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/theme.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/theme.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/actions.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/actions.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/change_form.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/change_form.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/inlines.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/inlines.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/popup_response.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/popup_response.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/nav_sidebar.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/nav_sidebar.js</td>
         </tr>
       
         <tr>
@@ -3552,23 +3552,93 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
+          <td>admin/js/SelectBox.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/SelectBox.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/calendar.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/calendar.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/filters.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/filters.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/actions.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/actions.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/popup_response.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/popup_response.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/inlines.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/inlines.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/SelectFilter2.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/SelectFilter2.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/change_form.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/change_form.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/theme.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/theme.js</td>
+        </tr>
+      
+        <tr>
           <td>admin/js/jquery.init.js</td>
           <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/jquery.init.js</td>
         </tr>
       
         <tr>
-          <td>admin/js/collapse.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/collapse.js</td>
+          <td>admin/js/unusable_password_field.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/unusable_password_field.js</td>
         </tr>
       
         <tr>
-          <td>admin/js/admin/DateTimeShortcuts.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js</td>
+          <td>admin/js/autocomplete.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/autocomplete.js</td>
         </tr>
       
         <tr>
-          <td>admin/js/admin/RelatedObjectLookups.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/admin/RelatedObjectLookups.js</td>
+          <td>admin/js/prepopulate.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/prepopulate.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/prepopulate_init.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/prepopulate_init.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/nav_sidebar.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/nav_sidebar.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/xregexp/xregexp.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/xregexp/xregexp.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/xregexp/LICENSE.txt</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/xregexp/LICENSE.txt</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/xregexp/xregexp.min.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/xregexp/xregexp.min.js</td>
         </tr>
       
         <tr>
@@ -3577,18 +3647,13 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
-          <td>admin/js/vendor/jquery/jquery.min.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/jquery/jquery.min.js</td>
-        </tr>
-      
-        <tr>
           <td>admin/js/vendor/jquery/LICENSE.txt</td>
           <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/jquery/LICENSE.txt</td>
         </tr>
       
         <tr>
-          <td>admin/js/vendor/select2/LICENSE.md</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/LICENSE.md</td>
+          <td>admin/js/vendor/jquery/jquery.min.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/jquery/jquery.min.js</td>
         </tr>
       
         <tr>
@@ -3597,13 +3662,78 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
+          <td>admin/js/vendor/select2/LICENSE.md</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/LICENSE.md</td>
+        </tr>
+      
+        <tr>
           <td>admin/js/vendor/select2/select2.full.min.js</td>
           <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/select2.full.min.js</td>
         </tr>
       
         <tr>
-          <td>admin/js/vendor/select2/i18n/pt.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/pt.js</td>
+          <td>admin/js/vendor/select2/i18n/th.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/th.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/sk.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sk.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ka.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ka.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/zh-CN.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/zh-CN.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/mk.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/mk.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/fi.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/fi.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/hy.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hy.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/pl.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/pl.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/hu.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hu.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/fa.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/fa.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/vi.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/vi.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/az.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/az.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/tr.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/tr.js</td>
         </tr>
       
         <tr>
@@ -3612,8 +3742,123 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
+          <td>admin/js/vendor/select2/i18n/pt.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/pt.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/uk.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/uk.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/sr-Cyrl.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sr-Cyrl.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/et.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/et.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/eu.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/eu.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ru.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ru.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/es.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/es.js</td>
+        </tr>
+      
+        <tr>
           <td>admin/js/vendor/select2/i18n/he.js</td>
           <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/he.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/tk.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/tk.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/lt.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/lt.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ro.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ro.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/pt-BR.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/pt-BR.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/bs.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/bs.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ms.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ms.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/gl.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/gl.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/zh-TW.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/zh-TW.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ca.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ca.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/dsb.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/dsb.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ne.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ne.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ja.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ja.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/hi.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hi.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/bn.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/bn.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/it.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/it.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/el.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/el.js</td>
         </tr>
       
         <tr>
@@ -3627,83 +3872,8 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
-          <td>admin/js/vendor/select2/i18n/hsb.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hsb.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ro.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ro.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ms.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ms.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/nb.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/nb.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/en.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/en.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/vi.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/vi.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/sr.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sr.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/it.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/it.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/tk.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/tk.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/et.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/et.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/id.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/id.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/pt-BR.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/pt-BR.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/hu.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hu.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/gl.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/gl.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/fr.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/fr.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/km.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/km.js</td>
+          <td>admin/js/vendor/select2/i18n/ps.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ps.js</td>
         </tr>
       
         <tr>
@@ -3712,138 +3882,8 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
-          <td>admin/js/vendor/select2/i18n/ja.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ja.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/mk.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/mk.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/sv.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sv.js</td>
-        </tr>
-      
-        <tr>
           <td>admin/js/vendor/select2/i18n/da.js</td>
           <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/da.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ru.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ru.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/fi.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/fi.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/th.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/th.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/eu.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/eu.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/hr.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hr.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/bn.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/bn.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ar.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ar.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ka.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ka.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/ca.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ca.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/lt.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/lt.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/sq.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sq.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/az.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/az.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/zh-TW.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/zh-TW.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/sl.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sl.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/de.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/de.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/el.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/el.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/pl.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/pl.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/hy.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hy.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/dsb.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/dsb.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/uk.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/uk.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/af.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/af.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/es.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/es.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/fa.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/fa.js</td>
         </tr>
       
         <tr>
@@ -3852,8 +3892,63 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
-          <td>admin/js/vendor/select2/i18n/ne.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ne.js</td>
+          <td>admin/js/vendor/select2/i18n/de.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/de.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/ar.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ar.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/sq.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sq.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/sv.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sv.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/km.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/km.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/nb.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/nb.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/sr.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sr.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/hr.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hr.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/en.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/en.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/af.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/af.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/sl.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sl.js</td>
+        </tr>
+      
+        <tr>
+          <td>admin/js/vendor/select2/i18n/fr.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/fr.js</td>
         </tr>
       
         <tr>
@@ -3862,168 +3957,23 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
-          <td>admin/js/vendor/select2/i18n/tr.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/tr.js</td>
+          <td>admin/js/vendor/select2/i18n/hsb.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hsb.js</td>
         </tr>
       
         <tr>
-          <td>admin/js/vendor/select2/i18n/ps.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/ps.js</td>
+          <td>admin/js/vendor/select2/i18n/id.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/id.js</td>
         </tr>
       
         <tr>
-          <td>admin/js/vendor/select2/i18n/sk.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sk.js</td>
+          <td>admin/js/admin/RelatedObjectLookups.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/admin/RelatedObjectLookups.js</td>
         </tr>
       
         <tr>
-          <td>admin/js/vendor/select2/i18n/hi.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/hi.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/bs.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/bs.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/zh-CN.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/zh-CN.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/select2/i18n/sr-Cyrl.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/select2/i18n/sr-Cyrl.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/xregexp/xregexp.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/xregexp/xregexp.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/xregexp/xregexp.min.js</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/xregexp/xregexp.min.js</td>
-        </tr>
-      
-        <tr>
-          <td>admin/js/vendor/xregexp/LICENSE.txt</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/vendor/xregexp/LICENSE.txt</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/widgets.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/widgets.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/dashboard.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/dashboard.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/rtl.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/rtl.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/responsive.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/responsive.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/autocomplete.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/autocomplete.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/changelists.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/changelists.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/nav_sidebar.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/nav_sidebar.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/base.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/base.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/responsive_rtl.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/responsive_rtl.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/login.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/login.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/forms.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/forms.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/dark_mode.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/dark_mode.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/vendor/select2/select2.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/vendor/select2/select2.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/vendor/select2/select2.min.css</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/vendor/select2/select2.min.css</td>
-        </tr>
-      
-        <tr>
-          <td>admin/css/vendor/select2/LICENSE-SELECT2.md</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/vendor/select2/LICENSE-SELECT2.md</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/icon-clock.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-clock.svg</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/icon-alert.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-alert.svg</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/selector-icons.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/selector-icons.svg</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/sorting-icons.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/sorting-icons.svg</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/icon-addlink.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-addlink.svg</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/icon-viewlink.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-viewlink.svg</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/icon-yes.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-yes.svg</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/icon-changelink.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-changelink.svg</td>
+          <td>admin/js/admin/DateTimeShortcuts.js</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/js/admin/DateTimeShortcuts.js</td>
         </tr>
       
         <tr>
@@ -4032,23 +3982,8 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
-          <td>admin/img/icon-unknown-alt.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-unknown-alt.svg</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/tooltag-arrowright.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/tooltag-arrowright.svg</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/README.txt</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/README.txt</td>
-        </tr>
-      
-        <tr>
-          <td>admin/img/LICENSE</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/LICENSE</td>
+          <td>admin/img/icon-yes.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-yes.svg</td>
         </tr>
       
         <tr>
@@ -4057,18 +3992,33 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
-          <td>admin/img/search.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/search.svg</td>
+          <td>admin/img/inline-delete.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/inline-delete.svg</td>
         </tr>
       
         <tr>
-          <td>admin/img/icon-hidelink.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-hidelink.svg</td>
+          <td>admin/img/icon-clock.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-clock.svg</td>
         </tr>
       
         <tr>
-          <td>admin/img/calendar-icons.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/calendar-icons.svg</td>
+          <td>admin/img/README.txt</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/README.txt</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/tooltag-arrowright.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/tooltag-arrowright.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/icon-viewlink.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-viewlink.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/LICENSE</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/LICENSE</td>
         </tr>
       
         <tr>
@@ -4077,13 +4027,23 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
-          <td>admin/img/inline-delete.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/inline-delete.svg</td>
+          <td>admin/img/sorting-icons.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/sorting-icons.svg</td>
         </tr>
       
         <tr>
-          <td>admin/img/icon-deletelink.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-deletelink.svg</td>
+          <td>admin/img/calendar-icons.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/calendar-icons.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/search.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/search.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/icon-addlink.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-addlink.svg</td>
         </tr>
       
         <tr>
@@ -4092,13 +4052,123 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
         </tr>
       
         <tr>
-          <td>admin/img/gis/move_vertex_off.svg</td>
-          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/gis/move_vertex_off.svg</td>
+          <td>admin/img/selector-icons.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/selector-icons.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/icon-changelink.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-changelink.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/icon-alert.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-alert.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/icon-hidelink.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-hidelink.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/icon-unknown-alt.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-unknown-alt.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/icon-deletelink.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/icon-deletelink.svg</td>
         </tr>
       
         <tr>
           <td>admin/img/gis/move_vertex_on.svg</td>
           <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/gis/move_vertex_on.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/img/gis/move_vertex_off.svg</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/img/gis/move_vertex_off.svg</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/nav_sidebar.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/nav_sidebar.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/dark_mode.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/dark_mode.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/widgets.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/widgets.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/rtl.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/rtl.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/responsive_rtl.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/responsive_rtl.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/autocomplete.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/autocomplete.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/forms.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/forms.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/login.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/login.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/changelists.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/changelists.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/dashboard.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/dashboard.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/base.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/base.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/unusable_password_field.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/unusable_password_field.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/responsive.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/responsive.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/vendor/select2/select2.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/vendor/select2/select2.css</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/vendor/select2/LICENSE-SELECT2.md</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/vendor/select2/LICENSE-SELECT2.md</td>
+        </tr>
+      
+        <tr>
+          <td>admin/css/vendor/select2/select2.min.css</td>
+          <td>/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/contrib/admin/static/admin/css/vendor/select2/select2.min.css</td>
         </tr>
       
     </tbody>
@@ -4132,14 +4202,14 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
 
   <dl>
     
-      <dt><strong><a class="remoteCall toggleTemplate" href="/debug_toolbar/template_source/?template=None&amp;template_origin=Ijx1bmtub3duIHNvdXJjZT4i:1rYA5Y:fTYpVbXLqfR65K8FCq_qeYKLCNjvVnJFfnTSV0-n37E">None</a></strong></dt>
+      <dt><strong><a class="remoteCall toggleTemplate" href="/debug_toolbar/template_source/?template=None&amp;template_origin=Ijx1bmtub3duIHNvdXJjZT4i:1stqTZ:lct9AJTS7CbZDhCDJcVcET4KXKRbE2YyyXfvhqbKvpM">None</a></strong></dt>
       <dd><samp>&lt;unknown source&gt;</samp></dd>
       
         <dd>
           <details>
             <summary>Toggle context</summary>
             <code class="djTemplateContext">{&#x27;False&#x27;: False, &#x27;None&#x27;: None, &#x27;True&#x27;: True}
-{&#x27;django_version_info&#x27;: &#x27;5.0.dev20240120035924&#x27;,
+{&#x27;django_version_info&#x27;: &#x27;5.2.dev20240926151433&#x27;,
  &#x27;exception_type&#x27;: &#x27;UnicodeEncodeError&#x27;,
  &#x27;exception_value&#x27;: &quot;&#x27;ascii&#x27; codec can&#x27;t encode characters in position 1-2: &quot;
                     &#x27;ordinal not in range(128), HTTP response headers must be &#x27;
@@ -4151,7 +4221,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/core/handlers/exception.py&#x27;,
              &#x27;function&#x27;: &#x27;inner&#x27;,
-             &#x27;id&#x27;: 140458682760256,
+             &#x27;id&#x27;: 140218062468352,
              &#x27;lineno&#x27;: 55,
              &#x27;post_context&#x27;: [&#x27;            except Exception as exc:&#x27;,
                               &#x27;                response = &#x27;
@@ -4168,7 +4238,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
                              &#x27;        def inner(request):&#x27;,
                              &#x27;            try:&#x27;],
              &#x27;pre_context_lineno&#x27;: 48,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fbf15e43c40&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f870fcdf500&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n               ^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;request&#x27;,
@@ -4180,7 +4250,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
                       (&#x27;get_response&#x27;,
                        &#x27;&lt;bound method BaseHandler._get_response of &#x27;
                        &#x27;&lt;django.core.handlers.wsgi.WSGIHandler object at &#x27;
-                       &#x27;0x7fbf1c8a18e0&gt;&gt;&#x27;)]},
+                       &#x27;0x7f8711e852b0&gt;&gt;&#x27;)]},
             {&#x27;colno&#x27;: &#x27;\n&#x27;
                       &#x27;                                &#x27;
                       &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
@@ -4191,7 +4261,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/core/handlers/base.py&#x27;,
              &#x27;function&#x27;: &#x27;_get_response&#x27;,
-             &#x27;id&#x27;: 140458682759424,
+             &#x27;id&#x27;: 140218062459008,
              &#x27;lineno&#x27;: 197,
              &#x27;post_context&#x27;: [&#x27;            except Exception as e:&#x27;,
                               &#x27;                response = &#x27;
@@ -4214,20 +4284,20 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
                              &#x27;async_to_sync(wrapped_callback)&#x27;,
                              &#x27;            try:&#x27;],
              &#x27;pre_context_lineno&#x27;: 190,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fbf15e43900&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f870fcdd080&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n&#x27;
                               &#x27;               &#x27;
                               &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;self&#x27;,
                        &#x27;&lt;django.core.handlers.wsgi.WSGIHandler object at &#x27;
-                       &#x27;0x7fbf1c8a18e0&gt;&#x27;),
+                       &#x27;0x7f8711e852b0&gt;&#x27;),
                       (&#x27;request&#x27;,
                        &#x27;&lt;WSGIRequest: GET &#x27;
                        &quot;&#x27;/django_admin_tests/v5.1/english/defaults/500-unicode/&#x27;&gt;&quot;),
                       (&#x27;response&#x27;, &#x27;None&#x27;),
                       (&#x27;callback&#x27;,
-                       &#x27;&lt;function server_error_unicode at 0x7fbf1a308860&gt;&#x27;),
+                       &#x27;&lt;function server_error_unicode at 0x7f8710959300&gt;&#x27;),
                       (&#x27;callback_args&#x27;, &#x27;()&#x27;),
                       (&#x27;callback_kwargs&#x27;, &#x27;{}&#x27;),
                       (&#x27;middleware_method&#x27;,
@@ -4235,14 +4305,14 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
                        &#x27;&lt;CsrfViewMiddleware &#x27;
                        &#x27;get_response=convert_exception_to_response.&lt;locals&gt;.inner&gt;&gt;&#x27;),
                       (&#x27;wrapped_callback&#x27;,
-                       &#x27;&lt;function server_error_unicode at 0x7fbf1a308860&gt;&#x27;)]},
+                       &#x27;&lt;function server_error_unicode at 0x7f8710959300&gt;&#x27;)]},
             {&#x27;colno&#x27;: &#x27;\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;context_line&#x27;: &#x27;    r.headers.__setitem__(&quot;føø&quot;, &quot;bar&quot;)&#x27;,
              &#x27;exc_cause&#x27;: None,
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/demo/demo_urls.py&#x27;,
              &#x27;function&#x27;: &#x27;server_error_unicode&#x27;,
-             &#x27;id&#x27;: 140458682759872,
+             &#x27;id&#x27;: 140218062464000,
              &#x27;lineno&#x27;: 55,
              &#x27;post_context&#x27;: [&#x27;&#x27;,
                               &#x27;&#x27;,
@@ -4258,7 +4328,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
                              &#x27;    # Raise a UnicodeError&#x27;,
                              &#x27;    r = HttpResponse()&#x27;],
              &#x27;pre_context_lineno&#x27;: 48,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fbf15e43ac0&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f870fcde400&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;user&#x27;,
              &#x27;vars&#x27;: [(&#x27;request&#x27;,
@@ -4276,7 +4346,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/http/response.py&#x27;,
              &#x27;function&#x27;: &#x27;__setitem__&#x27;,
-             &#x27;id&#x27;: 140458682759360,
+             &#x27;id&#x27;: 140218062469056,
              &#x27;lineno&#x27;: 86,
              &#x27;post_context&#x27;: [&#x27;        value = self._convert_to_charset(value, &#x27;
                               &#x27;&quot;latin-1&quot;, mime_encode=True)&#x27;,
@@ -4294,7 +4364,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
                              &#x27;&#x27;,
                              &#x27;    def __setitem__(self, key, value):&#x27;],
              &#x27;pre_context_lineno&#x27;: 79,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fbf15e438c0&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f870fcdf7c0&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n&#x27;
                               &#x27;          &#x27;
                               &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
@@ -4308,7 +4378,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/http/response.py&#x27;,
              &#x27;function&#x27;: &#x27;_convert_to_charset&#x27;,
-             &#x27;id&#x27;: 140458682757120,
+             &#x27;id&#x27;: 140218062454848,
              &#x27;lineno&#x27;: 52,
              &#x27;post_context&#x27;: [&#x27;            elif isinstance(value, bytes):&#x27;,
                               &#x27;                # Convert bytestring using &#x27;
@@ -4330,7 +4400,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
                              &#x27;                # Ensure string is valid in &#x27;
                              &#x27;given charset&#x27;],
              &#x27;pre_context_lineno&#x27;: 45,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fbf15e43000&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f870fcdc040&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n    ^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;self&#x27;, &quot;{&#x27;Content-Type&#x27;: &#x27;text/html; charset=utf-8&#x27;}&quot;),
@@ -4344,7 +4414,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
                &#x27;exc_cause_explicit&#x27;: None,
                &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/http/response.py&#x27;,
                &#x27;function&#x27;: &#x27;_convert_to_charset&#x27;,
-               &#x27;id&#x27;: 140458682757120,
+               &#x27;id&#x27;: 140218062454848,
                &#x27;lineno&#x27;: 52,
                &#x27;post_context&#x27;: [&#x27;            elif isinstance(value, bytes):&#x27;,
                                 &#x27;                # Convert bytestring using &#x27;
@@ -4366,7 +4436,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
                                &#x27;                # Ensure string is valid in &#x27;
                                &#x27;given charset&#x27;],
                &#x27;pre_context_lineno&#x27;: 45,
-               &#x27;tb&#x27;: &lt;traceback object at 0x7fbf15e43000&gt;,
+               &#x27;tb&#x27;: &lt;traceback object at 0x7f870fcdc040&gt;,
                &#x27;tb_area_colno&#x27;: &#x27;\n    ^^^^^^^^^^^^^^^^^^^^^&#x27;,
                &#x27;type&#x27;: &#x27;django&#x27;,
                &#x27;vars&#x27;: [(&#x27;self&#x27;,
@@ -4378,18 +4448,18 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
  &#x27;raising_view_name&#x27;: &#x27;demo.demo_urls.server_error_unicode&#x27;,
  &#x27;request&#x27;: &#x27;&lt;&lt;request&gt;&gt;&#x27;,
  &#x27;request_COOKIES_items&#x27;: dict_items([]),
- &#x27;request_FILES_items&#x27;: &lt;generator object MultiValueDict.items at 0x7fbf15b7c380&gt;,
- &#x27;request_GET_items&#x27;: &lt;generator object MultiValueDict.items at 0x7fbf153bca00&gt;,
+ &#x27;request_FILES_items&#x27;: &lt;generator object MultiValueDict.items at 0x7f871029a810&gt;,
+ &#x27;request_GET_items&#x27;: &lt;generator object MultiValueDict.items at 0x7f870e5cfd30&gt;,
  &#x27;request_insecure_uri&#x27;: &#x27;http://Hello:1337/django_admin_tests/v5.1/english/defaults/500-unicode/&#x27;,
  &#x27;request_meta&#x27;: {&#x27;SERVER_NAME&#x27;: &#x27;Hello&#x27;, &#x27;SERVER_PORT&#x27;: 1337},
- &#x27;server_time&#x27;: datetime.datetime(2024, 2, 8, 19, 29, 36, 724901, tzinfo=datetime.timezone.utc),
+ &#x27;server_time&#x27;: datetime.datetime(2024, 9, 26, 15, 32, 17, 140892, tzinfo=datetime.timezone.utc),
  &#x27;settings&#x27;: {&#x27;ABSOLUTE_URL_OVERRIDES&#x27;: {},
               &#x27;ADMINS&#x27;: [],
               &#x27;ALLOWED_HOSTS&#x27;: [&#x27;*&#x27;],
               &#x27;APPEND_SLASH&#x27;: True,
-              &#x27;AUTHENTICATION_BACKENDS&#x27;: [&#x27;django.contrib.auth.backends.ModelBackend&#x27;],
+              &#x27;AUTHENTICATION_BACKENDS&#x27;: &#x27;********************&#x27;,
               &#x27;AUTH_PASSWORD_VALIDATORS&#x27;: &#x27;********************&#x27;,
-              &#x27;AUTH_USER_MODEL&#x27;: &#x27;auth.User&#x27;,
+              &#x27;AUTH_USER_MODEL&#x27;: &#x27;********************&#x27;,
               &#x27;BASE_DIR&#x27;: PosixPath(&#x27;/home/runner/work/django_admin_tests/django_admin_tests&#x27;),
               &#x27;CACHES&#x27;: {&#x27;default&#x27;: {&#x27;BACKEND&#x27;: &#x27;django.core.cache.backends.locmem.LocMemCache&#x27;}},
               &#x27;CACHE_MIDDLEWARE_ALIAS&#x27;: &#x27;default&#x27;,
@@ -4451,13 +4521,12 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
                                      &#x27;%d %B, %Y&#x27;],
               &#x27;DEBUG&#x27;: True,
               &#x27;DEBUG_PROPAGATE_EXCEPTIONS&#x27;: False,
-              &#x27;DEBUG_TOOLBAR_CONFIG&#x27;: {&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7fbf1c483740&gt;},
+              &#x27;DEBUG_TOOLBAR_CONFIG&#x27;: {&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7f87127b6980&gt;},
               &#x27;DECIMAL_SEPARATOR&#x27;: &#x27;.&#x27;,
               &#x27;DEFAULT_AUTO_FIELD&#x27;: &#x27;django.db.models.BigAutoField&#x27;,
               &#x27;DEFAULT_CHARSET&#x27;: &#x27;utf-8&#x27;,
               &#x27;DEFAULT_EXCEPTION_REPORTER&#x27;: &#x27;django.views.debug.ExceptionReporter&#x27;,
               &#x27;DEFAULT_EXCEPTION_REPORTER_FILTER&#x27;: &#x27;django.views.debug.SafeExceptionReporterFilter&#x27;,
-              &#x27;DEFAULT_FILE_STORAGE&#x27;: &#x27;django.core.files.storage.FileSystemStorage&#x27;,
               &#x27;DEFAULT_FROM_EMAIL&#x27;: &#x27;webmaster@localhost&#x27;,
               &#x27;DEFAULT_INDEX_TABLESPACE&#x27;: &#x27;&#x27;,
               &#x27;DEFAULT_TABLESPACE&#x27;: &#x27;&#x27;,
@@ -4484,6 +4553,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
               &#x27;FIXTURE_DIRS&#x27;: [],
               &#x27;FORCE_SCRIPT_NAME&#x27;: None,
               &#x27;FORMAT_MODULE_PATH&#x27;: None,
+              &#x27;FORMS_URLFIELD_ASSUME_HTTPS&#x27;: False,
               &#x27;FORM_RENDERER&#x27;: &#x27;django.forms.renderers.DjangoTemplates&#x27;,
               &#x27;IGNORABLE_404_URLS&#x27;: [],
               &#x27;INSTALLED_APPS&#x27;: [&#x27;demo&#x27;,
@@ -4591,13 +4661,14 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
                             (&#x27;tr&#x27;, &#x27;Turkish&#x27;),
                             (&#x27;tt&#x27;, &#x27;Tatar&#x27;),
                             (&#x27;udm&#x27;, &#x27;Udmurt&#x27;),
+                            (&#x27;ug&#x27;, &#x27;Uyghur&#x27;),
                             (&#x27;uk&#x27;, &#x27;Ukrainian&#x27;),
                             (&#x27;ur&#x27;, &#x27;Urdu&#x27;),
                             (&#x27;uz&#x27;, &#x27;Uzbek&#x27;),
                             (&#x27;vi&#x27;, &#x27;Vietnamese&#x27;),
                             (&#x27;zh-hans&#x27;, &#x27;Simplified Chinese&#x27;),
                             (&#x27;zh-hant&#x27;, &#x27;Traditional Chinese&#x27;)],
-              &#x27;LANGUAGES_BIDI&#x27;: [&#x27;he&#x27;, &#x27;ar&#x27;, &#x27;ar-dz&#x27;, &#x27;ckb&#x27;, &#x27;fa&#x27;, &#x27;ur&#x27;],
+              &#x27;LANGUAGES_BIDI&#x27;: [&#x27;he&#x27;, &#x27;ar&#x27;, &#x27;ar-dz&#x27;, &#x27;ckb&#x27;, &#x27;fa&#x27;, &#x27;ug&#x27;, &#x27;ur&#x27;],
               &#x27;LANGUAGE_CODE&#x27;: &#x27;en-us&#x27;,
               &#x27;LANGUAGE_COOKIE_AGE&#x27;: None,
               &#x27;LANGUAGE_COOKIE_DOMAIN&#x27;: None,
@@ -4667,7 +4738,6 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
               &#x27;STATICFILES_DIRS&#x27;: [],
               &#x27;STATICFILES_FINDERS&#x27;: [&#x27;django.contrib.staticfiles.finders.FileSystemFinder&#x27;,
                                       &#x27;django.contrib.staticfiles.finders.AppDirectoriesFinder&#x27;],
-              &#x27;STATICFILES_STORAGE&#x27;: &#x27;django.contrib.staticfiles.storage.StaticFilesStorage&#x27;,
               &#x27;STATIC_ROOT&#x27;: PosixPath(&#x27;/home/runner/work/django_admin_tests/django_admin_tests/static&#x27;),
               &#x27;STATIC_URL&#x27;: &#x27;/django_admin_tests/v5.1/english/static/&#x27;,
               &#x27;STORAGES&#x27;: {&#x27;default&#x27;: {&#x27;BACKEND&#x27;: &#x27;django.core.files.storage.FileSystemStorage&#x27;},
@@ -4702,17 +4772,18 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
                                   &#x27;v4.1&#x27;: &#x27;v4.1&#x27;,
                                   &#x27;v4.2&#x27;: &#x27;v4.2&#x27;,
                                   &#x27;v5.0&#x27;: &#x27;v5.0&#x27;,
-                                  &#x27;v5.1&#x27;: &#x27;v5.0.dev20240120035924&#x27;},
+                                  &#x27;v5.1&#x27;: &#x27;v5.2.dev20240926151433&#x27;},
               &#x27;WSGI_APPLICATION&#x27;: &#x27;demo.wsgi.application&#x27;,
               &#x27;X_FRAME_OPTIONS&#x27;: &#x27;DENY&#x27;,
               &#x27;YEAR_MONTH_FORMAT&#x27;: &#x27;F Y&#x27;},
  &#x27;sys_executable&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/bin/python&#x27;,
  &#x27;sys_path&#x27;: [&#x27;/home/runner/work/django_admin_tests/django_admin_tests&#x27;,
-              &#x27;/opt/hostedtoolcache/Python/3.12.1/x64/lib/python312.zip&#x27;,
-              &#x27;/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12&#x27;,
-              &#x27;/opt/hostedtoolcache/Python/3.12.1/x64/lib/python3.12/lib-dynload&#x27;,
-              &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages&#x27;],
- &#x27;sys_version_info&#x27;: &#x27;3.12.1&#x27;,
+              &#x27;/opt/hostedtoolcache/Python/3.12.6/x64/lib/python312.zip&#x27;,
+              &#x27;/opt/hostedtoolcache/Python/3.12.6/x64/lib/python3.12&#x27;,
+              &#x27;/opt/hostedtoolcache/Python/3.12.6/x64/lib/python3.12/lib-dynload&#x27;,
+              &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages&#x27;,
+              &#x27;__editable__.Django-5.2.dev20240926151433.finder.__path_hook__&#x27;],
+ &#x27;sys_version_info&#x27;: &#x27;3.12.6&#x27;,
  &#x27;template_does_not_exist&#x27;: False,
  &#x27;template_info&#x27;: None,
  &#x27;unicode_hint&#x27;: &#x27;føø&#x27;,
@@ -4727,6 +4798,29 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
 <h4>Context processors</h4>
 
   <p>None</p>
+
+</div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="AlertsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <button type="button" class="djDebugClose">×</button>
+      <h3>Alerts</h3>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        
+        <div class="djdt-scroll">
+
+
+  <h4>No alerts found</h4>
 
 </div>
       
@@ -4940,7 +5034,7 @@ Exception Value: &#x27;ascii&#x27; codec can&#x27;t encode characters in positio
     
       <tr>
         <td>setting_changed</td>
-        <td>reset_cache, clear_cache_handlers, update_installed_apps, update_connections_time_zone, clear_routers_cache, reset_template_engines, storages_changed, clear_serializers_cache, language_changed, localize_settings_changed, file_storage_changed, complex_setting_changed, root_urlconf_changed, static_storage_changed, static_finders_changed, auth_password_validators_changed, user_model_swapped, update_toolbar_config, reset_hashers, clear_caches, update_level_tags, FileSystemStorage._clear_cached_properties, FileSystemStorage._clear_cached_properties, StaticFilesStorage._clear_cached_properties</td>
+        <td>reset_cache, clear_cache_handlers, update_installed_apps, update_connections_time_zone, clear_routers_cache, reset_template_engines, storages_changed, clear_serializers_cache, language_changed, localize_settings_changed, complex_setting_changed, root_urlconf_changed, static_storage_changed, static_finders_changed, form_renderer_changed, auth_password_validators_changed, user_model_swapped, update_toolbar_config, reset_hashers, Options.setting_changed, clear_caches, update_level_tags, FileSystemStorage._clear_cached_properties, FileSystemStorage._clear_cached_properties, StaticFilesStorage._clear_cached_properties</td>
       </tr>
     
   </tbody>

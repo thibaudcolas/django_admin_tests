@@ -2,11 +2,11 @@
 
 <html lang="en-us" dir="ltr">
 <head>
-<title>Are you sure? | Django site admin</title>
+<title>Delete | Django site admin</title>
 <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/base.css">
 
   <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/dark_mode.css">
-  <script src="/django_admin_tests/v5.1/english/static/admin/js/theme.js" defer></script>
+  <script src="/django_admin_tests/v5.1/english/static/admin/js/theme.js"></script>
 
 
   <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/nav_sidebar.css">
@@ -43,10 +43,10 @@
     
     <!-- Header -->
     
-    <div id="header">
+      <header id="header">
         <div id="branding">
         
-<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.0.dev20240120035924</a></div>
+<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.2.dev20240926151433</a></div>
 
 
         </div>
@@ -71,14 +71,14 @@
                 <a href="/django_admin_tests/v5.1/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/v5.1/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="rMne0UHWmwhO3Cf47b40MiKvo4i4e43CZ1IuNb69wGiyyO3yhNfOzs5fAlCBArmU">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="kwVsXZg1lhiZcTXhAY6pMxfhv7ghrXThm2pbPQwF39jyrVS8Ah1ToibNmqgL4K4F">
                     <button type="submit">Log out</button>
                 </form>
                 
 <button class="theme-toggle">
-  <div class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</div>
-  <div class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</div>
-  <div class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</div>
+  <span class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</span>
+  <span class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</span>
+  <span class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</span>
   <svg aria-hidden="true" class="theme-icon-when-auto">
     <use xlink:href="#icon-auto" />
   </svg>
@@ -95,7 +95,7 @@
         
         
         
-    </div>
+      </header>
     
     <!-- END Header -->
     
@@ -131,18 +131,29 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/admin/" class="section" title="Models in the Administration application">Administration</a>
         </caption>
-        
-          <tr class="model-logentry">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/admin/logentry/">Log entries</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/admin/logentry/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
+        
+          
+            <tr class="model-logentry">
+              <th scope="row" id="admin-logentry">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/admin/logentry/">Log entries</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/admin/logentry/add/" class="addlink" aria-describedby="admin-logentry">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -152,42 +163,61 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
         </caption>
-        
-          <tr class="model-group">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/auth/group/">Groups</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/auth/group/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
         
-          <tr class="model-permission current-model">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/auth/permission/" aria-current="page">Permissions</a></th>
-            
+          
+            <tr class="model-group">
+              <th scope="row" id="auth-group">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/auth/group/">Groups</a>
+                
+              </th>
 
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/auth/permission/add/" class="addlink">Add</a></td>
-            
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/auth/group/add/" class="addlink" aria-describedby="auth-group">Add</a></td>
+              
 
-            
-          </tr>
+              
+            </tr>
+          
         
-          <tr class="model-user">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/auth/user/">Users</a></th>
-            
+          
+            <tr class="model-permission current-model">
+              <th scope="row" id="auth-permission">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/auth/permission/" aria-current="page">Permissions</a>
+                
+              </th>
 
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/auth/user/add/" class="addlink">Add</a></td>
-            
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/auth/permission/add/" class="addlink" aria-describedby="auth-permission">Add</a></td>
+              
 
-            
-          </tr>
+              
+            </tr>
+          
+        
+          
+            <tr class="model-user">
+              <th scope="row" id="auth-user">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/auth/user/">Users</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/auth/user/add/" class="addlink" aria-describedby="auth-user">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -197,18 +227,29 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/contenttypes/" class="section" title="Models in the Content Types application">Content Types</a>
         </caption>
-        
-          <tr class="model-contenttype">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/contenttypes/contenttype/">Content types</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/contenttypes/contenttype/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
+        
+          
+            <tr class="model-contenttype">
+              <th scope="row" id="contenttypes-contenttype">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/contenttypes/contenttype/">Content types</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/contenttypes/contenttype/add/" class="addlink" aria-describedby="contenttypes-contenttype">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -218,54 +259,77 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/demo/" class="section" title="Models in the Demo application">Demo</a>
         </caption>
-        
-          <tr class="model-artist">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/artist/">Artists</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/demo/artist/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
         
-          <tr class="model-releasetrack">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/releasetrack/">Release tracks</a></th>
-            
+          
+            <tr class="model-artist">
+              <th scope="row" id="demo-artist">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/demo/artist/">Artists</a>
+                
+              </th>
 
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/demo/releasetrack/add/" class="addlink">Add</a></td>
-            
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/demo/artist/add/" class="addlink" aria-describedby="demo-artist">Add</a></td>
+              
 
-            
-          </tr>
+              
+            </tr>
+          
         
-          <tr class="model-release">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/release/">Releases</a></th>
-            
+          
+            <tr class="model-releasetrack">
+              <th scope="row" id="demo-releasetrack">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/demo/releasetrack/">Release tracks</a>
+                
+              </th>
 
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/demo/release/add/" class="addlink">Add</a></td>
-            
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/demo/releasetrack/add/" class="addlink" aria-describedby="demo-releasetrack">Add</a></td>
+              
 
-            
-          </tr>
+              
+            </tr>
+          
         
-          <tr class="model-track">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/track/">Tracks</a></th>
-            
+          
+            <tr class="model-release">
+              <th scope="row" id="demo-release">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/demo/release/">Releases</a>
+                
+              </th>
 
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/demo/track/add/" class="addlink">Add</a></td>
-            
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/demo/release/add/" class="addlink" aria-describedby="demo-release">Add</a></td>
+              
 
-            
-          </tr>
+              
+            </tr>
+          
+        
+          
+            <tr class="model-track">
+              <th scope="row" id="demo-track">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/demo/track/">Tracks</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/demo/track/add/" class="addlink" aria-describedby="demo-track">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -275,18 +339,29 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/flatpages/" class="section" title="Models in the Flat Pages application">Flat Pages</a>
         </caption>
-        
-          <tr class="model-flatpage">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/">Flat pages</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
+        
+          
+            <tr class="model-flatpage">
+              <th scope="row" id="flatpages-flatpage">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/">Flat pages</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/add/" class="addlink" aria-describedby="flatpages-flatpage">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -296,18 +371,29 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/redirects/" class="section" title="Models in the Redirects application">Redirects</a>
         </caption>
-        
-          <tr class="model-redirect">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/">Redirects</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
+        
+          
+            <tr class="model-redirect">
+              <th scope="row" id="redirects-redirect">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/">Redirects</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/add/" class="addlink" aria-describedby="redirects-redirect">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -317,18 +403,29 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/sessions/" class="section" title="Models in the Sessions application">Sessions</a>
         </caption>
-        
-          <tr class="model-session">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/sessions/session/">Sessions</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/sessions/session/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
+        
+          
+            <tr class="model-session">
+              <th scope="row" id="sessions-session">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/sessions/session/">Sessions</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/sessions/session/add/" class="addlink" aria-describedby="sessions-session">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -338,18 +435,29 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/sites/" class="section" title="Models in the Sites application">Sites</a>
         </caption>
-        
-          <tr class="model-site">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/sites/site/">Sites</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/sites/site/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
+        
+          
+            <tr class="model-site">
+              <th scope="row" id="sites-site">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/sites/site/">Sites</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/sites/site/add/" class="addlink" aria-describedby="sites-site">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -360,14 +468,14 @@
 
         
       
-      <div id="content-start" class="content" tabindex="-1">
+      <main id="content-start" class="content" tabindex="-1">
         
           
         
         <!-- Content -->
         <div id="content" class="colM">
           
-          <h1>Are you sure?</h1>
+          <h1>Delete</h1>
           
           
 
@@ -383,7 +491,7 @@
 
     <h2>Objects</h2>
     <ul id="deleted-objects">	<li>Permission: <a href="/django_admin_tests/v5.1/english/admin/auth/permission/21/change/">Sessions | session | Can add session</a></li></ul>
-    <form method="post"><input type="hidden" name="csrfmiddlewaretoken" value="rMne0UHWmwhO3Cf47b40MiKvo4i4e43CZ1IuNb69wGiyyO3yhNfOzs5fAlCBArmU">
+    <form method="post"><input type="hidden" name="csrfmiddlewaretoken" value="kwVsXZg1lhiZcTXhAY6pMxfhv7ghrXThm2pbPQwF39jyrVS8Ah1ToibNmqgL4K4F">
     <div>
     <input type="hidden" name="post" value="yes">
     
@@ -399,9 +507,9 @@
           <br class="clear">
         </div>
         <!-- END Content -->
-        <div id="footer"></div>
-      </div>
+      </main>
     </div>
+    <footer id="footer"></footer>
 </div>
 <!-- END Container -->
 
@@ -412,5 +520,6 @@
   <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>
 </svg>
 <!-- END SVGs -->
+
 </body>
 </html>

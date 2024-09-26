@@ -107,6 +107,16 @@ thead th.sorted .text {
     border-left: none;
 }
 
+.paginator .end {
+    margin-left: 6px;
+    margin-right: 0;
+}
+
+.paginator input {
+    margin-left: 0;
+    margin-right: auto;
+}
+
 /* FORMS */
 
 .aligned label {
@@ -176,19 +186,13 @@ fieldset .fieldBox {
     margin-right: 0;
 }
 
-
 /* WIDGETS */
 
 .calendarnav-previous {
     top: 0;
     left: auto;
     right: 10px;
-    background: url(../img/calendar-icons.svg) 0 -30px no-repeat;
-}
-
-.calendarbox .calendarnav-previous:focus,
-.calendarbox .calendarnav-previous:hover {
-    background-position: 0 -45px;
+    background: url(../img/calendar-icons.svg) 0 -15px no-repeat;
 }
 
 .calendarnav-next {
@@ -196,11 +200,6 @@ fieldset .fieldBox {
     right: auto;
     left: 10px;
     background: url(../img/calendar-icons.svg) 0 0 no-repeat;
-}
-
-.calendarbox .calendarnav-next:focus,
-.calendarbox .calendarnav-next:hover {
-    background-position: 0 -15px;
 }
 
 .calendar caption, .calendarbox h2 {
@@ -276,4 +275,12 @@ form .form-row p.datetime {
 .inline-related h3 span.delete label {
     margin-left: inherit;
     margin-right: 2px;
+}
+
+.inline-group .tabular td.original p {
+    right: 0;
+}
+
+.selector .selector-chooser {
+    margin: 0;
 }

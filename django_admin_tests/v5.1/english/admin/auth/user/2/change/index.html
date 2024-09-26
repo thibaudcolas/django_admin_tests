@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/base.css">
 
   <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/dark_mode.css">
-  <script src="/django_admin_tests/v5.1/english/static/admin/js/theme.js" defer></script>
+  <script src="/django_admin_tests/v5.1/english/static/admin/js/theme.js"></script>
 
 
   <link rel="stylesheet" href="/django_admin_tests/v5.1/english/static/admin/css/nav_sidebar.css">
@@ -46,10 +46,10 @@
     
     <!-- Header -->
     
-    <div id="header">
+      <header id="header">
         <div id="branding">
         
-<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.0.dev20240120035924</a></div>
+<div id="site-name"><a href="/django_admin_tests/v5.1/english/admin/">Django administration 5.2.dev20240926151433</a></div>
 
 
         </div>
@@ -74,14 +74,14 @@
                 <a href="/django_admin_tests/v5.1/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/v5.1/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="syF8VKfoa5xc6y5t690FyNamEANaEQ6GPNCbJCcSmOtgiiYCjB6TJ6BbnX6cXs2B">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="N1hdQEdOkKyZhKSnKjyNyY6Hi1tsCk1KbMzvEO40HmYRozIXfOfYh3NmskfcpmsQ">
                     <button type="submit">Log out</button>
                 </form>
                 
 <button class="theme-toggle">
-  <div class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</div>
-  <div class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</div>
-  <div class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</div>
+  <span class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</span>
+  <span class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</span>
+  <span class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</span>
   <svg aria-hidden="true" class="theme-icon-when-auto">
     <use xlink:href="#icon-auto" />
   </svg>
@@ -98,7 +98,7 @@
         
         
         
-    </div>
+      </header>
     
     <!-- END Header -->
     
@@ -133,18 +133,29 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/admin/" class="section" title="Models in the Administration application">Administration</a>
         </caption>
-        
-          <tr class="model-logentry">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/admin/logentry/">Log entries</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/admin/logentry/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
+        
+          
+            <tr class="model-logentry">
+              <th scope="row" id="admin-logentry">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/admin/logentry/">Log entries</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/admin/logentry/add/" class="addlink" aria-describedby="admin-logentry">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -154,42 +165,61 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
         </caption>
-        
-          <tr class="model-group">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/auth/group/">Groups</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/auth/group/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
         
-          <tr class="model-permission">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/auth/permission/">Permissions</a></th>
-            
+          
+            <tr class="model-group">
+              <th scope="row" id="auth-group">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/auth/group/">Groups</a>
+                
+              </th>
 
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/auth/permission/add/" class="addlink">Add</a></td>
-            
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/auth/group/add/" class="addlink" aria-describedby="auth-group">Add</a></td>
+              
 
-            
-          </tr>
+              
+            </tr>
+          
         
-          <tr class="model-user current-model">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/auth/user/" aria-current="page">Users</a></th>
-            
+          
+            <tr class="model-permission">
+              <th scope="row" id="auth-permission">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/auth/permission/">Permissions</a>
+                
+              </th>
 
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/auth/user/add/" class="addlink">Add</a></td>
-            
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/auth/permission/add/" class="addlink" aria-describedby="auth-permission">Add</a></td>
+              
 
-            
-          </tr>
+              
+            </tr>
+          
+        
+          
+            <tr class="model-user current-model">
+              <th scope="row" id="auth-user">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/auth/user/" aria-current="page">Users</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/auth/user/add/" class="addlink" aria-describedby="auth-user">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -199,18 +229,29 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/contenttypes/" class="section" title="Models in the Content Types application">Content Types</a>
         </caption>
-        
-          <tr class="model-contenttype">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/contenttypes/contenttype/">Content types</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/contenttypes/contenttype/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
+        
+          
+            <tr class="model-contenttype">
+              <th scope="row" id="contenttypes-contenttype">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/contenttypes/contenttype/">Content types</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/contenttypes/contenttype/add/" class="addlink" aria-describedby="contenttypes-contenttype">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -220,54 +261,77 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/demo/" class="section" title="Models in the Demo application">Demo</a>
         </caption>
-        
-          <tr class="model-artist">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/artist/">Artists</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/demo/artist/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
         
-          <tr class="model-releasetrack">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/releasetrack/">Release tracks</a></th>
-            
+          
+            <tr class="model-artist">
+              <th scope="row" id="demo-artist">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/demo/artist/">Artists</a>
+                
+              </th>
 
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/demo/releasetrack/add/" class="addlink">Add</a></td>
-            
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/demo/artist/add/" class="addlink" aria-describedby="demo-artist">Add</a></td>
+              
 
-            
-          </tr>
+              
+            </tr>
+          
         
-          <tr class="model-release">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/release/">Releases</a></th>
-            
+          
+            <tr class="model-releasetrack">
+              <th scope="row" id="demo-releasetrack">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/demo/releasetrack/">Release tracks</a>
+                
+              </th>
 
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/demo/release/add/" class="addlink">Add</a></td>
-            
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/demo/releasetrack/add/" class="addlink" aria-describedby="demo-releasetrack">Add</a></td>
+              
 
-            
-          </tr>
+              
+            </tr>
+          
         
-          <tr class="model-track">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/demo/track/">Tracks</a></th>
-            
+          
+            <tr class="model-release">
+              <th scope="row" id="demo-release">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/demo/release/">Releases</a>
+                
+              </th>
 
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/demo/track/add/" class="addlink">Add</a></td>
-            
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/demo/release/add/" class="addlink" aria-describedby="demo-release">Add</a></td>
+              
 
-            
-          </tr>
+              
+            </tr>
+          
+        
+          
+            <tr class="model-track">
+              <th scope="row" id="demo-track">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/demo/track/">Tracks</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/demo/track/add/" class="addlink" aria-describedby="demo-track">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -277,18 +341,29 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/flatpages/" class="section" title="Models in the Flat Pages application">Flat Pages</a>
         </caption>
-        
-          <tr class="model-flatpage">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/">Flat pages</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
+        
+          
+            <tr class="model-flatpage">
+              <th scope="row" id="flatpages-flatpage">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/">Flat pages</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/flatpages/flatpage/add/" class="addlink" aria-describedby="flatpages-flatpage">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -298,18 +373,29 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/redirects/" class="section" title="Models in the Redirects application">Redirects</a>
         </caption>
-        
-          <tr class="model-redirect">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/">Redirects</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
+        
+          
+            <tr class="model-redirect">
+              <th scope="row" id="redirects-redirect">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/">Redirects</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/redirects/redirect/add/" class="addlink" aria-describedby="redirects-redirect">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -319,18 +405,29 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/sessions/" class="section" title="Models in the Sessions application">Sessions</a>
         </caption>
-        
-          <tr class="model-session">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/sessions/session/">Sessions</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/sessions/session/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
+        
+          
+            <tr class="model-session">
+              <th scope="row" id="sessions-session">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/sessions/session/">Sessions</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/sessions/session/add/" class="addlink" aria-describedby="sessions-session">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -340,18 +437,29 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/sites/" class="section" title="Models in the Sites application">Sites</a>
         </caption>
-        
-          <tr class="model-site">
-            
-              <th scope="row"><a href="/django_admin_tests/v5.1/english/admin/sites/site/">Sites</a></th>
-            
-
-            
-              <td><a href="/django_admin_tests/v5.1/english/admin/sites/site/add/" class="addlink">Add</a></td>
-            
-
-            
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
           </tr>
+        </thead>
+        
+          
+            <tr class="model-site">
+              <th scope="row" id="sites-site">
+                
+                  <a href="/django_admin_tests/v5.1/english/admin/sites/site/">Sites</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/v5.1/english/admin/sites/site/add/" class="addlink" aria-describedby="sites-site">Add</a></td>
+              
+
+              
+            </tr>
+          
         
       </table>
     </div>
@@ -362,7 +470,7 @@
 
         
       
-      <div id="content-start" class="content" tabindex="-1">
+      <main id="content-start" class="content" tabindex="-1">
         
           
         
@@ -389,7 +497,7 @@
   </ul>
 
 
-<form method="post" id="user_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="syF8VKfoa5xc6y5t690FyNamEANaEQ6GPNCbJCcSmOtgiiYCjB6TJ6BbnX6cXs2B">
+<form method="post" id="user_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="N1hdQEdOkKyZhKSnKjyNyY6Hi1tsCk1KbMzvEO40HmYRozIXfOfYh3NmskfcpmsQ">
 <div>
 
 
@@ -398,7 +506,8 @@
 
 
 
-  <fieldset class="module aligned ">
+  
+<fieldset class="module aligned ">
     
     
     
@@ -417,7 +526,7 @@
                                 
                                 
                                 
-                                    <input type="text" name="username" value="newuser" class="vTextField" maxlength="150" autocapitalize="none" autocomplete="username" required id="id_username">
+                                    <input type="text" name="username" value="newuser" class="vTextField" maxlength="150" autocapitalize="none" autocomplete="username" required aria-describedby="id_username_helptext" id="id_username">
                                 
                             
                         </div>
@@ -437,21 +546,24 @@
                                 <label>Password:</label>
                                 
                                     <div class="help">
-                                        <div>Raw passwords are not stored, so there is no way to see this user’s password, but you can change the password using <a href="../../2/password/">this form</a>.</div>
+                                        <div>Raw passwords are not stored, so there is no way to see the user’s password.</div>
                                     </div>
                                 
                                 
                                 
-                                    <div disabled id="id_password">
-
-<strong>algorithm</strong>: <bdi>pbkdf2_sha256</bdi>
-
-<strong>iterations</strong>: <bdi>720000</bdi>
-
-<strong>salt</strong>: <bdi>H9fhSQ****************</bdi>
-
-<strong>hash</strong>: <bdi>S50aEJ**************************************</bdi>
-
+                                    <div disabled aria-describedby="id_password_helptext" id="id_password">
+  <p>
+    
+    <strong>algorithm</strong>: <bdi>pbkdf2_sha256</bdi>
+    
+    <strong>iterations</strong>: <bdi>720000</bdi>
+    
+    <strong>salt</strong>: <bdi>H9fhSQ****************</bdi>
+    
+    <strong>hash</strong>: <bdi>S50aEJ**************************************</bdi>
+    
+  </p>
+  <p><a class="button" href="../password/">Reset password</a></p>
 </div>
                                 
                             
@@ -462,11 +574,18 @@
             
         </div>
     
+    
 </fieldset>
 
 
-  <fieldset class="module aligned ">
-    <h2>Personal info</h2>
+
+  
+<fieldset class="module aligned " aria-labelledby="fieldset-0-personal-info-1-heading">
+    
+        
+        <h2 id="fieldset-0-personal-info-1-heading" class="fieldset-heading">Personal info</h2>
+        
+    
     
     
         <div class="form-row field-first_name">
@@ -532,11 +651,18 @@
             
         </div>
     
+    
 </fieldset>
 
 
-  <fieldset class="module aligned ">
-    <h2>Permissions</h2>
+
+  
+<fieldset class="module aligned " aria-labelledby="fieldset-0-permissions-2-heading">
+    
+        
+        <h2 id="fieldset-0-permissions-2-heading" class="fieldset-heading">Permissions</h2>
+        
+    
     
     
         <div class="form-row field-is_active">
@@ -547,7 +673,7 @@
                         <div class="flex-container checkbox-row">
                             
                                 
-                                <input type="checkbox" name="is_active" id="id_is_active" checked><label class="vCheckboxLabel" for="id_is_active">Active</label>
+                                <input type="checkbox" name="is_active" aria-describedby="id_is_active_helptext" id="id_is_active" checked><label class="vCheckboxLabel" for="id_is_active">Active</label>
                             
                         </div>
                     
@@ -568,7 +694,7 @@
                         <div class="flex-container checkbox-row">
                             
                                 
-                                <input type="checkbox" name="is_staff" id="id_is_staff"><label class="vCheckboxLabel" for="id_is_staff">Staff status</label>
+                                <input type="checkbox" name="is_staff" aria-describedby="id_is_staff_helptext" id="id_is_staff"><label class="vCheckboxLabel" for="id_is_staff">Staff status</label>
                             
                         </div>
                     
@@ -589,7 +715,7 @@
                         <div class="flex-container checkbox-row">
                             
                                 
-                                <input type="checkbox" name="is_superuser" id="id_is_superuser"><label class="vCheckboxLabel" for="id_is_superuser">Superuser status</label>
+                                <input type="checkbox" name="is_superuser" aria-describedby="id_is_superuser_helptext" id="id_is_superuser"><label class="vCheckboxLabel" for="id_is_superuser">Superuser status</label>
                             
                         </div>
                     
@@ -618,7 +744,7 @@
                                 
                                 
                                     <div class="related-widget-wrapper" data-model-ref="group">
-    <select name="groups" id="id_groups" multiple class="selectfilter" data-field-name="groups" data-is-stacked="0">
+    <select name="groups" data-context="available-source" aria-describedby="id_groups_helptext" id="id_groups" multiple class="selectfilter" data-field-name="groups" data-is-stacked="0">
   <option value="1">Editors</option>
 
 </select>
@@ -654,7 +780,7 @@
                                 
                                 
                                     <div class="related-widget-wrapper" data-model-ref="permission">
-    <select name="user_permissions" id="id_user_permissions" multiple class="selectfilter" data-field-name="user permissions" data-is-stacked="0">
+    <select name="user_permissions" data-context="available-source" aria-describedby="id_user_permissions_helptext" id="id_user_permissions" multiple class="selectfilter" data-field-name="user permissions" data-is-stacked="0">
   <option value="1">Administration | log entry | Can add log entry</option>
 
   <option value="2">Administration | log entry | Can change log entry</option>
@@ -776,11 +902,18 @@
             
         </div>
     
+    
 </fieldset>
 
 
-  <fieldset class="module aligned ">
-    <h2>Important dates</h2>
+
+  
+<fieldset class="module aligned " aria-labelledby="fieldset-0-important-dates-3-heading">
+    
+        
+        <h2 id="fieldset-0-important-dates-3-heading" class="fieldset-heading">Important dates</h2>
+        
+    
     
     
         <div class="form-row field-last_login">
@@ -839,7 +972,9 @@
             
         </div>
     
+    
 </fieldset>
+
 
 
 
@@ -891,9 +1026,9 @@
           <br class="clear">
         </div>
         <!-- END Content -->
-        <div id="footer"></div>
-      </div>
+      </main>
     </div>
+    <footer id="footer"></footer>
 </div>
 <!-- END Container -->
 
@@ -904,5 +1039,6 @@
   <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>
 </svg>
 <!-- END SVGs -->
+
 </body>
 </html>
