@@ -60,7 +60,7 @@
                 <a href="/django_admin_tests/v5.1/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/v5.1/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="upL9ZjkobWvPlo6R5vVWBshaCnNikDFJE0STT6XaI40x1tyFaXSRcPR7lR2VZJF6">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="WHwK409ldFRxSMbEm34RfzwYnyv0MVA7MaSvY5n9h1LBqvLs2IjHEXaAlUMwL81q">
                     <button type="submit">Log out</button>
                 </form>
                 
@@ -118,6 +118,13 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
         </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
         
           
             <tr class="model-group">
@@ -159,6 +166,13 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/flatpages/" class="section" title="Models in the Flat Pages application">Flat Pages</a>
         </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
         
           
             <tr class="model-flatpage">
@@ -184,6 +198,13 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/redirects/" class="section" title="Models in the Redirects application">Redirects</a>
         </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
         
           
             <tr class="model-redirect">
@@ -209,6 +230,13 @@
         <caption>
           <a href="/django_admin_tests/v5.1/english/admin/sites/" class="section" title="Models in the Sites application">Sites</a>
         </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
         
           
             <tr class="model-site">
@@ -632,26 +660,26 @@ It is {% now &quot;jS F Y H:i&quot; %}
 
     <hr>
     
-    <h3 id="built_in-query_string">query_string</h3>
+    <h3 id="built_in-querystring">querystring</h3>
     <h4>Add, remove, and change parameters of a QueryDict and return the result
 as a query string. If the query_dict argument is not provided, default
 to request.GET.
 </h4>
     <p>For example:</p>
 <pre class="literal-block">
-{% query_string foo=3 %}
+{% querystring foo=3 %}
 </pre>
 <p>To remove a key:</p>
 <pre class="literal-block">
-{% query_string foo=None %}
+{% querystring foo=None %}
 </pre>
 <p>To use with pagination:</p>
 <pre class="literal-block">
-{% query_string page=page_obj.next_page_number %}
+{% querystring page=page_obj.next_page_number %}
 </pre>
 <p>A custom <tt class="docutils literal">QueryDict</tt> can also be used:</p>
 <pre class="literal-block">
-{% query_string my_query_dict foo=3 %}
+{% querystring my_query_dict foo=3 %}
 </pre>
 
     <hr>
@@ -1494,7 +1522,7 @@ used within the block.</p>
     
         <li><a href="#built_in-now">now</a></li>
     
-        <li><a href="#built_in-query_string">query_string</a></li>
+        <li><a href="#built_in-querystring">querystring</a></li>
     
         <li><a href="#built_in-regroup">regroup</a></li>
     
@@ -1669,5 +1697,6 @@ used within the block.</p>
   <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>
 </svg>
 <!-- END SVGs -->
+
 </body>
 </html>
