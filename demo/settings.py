@@ -128,7 +128,9 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 SITE_ID = 1
 
 VERSION_NUMBERS = {
-    "v5.1": f"v{get_version()}",
+    "latest": f"v{get_version()}",
+    "v5.2": "v5.2",
+    "v5.1": "v5.1",
     "v5.0": "v5.0",
     "v4.2": "v4.2",
     "v4.1": "v4.1",

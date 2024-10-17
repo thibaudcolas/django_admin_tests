@@ -9,6 +9,7 @@ def variant_home(request):
         "demo/variant_home.html",
         {
             "version_number": settings.VERSION_NUMBER,
+            "version_label": settings.VERSION_NUMBERS[settings.VERSION_NUMBER],
             "variant": settings.VARIANT,
         }
     )

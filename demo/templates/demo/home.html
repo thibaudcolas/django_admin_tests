@@ -5,11 +5,14 @@
 {% block content %}
   <p>Welcome! Use this website to test the Django web framework’s UI elements across multiple releases, in particular the Django administration interface.</p>
   {% for version, version_label in version_numbers.items %}
-    <h2>{{ version_label }}</h2>
+    {% if version == "latest" %}
+    <h2>Latest: {{ version_label }}</h2>
     <ol>
       {% for variant in variants %}
         <li><a href="{{ version }}/{{ variant|lower }}/">{{ version }} - {{ variant }}</a></li>
       {% endfor %}
     </ol>
+    {% else %}
+    {% endif %}
   {% endfor %}
 {% endblock %}
