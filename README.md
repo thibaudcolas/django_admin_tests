@@ -94,7 +94,7 @@ View the latest Django admin HTML: <https://django-admin-tests.pages.dev/>
 For a specific pull request,
 
 1. View [available branches](https://github.com/thibaudcolas/django_admin_tests/branches).
-2. If there is a branch named `preview-<PR number>`, access its admin preview at `https://preview-< PR number >.django-admin-tests.pages.dev/django_admin_tests/v5.1/english/admin/`.
+2. If there is a branch named `preview-<PR number>`, access its admin preview at `https://preview-< PR number >.django-admin-tests.pages.dev/django_admin_tests/latest/english/admin/`.
 
 If you want to generate a preview for a specific pull request,
 

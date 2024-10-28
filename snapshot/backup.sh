@@ -7,7 +7,7 @@ HOST=$4
 COOKIES=cookies.txt
 
 if [ -z "$VERSION" ]; then
-  VERSION="v5.1"
+  VERSION="latest"
 fi
 if [ -z "$VARIANT" ]; then
   VARIANT="english"

@@ -36,7 +36,7 @@ jobs:
       - run: source .venv/bin/activate && ./manage.py runserver &
       - run: source .venv/bin/activate && ./manage.py collectstatic --noinput
       - run: ./snapshot/backup.sh || true
-      - run: cp -R ./static/* ./django_admin_tests/django_admin_tests/v5.1/english/static
+      - run: cp -R ./static/* ./django_admin_tests/django_admin_tests/latest/english/static
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
