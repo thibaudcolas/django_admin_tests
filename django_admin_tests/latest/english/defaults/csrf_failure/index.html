@@ -1,61 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home | Django admin tests</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="robots" content="NONE,NOARCHIVE">
+  <title>403 Forbidden</title>
+  <style>
+    html * { padding:0; margin:0; }
+    body * { padding:10px 20px; }
+    body * * { padding:0; }
+    body { font-family: sans-serif; background:#eee; color:#000; }
+    body>div { border-bottom:1px solid #ddd; }
+    h1 { font-weight:normal; margin-bottom:.4em; }
+    h1 span { font-size:60%; color:#666; font-weight:normal; }
+    #info { background:#f6f6f6; }
+    #info ul { margin: 0.5em 4em; }
+    #info p, #summary p { padding-top:10px; }
+    #summary { background: #ffc; }
+    #explanation { background:#eee; border-bottom: 0px none; }
+  </style>
 </head>
 <body>
-<main>
-  <h1>Django admin tests</h1>
-  
-  <p>Welcome! Use this website to test the Django web framework’s UI elements across multiple releases, in particular the Django administration interface.</p>
-  
-    
-    <h2>Latest: v5.2.dev20241030152157</h2>
-    <ol>
-      
-        <li><a href="latest/english/">latest - English</a></li>
-      
-        <li><a href="latest/german/">latest - German</a></li>
-      
-        <li><a href="latest/arabic/">latest - Arabic</a></li>
-      
-    </ol>
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
-    
-    
-  
+<div id="summary">
+  <h1>Forbidden <span>(403)</span></h1>
+  <p>CSRF verification failed. Request aborted.</p>
 
-</main>
+
+</div>
+
+<div id="info">
+  <h2>Help</h2>
+    
+
+  <p>In general, this can occur when there is a genuine Cross Site Request Forgery, or when
+  <a
+  href="https://docs.djangoproject.com/en/dev/ref/csrf/">Django’s
+  CSRF mechanism</a> has not been used correctly.  For POST forms, you need to
+  ensure:</p>
+
+  <ul>
+    <li>Your browser is accepting cookies.</li>
+
+    <li>The view function passes a <code>request</code> to the template’s <a
+    href="https://docs.djangoproject.com/en/dev/topics/templates/#django.template.backends.base.Template.render"><code>render</code></a>
+    method.</li>
+
+    <li>In the template, there is a <code>{% csrf_token
+    %}</code> template tag inside each POST form that
+    targets an internal URL.</li>
+
+    <li>If you are not using <code>CsrfViewMiddleware</code>, then you must use
+    <code>csrf_protect</code> on any views that use the <code>csrf_token</code>
+    template tag, as well as those that accept the POST data.</li>
+
+    <li>The form has a valid CSRF token. After logging in in another browser
+    tab or hitting the back button after a login, you may need to reload the
+    page with the form, because the token is rotated after a login.</li>
+  </ul>
+
+  <p>You’re seeing the help section of this page because you have <code>DEBUG =
+  True</code> in your Django settings file. Change that to <code>False</code>,
+  and only the initial error message will be displayed.  </p>
+
+  <p>You can customize this page using the CSRF_FAILURE_VIEW setting.</p>
+</div>
+
 
 
 <link rel="stylesheet" href="/django_admin_tests/latest/english/static/debug_toolbar/css/print.css" media="print">
@@ -66,7 +74,7 @@
 
 <div id="djDebug" class="djdt-hidden" dir="ltr"
      
-     data-store-id="f4e79f2d1ecf4c70a362f5d144287562"
+     data-store-id="de2b736769d0465482a9c7ce30ef5844"
      data-render-panel-url="/debug_toolbar/render_panel/"
      
      
@@ -136,7 +144,7 @@
   History
   
     
-      <br><small>/django_admin_tests/</small>
+      <br><small>/django_admin_tests/latest/english/defaults/csrf_failure/</small>
     
   
   
@@ -174,7 +182,7 @@
   Time
   
     
-      <br><small>CPU: 5.26ms (5.25ms)</small>
+      <br><small>CPU: 4.79ms (4.78ms)</small>
     
   
   
@@ -231,7 +239,7 @@
   Request
   
     
-      <br><small>home</small>
+      <br><small>csrf_failure</small>
     
   
   
@@ -283,12 +291,12 @@
 <li id="djdt-TemplatesPanel" class="djDebugPanelButton">
   <input type="checkbox" data-cookie="djdtTemplatesPanel" checked title="Disable for next and successive requests">
   
-    <a href="#" title="Templates (2 rendered)" class="TemplatesPanel">
+    <a href="#" title="Templates (1 rendered)" class="TemplatesPanel">
   
   Templates
   
     
-      <br><small>demo/home.html</small>
+      
     
   
   
@@ -543,7 +551,7 @@
   <div id="TemplatesPanel" class="djdt-panelContent djdt-hidden">
     <div class="djDebugPanelTitle">
       <button type="button" class="djDebugClose">×</button>
-      <h3>Templates (2 rendered)</h3>
+      <h3>Templates (1 rendered)</h3>
     </div>
     <div class="djDebugPanelContent">
       
