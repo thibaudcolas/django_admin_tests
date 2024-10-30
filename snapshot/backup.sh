@@ -20,7 +20,8 @@ if [ -z "$HOST" ]; then
 fi
 
 touch $COOKIES
-echo "localhost:8000	FALSE	/	FALSE	1729046818	auto_login	$USERNAME" > $COOKIES
+expiry_timestamp=$(($(date +%s) + 24 * 60 * 60))
+echo "localhost:8000	FALSE	/	FALSE	$expiry_timestamp	auto_login	$USERNAME" > $COOKIES
 
 
 wget --no-host-directories -P ./django_admin_tests --mirror --reject-regex "(.*)\?(.*)" --load-cookies $COOKIES $HOST/django_admin_tests/$VERSION/$VARIANT/
