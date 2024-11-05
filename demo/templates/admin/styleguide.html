@@ -1,0 +1,45 @@
+{% extends "admin/base_site.html" %}
+
+{% block branding %}
+<div id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></div>
+{% endblock %}
+
+{% block content %}
+    <h1>Styleguide</h1>
+    <h2>Messages</h2>
+    {% if messages %}
+        <ul class="messagelist">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message | safe }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <h2>Icons</h2>
+    <table>
+    <caption>All admin icons</caption>
+      <thead>
+          <tr>
+              <th scope="col">Visual</th>
+              <th scope="col">Name</th>
+              <th scope="col">Fill color</th>
+              <th scope="col">File path</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for item in icons %}
+              <tr style="--f: {{item.fill}}">
+                  <td>{{ item.contents | safe }}</td>
+                  <td><code>{{ item.filename }}</code></td>
+                  <td><code>{{ item.fill }}</code></td>
+                  <td style="color: var(--f);">
+                  <i style="background: var(--body-bg)">body-bg</i>
+                  <i style="background: var(--darkened-bg)">darkened-bg</i>
+                  <i style="background: var(--selected-bg)">selected-bg</i>
+                  <i style="background: var(--selected-row)">selected-row</i>
+                  </td>
+                  <td><code><a href="http://github.com/django/django/blob/main/django/contrib/admin/static/{{ item.path }}">{{ item.path }}</code></a></td>
+              </tr>
+          {% endfor %}
+      </tbody>
+    </table>
+{% endblock %}

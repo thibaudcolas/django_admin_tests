@@ -1,3 +1,5 @@
+import os
+import re
 from django.apps import apps
 from django.contrib import admin, messages
 from django.contrib.admin.models import LogEntry
@@ -8,6 +10,7 @@ from django.contrib.flatpages.models import FlatPage
 from django.contrib.redirects.models import Redirect
 from django.contrib.sessions.models import Session
 from django.contrib.sites.models import Site
+from django.contrib.staticfiles import finders
 from django.contrib.flatpages.admin import FlatPageAdmin
 from django.shortcuts import render
 from django.urls import path
@@ -21,20 +24,44 @@ class MyAdminSite(admin.AdminSite):
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [
-            path('test_messages/', self.test_messages, name='test_messages'),
+            path('styleguide/', self.styleguide, name='styleguide'),
         ]
         return custom_urls + urls
 
-    def test_messages(self, request):
-        # Here we trigger one message of each type
-        messages.add_message(request, messages.DEBUG, 'This is a debug message.')
-        messages.add_message(request, messages.INFO, 'This is an info message.')
-        messages.add_message(request, messages.SUCCESS, 'This is a success message.')
-        messages.add_message(request, messages.WARNING, 'This is a warning message.')
-        messages.add_message(request, messages.ERROR, 'This is an error message.')
+    def styleguide(self, request):
+        messages.set_level(request, messages.DEBUG)
+
+        message_types = {
+            messages.DEBUG: {"color": "#70bf2b", "type": "debug"},
+            messages.INFO: {"color": "#70bf2b", "type": "info"},
+            messages.SUCCESS: {"color": "#70bf2b", "type": "success"},
+            messages.WARNING: {"color": "#efb80b", "type": "warning"},
+            messages.ERROR: {"color": "#dd4646", "type": "error"},
+        }
+        for level, msg in message_types.items():
+            messages.add_message(request, level, f'This is a {msg["type"]} message <span style="color: {msg["color"]}; background-color: var(--message-{msg["type"]}-bg)">Contrast</span>.')
+
+        icons = []
+        for finder in finders.get_finders():
+            for path, storage in finder.list([]):
+                if path.endswith('.svg'):
+                    with storage.open(path) as file:
+                        svg = file.read().decode('utf-8')
+
+                        icons.append({
+                            "filename": os.path.basename(path)[:-4],
+                            "path": path,
+                            "contents": svg,
+                            # Extract the first fill color from the SVG
+                            "fill": re.search(r'fill="([^"]+)"', svg).group(1)
+                        })
 
         # Redirect to the model's admin change list
-        return render(request, "admin/test_messages.html", {})
+        return render(request, "admin/styleguide.html", {
+            "icons": icons,
+            "has_permission": True,
+        })
+
 
 
 admin_site = MyAdminSite(name="myadmin")

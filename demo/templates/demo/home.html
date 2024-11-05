@@ -9,7 +9,7 @@
     <h2>Latest: {{ version_label }}</h2>
     <ol>
       {% for variant in variants %}
-        <li><a href="{{ version }}/{{ variant|lower }}/">{{ version }} - {{ variant }}</a></li>
+        <li><a href="/django_admin_tests/{{ version }}/{{ variant|lower }}/">{{ version }} - {{ variant }}</a></li>
       {% endfor %}
     </ol>
     {% else %}
