@@ -121,9 +121,9 @@ class ExampleForm(forms.Form):
 
     # SlugField
 
-    regex_required = forms.RegexField(regex="\w", help_text="regex required field’s help text", required=True)
-    regex_optional = forms.RegexField(regex="\w", help_text="regex optional field’s help text", required=False)
-    regex_disabled = forms.RegexField(regex="\w", help_text="regex disabled field’s help text", disabled=True)
+    regex_required = forms.RegexField(regex="\\w", help_text="regex required field’s help text", required=True)
+    regex_optional = forms.RegexField(regex="\\w", help_text="regex optional field’s help text", required=False)
+    regex_disabled = forms.RegexField(regex="\\w", help_text="regex disabled field’s help text", disabled=True)
 
     slug_required = forms.SlugField(help_text="slug required field’s help text", required=True)
     slug_optional = forms.SlugField(help_text="slug optional field’s help text", required=False)
