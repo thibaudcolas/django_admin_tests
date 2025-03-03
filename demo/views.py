@@ -3,6 +3,7 @@ from django.conf import settings
 
 from .forms import ExampleForm
 
+
 def variant_home(request):
     return render(
         request,
@@ -11,8 +12,9 @@ def variant_home(request):
             "version_number": settings.VERSION_NUMBER,
             "version_label": settings.VERSION_NUMBERS[settings.VERSION_NUMBER],
             "variant": settings.VARIANT,
-        }
+        },
     )
+
 
 def example_form(request, as_type="div"):
     if request.method == "POST":
@@ -26,3 +28,7 @@ def example_form(request, as_type="div"):
         "demo/example_form.html",
         {"form": form, "as_type": as_type},
     )
+
+
+def redirect_to_admin(request):
+    return redirect("admin:index")

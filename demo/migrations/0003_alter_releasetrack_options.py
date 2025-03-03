@@ -4,14 +4,13 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('demo', '0001_initial'),
+        ("demo", "0002_help_text"),
     ]
 
     operations = [
         migrations.AlterModelOptions(
-            name='releasetrack',
-            options={'ordering': ['release', 'track_number']},
+            name="releasetrack",
+            options={"ordering": ["release", "track_number"]},
         ),
     ]

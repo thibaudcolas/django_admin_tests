@@ -18,13 +18,14 @@ from django.utils.version import get_version
 
 from demo.models import Artist, Release, ReleaseTrack, Track
 
+
 class MyAdminSite(admin.AdminSite):
     site_header = f"Django administration {get_version()}"
 
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [
-            path('styleguide/', self.styleguide, name='styleguide'),
+            path("styleguide/", self.styleguide, name="styleguide"),
         ]
         return custom_urls + urls
 
@@ -39,29 +40,38 @@ class MyAdminSite(admin.AdminSite):
             messages.ERROR: {"color": "#dd4646", "type": "error"},
         }
         for level, msg in message_types.items():
-            messages.add_message(request, level, f'This is a {msg["type"]} message <span style="color: {msg["color"]}; background-color: var(--message-{msg["type"]}-bg)">Contrast</span>.')
+            messages.add_message(
+                request,
+                level,
+                f'This is a {msg["type"]} message <span style="color: {msg["color"]}; background-color: var(--message-{msg["type"]}-bg)">Contrast</span>.',
+            )
 
         icons = []
         for finder in finders.get_finders():
             for path, storage in finder.list([]):
-                if path.endswith('.svg'):
+                if path.endswith(".svg"):
                     with storage.open(path) as file:
-                        svg = file.read().decode('utf-8')
+                        svg = file.read().decode("utf-8")
 
-                        icons.append({
-                            "filename": os.path.basename(path)[:-4],
-                            "path": path,
-                            "contents": svg,
-                            # Extract the first fill color from the SVG
-                            "fill": re.search(r'fill="([^"]+)"', svg).group(1)
-                        })
+                        icons.append(
+                            {
+                                "filename": os.path.basename(path)[:-4],
+                                "path": path,
+                                "contents": svg,
+                                # Extract the first fill color from the SVG
+                                "fill": re.search(r'fill="([^"]+)"', svg).group(1),
+                            }
+                        )
 
         # Redirect to the model's admin change list
-        return render(request, "admin/styleguide.html", {
-            "icons": icons,
-            "has_permission": True,
-        })
-
+        return render(
+            request,
+            "admin/styleguide.html",
+            {
+                "icons": icons,
+                "has_permission": True,
+            },
+        )
 
 
 admin_site = MyAdminSite(name="myadmin")
@@ -82,6 +92,7 @@ class ReleaseInline(admin.StackedInline):
 
 
 class ReleaseTrackInline(admin.TabularInline):
+    autocomplete_fields = ["track"]
     fields = ["track_number", "track"]
     model = ReleaseTrack
 
@@ -96,12 +107,12 @@ class ArtistAdmin(admin.ModelAdmin):
 
 @admin.register(Release, site=admin_site)
 class ReleaseAdmin(admin.ModelAdmin):
-    autocomplete_fields = ["artist"]
     date_hierarchy = "release_date"
     inlines = [ReleaseTrackInline]
     list_display = ["title", "artist", "type", "release_date"]
     list_editable = ["type", "release_date"]
     list_filter = ["type"]
+    raw_id_fields = ["artist"]
     readonly_fields = ["id"]
     search_fields = ["title", "artist__name"]
     list_per_page = 100

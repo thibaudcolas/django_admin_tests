@@ -49,6 +49,7 @@ MIDDLEWARE = [
     "demo.middleware.AutoLoginMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
 ]
 
 ROOT_URLCONF = "demo.urls"
@@ -154,7 +155,7 @@ VARIANT = os.environ.get("VARIANT", VARIANTS[0])
 DATA_UPLOAD_MAX_NUMBER_FIELDS = 1200
 
 DEBUG_TOOLBAR_CONFIG = {
-    'SHOW_TOOLBAR_CALLBACK': lambda request: "admin/" not in request.path,
+    "SHOW_TOOLBAR_CALLBACK": lambda request: "admin/" not in request.path,
 }
 
 
