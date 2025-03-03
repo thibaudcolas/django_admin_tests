@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
 <title>Password change | Django site admin</title>
 <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/base.css">
@@ -34,7 +34,7 @@
       <header id="header">
         <div id="branding">
         
-<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration 5.2.dev20241209084606</a></div>
+<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration 6.0.dev20250303103700</a></div>
 
 
         </div>
@@ -46,9 +46,9 @@
                 <strong>admin</strong>.
             
             
-  <a href="/django_admin_tests/latest/english/admin/doc/">Documentation</a> /  Change password /
+  <a href="/en/admin/doc/">Documentation</a> /  Change password /
   <form id="logout-form" method="post" action="/django_admin_tests/latest/english/admin/logout/">
-    <input type="hidden" name="csrfmiddlewaretoken" value="EdTf5e6gxSVdPtyxkFEmaj3EVDRy47tcRxo3FUCg7e5DCbm83VE5ANEIS3UkPd6C">
+    <input type="hidden" name="csrfmiddlewaretoken" value="eImG07l48JrP0bl2HIIQ6Mqaolna9I5cXSfycVYkoeKroleJRNNLDS0YlX3XFjEn">
     <button type="submit">Log out</button>
   </form>
   
@@ -452,9 +452,10 @@
           
           <h1>Password change</h1>
           
+          
           <div id="content-main">
 
-<form method="post"><input type="hidden" name="csrfmiddlewaretoken" value="EdTf5e6gxSVdPtyxkFEmaj3EVDRy47tcRxo3FUCg7e5DCbm83VE5ANEIS3UkPd6C">
+<form method="post"><input type="hidden" name="csrfmiddlewaretoken" value="eImG07l48JrP0bl2HIIQ6Mqaolna9I5cXSfycVYkoeKroleJRNNLDS0YlX3XFjEn">
 <div>
 
 
@@ -470,13 +471,13 @@
 
 <div class="form-row">
     
-    <div class="flex-container"><label for="id_new_password1">New password:</label> <input type="password" name="new_password1" autocomplete="new-password" id="id_new_password1"></div>
+    <div class="flex-container"><label for="id_new_password1" class="required">New password:</label> <input type="password" name="new_password1" autocomplete="new-password" required id="id_new_password1"></div>
     
 </div>
 
 <div class="form-row">
     
-    <div class="flex-container"><label for="id_new_password2">New password confirmation:</label> <input type="password" name="new_password2" autocomplete="new-password" aria-describedby="id_new_password2_helptext" id="id_new_password2"></div>
+    <div class="flex-container"><label for="id_new_password2" class="required">New password confirmation:</label> <input type="password" name="new_password2" autocomplete="new-password" required aria-describedby="id_new_password2_helptext" id="id_new_password2"></div>
     
     <div class="help" id="id_new_password2_helptext">Enter the same password as before, for verification.</div>
     

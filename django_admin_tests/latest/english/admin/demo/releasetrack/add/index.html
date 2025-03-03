@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
 <title>Add release track | Django site admin</title>
 <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/base.css">
@@ -49,7 +49,7 @@
       <header id="header">
         <div id="branding">
         
-<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration 5.2.dev20241209084606</a></div>
+<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration 6.0.dev20250303103700</a></div>
 
 
         </div>
@@ -67,14 +67,14 @@
                 
                     
                     
-                        <a href="/django_admin_tests/latest/english/admin/doc/">Documentation</a> /
+                        <a href="/en/admin/doc/">Documentation</a> /
                     
                 
                 
                 <a href="/django_admin_tests/latest/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/latest/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="tUBsCIA46L0D03WE90oP64s5Lt1po37VRvewP7dAQumu808H9quVQBNMiCVMNBBW">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="mZEhqG2wxQWK1wjqnSIkE9dP6HrzF1Ih59x9CuFMNlfmpGc7xXNfbfND3j7mbChs">
                     <button type="submit">Log out</button>
                 </form>
                 
@@ -480,11 +480,11 @@
           
           <h1>Add release track</h1>
           
+
+
+          
           <div id="content-main">
-
-
-
-<form method="post" id="releasetrack_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="tUBsCIA46L0D03WE90oP64s5Lt1po37VRvewP7dAQumu808H9quVQBNMiCVMNBBW">
+<form method="post" id="releasetrack_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="mZEhqG2wxQWK1wjqnSIkE9dP6HrzF1Ih59x9CuFMNlfmpGc7xXNfbfND3j7mbChs">
 <div>
 
 
@@ -540,7 +540,7 @@
                                 <label class="required" for="id_track">Track:</label>
                                 
                                     <div class="related-widget-wrapper" data-model-ref="track">
-    <select name="track" required id="id_track" class="admin-autocomplete" data-ajax--cache="true" data-ajax--delay="250" data-ajax--type="GET" data-ajax--url="/django_admin_tests/latest/english/admin/autocomplete/" data-app-label="demo" data-model-name="releasetrack" data-field-name="track" data-theme="admin-autocomplete" data-allow-clear="false" data-placeholder="" lang="en">
+    <select name="track" required aria-describedby="id_track_helptext" id="id_track" class="admin-autocomplete" data-ajax--cache="true" data-ajax--delay="250" data-ajax--type="GET" data-ajax--url="/django_admin_tests/latest/english/admin/autocomplete/" data-app-label="demo" data-model-name="releasetrack" data-field-name="track" data-theme="admin-autocomplete" data-allow-clear="false" data-placeholder="" lang="en">
 </select>
     
         <a class="related-widget-wrapper-link change-related" id="change_id_track"
@@ -558,6 +558,10 @@
                             
                         </div>
                     
+                        <div class="help" id="id_track_helptext">
+                            <div>There may be multiple versions of a track with the same name.</div>
+                        </div>
+                    
                 </div>
             
             
@@ -572,9 +576,13 @@
                             
                                 <label class="required" for="id_track_number">Track number:</label>
                                 
-                                    <input type="number" name="track_number" class="vIntegerField" min="0" required id="id_track_number">
+                                    <input type="number" name="track_number" class="vIntegerField" min="0" required aria-describedby="id_track_number_helptext" id="id_track_number">
                                 
                             
+                        </div>
+                    
+                        <div class="help" id="id_track_number_helptext">
+                            <div>The first track is 1, not 0.</div>
                         </div>
                     
                 </div>

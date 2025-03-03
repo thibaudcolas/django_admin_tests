@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en-us" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
 <title>Boards of Canada - XYZ | Change release | Django site admin</title>
 <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/base.css">
@@ -24,8 +24,8 @@
 <script src="/django_admin_tests/latest/english/static/admin/js/vendor/select2/i18n/en.js"></script>
 <script src="/django_admin_tests/latest/english/static/admin/js/jquery.init.js"></script>
 <script src="/django_admin_tests/latest/english/static/admin/js/core.js"></script>
-<script src="/django_admin_tests/latest/english/static/admin/js/autocomplete.js"></script>
 <script src="/django_admin_tests/latest/english/static/admin/js/inlines.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/autocomplete.js"></script>
 <script src="/django_admin_tests/latest/english/static/admin/js/admin/RelatedObjectLookups.js"></script>
 <script src="/django_admin_tests/latest/english/static/admin/js/actions.js"></script>
 <script src="/django_admin_tests/latest/english/static/admin/js/urlify.js"></script>
@@ -52,7 +52,7 @@
       <header id="header">
         <div id="branding">
         
-<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration 5.2.dev20241209084606</a></div>
+<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration 6.0.dev20250303103700</a></div>
 
 
         </div>
@@ -70,14 +70,14 @@
                 
                     
                     
-                        <a href="/django_admin_tests/latest/english/admin/doc/">Documentation</a> /
+                        <a href="/en/admin/doc/">Documentation</a> /
                     
                 
                 
                 <a href="/django_admin_tests/latest/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/latest/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="FXqC9nLq6nBOG8oOHXhWybpYULaFg2P25GYE7cAonB5AhlQRSjz5g4wrM9H25BXx">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="urR8fK9DwCgO5QFDa0IKbaxYKPfJQGkozPemvMICsqJWY3q529z5bevSjq8eNKiB">
                     <button type="submit">Log out</button>
                 </form>
                 
@@ -482,9 +482,7 @@
         <div id="content" class="colM">
           
           <h1>Change release</h1>
-          <h2>Boards of Canada - XYZ</h2>
-          <div id="content-main">
-
+          
 
   <ul class="object-tools">
     
@@ -501,7 +499,9 @@
   </ul>
 
 
-<form method="post" id="release_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="FXqC9nLq6nBOG8oOHXhWybpYULaFg2P25GYE7cAonB5AhlQRSjz5g4wrM9H25BXx">
+          <h2>Boards of Canada - XYZ</h2>
+          <div id="content-main">
+<form method="post" id="release_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="urR8fK9DwCgO5QFDa0IKbaxYKPfJQGkozPemvMICsqJWY3q529z5bevSjq8eNKiB">
 <div>
 
 
@@ -523,23 +523,9 @@
                             
                                 <label class="required" for="id_artist">Artist:</label>
                                 
-                                    <div class="related-widget-wrapper" data-model-ref="artist">
-    <select name="artist" required id="id_artist" class="admin-autocomplete" data-ajax--cache="true" data-ajax--delay="250" data-ajax--type="GET" data-ajax--url="/django_admin_tests/latest/english/admin/autocomplete/" data-app-label="demo" data-model-name="release" data-field-name="artist" data-theme="admin-autocomplete" data-allow-clear="false" data-placeholder="" lang="en">
-  <option value="2VAvhf61GgLYmC6C8anyX1" selected>Boards of Canada</option>
-
-</select>
-    
-        <a class="related-widget-wrapper-link change-related" id="change_id_artist"
-            data-href-template="/django_admin_tests/latest/english/admin/demo/artist/__fk__/change/?_to_field=id&amp;_popup=1"
-            data-popup="yes"
-            title="Change selected artist"><img src="/django_admin_tests/latest/english/static/admin/img/icon-changelink.svg" alt="" width="24" height="24"></a><a class="related-widget-wrapper-link add-related" id="add_id_artist"
-            data-popup="yes"
-            href="/django_admin_tests/latest/english/admin/demo/artist/add/?_to_field=id&amp;_popup=1"
-            title="Add another artist"><img src="/django_admin_tests/latest/english/static/admin/img/icon-addlink.svg" alt="" width="24" height="24"></a><a class="related-widget-wrapper-link view-related" id="view_id_artist"
-             data-href-template="/django_admin_tests/latest/english/admin/demo/artist/__fk__/change/?_to_field=id"
-             title="View selected artist"><img src="/django_admin_tests/latest/english/static/admin/img/icon-viewlink.svg" alt="" width="24" height="24"></a>
-    
-</div>
+                                    <div><input type="text" name="artist" value="2VAvhf61GgLYmC6C8anyX1" required id="id_artist" class="vForeignKeyRawIdAdminField">
+<a href="/django_admin_tests/latest/english/admin/demo/artist/?_to_field=id" class="related-lookup" id="lookup_id_artist" title="Lookup"></a>
+<strong><a href="/django_admin_tests/latest/english/admin/demo/artist/2VAvhf61GgLYmC6C8anyX1/change/">Boards of Canada</a></strong></div>
                                 
                             
                         </div>
@@ -668,11 +654,11 @@
        <th class="original"></th>
      
        <th class="column-track_number required">Track number
-       
+       <img src="/django_admin_tests/latest/english/static/admin/img/icon-unknown.svg" class="help help-tooltip" width="10" height="10" alt="(The first track is 1, not 0.)" title="The first track is 1, not 0.">
        </th>
      
        <th class="column-track required">Track
-       
+       <img src="/django_admin_tests/latest/english/static/admin/img/icon-unknown.svg" class="help help-tooltip" width="10" height="10" alt="(There may be multiple versions of a track with the same name.)" title="There may be multiple versions of a track with the same name.">
        </th>
      
      <th>Delete?</th>
@@ -700,7 +686,7 @@
               <td class="field-track_number">
               
                   
-                  <input type="number" name="releasetrack_set-0-track_number" value="5" class="vIntegerField" min="0" id="id_releasetrack_set-0-track_number">
+                  <input type="number" name="releasetrack_set-0-track_number" value="5" class="vIntegerField" min="0" aria-describedby="id_releasetrack_set-0-track_number_helptext" id="id_releasetrack_set-0-track_number">
               
               </td>
             
@@ -710,270 +696,8 @@
               
                   
                   <div class="related-widget-wrapper" data-model-ref="track">
-    <select name="releasetrack_set-0-track" data-context="available-source" id="id_releasetrack_set-0-track">
-  <option value="">---------</option>
-
-  <option value="0Ahl2jyiXAlO91FikWr93U">Cities - Live 1982</option>
-
+    <select name="releasetrack_set-0-track" aria-describedby="id_releasetrack_set-0-track_helptext" id="id_releasetrack_set-0-track" class="admin-autocomplete" data-ajax--cache="true" data-ajax--delay="250" data-ajax--type="GET" data-ajax--url="/django_admin_tests/latest/english/admin/autocomplete/" data-app-label="demo" data-model-name="releasetrack" data-field-name="track" data-theme="admin-autocomplete" data-allow-clear="false" data-placeholder="" lang="en">
   <option value="02zsC4LkWqvXSMS3A49lvF" selected>Psycho Killer (Live) - Remastered</option>
-
-  <option value="0CPyOvNYuhQ5xpVjbQQpqf">New Feeling - Alternate Version; 2003 Remaster</option>
-
-  <option value="0Cpr1EducaySYlY8MGJllG">Democratic Circus</option>
-
-  <option value="05eaIeCrkwpg5baqqL7Yqc">Mommy Daddy You and I</option>
-
-  <option value="0C6yB068XgDCrJDKt9jR3u">Papa Legba - 2005 Remaster</option>
-
-  <option value="02eyUrxu8saTFZoxzNHtHz">Television Man - 2005 Remaster</option>
-
-  <option value="03HUTPHpK8CJkBlIXTNvVL">The Lady Don&#x27;t Mind - 2005 Remaster</option>
-
-  <option value="0E3gdEF4z9cBFfFqA7i72k">Thank You for Sending Me an Angel - Live</option>
-
-  <option value="0CS31HRSJOKSkFRwJKhRU0">Making Flippy Floppy - Live</option>
-
-  <option value="019KRrap2TW8ASDAWbe6OU">Once in a Lifetime - Live</option>
-
-  <option value="04xgGiUefNOWhtcQQx5Kzg">Electric Guitar - 2005 Remaster</option>
-
-  <option value="0APSPe5gAJdPsZT0j3yER0">Under the Westway / Intermission - Live</option>
-
-  <option value="0DkdBihKubGqDoRB4kNlB2">Bad Head - Live in Hyde Park, London 3/7/09</option>
-
-  <option value="074k75OTaQRJfxvzKPKKTd">Beetlebum - Live in Hyde Park, London 3/7/09</option>
-
-  <option value="0DICm5ML6Kee7kAiwFGjbd">Ambulance</option>
-
-  <option value="08xT4sXJotusp2N09mwDt6">We&#x27;ve Got a File on You</option>
-
-  <option value="0EU6OwP92MyNhnvK3BC0NF">Caravan</option>
-
-  <option value="01fSXBxjBbkAJ193kfUoUc">Trimm Trabb</option>
-
-  <option value="05SEo3GMZSrYo8nQC28B0m">Optigan I</option>
-
-  <option value="0DrVgi8rW7gS2SRw9p62Kk">Top Man - 2012 Remaster</option>
-
-  <option value="08l0WDhkcMNh0fGxK6d8ig">Charmless Man - 2012 Remaster</option>
-
-  <option value="00wsE7sEhzBkDOHtt9aTLA">Djangology</option>
-
-  <option value="00sc8VZSYUTWEE3muf0ZxL">Taj Mahal</option>
-
-  <option value="05MFbS192zBQEOYnwvj0OP">Ol&#x27; Man River</option>
-
-  <option value="07HSvLZoOfCQJm2JrnHdaR">Liza</option>
-
-  <option value="03aSUSfxbFM7kGy00wDYJW">Japanese Sandman</option>
-
-  <option value="05ddOKhGbErFGHi6ReLqWh">Anniversary Song</option>
-
-  <option value="04goZSIbgZ7kLzab80aB0m">Lily belle may june</option>
-
-  <option value="08O5ZtaMtqfxS1SkrVvxEF">Moten Swing</option>
-
-  <option value="06TnfQbJvlupI8hOp3H0DL">Nuages</option>
-
-  <option value="02tSxBM8HyQSiMNG0C6CIq">Russian Songs Medley</option>
-
-  <option value="02djT73OSKx92keMProZjh">Gipsy With A Song</option>
-
-  <option value="02FQNxYmxFf9Yhg5HIhmDj">How High the Moon</option>
-
-  <option value="04W6LcbcR35cBYZxpFXlvT">Still am Tresen</option>
-
-  <option value="0Cr5EEtfVAWki34BRHc8P5">Mitleid Lady</option>
-
-  <option value="0Ct1tF91916p8pksWHbSl3">Gore Motel</option>
-
-  <option value="03k33F3NbrVk5iAtSvAFH0">Bbydhyonchord</option>
-
-  <option value="01x8CrGhRGd3annktbFbyz">Taking Control</option>
-
-  <option value="0CjC2iwz3fOHyC8MMfMUUt">Fingerbib</option>
-
-  <option value="00wT7HAtqZ2BnemrR34vbO">4</option>
-
-  <option value="0BShm4IqnSq5t13VOmP5AK">Carn Marth</option>
-
-  <option value="0BHE7cwodOlQ8ctYFK8NzO">Wet Tip Hen Ax</option>
-
-  <option value="00rqHqrLS3ZZCqRLsMSPXs">#11</option>
-
-  <option value="0EF2mNCpYwYZIdgJxAU31D">#18</option>
-
-  <option value="09opLVMX7cfKVKlP3iKZR1">Heliosphan</option>
-
-  <option value="0EK8vqmwSCqY5b7CemNc9I">Hedphelym</option>
-
-  <option value="06oElHjFe4jKv71Mgn8M06">Wonderful</option>
-
-  <option value="02ZbFADUWks6sfXxUGEuc7">Out-Side</option>
-
-  <option value="02Z9s5rWwBQNpVwJXvhXnA">Monolith</option>
-
-  <option value="0AEU24pccziELaOeMjZZBY">Ataronchronon</option>
-
-  <option value="0CxVbDRosOWSTJLoEpjQ48">Slow This Bird Down</option>
-
-  <option value="06v3SszX1ged7THW2H4jXB">Iced Cooly</option>
-
-  <option value="0015jQDZIIhkb8vgmx3GXp">Twoism</option>
-
-  <option value="09U7vMWR3zFSpA7Ruye2rw">In The Annexe</option>
-
-  <option value="06CUHGTggjdXLSZQQWN06Y">Opening The Mouth</option>
-
-  <option value="03zv0Znm7bA7XzWMZ1lEKO">An Eagle In Your Mind</option>
-
-  <option value="0AV4LKffb2pRsQCzZSSgzj">XYZ - Peel Session</option>
-
-  <option value="0AuiARc611uMh8Bf9dYbC9">Cinnabar</option>
-
-  <option value="02f2O7TcJVH1mEXzK8I53B">Vermilion</option>
-
-  <option value="0C8tw0sO1aOWTGO2OyFVRn">Cinnabar</option>
-
-  <option value="08TeWlLF8Gq62uz00hILul">Flower Bells</option>
-
-  <option value="09efiqoUP7d42iLcilgX8J">Fickle Sun (iii) I&#x27;m Set Free</option>
-
-  <option value="0B4MhV1Q06IJCzBgUZWiGm">Mother Of A Dog</option>
-
-  <option value="01feO92v0mESERkMGWdOxv">LUX 2</option>
-
-  <option value="00pYSjdvLOlCVMpK0rRYbZ">Sometimes in Autumn - MIT Mix</option>
-
-  <option value="0BI74OnbHS27hSnPYmLz1a">&quot;Granmon&quot;</option>
-
-  <option value="04UCvvXP2OulSRl0QLfK4Q">The Maze - Remastered</option>
-
-  <option value="07BxazIQrCFUS08S6fhGVm">Riot - Alternate Take1 / Remastered</option>
-
-  <option value="02Ma3Y0oxEfBDEfJj4EhMg">My Man&#x27;s Gone Now</option>
-
-  <option value="02K1WMHij5DHHakqfQhd7i">Raging Lung (Shaken-Up Live Version)</option>
-
-  <option value="04MoqQqgwVBNABuyCecucU">One Hit (Shaken-Up Live Version)</option>
-
-  <option value="030F8OCADpoCuSaTlb1ijc">Ready to Lose (Shaken-Up Live Version)</option>
-
-  <option value="0AuaydTSWVjpOhTnNySdXf">Raging Lung</option>
-
-  <option value="06hX6tlRVS2FwT4BeCPe3n">Networking</option>
-
-  <option value="08jk6PRaAJCZW161YKzISH">Ebb Tide Explorer</option>
-
-  <option value="09TQuLpem6iC9kuXU7opE0">Colouring of Pigeons</option>
-
-  <option value="017juRbAM30oWIpFedaZ2G">Seeds</option>
-
-  <option value="0EDSYTPGZfzm9LIONtVqme">Kino - Live</option>
-
-  <option value="0DLzR8ajItjcRtwuuG2W57">The Hall of Mirrors</option>
-
-  <option value="06wDu9e2m1ChROku6i2uqP">The Man Machine</option>
-
-  <option value="04WRVeFNEgvReleafQTd0d">Metall Auf Metall - Live</option>
-
-  <option value="09b1lpnsBkPvOSNwTT3CSV">Chrono - 2009 Remaster</option>
-
-  <option value="0DejBM5F1G2qjY3mw58OAr">Schaufensterpuppen - 2009 Remaster</option>
-
-  <option value="0CVzimInysodNtHPzULDiX">&#x27;90 aka A Man Like Me</option>
-
-  <option value="0DiQnis3FPXZLLU0fqDAD6">Rong</option>
-
-  <option value="03FFeubTclD92RZlEyyOQh">Intro - Comentarios</option>
-
-  <option value="08CXTt3OoHrrr63TYwxreb">Coup De Grace</option>
-
-  <option value="0AP5q9egIPuAmolgXa6C0B">Vision One</option>
-
-  <option value="0BHZMdDIa2lrmEaG0Ds09u">Clear The Area - Instrumental</option>
-
-  <option value="08bpgIMYtGJDKyLR9z2JoI">Lifeline - Instrumental</option>
-
-  <option value="03j9lrCJxtlSpga2CvgJWh">Climb to Sakteng - Instrumental</option>
-
-  <option value="045TagDpGdmMMWA9KwbeTd">About Minds Without Fear - Track Commentary</option>
-
-  <option value="00UjQjh4BcTyjqsZYRm0AP">Me The Machine (Instrumental)</option>
-
-  <option value="09XOG8iMrDrfpcTLiLnRV6">Tidal</option>
-
-  <option value="08kehe33kT0eBVRVz147Zj">Clear the Area</option>
-
-  <option value="01aEmdBEsL5CI4V8JF7QOM">Sleep</option>
-
-  <option value="07ulUcPBk32xgyim8UuCj7">Angry Angel</option>
-
-  <option value="0AhmWTJET3nBmVflLFFTcf">Rake It In</option>
-
-  <option value="0Dy6w8F4J1YJczzZLF2hh6">Good Stuff - Live</option>
-
-  <option value="00lOR0RdiaA5WtlIoFTeoP">Devil In My Car (Live) - Remastered</option>
-
-  <option value="06zeXiplaF7yacfXe8Lj4x">Legal Tender - Live</option>
-
-  <option value="07WKpF5QcG4IDOKVR5bqH3">Love in the Year 3000 - Live</option>
-
-  <option value="02ss5jD7GFX5xtICZkvSsS">Cosmic Thing - Live</option>
-
-  <option value="09jbecZurPNzGIduEmWBzL">Juliet Of The Spirits</option>
-
-  <option value="0BtuAAy3dyumm49hgUQtVa">Private Idaho - Live At The Roxy</option>
-
-  <option value="0CfNBzVVTnnHs3ZGbhcNjl">Ultraviolet</option>
-
-  <option value="06IoX89tXQB78NB3lZax4L">Eyes Wide Open</option>
-
-  <option value="0EEP9AVw5LaxcULtHml9MJ">Tell It Like It T-I-IS</option>
-
-  <option value="0EHVdXicUaZgezWmzHc7iy">Congratulations</option>
-
-  <option value="02bJJcfBVSvlczPgYPPzHt">There Will Be No Intermission</option>
-
-  <option value="05AB6iekUzhkKVjdmFUxmi">Trout Heart Replica</option>
-
-  <option value="09m8aC8aMuZXThPn6HNoQq">Olly Olly Oxen Free</option>
-
-  <option value="0Aryhqy6CeSYwuLVTfxG3r">Wynken, Blynken and Nod - Commentary</option>
-
-  <option value="0Bwop9xzBby2qhHSnmASNN">You Got Me Singing</option>
-
-  <option value="0DWpAU5UtoLDuHTSa8ja3L">Poem for Amanda (By Neil)</option>
-
-  <option value="05EKtTB9YQfEYEOei4n2pk">I Will Write In Words Of Fire</option>
-
-  <option value="06zEgXY68PsrlzH0R5nwd2">(Introduction to Dear Old House)</option>
-
-  <option value="01TQrsAzYm8XRsHzyC4kA9">(Introduction to Gaga, Palmer, Madonna; a Polemic)</option>
-
-  <option value="03gqhhAw5Jq5viahk5iQjS">(Introduction to Dear Old House)</option>
-
-  <option value="05r2beyZaflCMwjzcEOE8b">The Bed Song</option>
-
-  <option value="0DUrC21pi6FtyooX9mG35S">Melody Dean</option>
-
-  <option value="04IpfKEfXrHcBseT7yPDNe">The Killing Type</option>
-
-  <option value="06ujWmuWfkEYRIWKZoVcKu">Flugufrelsarinn</option>
-
-  <option value="00T0hEW35DAH54xQvaXeen">The Hungry Ghosts, We Live in an Old Chaos of the Sun</option>
-
-  <option value="0668cUBGpB6bhdvIzGlZId">All Mapped Out</option>
-
-  <option value="0Bf2oQ9ItFg825Bh14vUe1">End</option>
-
-  <option value="0E1kjLjtx5bhiXufhe33i6">Route One 005</option>
-
-  <option value="0Ahb9Zi7UeHTjY0U8rLM4o">Route One 011</option>
-
-  <option value="07tG3uSvWOlg5febou8YmZ">Route One 038</option>
-
-  <option value="08KvkSMJjJOMKj3WqW4iZJ">Brennisteinn - Live</option>
 
 </select>
     
@@ -993,9 +717,7 @@
             
           
         
-        
-          <td class="delete"><input type="checkbox" name="releasetrack_set-0-DELETE" id="id_releasetrack_set-0-DELETE"></td>
-        
+        <td class="delete"><input type="checkbox" name="releasetrack_set-0-DELETE" id="id_releasetrack_set-0-DELETE"></td>
         </tr>
      
         
@@ -1012,7 +734,7 @@
               <td class="field-track_number">
               
                   
-                  <input type="number" name="releasetrack_set-1-track_number" class="vIntegerField" min="0" id="id_releasetrack_set-1-track_number">
+                  <input type="number" name="releasetrack_set-1-track_number" class="vIntegerField" min="0" aria-describedby="id_releasetrack_set-1-track_number_helptext" id="id_releasetrack_set-1-track_number">
               
               </td>
             
@@ -1022,271 +744,7 @@
               
                   
                   <div class="related-widget-wrapper" data-model-ref="track">
-    <select name="releasetrack_set-1-track" data-context="available-source" id="id_releasetrack_set-1-track">
-  <option value="" selected>---------</option>
-
-  <option value="0Ahl2jyiXAlO91FikWr93U">Cities - Live 1982</option>
-
-  <option value="02zsC4LkWqvXSMS3A49lvF">Psycho Killer (Live) - Remastered</option>
-
-  <option value="0CPyOvNYuhQ5xpVjbQQpqf">New Feeling - Alternate Version; 2003 Remaster</option>
-
-  <option value="0Cpr1EducaySYlY8MGJllG">Democratic Circus</option>
-
-  <option value="05eaIeCrkwpg5baqqL7Yqc">Mommy Daddy You and I</option>
-
-  <option value="0C6yB068XgDCrJDKt9jR3u">Papa Legba - 2005 Remaster</option>
-
-  <option value="02eyUrxu8saTFZoxzNHtHz">Television Man - 2005 Remaster</option>
-
-  <option value="03HUTPHpK8CJkBlIXTNvVL">The Lady Don&#x27;t Mind - 2005 Remaster</option>
-
-  <option value="0E3gdEF4z9cBFfFqA7i72k">Thank You for Sending Me an Angel - Live</option>
-
-  <option value="0CS31HRSJOKSkFRwJKhRU0">Making Flippy Floppy - Live</option>
-
-  <option value="019KRrap2TW8ASDAWbe6OU">Once in a Lifetime - Live</option>
-
-  <option value="04xgGiUefNOWhtcQQx5Kzg">Electric Guitar - 2005 Remaster</option>
-
-  <option value="0APSPe5gAJdPsZT0j3yER0">Under the Westway / Intermission - Live</option>
-
-  <option value="0DkdBihKubGqDoRB4kNlB2">Bad Head - Live in Hyde Park, London 3/7/09</option>
-
-  <option value="074k75OTaQRJfxvzKPKKTd">Beetlebum - Live in Hyde Park, London 3/7/09</option>
-
-  <option value="0DICm5ML6Kee7kAiwFGjbd">Ambulance</option>
-
-  <option value="08xT4sXJotusp2N09mwDt6">We&#x27;ve Got a File on You</option>
-
-  <option value="0EU6OwP92MyNhnvK3BC0NF">Caravan</option>
-
-  <option value="01fSXBxjBbkAJ193kfUoUc">Trimm Trabb</option>
-
-  <option value="05SEo3GMZSrYo8nQC28B0m">Optigan I</option>
-
-  <option value="0DrVgi8rW7gS2SRw9p62Kk">Top Man - 2012 Remaster</option>
-
-  <option value="08l0WDhkcMNh0fGxK6d8ig">Charmless Man - 2012 Remaster</option>
-
-  <option value="00wsE7sEhzBkDOHtt9aTLA">Djangology</option>
-
-  <option value="00sc8VZSYUTWEE3muf0ZxL">Taj Mahal</option>
-
-  <option value="05MFbS192zBQEOYnwvj0OP">Ol&#x27; Man River</option>
-
-  <option value="07HSvLZoOfCQJm2JrnHdaR">Liza</option>
-
-  <option value="03aSUSfxbFM7kGy00wDYJW">Japanese Sandman</option>
-
-  <option value="05ddOKhGbErFGHi6ReLqWh">Anniversary Song</option>
-
-  <option value="04goZSIbgZ7kLzab80aB0m">Lily belle may june</option>
-
-  <option value="08O5ZtaMtqfxS1SkrVvxEF">Moten Swing</option>
-
-  <option value="06TnfQbJvlupI8hOp3H0DL">Nuages</option>
-
-  <option value="02tSxBM8HyQSiMNG0C6CIq">Russian Songs Medley</option>
-
-  <option value="02djT73OSKx92keMProZjh">Gipsy With A Song</option>
-
-  <option value="02FQNxYmxFf9Yhg5HIhmDj">How High the Moon</option>
-
-  <option value="04W6LcbcR35cBYZxpFXlvT">Still am Tresen</option>
-
-  <option value="0Cr5EEtfVAWki34BRHc8P5">Mitleid Lady</option>
-
-  <option value="0Ct1tF91916p8pksWHbSl3">Gore Motel</option>
-
-  <option value="03k33F3NbrVk5iAtSvAFH0">Bbydhyonchord</option>
-
-  <option value="01x8CrGhRGd3annktbFbyz">Taking Control</option>
-
-  <option value="0CjC2iwz3fOHyC8MMfMUUt">Fingerbib</option>
-
-  <option value="00wT7HAtqZ2BnemrR34vbO">4</option>
-
-  <option value="0BShm4IqnSq5t13VOmP5AK">Carn Marth</option>
-
-  <option value="0BHE7cwodOlQ8ctYFK8NzO">Wet Tip Hen Ax</option>
-
-  <option value="00rqHqrLS3ZZCqRLsMSPXs">#11</option>
-
-  <option value="0EF2mNCpYwYZIdgJxAU31D">#18</option>
-
-  <option value="09opLVMX7cfKVKlP3iKZR1">Heliosphan</option>
-
-  <option value="0EK8vqmwSCqY5b7CemNc9I">Hedphelym</option>
-
-  <option value="06oElHjFe4jKv71Mgn8M06">Wonderful</option>
-
-  <option value="02ZbFADUWks6sfXxUGEuc7">Out-Side</option>
-
-  <option value="02Z9s5rWwBQNpVwJXvhXnA">Monolith</option>
-
-  <option value="0AEU24pccziELaOeMjZZBY">Ataronchronon</option>
-
-  <option value="0CxVbDRosOWSTJLoEpjQ48">Slow This Bird Down</option>
-
-  <option value="06v3SszX1ged7THW2H4jXB">Iced Cooly</option>
-
-  <option value="0015jQDZIIhkb8vgmx3GXp">Twoism</option>
-
-  <option value="09U7vMWR3zFSpA7Ruye2rw">In The Annexe</option>
-
-  <option value="06CUHGTggjdXLSZQQWN06Y">Opening The Mouth</option>
-
-  <option value="03zv0Znm7bA7XzWMZ1lEKO">An Eagle In Your Mind</option>
-
-  <option value="0AV4LKffb2pRsQCzZSSgzj">XYZ - Peel Session</option>
-
-  <option value="0AuiARc611uMh8Bf9dYbC9">Cinnabar</option>
-
-  <option value="02f2O7TcJVH1mEXzK8I53B">Vermilion</option>
-
-  <option value="0C8tw0sO1aOWTGO2OyFVRn">Cinnabar</option>
-
-  <option value="08TeWlLF8Gq62uz00hILul">Flower Bells</option>
-
-  <option value="09efiqoUP7d42iLcilgX8J">Fickle Sun (iii) I&#x27;m Set Free</option>
-
-  <option value="0B4MhV1Q06IJCzBgUZWiGm">Mother Of A Dog</option>
-
-  <option value="01feO92v0mESERkMGWdOxv">LUX 2</option>
-
-  <option value="00pYSjdvLOlCVMpK0rRYbZ">Sometimes in Autumn - MIT Mix</option>
-
-  <option value="0BI74OnbHS27hSnPYmLz1a">&quot;Granmon&quot;</option>
-
-  <option value="04UCvvXP2OulSRl0QLfK4Q">The Maze - Remastered</option>
-
-  <option value="07BxazIQrCFUS08S6fhGVm">Riot - Alternate Take1 / Remastered</option>
-
-  <option value="02Ma3Y0oxEfBDEfJj4EhMg">My Man&#x27;s Gone Now</option>
-
-  <option value="02K1WMHij5DHHakqfQhd7i">Raging Lung (Shaken-Up Live Version)</option>
-
-  <option value="04MoqQqgwVBNABuyCecucU">One Hit (Shaken-Up Live Version)</option>
-
-  <option value="030F8OCADpoCuSaTlb1ijc">Ready to Lose (Shaken-Up Live Version)</option>
-
-  <option value="0AuaydTSWVjpOhTnNySdXf">Raging Lung</option>
-
-  <option value="06hX6tlRVS2FwT4BeCPe3n">Networking</option>
-
-  <option value="08jk6PRaAJCZW161YKzISH">Ebb Tide Explorer</option>
-
-  <option value="09TQuLpem6iC9kuXU7opE0">Colouring of Pigeons</option>
-
-  <option value="017juRbAM30oWIpFedaZ2G">Seeds</option>
-
-  <option value="0EDSYTPGZfzm9LIONtVqme">Kino - Live</option>
-
-  <option value="0DLzR8ajItjcRtwuuG2W57">The Hall of Mirrors</option>
-
-  <option value="06wDu9e2m1ChROku6i2uqP">The Man Machine</option>
-
-  <option value="04WRVeFNEgvReleafQTd0d">Metall Auf Metall - Live</option>
-
-  <option value="09b1lpnsBkPvOSNwTT3CSV">Chrono - 2009 Remaster</option>
-
-  <option value="0DejBM5F1G2qjY3mw58OAr">Schaufensterpuppen - 2009 Remaster</option>
-
-  <option value="0CVzimInysodNtHPzULDiX">&#x27;90 aka A Man Like Me</option>
-
-  <option value="0DiQnis3FPXZLLU0fqDAD6">Rong</option>
-
-  <option value="03FFeubTclD92RZlEyyOQh">Intro - Comentarios</option>
-
-  <option value="08CXTt3OoHrrr63TYwxreb">Coup De Grace</option>
-
-  <option value="0AP5q9egIPuAmolgXa6C0B">Vision One</option>
-
-  <option value="0BHZMdDIa2lrmEaG0Ds09u">Clear The Area - Instrumental</option>
-
-  <option value="08bpgIMYtGJDKyLR9z2JoI">Lifeline - Instrumental</option>
-
-  <option value="03j9lrCJxtlSpga2CvgJWh">Climb to Sakteng - Instrumental</option>
-
-  <option value="045TagDpGdmMMWA9KwbeTd">About Minds Without Fear - Track Commentary</option>
-
-  <option value="00UjQjh4BcTyjqsZYRm0AP">Me The Machine (Instrumental)</option>
-
-  <option value="09XOG8iMrDrfpcTLiLnRV6">Tidal</option>
-
-  <option value="08kehe33kT0eBVRVz147Zj">Clear the Area</option>
-
-  <option value="01aEmdBEsL5CI4V8JF7QOM">Sleep</option>
-
-  <option value="07ulUcPBk32xgyim8UuCj7">Angry Angel</option>
-
-  <option value="0AhmWTJET3nBmVflLFFTcf">Rake It In</option>
-
-  <option value="0Dy6w8F4J1YJczzZLF2hh6">Good Stuff - Live</option>
-
-  <option value="00lOR0RdiaA5WtlIoFTeoP">Devil In My Car (Live) - Remastered</option>
-
-  <option value="06zeXiplaF7yacfXe8Lj4x">Legal Tender - Live</option>
-
-  <option value="07WKpF5QcG4IDOKVR5bqH3">Love in the Year 3000 - Live</option>
-
-  <option value="02ss5jD7GFX5xtICZkvSsS">Cosmic Thing - Live</option>
-
-  <option value="09jbecZurPNzGIduEmWBzL">Juliet Of The Spirits</option>
-
-  <option value="0BtuAAy3dyumm49hgUQtVa">Private Idaho - Live At The Roxy</option>
-
-  <option value="0CfNBzVVTnnHs3ZGbhcNjl">Ultraviolet</option>
-
-  <option value="06IoX89tXQB78NB3lZax4L">Eyes Wide Open</option>
-
-  <option value="0EEP9AVw5LaxcULtHml9MJ">Tell It Like It T-I-IS</option>
-
-  <option value="0EHVdXicUaZgezWmzHc7iy">Congratulations</option>
-
-  <option value="02bJJcfBVSvlczPgYPPzHt">There Will Be No Intermission</option>
-
-  <option value="05AB6iekUzhkKVjdmFUxmi">Trout Heart Replica</option>
-
-  <option value="09m8aC8aMuZXThPn6HNoQq">Olly Olly Oxen Free</option>
-
-  <option value="0Aryhqy6CeSYwuLVTfxG3r">Wynken, Blynken and Nod - Commentary</option>
-
-  <option value="0Bwop9xzBby2qhHSnmASNN">You Got Me Singing</option>
-
-  <option value="0DWpAU5UtoLDuHTSa8ja3L">Poem for Amanda (By Neil)</option>
-
-  <option value="05EKtTB9YQfEYEOei4n2pk">I Will Write In Words Of Fire</option>
-
-  <option value="06zEgXY68PsrlzH0R5nwd2">(Introduction to Dear Old House)</option>
-
-  <option value="01TQrsAzYm8XRsHzyC4kA9">(Introduction to Gaga, Palmer, Madonna; a Polemic)</option>
-
-  <option value="03gqhhAw5Jq5viahk5iQjS">(Introduction to Dear Old House)</option>
-
-  <option value="05r2beyZaflCMwjzcEOE8b">The Bed Song</option>
-
-  <option value="0DUrC21pi6FtyooX9mG35S">Melody Dean</option>
-
-  <option value="04IpfKEfXrHcBseT7yPDNe">The Killing Type</option>
-
-  <option value="06ujWmuWfkEYRIWKZoVcKu">Flugufrelsarinn</option>
-
-  <option value="00T0hEW35DAH54xQvaXeen">The Hungry Ghosts, We Live in an Old Chaos of the Sun</option>
-
-  <option value="0668cUBGpB6bhdvIzGlZId">All Mapped Out</option>
-
-  <option value="0Bf2oQ9ItFg825Bh14vUe1">End</option>
-
-  <option value="0E1kjLjtx5bhiXufhe33i6">Route One 005</option>
-
-  <option value="0Ahb9Zi7UeHTjY0U8rLM4o">Route One 011</option>
-
-  <option value="07tG3uSvWOlg5febou8YmZ">Route One 038</option>
-
-  <option value="08KvkSMJjJOMKj3WqW4iZJ">Brennisteinn - Live</option>
-
+    <select name="releasetrack_set-1-track" aria-describedby="id_releasetrack_set-1-track_helptext" id="id_releasetrack_set-1-track" class="admin-autocomplete" data-ajax--cache="true" data-ajax--delay="250" data-ajax--type="GET" data-ajax--url="/django_admin_tests/latest/english/admin/autocomplete/" data-app-label="demo" data-model-name="releasetrack" data-field-name="track" data-theme="admin-autocomplete" data-allow-clear="false" data-placeholder="" lang="en">
 </select>
     
         <a class="related-widget-wrapper-link change-related" id="change_id_releasetrack_set-1-track"
@@ -1305,9 +763,7 @@
             
           
         
-        
-          <td class="delete"></td>
-        
+        <td class="delete"></td>
         </tr>
      
         
@@ -1324,7 +780,7 @@
               <td class="field-track_number">
               
                   
-                  <input type="number" name="releasetrack_set-2-track_number" class="vIntegerField" min="0" id="id_releasetrack_set-2-track_number">
+                  <input type="number" name="releasetrack_set-2-track_number" class="vIntegerField" min="0" aria-describedby="id_releasetrack_set-2-track_number_helptext" id="id_releasetrack_set-2-track_number">
               
               </td>
             
@@ -1334,271 +790,7 @@
               
                   
                   <div class="related-widget-wrapper" data-model-ref="track">
-    <select name="releasetrack_set-2-track" data-context="available-source" id="id_releasetrack_set-2-track">
-  <option value="" selected>---------</option>
-
-  <option value="0Ahl2jyiXAlO91FikWr93U">Cities - Live 1982</option>
-
-  <option value="02zsC4LkWqvXSMS3A49lvF">Psycho Killer (Live) - Remastered</option>
-
-  <option value="0CPyOvNYuhQ5xpVjbQQpqf">New Feeling - Alternate Version; 2003 Remaster</option>
-
-  <option value="0Cpr1EducaySYlY8MGJllG">Democratic Circus</option>
-
-  <option value="05eaIeCrkwpg5baqqL7Yqc">Mommy Daddy You and I</option>
-
-  <option value="0C6yB068XgDCrJDKt9jR3u">Papa Legba - 2005 Remaster</option>
-
-  <option value="02eyUrxu8saTFZoxzNHtHz">Television Man - 2005 Remaster</option>
-
-  <option value="03HUTPHpK8CJkBlIXTNvVL">The Lady Don&#x27;t Mind - 2005 Remaster</option>
-
-  <option value="0E3gdEF4z9cBFfFqA7i72k">Thank You for Sending Me an Angel - Live</option>
-
-  <option value="0CS31HRSJOKSkFRwJKhRU0">Making Flippy Floppy - Live</option>
-
-  <option value="019KRrap2TW8ASDAWbe6OU">Once in a Lifetime - Live</option>
-
-  <option value="04xgGiUefNOWhtcQQx5Kzg">Electric Guitar - 2005 Remaster</option>
-
-  <option value="0APSPe5gAJdPsZT0j3yER0">Under the Westway / Intermission - Live</option>
-
-  <option value="0DkdBihKubGqDoRB4kNlB2">Bad Head - Live in Hyde Park, London 3/7/09</option>
-
-  <option value="074k75OTaQRJfxvzKPKKTd">Beetlebum - Live in Hyde Park, London 3/7/09</option>
-
-  <option value="0DICm5ML6Kee7kAiwFGjbd">Ambulance</option>
-
-  <option value="08xT4sXJotusp2N09mwDt6">We&#x27;ve Got a File on You</option>
-
-  <option value="0EU6OwP92MyNhnvK3BC0NF">Caravan</option>
-
-  <option value="01fSXBxjBbkAJ193kfUoUc">Trimm Trabb</option>
-
-  <option value="05SEo3GMZSrYo8nQC28B0m">Optigan I</option>
-
-  <option value="0DrVgi8rW7gS2SRw9p62Kk">Top Man - 2012 Remaster</option>
-
-  <option value="08l0WDhkcMNh0fGxK6d8ig">Charmless Man - 2012 Remaster</option>
-
-  <option value="00wsE7sEhzBkDOHtt9aTLA">Djangology</option>
-
-  <option value="00sc8VZSYUTWEE3muf0ZxL">Taj Mahal</option>
-
-  <option value="05MFbS192zBQEOYnwvj0OP">Ol&#x27; Man River</option>
-
-  <option value="07HSvLZoOfCQJm2JrnHdaR">Liza</option>
-
-  <option value="03aSUSfxbFM7kGy00wDYJW">Japanese Sandman</option>
-
-  <option value="05ddOKhGbErFGHi6ReLqWh">Anniversary Song</option>
-
-  <option value="04goZSIbgZ7kLzab80aB0m">Lily belle may june</option>
-
-  <option value="08O5ZtaMtqfxS1SkrVvxEF">Moten Swing</option>
-
-  <option value="06TnfQbJvlupI8hOp3H0DL">Nuages</option>
-
-  <option value="02tSxBM8HyQSiMNG0C6CIq">Russian Songs Medley</option>
-
-  <option value="02djT73OSKx92keMProZjh">Gipsy With A Song</option>
-
-  <option value="02FQNxYmxFf9Yhg5HIhmDj">How High the Moon</option>
-
-  <option value="04W6LcbcR35cBYZxpFXlvT">Still am Tresen</option>
-
-  <option value="0Cr5EEtfVAWki34BRHc8P5">Mitleid Lady</option>
-
-  <option value="0Ct1tF91916p8pksWHbSl3">Gore Motel</option>
-
-  <option value="03k33F3NbrVk5iAtSvAFH0">Bbydhyonchord</option>
-
-  <option value="01x8CrGhRGd3annktbFbyz">Taking Control</option>
-
-  <option value="0CjC2iwz3fOHyC8MMfMUUt">Fingerbib</option>
-
-  <option value="00wT7HAtqZ2BnemrR34vbO">4</option>
-
-  <option value="0BShm4IqnSq5t13VOmP5AK">Carn Marth</option>
-
-  <option value="0BHE7cwodOlQ8ctYFK8NzO">Wet Tip Hen Ax</option>
-
-  <option value="00rqHqrLS3ZZCqRLsMSPXs">#11</option>
-
-  <option value="0EF2mNCpYwYZIdgJxAU31D">#18</option>
-
-  <option value="09opLVMX7cfKVKlP3iKZR1">Heliosphan</option>
-
-  <option value="0EK8vqmwSCqY5b7CemNc9I">Hedphelym</option>
-
-  <option value="06oElHjFe4jKv71Mgn8M06">Wonderful</option>
-
-  <option value="02ZbFADUWks6sfXxUGEuc7">Out-Side</option>
-
-  <option value="02Z9s5rWwBQNpVwJXvhXnA">Monolith</option>
-
-  <option value="0AEU24pccziELaOeMjZZBY">Ataronchronon</option>
-
-  <option value="0CxVbDRosOWSTJLoEpjQ48">Slow This Bird Down</option>
-
-  <option value="06v3SszX1ged7THW2H4jXB">Iced Cooly</option>
-
-  <option value="0015jQDZIIhkb8vgmx3GXp">Twoism</option>
-
-  <option value="09U7vMWR3zFSpA7Ruye2rw">In The Annexe</option>
-
-  <option value="06CUHGTggjdXLSZQQWN06Y">Opening The Mouth</option>
-
-  <option value="03zv0Znm7bA7XzWMZ1lEKO">An Eagle In Your Mind</option>
-
-  <option value="0AV4LKffb2pRsQCzZSSgzj">XYZ - Peel Session</option>
-
-  <option value="0AuiARc611uMh8Bf9dYbC9">Cinnabar</option>
-
-  <option value="02f2O7TcJVH1mEXzK8I53B">Vermilion</option>
-
-  <option value="0C8tw0sO1aOWTGO2OyFVRn">Cinnabar</option>
-
-  <option value="08TeWlLF8Gq62uz00hILul">Flower Bells</option>
-
-  <option value="09efiqoUP7d42iLcilgX8J">Fickle Sun (iii) I&#x27;m Set Free</option>
-
-  <option value="0B4MhV1Q06IJCzBgUZWiGm">Mother Of A Dog</option>
-
-  <option value="01feO92v0mESERkMGWdOxv">LUX 2</option>
-
-  <option value="00pYSjdvLOlCVMpK0rRYbZ">Sometimes in Autumn - MIT Mix</option>
-
-  <option value="0BI74OnbHS27hSnPYmLz1a">&quot;Granmon&quot;</option>
-
-  <option value="04UCvvXP2OulSRl0QLfK4Q">The Maze - Remastered</option>
-
-  <option value="07BxazIQrCFUS08S6fhGVm">Riot - Alternate Take1 / Remastered</option>
-
-  <option value="02Ma3Y0oxEfBDEfJj4EhMg">My Man&#x27;s Gone Now</option>
-
-  <option value="02K1WMHij5DHHakqfQhd7i">Raging Lung (Shaken-Up Live Version)</option>
-
-  <option value="04MoqQqgwVBNABuyCecucU">One Hit (Shaken-Up Live Version)</option>
-
-  <option value="030F8OCADpoCuSaTlb1ijc">Ready to Lose (Shaken-Up Live Version)</option>
-
-  <option value="0AuaydTSWVjpOhTnNySdXf">Raging Lung</option>
-
-  <option value="06hX6tlRVS2FwT4BeCPe3n">Networking</option>
-
-  <option value="08jk6PRaAJCZW161YKzISH">Ebb Tide Explorer</option>
-
-  <option value="09TQuLpem6iC9kuXU7opE0">Colouring of Pigeons</option>
-
-  <option value="017juRbAM30oWIpFedaZ2G">Seeds</option>
-
-  <option value="0EDSYTPGZfzm9LIONtVqme">Kino - Live</option>
-
-  <option value="0DLzR8ajItjcRtwuuG2W57">The Hall of Mirrors</option>
-
-  <option value="06wDu9e2m1ChROku6i2uqP">The Man Machine</option>
-
-  <option value="04WRVeFNEgvReleafQTd0d">Metall Auf Metall - Live</option>
-
-  <option value="09b1lpnsBkPvOSNwTT3CSV">Chrono - 2009 Remaster</option>
-
-  <option value="0DejBM5F1G2qjY3mw58OAr">Schaufensterpuppen - 2009 Remaster</option>
-
-  <option value="0CVzimInysodNtHPzULDiX">&#x27;90 aka A Man Like Me</option>
-
-  <option value="0DiQnis3FPXZLLU0fqDAD6">Rong</option>
-
-  <option value="03FFeubTclD92RZlEyyOQh">Intro - Comentarios</option>
-
-  <option value="08CXTt3OoHrrr63TYwxreb">Coup De Grace</option>
-
-  <option value="0AP5q9egIPuAmolgXa6C0B">Vision One</option>
-
-  <option value="0BHZMdDIa2lrmEaG0Ds09u">Clear The Area - Instrumental</option>
-
-  <option value="08bpgIMYtGJDKyLR9z2JoI">Lifeline - Instrumental</option>
-
-  <option value="03j9lrCJxtlSpga2CvgJWh">Climb to Sakteng - Instrumental</option>
-
-  <option value="045TagDpGdmMMWA9KwbeTd">About Minds Without Fear - Track Commentary</option>
-
-  <option value="00UjQjh4BcTyjqsZYRm0AP">Me The Machine (Instrumental)</option>
-
-  <option value="09XOG8iMrDrfpcTLiLnRV6">Tidal</option>
-
-  <option value="08kehe33kT0eBVRVz147Zj">Clear the Area</option>
-
-  <option value="01aEmdBEsL5CI4V8JF7QOM">Sleep</option>
-
-  <option value="07ulUcPBk32xgyim8UuCj7">Angry Angel</option>
-
-  <option value="0AhmWTJET3nBmVflLFFTcf">Rake It In</option>
-
-  <option value="0Dy6w8F4J1YJczzZLF2hh6">Good Stuff - Live</option>
-
-  <option value="00lOR0RdiaA5WtlIoFTeoP">Devil In My Car (Live) - Remastered</option>
-
-  <option value="06zeXiplaF7yacfXe8Lj4x">Legal Tender - Live</option>
-
-  <option value="07WKpF5QcG4IDOKVR5bqH3">Love in the Year 3000 - Live</option>
-
-  <option value="02ss5jD7GFX5xtICZkvSsS">Cosmic Thing - Live</option>
-
-  <option value="09jbecZurPNzGIduEmWBzL">Juliet Of The Spirits</option>
-
-  <option value="0BtuAAy3dyumm49hgUQtVa">Private Idaho - Live At The Roxy</option>
-
-  <option value="0CfNBzVVTnnHs3ZGbhcNjl">Ultraviolet</option>
-
-  <option value="06IoX89tXQB78NB3lZax4L">Eyes Wide Open</option>
-
-  <option value="0EEP9AVw5LaxcULtHml9MJ">Tell It Like It T-I-IS</option>
-
-  <option value="0EHVdXicUaZgezWmzHc7iy">Congratulations</option>
-
-  <option value="02bJJcfBVSvlczPgYPPzHt">There Will Be No Intermission</option>
-
-  <option value="05AB6iekUzhkKVjdmFUxmi">Trout Heart Replica</option>
-
-  <option value="09m8aC8aMuZXThPn6HNoQq">Olly Olly Oxen Free</option>
-
-  <option value="0Aryhqy6CeSYwuLVTfxG3r">Wynken, Blynken and Nod - Commentary</option>
-
-  <option value="0Bwop9xzBby2qhHSnmASNN">You Got Me Singing</option>
-
-  <option value="0DWpAU5UtoLDuHTSa8ja3L">Poem for Amanda (By Neil)</option>
-
-  <option value="05EKtTB9YQfEYEOei4n2pk">I Will Write In Words Of Fire</option>
-
-  <option value="06zEgXY68PsrlzH0R5nwd2">(Introduction to Dear Old House)</option>
-
-  <option value="01TQrsAzYm8XRsHzyC4kA9">(Introduction to Gaga, Palmer, Madonna; a Polemic)</option>
-
-  <option value="03gqhhAw5Jq5viahk5iQjS">(Introduction to Dear Old House)</option>
-
-  <option value="05r2beyZaflCMwjzcEOE8b">The Bed Song</option>
-
-  <option value="0DUrC21pi6FtyooX9mG35S">Melody Dean</option>
-
-  <option value="04IpfKEfXrHcBseT7yPDNe">The Killing Type</option>
-
-  <option value="06ujWmuWfkEYRIWKZoVcKu">Flugufrelsarinn</option>
-
-  <option value="00T0hEW35DAH54xQvaXeen">The Hungry Ghosts, We Live in an Old Chaos of the Sun</option>
-
-  <option value="0668cUBGpB6bhdvIzGlZId">All Mapped Out</option>
-
-  <option value="0Bf2oQ9ItFg825Bh14vUe1">End</option>
-
-  <option value="0E1kjLjtx5bhiXufhe33i6">Route One 005</option>
-
-  <option value="0Ahb9Zi7UeHTjY0U8rLM4o">Route One 011</option>
-
-  <option value="07tG3uSvWOlg5febou8YmZ">Route One 038</option>
-
-  <option value="08KvkSMJjJOMKj3WqW4iZJ">Brennisteinn - Live</option>
-
+    <select name="releasetrack_set-2-track" aria-describedby="id_releasetrack_set-2-track_helptext" id="id_releasetrack_set-2-track" class="admin-autocomplete" data-ajax--cache="true" data-ajax--delay="250" data-ajax--type="GET" data-ajax--url="/django_admin_tests/latest/english/admin/autocomplete/" data-app-label="demo" data-model-name="releasetrack" data-field-name="track" data-theme="admin-autocomplete" data-allow-clear="false" data-placeholder="" lang="en">
 </select>
     
         <a class="related-widget-wrapper-link change-related" id="change_id_releasetrack_set-2-track"
@@ -1617,9 +809,7 @@
             
           
         
-        
-          <td class="delete"></td>
-        
+        <td class="delete"></td>
         </tr>
      
         
@@ -1636,7 +826,7 @@
               <td class="field-track_number">
               
                   
-                  <input type="number" name="releasetrack_set-3-track_number" class="vIntegerField" min="0" id="id_releasetrack_set-3-track_number">
+                  <input type="number" name="releasetrack_set-3-track_number" class="vIntegerField" min="0" aria-describedby="id_releasetrack_set-3-track_number_helptext" id="id_releasetrack_set-3-track_number">
               
               </td>
             
@@ -1646,271 +836,7 @@
               
                   
                   <div class="related-widget-wrapper" data-model-ref="track">
-    <select name="releasetrack_set-3-track" data-context="available-source" id="id_releasetrack_set-3-track">
-  <option value="" selected>---------</option>
-
-  <option value="0Ahl2jyiXAlO91FikWr93U">Cities - Live 1982</option>
-
-  <option value="02zsC4LkWqvXSMS3A49lvF">Psycho Killer (Live) - Remastered</option>
-
-  <option value="0CPyOvNYuhQ5xpVjbQQpqf">New Feeling - Alternate Version; 2003 Remaster</option>
-
-  <option value="0Cpr1EducaySYlY8MGJllG">Democratic Circus</option>
-
-  <option value="05eaIeCrkwpg5baqqL7Yqc">Mommy Daddy You and I</option>
-
-  <option value="0C6yB068XgDCrJDKt9jR3u">Papa Legba - 2005 Remaster</option>
-
-  <option value="02eyUrxu8saTFZoxzNHtHz">Television Man - 2005 Remaster</option>
-
-  <option value="03HUTPHpK8CJkBlIXTNvVL">The Lady Don&#x27;t Mind - 2005 Remaster</option>
-
-  <option value="0E3gdEF4z9cBFfFqA7i72k">Thank You for Sending Me an Angel - Live</option>
-
-  <option value="0CS31HRSJOKSkFRwJKhRU0">Making Flippy Floppy - Live</option>
-
-  <option value="019KRrap2TW8ASDAWbe6OU">Once in a Lifetime - Live</option>
-
-  <option value="04xgGiUefNOWhtcQQx5Kzg">Electric Guitar - 2005 Remaster</option>
-
-  <option value="0APSPe5gAJdPsZT0j3yER0">Under the Westway / Intermission - Live</option>
-
-  <option value="0DkdBihKubGqDoRB4kNlB2">Bad Head - Live in Hyde Park, London 3/7/09</option>
-
-  <option value="074k75OTaQRJfxvzKPKKTd">Beetlebum - Live in Hyde Park, London 3/7/09</option>
-
-  <option value="0DICm5ML6Kee7kAiwFGjbd">Ambulance</option>
-
-  <option value="08xT4sXJotusp2N09mwDt6">We&#x27;ve Got a File on You</option>
-
-  <option value="0EU6OwP92MyNhnvK3BC0NF">Caravan</option>
-
-  <option value="01fSXBxjBbkAJ193kfUoUc">Trimm Trabb</option>
-
-  <option value="05SEo3GMZSrYo8nQC28B0m">Optigan I</option>
-
-  <option value="0DrVgi8rW7gS2SRw9p62Kk">Top Man - 2012 Remaster</option>
-
-  <option value="08l0WDhkcMNh0fGxK6d8ig">Charmless Man - 2012 Remaster</option>
-
-  <option value="00wsE7sEhzBkDOHtt9aTLA">Djangology</option>
-
-  <option value="00sc8VZSYUTWEE3muf0ZxL">Taj Mahal</option>
-
-  <option value="05MFbS192zBQEOYnwvj0OP">Ol&#x27; Man River</option>
-
-  <option value="07HSvLZoOfCQJm2JrnHdaR">Liza</option>
-
-  <option value="03aSUSfxbFM7kGy00wDYJW">Japanese Sandman</option>
-
-  <option value="05ddOKhGbErFGHi6ReLqWh">Anniversary Song</option>
-
-  <option value="04goZSIbgZ7kLzab80aB0m">Lily belle may june</option>
-
-  <option value="08O5ZtaMtqfxS1SkrVvxEF">Moten Swing</option>
-
-  <option value="06TnfQbJvlupI8hOp3H0DL">Nuages</option>
-
-  <option value="02tSxBM8HyQSiMNG0C6CIq">Russian Songs Medley</option>
-
-  <option value="02djT73OSKx92keMProZjh">Gipsy With A Song</option>
-
-  <option value="02FQNxYmxFf9Yhg5HIhmDj">How High the Moon</option>
-
-  <option value="04W6LcbcR35cBYZxpFXlvT">Still am Tresen</option>
-
-  <option value="0Cr5EEtfVAWki34BRHc8P5">Mitleid Lady</option>
-
-  <option value="0Ct1tF91916p8pksWHbSl3">Gore Motel</option>
-
-  <option value="03k33F3NbrVk5iAtSvAFH0">Bbydhyonchord</option>
-
-  <option value="01x8CrGhRGd3annktbFbyz">Taking Control</option>
-
-  <option value="0CjC2iwz3fOHyC8MMfMUUt">Fingerbib</option>
-
-  <option value="00wT7HAtqZ2BnemrR34vbO">4</option>
-
-  <option value="0BShm4IqnSq5t13VOmP5AK">Carn Marth</option>
-
-  <option value="0BHE7cwodOlQ8ctYFK8NzO">Wet Tip Hen Ax</option>
-
-  <option value="00rqHqrLS3ZZCqRLsMSPXs">#11</option>
-
-  <option value="0EF2mNCpYwYZIdgJxAU31D">#18</option>
-
-  <option value="09opLVMX7cfKVKlP3iKZR1">Heliosphan</option>
-
-  <option value="0EK8vqmwSCqY5b7CemNc9I">Hedphelym</option>
-
-  <option value="06oElHjFe4jKv71Mgn8M06">Wonderful</option>
-
-  <option value="02ZbFADUWks6sfXxUGEuc7">Out-Side</option>
-
-  <option value="02Z9s5rWwBQNpVwJXvhXnA">Monolith</option>
-
-  <option value="0AEU24pccziELaOeMjZZBY">Ataronchronon</option>
-
-  <option value="0CxVbDRosOWSTJLoEpjQ48">Slow This Bird Down</option>
-
-  <option value="06v3SszX1ged7THW2H4jXB">Iced Cooly</option>
-
-  <option value="0015jQDZIIhkb8vgmx3GXp">Twoism</option>
-
-  <option value="09U7vMWR3zFSpA7Ruye2rw">In The Annexe</option>
-
-  <option value="06CUHGTggjdXLSZQQWN06Y">Opening The Mouth</option>
-
-  <option value="03zv0Znm7bA7XzWMZ1lEKO">An Eagle In Your Mind</option>
-
-  <option value="0AV4LKffb2pRsQCzZSSgzj">XYZ - Peel Session</option>
-
-  <option value="0AuiARc611uMh8Bf9dYbC9">Cinnabar</option>
-
-  <option value="02f2O7TcJVH1mEXzK8I53B">Vermilion</option>
-
-  <option value="0C8tw0sO1aOWTGO2OyFVRn">Cinnabar</option>
-
-  <option value="08TeWlLF8Gq62uz00hILul">Flower Bells</option>
-
-  <option value="09efiqoUP7d42iLcilgX8J">Fickle Sun (iii) I&#x27;m Set Free</option>
-
-  <option value="0B4MhV1Q06IJCzBgUZWiGm">Mother Of A Dog</option>
-
-  <option value="01feO92v0mESERkMGWdOxv">LUX 2</option>
-
-  <option value="00pYSjdvLOlCVMpK0rRYbZ">Sometimes in Autumn - MIT Mix</option>
-
-  <option value="0BI74OnbHS27hSnPYmLz1a">&quot;Granmon&quot;</option>
-
-  <option value="04UCvvXP2OulSRl0QLfK4Q">The Maze - Remastered</option>
-
-  <option value="07BxazIQrCFUS08S6fhGVm">Riot - Alternate Take1 / Remastered</option>
-
-  <option value="02Ma3Y0oxEfBDEfJj4EhMg">My Man&#x27;s Gone Now</option>
-
-  <option value="02K1WMHij5DHHakqfQhd7i">Raging Lung (Shaken-Up Live Version)</option>
-
-  <option value="04MoqQqgwVBNABuyCecucU">One Hit (Shaken-Up Live Version)</option>
-
-  <option value="030F8OCADpoCuSaTlb1ijc">Ready to Lose (Shaken-Up Live Version)</option>
-
-  <option value="0AuaydTSWVjpOhTnNySdXf">Raging Lung</option>
-
-  <option value="06hX6tlRVS2FwT4BeCPe3n">Networking</option>
-
-  <option value="08jk6PRaAJCZW161YKzISH">Ebb Tide Explorer</option>
-
-  <option value="09TQuLpem6iC9kuXU7opE0">Colouring of Pigeons</option>
-
-  <option value="017juRbAM30oWIpFedaZ2G">Seeds</option>
-
-  <option value="0EDSYTPGZfzm9LIONtVqme">Kino - Live</option>
-
-  <option value="0DLzR8ajItjcRtwuuG2W57">The Hall of Mirrors</option>
-
-  <option value="06wDu9e2m1ChROku6i2uqP">The Man Machine</option>
-
-  <option value="04WRVeFNEgvReleafQTd0d">Metall Auf Metall - Live</option>
-
-  <option value="09b1lpnsBkPvOSNwTT3CSV">Chrono - 2009 Remaster</option>
-
-  <option value="0DejBM5F1G2qjY3mw58OAr">Schaufensterpuppen - 2009 Remaster</option>
-
-  <option value="0CVzimInysodNtHPzULDiX">&#x27;90 aka A Man Like Me</option>
-
-  <option value="0DiQnis3FPXZLLU0fqDAD6">Rong</option>
-
-  <option value="03FFeubTclD92RZlEyyOQh">Intro - Comentarios</option>
-
-  <option value="08CXTt3OoHrrr63TYwxreb">Coup De Grace</option>
-
-  <option value="0AP5q9egIPuAmolgXa6C0B">Vision One</option>
-
-  <option value="0BHZMdDIa2lrmEaG0Ds09u">Clear The Area - Instrumental</option>
-
-  <option value="08bpgIMYtGJDKyLR9z2JoI">Lifeline - Instrumental</option>
-
-  <option value="03j9lrCJxtlSpga2CvgJWh">Climb to Sakteng - Instrumental</option>
-
-  <option value="045TagDpGdmMMWA9KwbeTd">About Minds Without Fear - Track Commentary</option>
-
-  <option value="00UjQjh4BcTyjqsZYRm0AP">Me The Machine (Instrumental)</option>
-
-  <option value="09XOG8iMrDrfpcTLiLnRV6">Tidal</option>
-
-  <option value="08kehe33kT0eBVRVz147Zj">Clear the Area</option>
-
-  <option value="01aEmdBEsL5CI4V8JF7QOM">Sleep</option>
-
-  <option value="07ulUcPBk32xgyim8UuCj7">Angry Angel</option>
-
-  <option value="0AhmWTJET3nBmVflLFFTcf">Rake It In</option>
-
-  <option value="0Dy6w8F4J1YJczzZLF2hh6">Good Stuff - Live</option>
-
-  <option value="00lOR0RdiaA5WtlIoFTeoP">Devil In My Car (Live) - Remastered</option>
-
-  <option value="06zeXiplaF7yacfXe8Lj4x">Legal Tender - Live</option>
-
-  <option value="07WKpF5QcG4IDOKVR5bqH3">Love in the Year 3000 - Live</option>
-
-  <option value="02ss5jD7GFX5xtICZkvSsS">Cosmic Thing - Live</option>
-
-  <option value="09jbecZurPNzGIduEmWBzL">Juliet Of The Spirits</option>
-
-  <option value="0BtuAAy3dyumm49hgUQtVa">Private Idaho - Live At The Roxy</option>
-
-  <option value="0CfNBzVVTnnHs3ZGbhcNjl">Ultraviolet</option>
-
-  <option value="06IoX89tXQB78NB3lZax4L">Eyes Wide Open</option>
-
-  <option value="0EEP9AVw5LaxcULtHml9MJ">Tell It Like It T-I-IS</option>
-
-  <option value="0EHVdXicUaZgezWmzHc7iy">Congratulations</option>
-
-  <option value="02bJJcfBVSvlczPgYPPzHt">There Will Be No Intermission</option>
-
-  <option value="05AB6iekUzhkKVjdmFUxmi">Trout Heart Replica</option>
-
-  <option value="09m8aC8aMuZXThPn6HNoQq">Olly Olly Oxen Free</option>
-
-  <option value="0Aryhqy6CeSYwuLVTfxG3r">Wynken, Blynken and Nod - Commentary</option>
-
-  <option value="0Bwop9xzBby2qhHSnmASNN">You Got Me Singing</option>
-
-  <option value="0DWpAU5UtoLDuHTSa8ja3L">Poem for Amanda (By Neil)</option>
-
-  <option value="05EKtTB9YQfEYEOei4n2pk">I Will Write In Words Of Fire</option>
-
-  <option value="06zEgXY68PsrlzH0R5nwd2">(Introduction to Dear Old House)</option>
-
-  <option value="01TQrsAzYm8XRsHzyC4kA9">(Introduction to Gaga, Palmer, Madonna; a Polemic)</option>
-
-  <option value="03gqhhAw5Jq5viahk5iQjS">(Introduction to Dear Old House)</option>
-
-  <option value="05r2beyZaflCMwjzcEOE8b">The Bed Song</option>
-
-  <option value="0DUrC21pi6FtyooX9mG35S">Melody Dean</option>
-
-  <option value="04IpfKEfXrHcBseT7yPDNe">The Killing Type</option>
-
-  <option value="06ujWmuWfkEYRIWKZoVcKu">Flugufrelsarinn</option>
-
-  <option value="00T0hEW35DAH54xQvaXeen">The Hungry Ghosts, We Live in an Old Chaos of the Sun</option>
-
-  <option value="0668cUBGpB6bhdvIzGlZId">All Mapped Out</option>
-
-  <option value="0Bf2oQ9ItFg825Bh14vUe1">End</option>
-
-  <option value="0E1kjLjtx5bhiXufhe33i6">Route One 005</option>
-
-  <option value="0Ahb9Zi7UeHTjY0U8rLM4o">Route One 011</option>
-
-  <option value="07tG3uSvWOlg5febou8YmZ">Route One 038</option>
-
-  <option value="08KvkSMJjJOMKj3WqW4iZJ">Brennisteinn - Live</option>
-
+    <select name="releasetrack_set-3-track" aria-describedby="id_releasetrack_set-3-track_helptext" id="id_releasetrack_set-3-track" class="admin-autocomplete" data-ajax--cache="true" data-ajax--delay="250" data-ajax--type="GET" data-ajax--url="/django_admin_tests/latest/english/admin/autocomplete/" data-app-label="demo" data-model-name="releasetrack" data-field-name="track" data-theme="admin-autocomplete" data-allow-clear="false" data-placeholder="" lang="en">
 </select>
     
         <a class="related-widget-wrapper-link change-related" id="change_id_releasetrack_set-3-track"
@@ -1929,9 +855,7 @@
             
           
         
-        
-          <td class="delete"></td>
-        
+        <td class="delete"></td>
         </tr>
      
         
@@ -1948,7 +872,7 @@
               <td class="field-track_number">
               
                   
-                  <input type="number" name="releasetrack_set-__prefix__-track_number" class="vIntegerField" min="0" id="id_releasetrack_set-__prefix__-track_number">
+                  <input type="number" name="releasetrack_set-__prefix__-track_number" class="vIntegerField" min="0" aria-describedby="id_releasetrack_set-__prefix__-track_number_helptext" id="id_releasetrack_set-__prefix__-track_number">
               
               </td>
             
@@ -1958,271 +882,7 @@
               
                   
                   <div class="related-widget-wrapper" data-model-ref="track">
-    <select name="releasetrack_set-__prefix__-track" data-context="available-source" id="id_releasetrack_set-__prefix__-track">
-  <option value="" selected>---------</option>
-
-  <option value="0Ahl2jyiXAlO91FikWr93U">Cities - Live 1982</option>
-
-  <option value="02zsC4LkWqvXSMS3A49lvF">Psycho Killer (Live) - Remastered</option>
-
-  <option value="0CPyOvNYuhQ5xpVjbQQpqf">New Feeling - Alternate Version; 2003 Remaster</option>
-
-  <option value="0Cpr1EducaySYlY8MGJllG">Democratic Circus</option>
-
-  <option value="05eaIeCrkwpg5baqqL7Yqc">Mommy Daddy You and I</option>
-
-  <option value="0C6yB068XgDCrJDKt9jR3u">Papa Legba - 2005 Remaster</option>
-
-  <option value="02eyUrxu8saTFZoxzNHtHz">Television Man - 2005 Remaster</option>
-
-  <option value="03HUTPHpK8CJkBlIXTNvVL">The Lady Don&#x27;t Mind - 2005 Remaster</option>
-
-  <option value="0E3gdEF4z9cBFfFqA7i72k">Thank You for Sending Me an Angel - Live</option>
-
-  <option value="0CS31HRSJOKSkFRwJKhRU0">Making Flippy Floppy - Live</option>
-
-  <option value="019KRrap2TW8ASDAWbe6OU">Once in a Lifetime - Live</option>
-
-  <option value="04xgGiUefNOWhtcQQx5Kzg">Electric Guitar - 2005 Remaster</option>
-
-  <option value="0APSPe5gAJdPsZT0j3yER0">Under the Westway / Intermission - Live</option>
-
-  <option value="0DkdBihKubGqDoRB4kNlB2">Bad Head - Live in Hyde Park, London 3/7/09</option>
-
-  <option value="074k75OTaQRJfxvzKPKKTd">Beetlebum - Live in Hyde Park, London 3/7/09</option>
-
-  <option value="0DICm5ML6Kee7kAiwFGjbd">Ambulance</option>
-
-  <option value="08xT4sXJotusp2N09mwDt6">We&#x27;ve Got a File on You</option>
-
-  <option value="0EU6OwP92MyNhnvK3BC0NF">Caravan</option>
-
-  <option value="01fSXBxjBbkAJ193kfUoUc">Trimm Trabb</option>
-
-  <option value="05SEo3GMZSrYo8nQC28B0m">Optigan I</option>
-
-  <option value="0DrVgi8rW7gS2SRw9p62Kk">Top Man - 2012 Remaster</option>
-
-  <option value="08l0WDhkcMNh0fGxK6d8ig">Charmless Man - 2012 Remaster</option>
-
-  <option value="00wsE7sEhzBkDOHtt9aTLA">Djangology</option>
-
-  <option value="00sc8VZSYUTWEE3muf0ZxL">Taj Mahal</option>
-
-  <option value="05MFbS192zBQEOYnwvj0OP">Ol&#x27; Man River</option>
-
-  <option value="07HSvLZoOfCQJm2JrnHdaR">Liza</option>
-
-  <option value="03aSUSfxbFM7kGy00wDYJW">Japanese Sandman</option>
-
-  <option value="05ddOKhGbErFGHi6ReLqWh">Anniversary Song</option>
-
-  <option value="04goZSIbgZ7kLzab80aB0m">Lily belle may june</option>
-
-  <option value="08O5ZtaMtqfxS1SkrVvxEF">Moten Swing</option>
-
-  <option value="06TnfQbJvlupI8hOp3H0DL">Nuages</option>
-
-  <option value="02tSxBM8HyQSiMNG0C6CIq">Russian Songs Medley</option>
-
-  <option value="02djT73OSKx92keMProZjh">Gipsy With A Song</option>
-
-  <option value="02FQNxYmxFf9Yhg5HIhmDj">How High the Moon</option>
-
-  <option value="04W6LcbcR35cBYZxpFXlvT">Still am Tresen</option>
-
-  <option value="0Cr5EEtfVAWki34BRHc8P5">Mitleid Lady</option>
-
-  <option value="0Ct1tF91916p8pksWHbSl3">Gore Motel</option>
-
-  <option value="03k33F3NbrVk5iAtSvAFH0">Bbydhyonchord</option>
-
-  <option value="01x8CrGhRGd3annktbFbyz">Taking Control</option>
-
-  <option value="0CjC2iwz3fOHyC8MMfMUUt">Fingerbib</option>
-
-  <option value="00wT7HAtqZ2BnemrR34vbO">4</option>
-
-  <option value="0BShm4IqnSq5t13VOmP5AK">Carn Marth</option>
-
-  <option value="0BHE7cwodOlQ8ctYFK8NzO">Wet Tip Hen Ax</option>
-
-  <option value="00rqHqrLS3ZZCqRLsMSPXs">#11</option>
-
-  <option value="0EF2mNCpYwYZIdgJxAU31D">#18</option>
-
-  <option value="09opLVMX7cfKVKlP3iKZR1">Heliosphan</option>
-
-  <option value="0EK8vqmwSCqY5b7CemNc9I">Hedphelym</option>
-
-  <option value="06oElHjFe4jKv71Mgn8M06">Wonderful</option>
-
-  <option value="02ZbFADUWks6sfXxUGEuc7">Out-Side</option>
-
-  <option value="02Z9s5rWwBQNpVwJXvhXnA">Monolith</option>
-
-  <option value="0AEU24pccziELaOeMjZZBY">Ataronchronon</option>
-
-  <option value="0CxVbDRosOWSTJLoEpjQ48">Slow This Bird Down</option>
-
-  <option value="06v3SszX1ged7THW2H4jXB">Iced Cooly</option>
-
-  <option value="0015jQDZIIhkb8vgmx3GXp">Twoism</option>
-
-  <option value="09U7vMWR3zFSpA7Ruye2rw">In The Annexe</option>
-
-  <option value="06CUHGTggjdXLSZQQWN06Y">Opening The Mouth</option>
-
-  <option value="03zv0Znm7bA7XzWMZ1lEKO">An Eagle In Your Mind</option>
-
-  <option value="0AV4LKffb2pRsQCzZSSgzj">XYZ - Peel Session</option>
-
-  <option value="0AuiARc611uMh8Bf9dYbC9">Cinnabar</option>
-
-  <option value="02f2O7TcJVH1mEXzK8I53B">Vermilion</option>
-
-  <option value="0C8tw0sO1aOWTGO2OyFVRn">Cinnabar</option>
-
-  <option value="08TeWlLF8Gq62uz00hILul">Flower Bells</option>
-
-  <option value="09efiqoUP7d42iLcilgX8J">Fickle Sun (iii) I&#x27;m Set Free</option>
-
-  <option value="0B4MhV1Q06IJCzBgUZWiGm">Mother Of A Dog</option>
-
-  <option value="01feO92v0mESERkMGWdOxv">LUX 2</option>
-
-  <option value="00pYSjdvLOlCVMpK0rRYbZ">Sometimes in Autumn - MIT Mix</option>
-
-  <option value="0BI74OnbHS27hSnPYmLz1a">&quot;Granmon&quot;</option>
-
-  <option value="04UCvvXP2OulSRl0QLfK4Q">The Maze - Remastered</option>
-
-  <option value="07BxazIQrCFUS08S6fhGVm">Riot - Alternate Take1 / Remastered</option>
-
-  <option value="02Ma3Y0oxEfBDEfJj4EhMg">My Man&#x27;s Gone Now</option>
-
-  <option value="02K1WMHij5DHHakqfQhd7i">Raging Lung (Shaken-Up Live Version)</option>
-
-  <option value="04MoqQqgwVBNABuyCecucU">One Hit (Shaken-Up Live Version)</option>
-
-  <option value="030F8OCADpoCuSaTlb1ijc">Ready to Lose (Shaken-Up Live Version)</option>
-
-  <option value="0AuaydTSWVjpOhTnNySdXf">Raging Lung</option>
-
-  <option value="06hX6tlRVS2FwT4BeCPe3n">Networking</option>
-
-  <option value="08jk6PRaAJCZW161YKzISH">Ebb Tide Explorer</option>
-
-  <option value="09TQuLpem6iC9kuXU7opE0">Colouring of Pigeons</option>
-
-  <option value="017juRbAM30oWIpFedaZ2G">Seeds</option>
-
-  <option value="0EDSYTPGZfzm9LIONtVqme">Kino - Live</option>
-
-  <option value="0DLzR8ajItjcRtwuuG2W57">The Hall of Mirrors</option>
-
-  <option value="06wDu9e2m1ChROku6i2uqP">The Man Machine</option>
-
-  <option value="04WRVeFNEgvReleafQTd0d">Metall Auf Metall - Live</option>
-
-  <option value="09b1lpnsBkPvOSNwTT3CSV">Chrono - 2009 Remaster</option>
-
-  <option value="0DejBM5F1G2qjY3mw58OAr">Schaufensterpuppen - 2009 Remaster</option>
-
-  <option value="0CVzimInysodNtHPzULDiX">&#x27;90 aka A Man Like Me</option>
-
-  <option value="0DiQnis3FPXZLLU0fqDAD6">Rong</option>
-
-  <option value="03FFeubTclD92RZlEyyOQh">Intro - Comentarios</option>
-
-  <option value="08CXTt3OoHrrr63TYwxreb">Coup De Grace</option>
-
-  <option value="0AP5q9egIPuAmolgXa6C0B">Vision One</option>
-
-  <option value="0BHZMdDIa2lrmEaG0Ds09u">Clear The Area - Instrumental</option>
-
-  <option value="08bpgIMYtGJDKyLR9z2JoI">Lifeline - Instrumental</option>
-
-  <option value="03j9lrCJxtlSpga2CvgJWh">Climb to Sakteng - Instrumental</option>
-
-  <option value="045TagDpGdmMMWA9KwbeTd">About Minds Without Fear - Track Commentary</option>
-
-  <option value="00UjQjh4BcTyjqsZYRm0AP">Me The Machine (Instrumental)</option>
-
-  <option value="09XOG8iMrDrfpcTLiLnRV6">Tidal</option>
-
-  <option value="08kehe33kT0eBVRVz147Zj">Clear the Area</option>
-
-  <option value="01aEmdBEsL5CI4V8JF7QOM">Sleep</option>
-
-  <option value="07ulUcPBk32xgyim8UuCj7">Angry Angel</option>
-
-  <option value="0AhmWTJET3nBmVflLFFTcf">Rake It In</option>
-
-  <option value="0Dy6w8F4J1YJczzZLF2hh6">Good Stuff - Live</option>
-
-  <option value="00lOR0RdiaA5WtlIoFTeoP">Devil In My Car (Live) - Remastered</option>
-
-  <option value="06zeXiplaF7yacfXe8Lj4x">Legal Tender - Live</option>
-
-  <option value="07WKpF5QcG4IDOKVR5bqH3">Love in the Year 3000 - Live</option>
-
-  <option value="02ss5jD7GFX5xtICZkvSsS">Cosmic Thing - Live</option>
-
-  <option value="09jbecZurPNzGIduEmWBzL">Juliet Of The Spirits</option>
-
-  <option value="0BtuAAy3dyumm49hgUQtVa">Private Idaho - Live At The Roxy</option>
-
-  <option value="0CfNBzVVTnnHs3ZGbhcNjl">Ultraviolet</option>
-
-  <option value="06IoX89tXQB78NB3lZax4L">Eyes Wide Open</option>
-
-  <option value="0EEP9AVw5LaxcULtHml9MJ">Tell It Like It T-I-IS</option>
-
-  <option value="0EHVdXicUaZgezWmzHc7iy">Congratulations</option>
-
-  <option value="02bJJcfBVSvlczPgYPPzHt">There Will Be No Intermission</option>
-
-  <option value="05AB6iekUzhkKVjdmFUxmi">Trout Heart Replica</option>
-
-  <option value="09m8aC8aMuZXThPn6HNoQq">Olly Olly Oxen Free</option>
-
-  <option value="0Aryhqy6CeSYwuLVTfxG3r">Wynken, Blynken and Nod - Commentary</option>
-
-  <option value="0Bwop9xzBby2qhHSnmASNN">You Got Me Singing</option>
-
-  <option value="0DWpAU5UtoLDuHTSa8ja3L">Poem for Amanda (By Neil)</option>
-
-  <option value="05EKtTB9YQfEYEOei4n2pk">I Will Write In Words Of Fire</option>
-
-  <option value="06zEgXY68PsrlzH0R5nwd2">(Introduction to Dear Old House)</option>
-
-  <option value="01TQrsAzYm8XRsHzyC4kA9">(Introduction to Gaga, Palmer, Madonna; a Polemic)</option>
-
-  <option value="03gqhhAw5Jq5viahk5iQjS">(Introduction to Dear Old House)</option>
-
-  <option value="05r2beyZaflCMwjzcEOE8b">The Bed Song</option>
-
-  <option value="0DUrC21pi6FtyooX9mG35S">Melody Dean</option>
-
-  <option value="04IpfKEfXrHcBseT7yPDNe">The Killing Type</option>
-
-  <option value="06ujWmuWfkEYRIWKZoVcKu">Flugufrelsarinn</option>
-
-  <option value="00T0hEW35DAH54xQvaXeen">The Hungry Ghosts, We Live in an Old Chaos of the Sun</option>
-
-  <option value="0668cUBGpB6bhdvIzGlZId">All Mapped Out</option>
-
-  <option value="0Bf2oQ9ItFg825Bh14vUe1">End</option>
-
-  <option value="0E1kjLjtx5bhiXufhe33i6">Route One 005</option>
-
-  <option value="0Ahb9Zi7UeHTjY0U8rLM4o">Route One 011</option>
-
-  <option value="07tG3uSvWOlg5febou8YmZ">Route One 038</option>
-
-  <option value="08KvkSMJjJOMKj3WqW4iZJ">Brennisteinn - Live</option>
-
+    <select name="releasetrack_set-__prefix__-track" aria-describedby="id_releasetrack_set-__prefix__-track_helptext" id="id_releasetrack_set-__prefix__-track" class="admin-autocomplete" data-ajax--cache="true" data-ajax--delay="250" data-ajax--type="GET" data-ajax--url="/django_admin_tests/latest/english/admin/autocomplete/" data-app-label="demo" data-model-name="releasetrack" data-field-name="track" data-theme="admin-autocomplete" data-allow-clear="false" data-placeholder="" lang="en">
 </select>
     
         <a class="related-widget-wrapper-link change-related" id="change_id_releasetrack_set-__prefix__-track"
@@ -2241,9 +901,7 @@
             
           
         
-        
-          <td class="delete"></td>
-        
+        <td class="delete"></td>
         </tr>
      
      </tbody>
