@@ -9,8 +9,16 @@ class AutoLoginMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
-        # Get the user you want to log in
-        if username := request.COOKIES.get('auto_login'):
+        # Get the user we want to log in as, from cookies.
+        if username := request.COOKIES.get("auto_login"):
+            user = User.objects.get(username=username)
+
+            # Log in the user
+            request.user = user
+            login(request, user)
+
+        # Get the user we want to log in as, from headers.
+        elif username := request.headers.get("X-Auto-Login"):
             user = User.objects.get(username=username)
 
             # Log in the user
