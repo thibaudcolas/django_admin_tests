@@ -59,7 +59,7 @@
                 <a href="/django_admin_tests/latest/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/latest/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="SxFEvnUbnO7GgKbjmzn7WZDK3cA4oKwJVex3gcGzegd1cUwS2lcO45NxWDvN6209">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="nszjLTPn9C34hNyq3JfJFiGO7vZaEkS2vAc682M6yMrklswh3Wz8sbI2tE6aaI5e">
                     <button type="submit">Log out</button>
                 </form>
                 
@@ -662,24 +662,25 @@ It is {% now &quot;jS F Y H:i&quot; %}
     <hr>
     
     <h3 id="built_in-querystring">querystring</h3>
-    <h4>Add, remove, and change parameters of a QueryDict and return the result
-as a query string. If the query_dict argument is not provided, default
-to request.GET.
+    <h4>Build a query string using query_dict and kwargs arguments.
 </h4>
-    <p>For example:</p>
+    <p>This tag constructs a new query string by adding, removing, or modifying
+parameters, starting from the given <a class="reference external" href="/django_admin_tests/latest/english/admin/doc/tags/#query_dict">query_dict</a> (defaulting to
+<a class="reference external" href="/django_admin_tests/latest/english/admin/doc/tags/#request.get">request.GET</a>). Keyword arguments are processed sequentially, with later
+arguments taking precedence.</p>
+<p>A query string prefixed with <a class="reference external" href="/django_admin_tests/latest/english/admin/doc/tags/#?">?</a> is returned.</p>
+<p>For example:</p>
 <pre class="literal-block">
+{# Set a parameter on top of `request.GET` #}
 {% querystring foo=3 %}
-</pre>
-<p>To remove a key:</p>
-<pre class="literal-block">
+
+{# Remove a key from `request.GET` #}
 {% querystring foo=None %}
-</pre>
-<p>To use with pagination:</p>
-<pre class="literal-block">
+
+{# Use with pagination #}
 {% querystring page=page_obj.next_page_number %}
-</pre>
-<p>A custom <tt class="docutils literal">QueryDict</tt> can also be used:</p>
-<pre class="literal-block">
+
+{# Use a custom ``QueryDict`` #}
 {% querystring my_query_dict foo=3 %}
 </pre>
 
