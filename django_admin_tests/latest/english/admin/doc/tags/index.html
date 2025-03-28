@@ -59,7 +59,7 @@
                 <a href="/django_admin_tests/latest/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/latest/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="nszjLTPn9C34hNyq3JfJFiGO7vZaEkS2vAc682M6yMrklswh3Wz8sbI2tE6aaI5e">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="yuabPiEiXtuvshMfelowrTBzI3PX3V8dDR0lZeSRFLMmX4wagT4KTmawbZw9UM89">
                     <button type="submit">Log out</button>
                 </form>
                 
@@ -662,13 +662,17 @@ It is {% now &quot;jS F Y H:i&quot; %}
     <hr>
     
     <h3 id="built_in-querystring">querystring</h3>
-    <h4>Build a query string using query_dict and kwargs arguments.
+    <h4>Build a query string using args and kwargs arguments.
 </h4>
     <p>This tag constructs a new query string by adding, removing, or modifying
-parameters, starting from the given <a class="reference external" href="/django_admin_tests/latest/english/admin/doc/tags/#query_dict">query_dict</a> (defaulting to
-<a class="reference external" href="/django_admin_tests/latest/english/admin/doc/tags/#request.get">request.GET</a>). Keyword arguments are processed sequentially, with later
-arguments taking precedence.</p>
+parameters from the given positional and keyword arguments. Positional
+arguments must be mappings (such as <a class="reference external" href="/django_admin_tests/latest/english/admin/doc/tags/#querydict">QueryDict</a> or <a class="reference external" href="/django_admin_tests/latest/english/admin/doc/tags/#dict">dict</a>), and
+<a class="reference external" href="/django_admin_tests/latest/english/admin/doc/tags/#request.get">request.GET</a> is used as the starting point if <a class="reference external" href="/django_admin_tests/latest/english/admin/doc/tags/#args">args</a> is empty.</p>
+<p>Keyword arguments are treated as an extra, final mapping. These mappings
+are processed sequentially, with later arguments taking precedence.</p>
 <p>A query string prefixed with <a class="reference external" href="/django_admin_tests/latest/english/admin/doc/tags/#?">?</a> is returned.</p>
+<p>Raise TemplateSyntaxError if a positional argument is not a mapping or if
+keys are not strings.</p>
 <p>For example:</p>
 <pre class="literal-block">
 {# Set a parameter on top of `request.GET` #}
@@ -682,6 +686,9 @@ arguments taking precedence.</p>
 
 {# Use a custom ``QueryDict`` #}
 {% querystring my_query_dict foo=3 %}
+
+{# Use multiple positional and keyword arguments #}
+{% querystring my_query_dict my_dict foo=3 bar=None %}
 </pre>
 
     <hr>
