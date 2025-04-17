@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+<title>Select artist to change | Django site admin</title>
+<link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/base.css">
+
+  <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/dark_mode.css">
+  <script src="/django_admin_tests/latest/english/static/admin/js/theme.js"></script>
+
+
+  <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/nav_sidebar.css">
+
+
+  
+  <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/changelists.css">
+  
+  
+    <script src="/django_admin_tests/latest/english/admin/jsi18n/"></script>
+  
+  
+  
+
+
+
+
+<script src="/django_admin_tests/latest/english/static/admin/js/vendor/jquery/jquery.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/jquery.init.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/core.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/actions.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/urlify.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/prepopulate.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/vendor/xregexp/xregexp.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/filters.js" defer></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=" app-demo model-artist change-list"
+  data-admin-utc-offset="0">
+<a href="#content-start" class="skip-to-content-link">Skip to main content</a>
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+      <header id="header">
+        <div id="branding">
+        
+<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration 5.2.dev20241211142310</a></div>
+
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>admin</strong>.
+            
+            
+                
+                    <a href="/">View site</a> /
+                
+                
+                    
+                    
+                        <a href="/django_admin_tests/latest/english/admin/doc/">Documentation</a> /
+                    
+                
+                
+                <a href="/django_admin_tests/latest/english/admin/password_change/">Change password</a> /
+                
+                <form id="logout-form" method="post" action="/django_admin_tests/latest/english/admin/logout/">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="Qa03gnul2R3ZYtmzIPBlkcSE5o7s2N6BgpVAkui78dOrGgURhz0bSyi0NHAPaIV7">
+                    <button type="submit">Log out</button>
+                </form>
+                
+<button class="theme-toggle">
+  <span class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</span>
+  <span class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</span>
+  <span class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</span>
+  <svg aria-hidden="true" class="theme-icon-when-auto">
+    <use xlink:href="#icon-auto" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-dark">
+    <use xlink:href="#icon-moon" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-light">
+    <use xlink:href="#icon-sun" />
+  </svg>
+</button>
+
+            
+        </div>
+        
+        
+        
+      </header>
+    
+    <!-- END Header -->
+    
+      <nav aria-label="Breadcrumbs">
+        
+<div class="breadcrumbs">
+<a href="/django_admin_tests/latest/english/admin/">Home</a>
+&rsaquo; <a href="/django_admin_tests/latest/english/admin/demo/">Demo</a>
+&rsaquo; Artists
+</div>
+
+      </nav>
+    
+    
+
+    <div class="main" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
+<nav class="sticky" id="nav-sidebar" aria-label="Sidebar">
+  <input type="search" id="nav-filter"
+         placeholder="Start typing to filter…"
+         aria-label="Filter navigation items">
+  
+
+
+  
+    <div class="app-admin module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/admin/" class="section" title="Models in the Administration application">Administration</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-logentry">
+              <th scope="row" id="admin-logentry">
+                
+                  <a href="/django_admin_tests/latest/english/admin/admin/logentry/">Log entries</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/admin/logentry/add/" class="addlink" aria-describedby="admin-logentry">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-auth module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-group">
+              <th scope="row" id="auth-group">
+                
+                  <a href="/django_admin_tests/latest/english/admin/auth/group/">Groups</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/auth/group/add/" class="addlink" aria-describedby="auth-group">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-permission">
+              <th scope="row" id="auth-permission">
+                
+                  <a href="/django_admin_tests/latest/english/admin/auth/permission/">Permissions</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/auth/permission/add/" class="addlink" aria-describedby="auth-permission">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-user">
+              <th scope="row" id="auth-user">
+                
+                  <a href="/django_admin_tests/latest/english/admin/auth/user/">Users</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/auth/user/add/" class="addlink" aria-describedby="auth-user">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-contenttypes module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/contenttypes/" class="section" title="Models in the Content Types application">Content Types</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-contenttype">
+              <th scope="row" id="contenttypes-contenttype">
+                
+                  <a href="/django_admin_tests/latest/english/admin/contenttypes/contenttype/">Content types</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/contenttypes/contenttype/add/" class="addlink" aria-describedby="contenttypes-contenttype">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-demo module current-app">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/demo/" class="section" title="Models in the Demo application">Demo</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-artist current-model">
+              <th scope="row" id="demo-artist">
+                
+                  <a href="/django_admin_tests/latest/english/admin/demo/artist/" aria-current="page">Artists</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/demo/artist/add/" class="addlink" aria-describedby="demo-artist">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-releasetrack">
+              <th scope="row" id="demo-releasetrack">
+                
+                  <a href="/django_admin_tests/latest/english/admin/demo/releasetrack/">Release tracks</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/demo/releasetrack/add/" class="addlink" aria-describedby="demo-releasetrack">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-release">
+              <th scope="row" id="demo-release">
+                
+                  <a href="/django_admin_tests/latest/english/admin/demo/release/">Releases</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/demo/release/add/" class="addlink" aria-describedby="demo-release">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-track">
+              <th scope="row" id="demo-track">
+                
+                  <a href="/django_admin_tests/latest/english/admin/demo/track/">Tracks</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/demo/track/add/" class="addlink" aria-describedby="demo-track">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-flatpages module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/flatpages/" class="section" title="Models in the Flat Pages application">Flat Pages</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-flatpage">
+              <th scope="row" id="flatpages-flatpage">
+                
+                  <a href="/django_admin_tests/latest/english/admin/flatpages/flatpage/">Flat pages</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/flatpages/flatpage/add/" class="addlink" aria-describedby="flatpages-flatpage">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-redirects module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/redirects/" class="section" title="Models in the Redirects application">Redirects</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-redirect">
+              <th scope="row" id="redirects-redirect">
+                
+                  <a href="/django_admin_tests/latest/english/admin/redirects/redirect/">Redirects</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/redirects/redirect/add/" class="addlink" aria-describedby="redirects-redirect">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-sessions module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/sessions/" class="section" title="Models in the Sessions application">Sessions</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-session">
+              <th scope="row" id="sessions-session">
+                
+                  <a href="/django_admin_tests/latest/english/admin/sessions/session/">Sessions</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/sessions/session/add/" class="addlink" aria-describedby="sessions-session">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-sites module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/sites/" class="section" title="Models in the Sites application">Sites</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-site">
+              <th scope="row" id="sites-site">
+                
+                  <a href="/django_admin_tests/latest/english/admin/sites/site/">Sites</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/sites/site/add/" class="addlink" aria-describedby="sites-site">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+
+
+</nav>
+<script src="/django_admin_tests/latest/english/static/admin/js/nav_sidebar.js"></script>
+
+        
+      
+      <main id="content-start" class="content" tabindex="-1">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="">
+          
+          <h1>Select artist to change</h1>
+          
+          
+  <div id="content-main">
+    
+        <ul class="object-tools">
+          
+            
+
+
+  
+  <li>
+    
+    <a href="/django_admin_tests/latest/english/admin/demo/artist/add/" class="addlink">
+      Add artist
+    </a>
+  </li>
+  
+
+
+          
+        </ul>
+    
+    
+    <div class="module" id="changelist">
+      <div class="changelist-form-container">
+        
+
+<div id="toolbar"><form id="changelist-search" method="get" role="search">
+<div><!-- DIV needed for valid HTML -->
+<label for="searchbar"><img src="/django_admin_tests/latest/english/static/admin/img/search.svg" alt="Search"></label>
+<input type="text" size="40" name="q" value="" id="searchbar">
+<input type="submit" value="Search">
+
+
+</div>
+
+</form></div>
+
+
+        
+
+        <form id="changelist-form" method="post" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="Qa03gnul2R3ZYtmzIPBlkcSE5o7s2N6BgpVAkui78dOrGgURhz0bSyi0NHAPaIV7">
+        
+
+        
+          
+<div class="actions">
+  
+    
+    <label>Action: <select name="action" required>
+  <option value="" selected>---------</option>
+
+  <option value="delete_selected">Delete selected artists</option>
+
+</select></label><input type="hidden" name="select_across" value="0" class="select-across">
+    
+    
+    <button type="submit" class="button" title="Run the selected action" name="index" value="0">Go</button>
+    
+    
+    
+        <span class="action-counter" data-actions-icnt="72">0 of 72 selected</span>
+        
+    
+    
+  
+</div>
+
+          
+
+
+<div class="results">
+<table id="result_list">
+<thead>
+<tr>
+
+<th scope="col" class="action-checkbox-column">
+   
+   <div class="text"><span><input type="checkbox" id="action-toggle" aria-label="Select all objects on this page for an action"></span></div>
+   <div class="clear"></div>
+</th>
+<th scope="col" class="sortable column-__str__">
+   
+   <div class="text"><a href="?o=1">Artist</a></div>
+   <div class="clear"></div>
+</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3Rp3pcr8W9rhgF8YhHqplP" class="action-select" aria-label="Select this object for an action - Eno • Hyde"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/3Rp3pcr8W9rhgF8YhHqplP/change/">Eno • Hyde</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3PihHGdkeI7CBvqoMUIMdT" class="action-select" aria-label="Select this object for an action - Sonya Kitchell"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/3PihHGdkeI7CBvqoMUIMdT/change/">Sonya Kitchell</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3OsRAKCvk37zwYcnzRf5XF" class="action-select" aria-label="Select this object for an action - Moby"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/3OsRAKCvk37zwYcnzRf5XF/change/">Moby</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3NftVCkNIA0jXRHBMTQG5S" class="action-select" aria-label="Select this object for an action - E-Dward!"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/3NftVCkNIA0jXRHBMTQG5S/change/">E-Dward!</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3LpLGlgRS1IKPPwElnpW35" class="action-select" aria-label="Select this object for an action - James Morrison"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/3LpLGlgRS1IKPPwElnpW35/change/">James Morrison</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="39xjP2biuKg7i0U6DwoRHg" class="action-select" aria-label="Select this object for an action - John McEntire"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/39xjP2biuKg7i0U6DwoRHg/change/">John McEntire</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="336WobO76en2wVEsmGemZ0" class="action-select" aria-label="Select this object for an action - Linda Neil"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/336WobO76en2wVEsmGemZ0/change/">Linda Neil</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="32pN1An13076I4PTMzn2g7" class="action-select" aria-label="Select this object for an action - Arve Henriksen"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/32pN1An13076I4PTMzn2g7/change/">Arve Henriksen</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2x9SpqnPi8rlE9pjHBwmSC" class="action-select" aria-label="Select this object for an action - Talking Heads"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2x9SpqnPi8rlE9pjHBwmSC/change/">Talking Heads</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2vJObElaIZWYDLpiXiJMo9" class="action-select" aria-label="Select this object for an action - Cornelius"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2vJObElaIZWYDLpiXiJMo9/change/">Cornelius</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2sf2owtFSCvz2MLfxmNdkb" class="action-select" aria-label="Select this object for an action - Tinariwen"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2sf2owtFSCvz2MLfxmNdkb/change/">Tinariwen</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2nCACYdIndYchzX4bxLcTW" class="action-select" aria-label="Select this object for an action - Toumani Diabaté"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2nCACYdIndYchzX4bxLcTW/change/">Toumani Diabaté</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2gE7z8Q7HaHFiyyjzl3Qbk" class="action-select" aria-label="Select this object for an action - Lærke Bo Winther"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2gE7z8Q7HaHFiyyjzl3Qbk/change/">Lærke Bo Winther</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2eFVsaX3yHLPeWpiqvmeFn" class="action-select" aria-label="Select this object for an action - Céu"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2eFVsaX3yHLPeWpiqvmeFn/change/">Céu</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2c0fwzZLBTcn71TtEY5rem" class="action-select" aria-label="Select this object for an action - Michel Warlop"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2c0fwzZLBTcn71TtEY5rem/change/">Michel Warlop</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2ZvrvbQNrHKwjT7qfGFFUW" class="action-select" aria-label="Select this object for an action - Herbie Hancock"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2ZvrvbQNrHKwjT7qfGFFUW/change/">Herbie Hancock</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2VAvhf61GgLYmC6C8anyX1" class="action-select" aria-label="Select this object for an action - Boards of Canada"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2VAvhf61GgLYmC6C8anyX1/change/">Boards of Canada</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2UyhhfLOvfLs7ZhzsAaNC3" class="action-select" aria-label="Select this object for an action - Mount Sims"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2UyhhfLOvfLs7ZhzsAaNC3/change/">Mount Sims</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2SCl569EBW2Puv5DPKeYCV" class="action-select" aria-label="Select this object for an action - Burger"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2SCl569EBW2Puv5DPKeYCV/change/">Burger</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2MpxaqGTQeft5RU4wvwm57" class="action-select" aria-label="Select this object for an action - Unknown"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2MpxaqGTQeft5RU4wvwm57/change/">Unknown</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2LMR8u7DOMF0FBseDpTsRa" class="action-select" aria-label="Select this object for an action - The Beta Band"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2LMR8u7DOMF0FBseDpTsRa/change/">The Beta Band</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2Kx7MNY7cI1ENniW7vT30N" class="action-select" aria-label="Select this object for an action - Norah Jones"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2Kx7MNY7cI1ENniW7vT30N/change/">Norah Jones</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2K13AVg3bFpHSxDM1vJ0qA" class="action-select" aria-label="Select this object for an action - CSS"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2K13AVg3bFpHSxDM1vJ0qA/change/">CSS</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2CIMQHirSU0MQqyYHq0eOx" class="action-select" aria-label="Select this object for an action - deadmau5"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2CIMQHirSU0MQqyYHq0eOx/change/">deadmau5</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2BSlLKhHzyf1EFquAUGcTd" class="action-select" aria-label="Select this object for an action - Django Reinhardt Orchestra"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2BSlLKhHzyf1EFquAUGcTd/change/">Django Reinhardt Orchestra</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2AHGrNDMKFi8rHqQ8kJqfl" class="action-select" aria-label="Select this object for an action - William Orbit"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/2AHGrNDMKFi8rHqQ8kJqfl/change/">William Orbit</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="29WzbAQtDnBJF09es0uddn" class="action-select" aria-label="Select this object for an action - Corinne Bailey Rae"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/29WzbAQtDnBJF09es0uddn/change/">Corinne Bailey Rae</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="25IOiTtNlrRS3SaIcKbo7h" class="action-select" aria-label="Select this object for an action - Detektivbyrån"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/25IOiTtNlrRS3SaIcKbo7h/change/">Detektivbyrån</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="23MIhFHpoOuhtEHZDrrnCS" class="action-select" aria-label="Select this object for an action - The Field"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/23MIhFHpoOuhtEHZDrrnCS/change/">The Field</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1zuJe6b1roixEKMOtyrEak" class="action-select" aria-label="Select this object for an action - Tina Turner"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1zuJe6b1roixEKMOtyrEak/change/">Tina Turner</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1yv1pS6ejZPKgguz0CjmTl" class="action-select" aria-label="Select this object for an action - Phil Daniels"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1yv1pS6ejZPKgguz0CjmTl/change/">Phil Daniels</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1y5meDkezxxwJRPB8zkqW1" class="action-select" aria-label="Select this object for an action - The Grand Theft Orchestra"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1y5meDkezxxwJRPB8zkqW1/change/">The Grand Theft Orchestra</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1xJPYI7GXasA3ariMSftPq" class="action-select" aria-label="Select this object for an action - Derek Trucks"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1xJPYI7GXasA3ariMSftPq/change/">Derek Trucks</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1roEfVbO350AW56DWqtw1m" class="action-select" aria-label="Select this object for an action - Bobby Ray Simmons, Jr."></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1roEfVbO350AW56DWqtw1m/change/">Bobby Ray Simmons, Jr.</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1q1JhA8NmMYJhIPHKtlFwg" class="action-select" aria-label="Select this object for an action - Steindór Andersen"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1q1JhA8NmMYJhIPHKtlFwg/change/">Steindór Andersen</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1pOFlNEK2vIUCacdFXFHMe" class="action-select" aria-label="Select this object for an action - Andre Ekyan"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1pOFlNEK2vIUCacdFXFHMe/change/">Andre Ekyan</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1mAZuRxncE9DLiAghJ4ieu" class="action-select" aria-label="Select this object for an action - The Jane Austen Argument"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1mAZuRxncE9DLiAghJ4ieu/change/">The Jane Austen Argument</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1lB7KbOr9xdPK1CuasxmeA" class="action-select" aria-label="Select this object for an action - Jackie McLean"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1lB7KbOr9xdPK1CuasxmeA/change/">Jackie McLean</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1kq2ZvBA7AX9mdZTk9SkpU" class="action-select" aria-label="Select this object for an action - Jamie Irrepressible"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1kq2ZvBA7AX9mdZTk9SkpU/change/">Jamie Irrepressible</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1doYxKMh5Eg26rzpEIQdjd" class="action-select" aria-label="Select this object for an action - Shannon Funchess"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1doYxKMh5Eg26rzpEIQdjd/change/">Shannon Funchess</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1dO2xIT92KWbZsnv4FDYhy" class="action-select" aria-label="Select this object for an action - The Glenn Miller&#x27;s All Stars"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1dO2xIT92KWbZsnv4FDYhy/change/">The Glenn Miller&#x27;s All Stars</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1ZcnsSFqWusWlRK01vKE6b" class="action-select" aria-label="Select this object for an action - Montaigne"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1ZcnsSFqWusWlRK01vKE6b/change/">Montaigne</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1KCSPY1glIKqW2TotWuXOR" class="action-select" aria-label="Select this object for an action - P!nk"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1KCSPY1glIKqW2TotWuXOR/change/">P!nk</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1GkiKu2FJFSBrXSL8wKFzy" class="action-select" aria-label="Select this object for an action - Jerry Harrison"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1GkiKu2FJFSBrXSL8wKFzy/change/">Jerry Harrison</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1F72pgs2ddg2UY3WDNXJ0Q" class="action-select" aria-label="Select this object for an action - Unknown"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1F72pgs2ddg2UY3WDNXJ0Q/change/">Unknown</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1EoM3RaZFNyVemrUilsheL" class="action-select" aria-label="Select this object for an action - Rick Holland"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1EoM3RaZFNyVemrUilsheL/change/">Rick Holland</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1E1ti7Ttt0Vq3GVCw9oHvm" class="action-select" aria-label="Select this object for an action - Eddie South"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1E1ti7Ttt0Vq3GVCw9oHvm/change/">Eddie South</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1BaQTErXwanCRr4ZceCDwR" class="action-select" aria-label="Select this object for an action - Philippe Brun"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1BaQTErXwanCRr4ZceCDwR/change/">Philippe Brun</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1BBAwlYxmXVW80YYm7Zgyb" class="action-select" aria-label="Select this object for an action - Eddie South - Cordonnie - Stéphane Grappelli - Django Reinhardt"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/1BBAwlYxmXVW80YYm7Zgyb/change/">Eddie South - Cordonnie - Stéphane Grappelli - Django Reinhardt</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="14J4BdjbQR2CkS5id12bmk" class="action-select" aria-label="Select this object for an action - Emily Roysdon"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/14J4BdjbQR2CkS5id12bmk/change/">Emily Roysdon</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="13wKR291adpTJBrofe2ceL" class="action-select" aria-label="Select this object for an action - Live It"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/13wKR291adpTJBrofe2ceL/change/">Live It</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="13vQloYd6mP7V1mVwKJwS2" class="action-select" aria-label="Select this object for an action - Dave Matthews"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/13vQloYd6mP7V1mVwKJwS2/change/">Dave Matthews</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0z7Yuv7DuDQ5SaVn4VSlLt" class="action-select" aria-label="Select this object for an action - Lisa Hannigan"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0z7Yuv7DuDQ5SaVn4VSlLt/change/">Lisa Hannigan</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0tHDVpPzMs1JqKTAuGQkQR" class="action-select" aria-label="Select this object for an action - Harmonia"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0tHDVpPzMs1JqKTAuGQkQR/change/">Harmonia</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0kibIwgAWgIDqaIa0u3Ypf" class="action-select" aria-label="Select this object for an action - Vincent Youmans"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0kibIwgAWgIDqaIa0u3Ypf/change/">Vincent Youmans</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0iONcDu4zVlsw1LwIq4rrN" class="action-select" aria-label="Select this object for an action - Tom Rogerson"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0iONcDu4zVlsw1LwIq4rrN/change/">Tom Rogerson</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0gz64Oe1zLOi5PziX5Rhtd" class="action-select" aria-label="Select this object for an action - Mit"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0gz64Oe1zLOi5PziX5Rhtd/change/">Mit</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0dmPX6ovclgOy8WWJaFEUU" class="action-select" aria-label="Select this object for an action - Kraftwerk"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0dmPX6ovclgOy8WWJaFEUU/change/">Kraftwerk</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0d7aBBLFcc4dlETnae6zcH" class="action-select" aria-label="Select this object for an action - WHY?"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0d7aBBLFcc4dlETnae6zcH/change/">WHY?</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0cv8X9QNT0s3OHfVVeNWkM" class="action-select" aria-label="Select this object for an action - Luciana Souza"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0cv8X9QNT0s3OHfVVeNWkM/change/">Luciana Souza</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0ZqhrTXYPA9DZR527ZnFdO" class="action-select" aria-label="Select this object for an action - Wayne Shorter"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0ZqhrTXYPA9DZR527ZnFdO/change/">Wayne Shorter</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0UbNVjVeuhbzYSzkYBcKI3" class="action-select" aria-label="Select this object for an action - Manmousse"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0UbNVjVeuhbzYSzkYBcKI3/change/">Manmousse</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0UWZUmn7sybxMCqrw9tGa7" class="action-select" aria-label="Select this object for an action - Juanes"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0UWZUmn7sybxMCqrw9tGa7/change/">Juanes</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0Tb8S5bNKO7nZV1eunOwZa" class="action-select" aria-label="Select this object for an action - Rex Stewart"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0Tb8S5bNKO7nZV1eunOwZa/change/">Rex Stewart</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0QWCnpfvnorRJej06j0J7v" class="action-select" aria-label="Select this object for an action - James Morrison"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0QWCnpfvnorRJej06j0J7v/change/">James Morrison</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0PFtn5NtBbbUNbU9EAmIWF" class="action-select" aria-label="Select this object for an action - TOTO"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0PFtn5NtBbbUNbU9EAmIWF/change/">TOTO</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0O98jlCaPzvsoei6U5jfEL" class="action-select" aria-label="Select this object for an action - Damon Albarn"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0O98jlCaPzvsoei6U5jfEL/change/">Damon Albarn</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0JM134st8VY7Ld9T2wQiH0" class="action-select" aria-label="Select this object for an action - Coleman Hawkins"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0JM134st8VY7Ld9T2wQiH0/change/">Coleman Hawkins</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0AD4odMWVQ2wUSlgxOB5Rl" class="action-select" aria-label="Select this object for an action - Jeff Beck"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/0AD4odMWVQ2wUSlgxOB5Rl/change/">Jeff Beck</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="09P3wPH0MvtLnhwfbtzrRq" class="action-select" aria-label="Select this object for an action - Nevermen"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/09P3wPH0MvtLnhwfbtzrRq/change/">Nevermen</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="042N2d6Ydqx1Kc26W1bHLJ" class="action-select" aria-label="Select this object for an action - Kristina Wahlin Momme"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/042N2d6Ydqx1Kc26W1bHLJ/change/">Kristina Wahlin Momme</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="00b3RKsk2pv5VWSnYAKW8u" class="action-select" aria-label="Select this object for an action - Man Without Country"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/demo/artist/00b3RKsk2pv5VWSnYAKW8u/change/">Man Without Country</a></th></tr>
+
+</tbody>
+</table>
+</div>
+
+
+          
+        
+        
+
+<p class="paginator">
+
+72 artists
+
+
+</p>
+
+        </form>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+      </main>
+    </div>
+    <footer id="footer"></footer>
+</div>
+<!-- END Container -->
+
+<!-- SVGs -->
+<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">
+  <symbol viewBox="0 0 24 24" width="1.5rem" height="1.5rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1.5rem" height="1.5rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1.5rem" height="1.5rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>
+</svg>
+<!-- END SVGs -->
+
+</body>
+</html>
