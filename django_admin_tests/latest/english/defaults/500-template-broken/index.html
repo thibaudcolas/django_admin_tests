@@ -116,7 +116,7 @@
 
     <tr>
       <th scope="row">Django Version:</th>
-      <td>6.0.dev20250412174200</td>
+      <td>6.0.dev20250417152306</td>
     </tr>
 
     <tr>
@@ -133,7 +133,7 @@
 
     <tr>
       <th scope="row">Exception Location:</th>
-      <td><span class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</span>, line 567, in invalid_block_tag</td>
+      <td><span class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</span>, line 575, in invalid_block_tag</td>
     </tr>
 
 
@@ -148,20 +148,20 @@
     </tr>
     <tr>
       <th scope="row">Python Version:</th>
-      <td>3.12.9</td>
+      <td>3.12.10</td>
     </tr>
     <tr>
       <th scope="row">Python Path:</th>
       <td><pre><code>[&#x27;/home/runner/work/django_admin_tests/django_admin_tests&#x27;,
- &#x27;/opt/hostedtoolcache/Python/3.12.9/x64/lib/python312.zip&#x27;,
- &#x27;/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12&#x27;,
- &#x27;/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/lib-dynload&#x27;,
+ &#x27;/opt/hostedtoolcache/Python/3.12.10/x64/lib/python312.zip&#x27;,
+ &#x27;/opt/hostedtoolcache/Python/3.12.10/x64/lib/python3.12&#x27;,
+ &#x27;/opt/hostedtoolcache/Python/3.12.10/x64/lib/python3.12/lib-dynload&#x27;,
  &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages&#x27;,
- &#x27;__editable__.django-6.0.dev20250412174200.finder.__path_hook__&#x27;]</code></pre></td>
+ &#x27;__editable__.django-6.0.dev20250417152306.finder.__path_hook__&#x27;]</code></pre></td>
     </tr>
     <tr>
       <th scope="row">Server time:</th>
-      <td>Tue, 15 Apr 2025 03:35:45 +0000</td>
+      <td>Fri, 18 Apr 2025 03:34:15 +0000</td>
     </tr>
   </table>
 </header>
@@ -245,48 +245,48 @@
         
         <li class="frame django">
           
-            <code class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</code>, line 510, in parse
+            <code class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</code>, line 518, in parse
           
 
           
-            <div class="context" id="c140609449432704">
+            <div class="context" id="c139862193278144">
               
-                <ol start="503" class="pre-context" id="pre140609449432704">
+                <ol start="511" class="pre-context" id="pre139862193278144">
                 
-                  <li onclick="toggle('pre140609449432704', 'post140609449432704')"><pre>                # Add the token to the command stack. This is used for error</pre></li>
+                  <li onclick="toggle('pre139862193278144', 'post139862193278144')"><pre>                # Add the token to the command stack. This is used for error</pre></li>
                 
-                  <li onclick="toggle('pre140609449432704', 'post140609449432704')"><pre>                # messages if further parsing fails due to an unclosed block</pre></li>
+                  <li onclick="toggle('pre139862193278144', 'post139862193278144')"><pre>                # messages if further parsing fails due to an unclosed block</pre></li>
                 
-                  <li onclick="toggle('pre140609449432704', 'post140609449432704')"><pre>                # tag.</pre></li>
+                  <li onclick="toggle('pre139862193278144', 'post139862193278144')"><pre>                # tag.</pre></li>
                 
-                  <li onclick="toggle('pre140609449432704', 'post140609449432704')"><pre>                self.command_stack.append((command, token))</pre></li>
+                  <li onclick="toggle('pre139862193278144', 'post139862193278144')"><pre>                self.command_stack.append((command, token))</pre></li>
                 
-                  <li onclick="toggle('pre140609449432704', 'post140609449432704')"><pre>                # Get the tag callback function from the ones registered with</pre></li>
+                  <li onclick="toggle('pre139862193278144', 'post139862193278144')"><pre>                # Get the tag callback function from the ones registered with</pre></li>
                 
-                  <li onclick="toggle('pre140609449432704', 'post140609449432704')"><pre>                # the parser.</pre></li>
+                  <li onclick="toggle('pre139862193278144', 'post139862193278144')"><pre>                # the parser.</pre></li>
                 
-                  <li onclick="toggle('pre140609449432704', 'post140609449432704')"><pre>                try:</pre></li>
+                  <li onclick="toggle('pre139862193278144', 'post139862193278144')"><pre>                try:</pre></li>
                 
                 </ol>
               
-              <ol start="510" class="context-line">
-                <li onclick="toggle('pre140609449432704', 'post140609449432704')"><pre>                    compile_func = self.tags[command]
+              <ol start="518" class="context-line">
+                <li onclick="toggle('pre139862193278144', 'post139862193278144')"><pre>                    compile_func = self.tags[command]
                                         ^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='511' class="post-context" id="post140609449432704">
+                <ol start='519' class="post-context" id="post139862193278144">
                   
-                  <li onclick="toggle('pre140609449432704', 'post140609449432704')"><pre>                except KeyError:</pre></li>
+                  <li onclick="toggle('pre139862193278144', 'post139862193278144')"><pre>                except KeyError:</pre></li>
                   
-                  <li onclick="toggle('pre140609449432704', 'post140609449432704')"><pre>                    self.invalid_block_tag(token, command, parse_until)</pre></li>
+                  <li onclick="toggle('pre139862193278144', 'post139862193278144')"><pre>                    self.invalid_block_tag(token, command, parse_until)</pre></li>
                   
-                  <li onclick="toggle('pre140609449432704', 'post140609449432704')"><pre>                # Compile the callback into a node object and add it to</pre></li>
+                  <li onclick="toggle('pre139862193278144', 'post139862193278144')"><pre>                # Compile the callback into a node object and add it to</pre></li>
                   
-                  <li onclick="toggle('pre140609449432704', 'post140609449432704')"><pre>                # the node list.</pre></li>
+                  <li onclick="toggle('pre139862193278144', 'post139862193278144')"><pre>                # the node list.</pre></li>
                   
-                  <li onclick="toggle('pre140609449432704', 'post140609449432704')"><pre>                try:</pre></li>
+                  <li onclick="toggle('pre139862193278144', 'post139862193278144')"><pre>                try:</pre></li>
                   
-                  <li onclick="toggle('pre140609449432704', 'post140609449432704')"><pre>                    compiled_result = compile_func(self, token)</pre></li>
+                  <li onclick="toggle('pre139862193278144', 'post139862193278144')"><pre>                    compiled_result = compile_func(self, token)</pre></li>
                   
               </ol>
               
@@ -298,7 +298,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449432704">
+            <table class="vars" id="v139862193278144">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -356,44 +356,44 @@
           
 
           
-            <div class="context" id="c140609449439552">
+            <div class="context" id="c139862193279808">
               
-                <ol start="48" class="pre-context" id="pre140609449439552">
+                <ol start="48" class="pre-context" id="pre139862193279808">
                 
-                  <li onclick="toggle('pre140609449439552', 'post140609449439552')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193279808', 'post139862193279808')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140609449439552', 'post140609449439552')"><pre>        return inner</pre></li>
+                  <li onclick="toggle('pre139862193279808', 'post139862193279808')"><pre>        return inner</pre></li>
                 
-                  <li onclick="toggle('pre140609449439552', 'post140609449439552')"><pre>    else:</pre></li>
+                  <li onclick="toggle('pre139862193279808', 'post139862193279808')"><pre>    else:</pre></li>
                 
-                  <li onclick="toggle('pre140609449439552', 'post140609449439552')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193279808', 'post139862193279808')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140609449439552', 'post140609449439552')"><pre>        @wraps(get_response)</pre></li>
+                  <li onclick="toggle('pre139862193279808', 'post139862193279808')"><pre>        @wraps(get_response)</pre></li>
                 
-                  <li onclick="toggle('pre140609449439552', 'post140609449439552')"><pre>        def inner(request):</pre></li>
+                  <li onclick="toggle('pre139862193279808', 'post139862193279808')"><pre>        def inner(request):</pre></li>
                 
-                  <li onclick="toggle('pre140609449439552', 'post140609449439552')"><pre>            try:</pre></li>
+                  <li onclick="toggle('pre139862193279808', 'post139862193279808')"><pre>            try:</pre></li>
                 
                 </ol>
               
               <ol start="55" class="context-line">
-                <li onclick="toggle('pre140609449439552', 'post140609449439552')"><pre>                response = get_response(request)
+                <li onclick="toggle('pre139862193279808', 'post139862193279808')"><pre>                response = get_response(request)
                                ^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='56' class="post-context" id="post140609449439552">
+                <ol start='56' class="post-context" id="post139862193279808">
                   
-                  <li onclick="toggle('pre140609449439552', 'post140609449439552')"><pre>            except Exception as exc:</pre></li>
+                  <li onclick="toggle('pre139862193279808', 'post139862193279808')"><pre>            except Exception as exc:</pre></li>
                   
-                  <li onclick="toggle('pre140609449439552', 'post140609449439552')"><pre>                response = response_for_exception(request, exc)</pre></li>
+                  <li onclick="toggle('pre139862193279808', 'post139862193279808')"><pre>                response = response_for_exception(request, exc)</pre></li>
                   
-                  <li onclick="toggle('pre140609449439552', 'post140609449439552')"><pre>            return response</pre></li>
+                  <li onclick="toggle('pre139862193279808', 'post139862193279808')"><pre>            return response</pre></li>
                   
-                  <li onclick="toggle('pre140609449439552', 'post140609449439552')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193279808', 'post139862193279808')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140609449439552', 'post140609449439552')"><pre>        return inner</pre></li>
+                  <li onclick="toggle('pre139862193279808', 'post139862193279808')"><pre>        return inner</pre></li>
                   
-                  <li onclick="toggle('pre140609449439552', 'post140609449439552')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193279808', 'post139862193279808')"><pre></pre></li>
                   
               </ol>
               
@@ -405,7 +405,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449439552">
+            <table class="vars" id="v139862193279808">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -416,12 +416,12 @@
                 
                   <tr>
                     <td>exc</td>
-                    <td class="code"><pre>TemplateSyntaxError(&quot;Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, expected &#x27;endblock&#x27;. Did you forget to register or load this tag?&quot;)</pre></td>
+                    <td class="code"><pre>TemplateSyntaxError(&quot;Template: /home/runner/work/django_admin_tests/django_admin_tests/demo/templates/demo/broken_template.html, Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, expected &#x27;endblock&#x27;. Did you forget to register or load this tag?&quot;)</pre></td>
                   </tr>
                 
                   <tr>
                     <td>get_response</td>
-                    <td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fe234aac200&gt;&gt;</pre></td>
+                    <td class="code"><pre>&lt;bound method BaseHandler._get_response of &lt;django.core.handlers.wsgi.WSGIHandler object at 0x7f3436a58a70&gt;&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -442,44 +442,44 @@
           
 
           
-            <div class="context" id="c140609449439168">
+            <div class="context" id="c139862193282176">
               
-                <ol start="190" class="pre-context" id="pre140609449439168">
+                <ol start="190" class="pre-context" id="pre139862193282176">
                 
-                  <li onclick="toggle('pre140609449439168', 'post140609449439168')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193282176', 'post139862193282176')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140609449439168', 'post140609449439168')"><pre>        if response is None:</pre></li>
+                  <li onclick="toggle('pre139862193282176', 'post139862193282176')"><pre>        if response is None:</pre></li>
                 
-                  <li onclick="toggle('pre140609449439168', 'post140609449439168')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
+                  <li onclick="toggle('pre139862193282176', 'post139862193282176')"><pre>            wrapped_callback = self.make_view_atomic(callback)</pre></li>
                 
-                  <li onclick="toggle('pre140609449439168', 'post140609449439168')"><pre>            # If it is an asynchronous view, run it in a subthread.</pre></li>
+                  <li onclick="toggle('pre139862193282176', 'post139862193282176')"><pre>            # If it is an asynchronous view, run it in a subthread.</pre></li>
                 
-                  <li onclick="toggle('pre140609449439168', 'post140609449439168')"><pre>            if iscoroutinefunction(wrapped_callback):</pre></li>
+                  <li onclick="toggle('pre139862193282176', 'post139862193282176')"><pre>            if iscoroutinefunction(wrapped_callback):</pre></li>
                 
-                  <li onclick="toggle('pre140609449439168', 'post140609449439168')"><pre>                wrapped_callback = async_to_sync(wrapped_callback)</pre></li>
+                  <li onclick="toggle('pre139862193282176', 'post139862193282176')"><pre>                wrapped_callback = async_to_sync(wrapped_callback)</pre></li>
                 
-                  <li onclick="toggle('pre140609449439168', 'post140609449439168')"><pre>            try:</pre></li>
+                  <li onclick="toggle('pre139862193282176', 'post139862193282176')"><pre>            try:</pre></li>
                 
                 </ol>
               
               <ol start="197" class="context-line">
-                <li onclick="toggle('pre140609449439168', 'post140609449439168')"><pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)
+                <li onclick="toggle('pre139862193282176', 'post139862193282176')"><pre>                response = wrapped_callback(request, *callback_args, **callback_kwargs)
                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='198' class="post-context" id="post140609449439168">
+                <ol start='198' class="post-context" id="post139862193282176">
                   
-                  <li onclick="toggle('pre140609449439168', 'post140609449439168')"><pre>            except Exception as e:</pre></li>
+                  <li onclick="toggle('pre139862193282176', 'post139862193282176')"><pre>            except Exception as e:</pre></li>
                   
-                  <li onclick="toggle('pre140609449439168', 'post140609449439168')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
+                  <li onclick="toggle('pre139862193282176', 'post139862193282176')"><pre>                response = self.process_exception_by_middleware(e, request)</pre></li>
                   
-                  <li onclick="toggle('pre140609449439168', 'post140609449439168')"><pre>                if response is None:</pre></li>
+                  <li onclick="toggle('pre139862193282176', 'post139862193282176')"><pre>                if response is None:</pre></li>
                   
-                  <li onclick="toggle('pre140609449439168', 'post140609449439168')"><pre>                    raise</pre></li>
+                  <li onclick="toggle('pre139862193282176', 'post139862193282176')"><pre>                    raise</pre></li>
                   
-                  <li onclick="toggle('pre140609449439168', 'post140609449439168')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193282176', 'post139862193282176')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140609449439168', 'post140609449439168')"><pre>        # Complain if the view returned None (a common error).</pre></li>
+                  <li onclick="toggle('pre139862193282176', 'post139862193282176')"><pre>        # Complain if the view returned None (a common error).</pre></li>
                   
               </ol>
               
@@ -491,7 +491,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449439168">
+            <table class="vars" id="v139862193282176">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -502,7 +502,7 @@
                 
                   <tr>
                     <td>callback</td>
-                    <td class="code"><pre>&lt;function server_error_template_broken at 0x7fe23386fd80&gt;</pre></td>
+                    <td class="code"><pre>&lt;function server_error_template_broken at 0x7f3435c1d580&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -532,12 +532,12 @@
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x7fe234aac200&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.core.handlers.wsgi.WSGIHandler object at 0x7f3436a58a70&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>wrapped_callback</td>
-                    <td class="code"><pre>&lt;function server_error_template_broken at 0x7fe23386fd80&gt;</pre></td>
+                    <td class="code"><pre>&lt;function server_error_template_broken at 0x7f3435c1d580&gt;</pre></td>
                   </tr>
                 
               </tbody>
@@ -553,44 +553,44 @@
           
 
           
-            <div class="context" id="c140609449429824">
+            <div class="context" id="c139862193287360">
               
-                <ol start="38" class="pre-context" id="pre140609449429824">
+                <ol start="38" class="pre-context" id="pre139862193287360">
                 
-                  <li onclick="toggle('pre140609449429824', 'post140609449429824')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193287360', 'post139862193287360')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140609449429824', 'post140609449429824')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193287360', 'post139862193287360')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140609449429824', 'post140609449429824')"><pre>def server_error_template_broken(request):</pre></li>
+                  <li onclick="toggle('pre139862193287360', 'post139862193287360')"><pre>def server_error_template_broken(request):</pre></li>
                 
-                  <li onclick="toggle('pre140609449429824', 'post140609449429824')"><pre>    request.META = {</pre></li>
+                  <li onclick="toggle('pre139862193287360', 'post139862193287360')"><pre>    request.META = {</pre></li>
                 
-                  <li onclick="toggle('pre140609449429824', 'post140609449429824')"><pre>        &quot;SERVER_NAME&quot;: &quot;Hello&quot;,</pre></li>
+                  <li onclick="toggle('pre139862193287360', 'post139862193287360')"><pre>        &quot;SERVER_NAME&quot;: &quot;Hello&quot;,</pre></li>
                 
-                  <li onclick="toggle('pre140609449429824', 'post140609449429824')"><pre>        &quot;SERVER_PORT&quot;: 1337,</pre></li>
+                  <li onclick="toggle('pre139862193287360', 'post139862193287360')"><pre>        &quot;SERVER_PORT&quot;: 1337,</pre></li>
                 
-                  <li onclick="toggle('pre140609449429824', 'post140609449429824')"><pre>    }</pre></li>
+                  <li onclick="toggle('pre139862193287360', 'post139862193287360')"><pre>    }</pre></li>
                 
                 </ol>
               
               <ol start="45" class="context-line">
-                <li onclick="toggle('pre140609449429824', 'post140609449429824')"><pre>    return render(request, &quot;demo/broken_template.html&quot;)
+                <li onclick="toggle('pre139862193287360', 'post139862193287360')"><pre>    return render(request, &quot;demo/broken_template.html&quot;)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='46' class="post-context" id="post140609449429824">
+                <ol start='46' class="post-context" id="post139862193287360">
                   
-                  <li onclick="toggle('pre140609449429824', 'post140609449429824')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193287360', 'post139862193287360')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140609449429824', 'post140609449429824')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193287360', 'post139862193287360')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140609449429824', 'post140609449429824')"><pre>def server_error_unicode(request):</pre></li>
+                  <li onclick="toggle('pre139862193287360', 'post139862193287360')"><pre>def server_error_unicode(request):</pre></li>
                   
-                  <li onclick="toggle('pre140609449429824', 'post140609449429824')"><pre>    request.META = {</pre></li>
+                  <li onclick="toggle('pre139862193287360', 'post139862193287360')"><pre>    request.META = {</pre></li>
                   
-                  <li onclick="toggle('pre140609449429824', 'post140609449429824')"><pre>        &quot;SERVER_NAME&quot;: &quot;Hello&quot;,</pre></li>
+                  <li onclick="toggle('pre139862193287360', 'post139862193287360')"><pre>        &quot;SERVER_NAME&quot;: &quot;Hello&quot;,</pre></li>
                   
-                  <li onclick="toggle('pre140609449429824', 'post140609449429824')"><pre>        &quot;SERVER_PORT&quot;: 1337,</pre></li>
+                  <li onclick="toggle('pre139862193287360', 'post139862193287360')"><pre>        &quot;SERVER_PORT&quot;: 1337,</pre></li>
                   
               </ol>
               
@@ -602,7 +602,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449429824">
+            <table class="vars" id="v139862193287360">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -629,44 +629,44 @@
           
 
           
-            <div class="context" id="c140609449435136">
+            <div class="context" id="c139862193284864">
               
-                <ol start="18" class="pre-context" id="pre140609449435136">
+                <ol start="18" class="pre-context" id="pre139862193284864">
                 
-                  <li onclick="toggle('pre140609449435136', 'post140609449435136')"><pre>def render(</pre></li>
+                  <li onclick="toggle('pre139862193284864', 'post139862193284864')"><pre>def render(</pre></li>
                 
-                  <li onclick="toggle('pre140609449435136', 'post140609449435136')"><pre>    request, template_name, context=None, content_type=None, status=None, using=None</pre></li>
+                  <li onclick="toggle('pre139862193284864', 'post139862193284864')"><pre>    request, template_name, context=None, content_type=None, status=None, using=None</pre></li>
                 
-                  <li onclick="toggle('pre140609449435136', 'post140609449435136')"><pre>):</pre></li>
+                  <li onclick="toggle('pre139862193284864', 'post139862193284864')"><pre>):</pre></li>
                 
-                  <li onclick="toggle('pre140609449435136', 'post140609449435136')"><pre>    &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre139862193284864', 'post139862193284864')"><pre>    &quot;&quot;&quot;</pre></li>
                 
-                  <li onclick="toggle('pre140609449435136', 'post140609449435136')"><pre>    Return an HttpResponse whose content is filled with the result of calling</pre></li>
+                  <li onclick="toggle('pre139862193284864', 'post139862193284864')"><pre>    Return an HttpResponse whose content is filled with the result of calling</pre></li>
                 
-                  <li onclick="toggle('pre140609449435136', 'post140609449435136')"><pre>    django.template.loader.render_to_string() with the passed arguments.</pre></li>
+                  <li onclick="toggle('pre139862193284864', 'post139862193284864')"><pre>    django.template.loader.render_to_string() with the passed arguments.</pre></li>
                 
-                  <li onclick="toggle('pre140609449435136', 'post140609449435136')"><pre>    &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre139862193284864', 'post139862193284864')"><pre>    &quot;&quot;&quot;</pre></li>
                 
                 </ol>
               
               <ol start="25" class="context-line">
-                <li onclick="toggle('pre140609449435136', 'post140609449435136')"><pre>    content = loader.render_to_string(template_name, context, request, using=using)
+                <li onclick="toggle('pre139862193284864', 'post139862193284864')"><pre>    content = loader.render_to_string(template_name, context, request, using=using)
                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='26' class="post-context" id="post140609449435136">
+                <ol start='26' class="post-context" id="post139862193284864">
                   
-                  <li onclick="toggle('pre140609449435136', 'post140609449435136')"><pre>    return HttpResponse(content, content_type, status)</pre></li>
+                  <li onclick="toggle('pre139862193284864', 'post139862193284864')"><pre>    return HttpResponse(content, content_type, status)</pre></li>
                   
-                  <li onclick="toggle('pre140609449435136', 'post140609449435136')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193284864', 'post139862193284864')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140609449435136', 'post140609449435136')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193284864', 'post139862193284864')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140609449435136', 'post140609449435136')"><pre>def redirect(to, *args, permanent=False, preserve_request=False, **kwargs):</pre></li>
+                  <li onclick="toggle('pre139862193284864', 'post139862193284864')"><pre>def redirect(to, *args, permanent=False, preserve_request=False, **kwargs):</pre></li>
                   
-                  <li onclick="toggle('pre140609449435136', 'post140609449435136')"><pre>    &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre139862193284864', 'post139862193284864')"><pre>    &quot;&quot;&quot;</pre></li>
                   
-                  <li onclick="toggle('pre140609449435136', 'post140609449435136')"><pre>    Return an HttpResponseRedirect to the appropriate URL for the arguments</pre></li>
+                  <li onclick="toggle('pre139862193284864', 'post139862193284864')"><pre>    Return an HttpResponseRedirect to the appropriate URL for the arguments</pre></li>
                   
               </ol>
               
@@ -678,7 +678,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449435136">
+            <table class="vars" id="v139862193284864">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -730,42 +730,42 @@
           
 
           
-            <div class="context" id="c140609449435072">
+            <div class="context" id="c139862193290432">
               
-                <ol start="54" class="pre-context" id="pre140609449435072">
+                <ol start="54" class="pre-context" id="pre139862193290432">
                 
-                  <li onclick="toggle('pre140609449435072', 'post140609449435072')"><pre>    Load a template and render it with a context. Return a string.</pre></li>
+                  <li onclick="toggle('pre139862193290432', 'post139862193290432')"><pre>    Load a template and render it with a context. Return a string.</pre></li>
                 
-                  <li onclick="toggle('pre140609449435072', 'post140609449435072')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193290432', 'post139862193290432')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140609449435072', 'post140609449435072')"><pre>    template_name may be a string or a list of strings.</pre></li>
+                  <li onclick="toggle('pre139862193290432', 'post139862193290432')"><pre>    template_name may be a string or a list of strings.</pre></li>
                 
-                  <li onclick="toggle('pre140609449435072', 'post140609449435072')"><pre>    &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre139862193290432', 'post139862193290432')"><pre>    &quot;&quot;&quot;</pre></li>
                 
-                  <li onclick="toggle('pre140609449435072', 'post140609449435072')"><pre>    if isinstance(template_name, (list, tuple)):</pre></li>
+                  <li onclick="toggle('pre139862193290432', 'post139862193290432')"><pre>    if isinstance(template_name, (list, tuple)):</pre></li>
                 
-                  <li onclick="toggle('pre140609449435072', 'post140609449435072')"><pre>        template = select_template(template_name, using=using)</pre></li>
+                  <li onclick="toggle('pre139862193290432', 'post139862193290432')"><pre>        template = select_template(template_name, using=using)</pre></li>
                 
-                  <li onclick="toggle('pre140609449435072', 'post140609449435072')"><pre>    else:</pre></li>
+                  <li onclick="toggle('pre139862193290432', 'post139862193290432')"><pre>    else:</pre></li>
                 
                 </ol>
               
               <ol start="61" class="context-line">
-                <li onclick="toggle('pre140609449435072', 'post140609449435072')"><pre>        template = get_template(template_name, using=using)
+                <li onclick="toggle('pre139862193290432', 'post139862193290432')"><pre>        template = get_template(template_name, using=using)
                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='62' class="post-context" id="post140609449435072">
+                <ol start='62' class="post-context" id="post139862193290432">
                   
-                  <li onclick="toggle('pre140609449435072', 'post140609449435072')"><pre>    return template.render(context, request)</pre></li>
+                  <li onclick="toggle('pre139862193290432', 'post139862193290432')"><pre>    return template.render(context, request)</pre></li>
                   
-                  <li onclick="toggle('pre140609449435072', 'post140609449435072')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193290432', 'post139862193290432')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140609449435072', 'post140609449435072')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193290432', 'post139862193290432')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140609449435072', 'post140609449435072')"><pre>def _engine_list(using=None):</pre></li>
+                  <li onclick="toggle('pre139862193290432', 'post139862193290432')"><pre>def _engine_list(using=None):</pre></li>
                   
-                  <li onclick="toggle('pre140609449435072', 'post140609449435072')"><pre>    return engines.all() if using is None else [engines[using]]</pre></li>
+                  <li onclick="toggle('pre139862193290432', 'post139862193290432')"><pre>    return engines.all() if using is None else [engines[using]]</pre></li>
                   
               </ol>
               
@@ -777,7 +777,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449435072">
+            <table class="vars" id="v139862193290432">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -819,44 +819,44 @@
           
 
           
-            <div class="context" id="c140609449429568">
+            <div class="context" id="c139862193277568">
               
-                <ol start="8" class="pre-context" id="pre140609449429568">
+                <ol start="8" class="pre-context" id="pre139862193277568">
                 
-                  <li onclick="toggle('pre140609449429568', 'post140609449429568')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193277568', 'post139862193277568')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140609449429568', 'post140609449429568')"><pre>    Raise TemplateDoesNotExist if no such template exists.</pre></li>
+                  <li onclick="toggle('pre139862193277568', 'post139862193277568')"><pre>    Raise TemplateDoesNotExist if no such template exists.</pre></li>
                 
-                  <li onclick="toggle('pre140609449429568', 'post140609449429568')"><pre>    &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre139862193277568', 'post139862193277568')"><pre>    &quot;&quot;&quot;</pre></li>
                 
-                  <li onclick="toggle('pre140609449429568', 'post140609449429568')"><pre>    chain = []</pre></li>
+                  <li onclick="toggle('pre139862193277568', 'post139862193277568')"><pre>    chain = []</pre></li>
                 
-                  <li onclick="toggle('pre140609449429568', 'post140609449429568')"><pre>    engines = _engine_list(using)</pre></li>
+                  <li onclick="toggle('pre139862193277568', 'post139862193277568')"><pre>    engines = _engine_list(using)</pre></li>
                 
-                  <li onclick="toggle('pre140609449429568', 'post140609449429568')"><pre>    for engine in engines:</pre></li>
+                  <li onclick="toggle('pre139862193277568', 'post139862193277568')"><pre>    for engine in engines:</pre></li>
                 
-                  <li onclick="toggle('pre140609449429568', 'post140609449429568')"><pre>        try:</pre></li>
+                  <li onclick="toggle('pre139862193277568', 'post139862193277568')"><pre>        try:</pre></li>
                 
                 </ol>
               
               <ol start="15" class="context-line">
-                <li onclick="toggle('pre140609449429568', 'post140609449429568')"><pre>            return engine.get_template(template_name)
+                <li onclick="toggle('pre139862193277568', 'post139862193277568')"><pre>            return engine.get_template(template_name)
                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='16' class="post-context" id="post140609449429568">
+                <ol start='16' class="post-context" id="post139862193277568">
                   
-                  <li onclick="toggle('pre140609449429568', 'post140609449429568')"><pre>        except TemplateDoesNotExist as e:</pre></li>
+                  <li onclick="toggle('pre139862193277568', 'post139862193277568')"><pre>        except TemplateDoesNotExist as e:</pre></li>
                   
-                  <li onclick="toggle('pre140609449429568', 'post140609449429568')"><pre>            chain.append(e)</pre></li>
+                  <li onclick="toggle('pre139862193277568', 'post139862193277568')"><pre>            chain.append(e)</pre></li>
                   
-                  <li onclick="toggle('pre140609449429568', 'post140609449429568')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193277568', 'post139862193277568')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140609449429568', 'post140609449429568')"><pre>    raise TemplateDoesNotExist(template_name, chain=chain)</pre></li>
+                  <li onclick="toggle('pre139862193277568', 'post139862193277568')"><pre>    raise TemplateDoesNotExist(template_name, chain=chain)</pre></li>
                   
-                  <li onclick="toggle('pre140609449429568', 'post140609449429568')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193277568', 'post139862193277568')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140609449429568', 'post140609449429568')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193277568', 'post139862193277568')"><pre></pre></li>
                   
               </ol>
               
@@ -868,7 +868,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449429568">
+            <table class="vars" id="v139862193277568">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -884,12 +884,12 @@
                 
                   <tr>
                     <td>engine</td>
-                    <td class="code"><pre>&lt;django.template.backends.django.DjangoTemplates object at 0x7fe233c54a10&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.template.backends.django.DjangoTemplates object at 0x7f3435a508f0&gt;</pre></td>
                   </tr>
                 
                   <tr>
                     <td>engines</td>
-                    <td class="code"><pre>[&lt;django.template.backends.django.DjangoTemplates object at 0x7fe233c54a10&gt;]</pre></td>
+                    <td class="code"><pre>[&lt;django.template.backends.django.DjangoTemplates object at 0x7f3435a508f0&gt;]</pre></td>
                   </tr>
                 
                   <tr>
@@ -915,44 +915,44 @@
           
 
           
-            <div class="context" id="c140609449430528">
+            <div class="context" id="c139862193289344">
               
-                <ol start="72" class="pre-context" id="pre140609449430528">
+                <ol start="72" class="pre-context" id="pre139862193289344">
                 
-                  <li onclick="toggle('pre140609449430528', 'post140609449430528')"><pre>        return errors</pre></li>
+                  <li onclick="toggle('pre139862193289344', 'post139862193289344')"><pre>        return errors</pre></li>
                 
-                  <li onclick="toggle('pre140609449430528', 'post140609449430528')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193289344', 'post139862193289344')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140609449430528', 'post140609449430528')"><pre>    def from_string(self, template_code):</pre></li>
+                  <li onclick="toggle('pre139862193289344', 'post139862193289344')"><pre>    def from_string(self, template_code):</pre></li>
                 
-                  <li onclick="toggle('pre140609449430528', 'post140609449430528')"><pre>        return Template(self.engine.from_string(template_code), self)</pre></li>
+                  <li onclick="toggle('pre139862193289344', 'post139862193289344')"><pre>        return Template(self.engine.from_string(template_code), self)</pre></li>
                 
-                  <li onclick="toggle('pre140609449430528', 'post140609449430528')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193289344', 'post139862193289344')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140609449430528', 'post140609449430528')"><pre>    def get_template(self, template_name):</pre></li>
+                  <li onclick="toggle('pre139862193289344', 'post139862193289344')"><pre>    def get_template(self, template_name):</pre></li>
                 
-                  <li onclick="toggle('pre140609449430528', 'post140609449430528')"><pre>        try:</pre></li>
+                  <li onclick="toggle('pre139862193289344', 'post139862193289344')"><pre>        try:</pre></li>
                 
                 </ol>
               
               <ol start="79" class="context-line">
-                <li onclick="toggle('pre140609449430528', 'post140609449430528')"><pre>            return Template(self.engine.get_template(template_name), self)
+                <li onclick="toggle('pre139862193289344', 'post139862193289344')"><pre>            return Template(self.engine.get_template(template_name), self)
                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='80' class="post-context" id="post140609449430528">
+                <ol start='80' class="post-context" id="post139862193289344">
                   
-                  <li onclick="toggle('pre140609449430528', 'post140609449430528')"><pre>        except TemplateDoesNotExist as exc:</pre></li>
+                  <li onclick="toggle('pre139862193289344', 'post139862193289344')"><pre>        except TemplateDoesNotExist as exc:</pre></li>
                   
-                  <li onclick="toggle('pre140609449430528', 'post140609449430528')"><pre>            reraise(exc, self)</pre></li>
+                  <li onclick="toggle('pre139862193289344', 'post139862193289344')"><pre>            reraise(exc, self)</pre></li>
                   
-                  <li onclick="toggle('pre140609449430528', 'post140609449430528')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193289344', 'post139862193289344')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140609449430528', 'post140609449430528')"><pre>    def get_templatetag_libraries(self, custom_libraries):</pre></li>
+                  <li onclick="toggle('pre139862193289344', 'post139862193289344')"><pre>    def get_templatetag_libraries(self, custom_libraries):</pre></li>
                   
-                  <li onclick="toggle('pre140609449430528', 'post140609449430528')"><pre>        &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre139862193289344', 'post139862193289344')"><pre>        &quot;&quot;&quot;</pre></li>
                   
-                  <li onclick="toggle('pre140609449430528', 'post140609449430528')"><pre>        Return a collation of template tag libraries from installed</pre></li>
+                  <li onclick="toggle('pre139862193289344', 'post139862193289344')"><pre>        Return a collation of template tag libraries from installed</pre></li>
                   
               </ol>
               
@@ -964,7 +964,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449430528">
+            <table class="vars" id="v139862193289344">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -975,7 +975,7 @@
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;django.template.backends.django.DjangoTemplates object at 0x7fe233c54a10&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.template.backends.django.DjangoTemplates object at 0x7f3435a508f0&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -996,44 +996,44 @@
           
 
           
-            <div class="context" id="c140609449442432">
+            <div class="context" id="c139862193288512">
               
-                <ol start="170" class="pre-context" id="pre140609449442432">
+                <ol start="170" class="pre-context" id="pre139862193288512">
                 
-                  <li onclick="toggle('pre140609449442432', 'post140609449442432')"><pre>        return Template(template_code, engine=self)</pre></li>
+                  <li onclick="toggle('pre139862193288512', 'post139862193288512')"><pre>        return Template(template_code, engine=self)</pre></li>
                 
-                  <li onclick="toggle('pre140609449442432', 'post140609449442432')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193288512', 'post139862193288512')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140609449442432', 'post140609449442432')"><pre>    def get_template(self, template_name):</pre></li>
+                  <li onclick="toggle('pre139862193288512', 'post139862193288512')"><pre>    def get_template(self, template_name):</pre></li>
                 
-                  <li onclick="toggle('pre140609449442432', 'post140609449442432')"><pre>        &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre139862193288512', 'post139862193288512')"><pre>        &quot;&quot;&quot;</pre></li>
                 
-                  <li onclick="toggle('pre140609449442432', 'post140609449442432')"><pre>        Return a compiled Template object for the given template name,</pre></li>
+                  <li onclick="toggle('pre139862193288512', 'post139862193288512')"><pre>        Return a compiled Template object for the given template name,</pre></li>
                 
-                  <li onclick="toggle('pre140609449442432', 'post140609449442432')"><pre>        handling template inheritance recursively.</pre></li>
+                  <li onclick="toggle('pre139862193288512', 'post139862193288512')"><pre>        handling template inheritance recursively.</pre></li>
                 
-                  <li onclick="toggle('pre140609449442432', 'post140609449442432')"><pre>        &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre139862193288512', 'post139862193288512')"><pre>        &quot;&quot;&quot;</pre></li>
                 
                 </ol>
               
               <ol start="177" class="context-line">
-                <li onclick="toggle('pre140609449442432', 'post140609449442432')"><pre>        template, origin = self.find_template(template_name)
+                <li onclick="toggle('pre139862193288512', 'post139862193288512')"><pre>        template, origin = self.find_template(template_name)
                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='178' class="post-context" id="post140609449442432">
+                <ol start='178' class="post-context" id="post139862193288512">
                   
-                  <li onclick="toggle('pre140609449442432', 'post140609449442432')"><pre>        if not hasattr(template, &quot;render&quot;):</pre></li>
+                  <li onclick="toggle('pre139862193288512', 'post139862193288512')"><pre>        if not hasattr(template, &quot;render&quot;):</pre></li>
                   
-                  <li onclick="toggle('pre140609449442432', 'post140609449442432')"><pre>            # template needs to be compiled</pre></li>
+                  <li onclick="toggle('pre139862193288512', 'post139862193288512')"><pre>            # template needs to be compiled</pre></li>
                   
-                  <li onclick="toggle('pre140609449442432', 'post140609449442432')"><pre>            template = Template(template, origin, template_name, engine=self)</pre></li>
+                  <li onclick="toggle('pre139862193288512', 'post139862193288512')"><pre>            template = Template(template, origin, template_name, engine=self)</pre></li>
                   
-                  <li onclick="toggle('pre140609449442432', 'post140609449442432')"><pre>        return template</pre></li>
+                  <li onclick="toggle('pre139862193288512', 'post139862193288512')"><pre>        return template</pre></li>
                   
-                  <li onclick="toggle('pre140609449442432', 'post140609449442432')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193288512', 'post139862193288512')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140609449442432', 'post140609449442432')"><pre>    def render_to_string(self, template_name, context=None):</pre></li>
+                  <li onclick="toggle('pre139862193288512', 'post139862193288512')"><pre>    def render_to_string(self, template_name, context=None):</pre></li>
                   
               </ol>
               
@@ -1045,7 +1045,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449442432">
+            <table class="vars" id="v139862193288512">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -1056,7 +1056,7 @@
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;Engine: app_dirs=True context_processors=[&#x27;django.template.context_processors.debug&#x27;, &#x27;django.template.context_processors.request&#x27;, &#x27;django.contrib.auth.context_processors.auth&#x27;, &#x27;django.contrib.messages.context_processors.messages&#x27;] debug=True loaders=[(&#x27;django.template.loaders.cached.Loader&#x27;, [&#x27;django.template.loaders.filesystem.Loader&#x27;, &#x27;django.template.loaders.app_directories.Loader&#x27;])] string_if_invalid=&#x27;&#x27; file_charset=&#x27;utf-8&#x27; libraries={&#x27;cache&#x27;: &#x27;django.templatetags.cache&#x27;, &#x27;i18n&#x27;: &#x27;django.templatetags.i18n&#x27;, &#x27;l10n&#x27;: &#x27;django.templatetags.l10n&#x27;, &#x27;static&#x27;: &#x27;django.templatetags.static&#x27;, &#x27;tz&#x27;: &#x27;django.templatetags.tz&#x27;, &#x27;admin_list&#x27;: &#x27;django.contrib.admin.templatetags.admin_list&#x27;, &#x27;admin_modify&#x27;: &#x27;django.contrib.admin.templatetags.admin_modify&#x27;, &#x27;admin_urls&#x27;: &#x27;django.contrib.admin.templatetags.admin_urls&#x27;, &#x27;log&#x27;: &#x27;django.contrib.admin.templatetags.log&#x27;, &#x27;flatpages&#x27;: &#x27;django.contrib.flatpages.templatetags.flatpages&#x27;} builtins=[&#x27;django.template.defaulttags&#x27;, &#x27;django.template.defaultfilters&#x27;, &#x27;django.template.loader_tags&#x27;] autoescape=True&gt;</pre></td>
+                    <td class="code"><pre>&lt;Engine: app_dirs=True context_processors=[&#x27;django.template.context_processors.debug&#x27;, &#x27;django.template.context_processors.request&#x27;, &#x27;django.contrib.auth.context_processors.auth&#x27;, &#x27;django.contrib.messages.context_processors.messages&#x27;] debug=True loaders=[(&#x27;django.template.loaders.cached.Loader&#x27;, [&#x27;django.template.loaders.filesystem.Loader&#x27;, &#x27;django.template.loaders.app_directories.Loader&#x27;])] string_if_invalid=&#x27;&#x27; file_charset=&#x27;utf-8&#x27; libraries={&#x27;cache&#x27;: &#x27;django.templatetags.cache&#x27;, &#x27;i18n&#x27;: &#x27;django.templatetags.i18n&#x27;, &#x27;l10n&#x27;: &#x27;django.templatetags.l10n&#x27;, &#x27;static&#x27;: &#x27;django.templatetags.static&#x27;, &#x27;tz&#x27;: &#x27;django.templatetags.tz&#x27;, &#x27;admin_list&#x27;: &#x27;django.contrib.admin.templatetags.admin_list&#x27;, &#x27;admin_modify&#x27;: &#x27;django.contrib.admin.templatetags.admin_modify&#x27;, &#x27;admin_urls&#x27;: &#x27;django.contrib.admin.templatetags.admin_urls&#x27;, &#x27;log&#x27;: &#x27;django.contrib.admin.templatetags.log&#x27;, &#x27;auth&#x27;: &#x27;django.contrib.auth.templatetags.auth&#x27;, &#x27;flatpages&#x27;: &#x27;django.contrib.flatpages.templatetags.flatpages&#x27;} builtins=[&#x27;django.template.defaulttags&#x27;, &#x27;django.template.defaultfilters&#x27;, &#x27;django.template.loader_tags&#x27;] autoescape=True&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1077,44 +1077,44 @@
           
 
           
-            <div class="context" id="c140609449439680">
+            <div class="context" id="c139862193275520">
               
-                <ol start="152" class="pre-context" id="pre140609449439680">
+                <ol start="152" class="pre-context" id="pre139862193275520">
                 
-                  <li onclick="toggle('pre140609449439680', 'post140609449439680')"><pre>                &quot;Invalid value in template loaders configuration: %r&quot; % loader</pre></li>
+                  <li onclick="toggle('pre139862193275520', 'post139862193275520')"><pre>                &quot;Invalid value in template loaders configuration: %r&quot; % loader</pre></li>
                 
-                  <li onclick="toggle('pre140609449439680', 'post140609449439680')"><pre>            )</pre></li>
+                  <li onclick="toggle('pre139862193275520', 'post139862193275520')"><pre>            )</pre></li>
                 
-                  <li onclick="toggle('pre140609449439680', 'post140609449439680')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193275520', 'post139862193275520')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140609449439680', 'post140609449439680')"><pre>    def find_template(self, name, dirs=None, skip=None):</pre></li>
+                  <li onclick="toggle('pre139862193275520', 'post139862193275520')"><pre>    def find_template(self, name, dirs=None, skip=None):</pre></li>
                 
-                  <li onclick="toggle('pre140609449439680', 'post140609449439680')"><pre>        tried = []</pre></li>
+                  <li onclick="toggle('pre139862193275520', 'post139862193275520')"><pre>        tried = []</pre></li>
                 
-                  <li onclick="toggle('pre140609449439680', 'post140609449439680')"><pre>        for loader in self.template_loaders:</pre></li>
+                  <li onclick="toggle('pre139862193275520', 'post139862193275520')"><pre>        for loader in self.template_loaders:</pre></li>
                 
-                  <li onclick="toggle('pre140609449439680', 'post140609449439680')"><pre>            try:</pre></li>
+                  <li onclick="toggle('pre139862193275520', 'post139862193275520')"><pre>            try:</pre></li>
                 
                 </ol>
               
               <ol start="159" class="context-line">
-                <li onclick="toggle('pre140609449439680', 'post140609449439680')"><pre>                template = loader.get_template(name, skip=skip)
+                <li onclick="toggle('pre139862193275520', 'post139862193275520')"><pre>                template = loader.get_template(name, skip=skip)
                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='160' class="post-context" id="post140609449439680">
+                <ol start='160' class="post-context" id="post139862193275520">
                   
-                  <li onclick="toggle('pre140609449439680', 'post140609449439680')"><pre>                return template, template.origin</pre></li>
+                  <li onclick="toggle('pre139862193275520', 'post139862193275520')"><pre>                return template, template.origin</pre></li>
                   
-                  <li onclick="toggle('pre140609449439680', 'post140609449439680')"><pre>            except TemplateDoesNotExist as e:</pre></li>
+                  <li onclick="toggle('pre139862193275520', 'post139862193275520')"><pre>            except TemplateDoesNotExist as e:</pre></li>
                   
-                  <li onclick="toggle('pre140609449439680', 'post140609449439680')"><pre>                tried.extend(e.tried)</pre></li>
+                  <li onclick="toggle('pre139862193275520', 'post139862193275520')"><pre>                tried.extend(e.tried)</pre></li>
                   
-                  <li onclick="toggle('pre140609449439680', 'post140609449439680')"><pre>        raise TemplateDoesNotExist(name, tried=tried)</pre></li>
+                  <li onclick="toggle('pre139862193275520', 'post139862193275520')"><pre>        raise TemplateDoesNotExist(name, tried=tried)</pre></li>
                   
-                  <li onclick="toggle('pre140609449439680', 'post140609449439680')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193275520', 'post139862193275520')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140609449439680', 'post140609449439680')"><pre>    def from_string(self, template_code):</pre></li>
+                  <li onclick="toggle('pre139862193275520', 'post139862193275520')"><pre>    def from_string(self, template_code):</pre></li>
                   
               </ol>
               
@@ -1126,7 +1126,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449439680">
+            <table class="vars" id="v139862193275520">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -1142,7 +1142,7 @@
                 
                   <tr>
                     <td>loader</td>
-                    <td class="code"><pre>&lt;django.template.loaders.cached.Loader object at 0x7fe23229d0a0&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.template.loaders.cached.Loader object at 0x7f34349b4890&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1152,7 +1152,7 @@
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;Engine: app_dirs=True context_processors=[&#x27;django.template.context_processors.debug&#x27;, &#x27;django.template.context_processors.request&#x27;, &#x27;django.contrib.auth.context_processors.auth&#x27;, &#x27;django.contrib.messages.context_processors.messages&#x27;] debug=True loaders=[(&#x27;django.template.loaders.cached.Loader&#x27;, [&#x27;django.template.loaders.filesystem.Loader&#x27;, &#x27;django.template.loaders.app_directories.Loader&#x27;])] string_if_invalid=&#x27;&#x27; file_charset=&#x27;utf-8&#x27; libraries={&#x27;cache&#x27;: &#x27;django.templatetags.cache&#x27;, &#x27;i18n&#x27;: &#x27;django.templatetags.i18n&#x27;, &#x27;l10n&#x27;: &#x27;django.templatetags.l10n&#x27;, &#x27;static&#x27;: &#x27;django.templatetags.static&#x27;, &#x27;tz&#x27;: &#x27;django.templatetags.tz&#x27;, &#x27;admin_list&#x27;: &#x27;django.contrib.admin.templatetags.admin_list&#x27;, &#x27;admin_modify&#x27;: &#x27;django.contrib.admin.templatetags.admin_modify&#x27;, &#x27;admin_urls&#x27;: &#x27;django.contrib.admin.templatetags.admin_urls&#x27;, &#x27;log&#x27;: &#x27;django.contrib.admin.templatetags.log&#x27;, &#x27;flatpages&#x27;: &#x27;django.contrib.flatpages.templatetags.flatpages&#x27;} builtins=[&#x27;django.template.defaulttags&#x27;, &#x27;django.template.defaultfilters&#x27;, &#x27;django.template.loader_tags&#x27;] autoescape=True&gt;</pre></td>
+                    <td class="code"><pre>&lt;Engine: app_dirs=True context_processors=[&#x27;django.template.context_processors.debug&#x27;, &#x27;django.template.context_processors.request&#x27;, &#x27;django.contrib.auth.context_processors.auth&#x27;, &#x27;django.contrib.messages.context_processors.messages&#x27;] debug=True loaders=[(&#x27;django.template.loaders.cached.Loader&#x27;, [&#x27;django.template.loaders.filesystem.Loader&#x27;, &#x27;django.template.loaders.app_directories.Loader&#x27;])] string_if_invalid=&#x27;&#x27; file_charset=&#x27;utf-8&#x27; libraries={&#x27;cache&#x27;: &#x27;django.templatetags.cache&#x27;, &#x27;i18n&#x27;: &#x27;django.templatetags.i18n&#x27;, &#x27;l10n&#x27;: &#x27;django.templatetags.l10n&#x27;, &#x27;static&#x27;: &#x27;django.templatetags.static&#x27;, &#x27;tz&#x27;: &#x27;django.templatetags.tz&#x27;, &#x27;admin_list&#x27;: &#x27;django.contrib.admin.templatetags.admin_list&#x27;, &#x27;admin_modify&#x27;: &#x27;django.contrib.admin.templatetags.admin_modify&#x27;, &#x27;admin_urls&#x27;: &#x27;django.contrib.admin.templatetags.admin_urls&#x27;, &#x27;log&#x27;: &#x27;django.contrib.admin.templatetags.log&#x27;, &#x27;auth&#x27;: &#x27;django.contrib.auth.templatetags.auth&#x27;, &#x27;flatpages&#x27;: &#x27;django.contrib.flatpages.templatetags.flatpages&#x27;} builtins=[&#x27;django.template.defaulttags&#x27;, &#x27;django.template.defaultfilters&#x27;, &#x27;django.template.loader_tags&#x27;] autoescape=True&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1178,44 +1178,44 @@
           
 
           
-            <div class="context" id="c140609449428032">
+            <div class="context" id="c139862193278464">
               
-                <ol start="50" class="pre-context" id="pre140609449428032">
+                <ol start="50" class="pre-context" id="pre139862193278464">
                 
-                  <li onclick="toggle('pre140609449428032', 'post140609449428032')"><pre>            if isinstance(cached, type) and issubclass(cached, TemplateDoesNotExist):</pre></li>
+                  <li onclick="toggle('pre139862193278464', 'post139862193278464')"><pre>            if isinstance(cached, type) and issubclass(cached, TemplateDoesNotExist):</pre></li>
                 
-                  <li onclick="toggle('pre140609449428032', 'post140609449428032')"><pre>                raise cached(template_name)</pre></li>
+                  <li onclick="toggle('pre139862193278464', 'post139862193278464')"><pre>                raise cached(template_name)</pre></li>
                 
-                  <li onclick="toggle('pre140609449428032', 'post140609449428032')"><pre>            elif isinstance(cached, TemplateDoesNotExist):</pre></li>
+                  <li onclick="toggle('pre139862193278464', 'post139862193278464')"><pre>            elif isinstance(cached, TemplateDoesNotExist):</pre></li>
                 
-                  <li onclick="toggle('pre140609449428032', 'post140609449428032')"><pre>                raise copy_exception(cached)</pre></li>
+                  <li onclick="toggle('pre139862193278464', 'post139862193278464')"><pre>                raise copy_exception(cached)</pre></li>
                 
-                  <li onclick="toggle('pre140609449428032', 'post140609449428032')"><pre>            return cached</pre></li>
+                  <li onclick="toggle('pre139862193278464', 'post139862193278464')"><pre>            return cached</pre></li>
                 
-                  <li onclick="toggle('pre140609449428032', 'post140609449428032')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193278464', 'post139862193278464')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140609449428032', 'post140609449428032')"><pre>        try:</pre></li>
+                  <li onclick="toggle('pre139862193278464', 'post139862193278464')"><pre>        try:</pre></li>
                 
                 </ol>
               
               <ol start="57" class="context-line">
-                <li onclick="toggle('pre140609449428032', 'post140609449428032')"><pre>            template = super().get_template(template_name, skip)
+                <li onclick="toggle('pre139862193278464', 'post139862193278464')"><pre>            template = super().get_template(template_name, skip)
                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='58' class="post-context" id="post140609449428032">
+                <ol start='58' class="post-context" id="post139862193278464">
                   
-                  <li onclick="toggle('pre140609449428032', 'post140609449428032')"><pre>        except TemplateDoesNotExist as e:</pre></li>
+                  <li onclick="toggle('pre139862193278464', 'post139862193278464')"><pre>        except TemplateDoesNotExist as e:</pre></li>
                   
-                  <li onclick="toggle('pre140609449428032', 'post140609449428032')"><pre>            self.get_template_cache[key] = (</pre></li>
+                  <li onclick="toggle('pre139862193278464', 'post139862193278464')"><pre>            self.get_template_cache[key] = (</pre></li>
                   
-                  <li onclick="toggle('pre140609449428032', 'post140609449428032')"><pre>                copy_exception(e) if self.engine.debug else TemplateDoesNotExist</pre></li>
+                  <li onclick="toggle('pre139862193278464', 'post139862193278464')"><pre>                copy_exception(e) if self.engine.debug else TemplateDoesNotExist</pre></li>
                   
-                  <li onclick="toggle('pre140609449428032', 'post140609449428032')"><pre>            )</pre></li>
+                  <li onclick="toggle('pre139862193278464', 'post139862193278464')"><pre>            )</pre></li>
                   
-                  <li onclick="toggle('pre140609449428032', 'post140609449428032')"><pre>            raise</pre></li>
+                  <li onclick="toggle('pre139862193278464', 'post139862193278464')"><pre>            raise</pre></li>
                   
-                  <li onclick="toggle('pre140609449428032', 'post140609449428032')"><pre>        else:</pre></li>
+                  <li onclick="toggle('pre139862193278464', 'post139862193278464')"><pre>        else:</pre></li>
                   
               </ol>
               
@@ -1227,7 +1227,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449428032">
+            <table class="vars" id="v139862193278464">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -1253,7 +1253,7 @@
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;django.template.loaders.cached.Loader object at 0x7fe23229d0a0&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.template.loaders.cached.Loader object at 0x7f34349b4890&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1279,44 +1279,44 @@
           
 
           
-            <div class="context" id="c140609449436096">
+            <div class="context" id="c139862193290816">
               
-                <ol start="21" class="pre-context" id="pre140609449436096">
+                <ol start="21" class="pre-context" id="pre139862193290816">
                 
-                  <li onclick="toggle('pre140609449436096', 'post140609449436096')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193290816', 'post139862193290816')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140609449436096', 'post140609449436096')"><pre>            try:</pre></li>
+                  <li onclick="toggle('pre139862193290816', 'post139862193290816')"><pre>            try:</pre></li>
                 
-                  <li onclick="toggle('pre140609449436096', 'post140609449436096')"><pre>                contents = self.get_contents(origin)</pre></li>
+                  <li onclick="toggle('pre139862193290816', 'post139862193290816')"><pre>                contents = self.get_contents(origin)</pre></li>
                 
-                  <li onclick="toggle('pre140609449436096', 'post140609449436096')"><pre>            except TemplateDoesNotExist:</pre></li>
+                  <li onclick="toggle('pre139862193290816', 'post139862193290816')"><pre>            except TemplateDoesNotExist:</pre></li>
                 
-                  <li onclick="toggle('pre140609449436096', 'post140609449436096')"><pre>                tried.append((origin, &quot;Source does not exist&quot;))</pre></li>
+                  <li onclick="toggle('pre139862193290816', 'post139862193290816')"><pre>                tried.append((origin, &quot;Source does not exist&quot;))</pre></li>
                 
-                  <li onclick="toggle('pre140609449436096', 'post140609449436096')"><pre>                continue</pre></li>
+                  <li onclick="toggle('pre139862193290816', 'post139862193290816')"><pre>                continue</pre></li>
                 
-                  <li onclick="toggle('pre140609449436096', 'post140609449436096')"><pre>            else:</pre></li>
+                  <li onclick="toggle('pre139862193290816', 'post139862193290816')"><pre>            else:</pre></li>
                 
                 </ol>
               
               <ol start="28" class="context-line">
-                <li onclick="toggle('pre140609449436096', 'post140609449436096')"><pre>                return Template(
+                <li onclick="toggle('pre139862193290816', 'post139862193290816')"><pre>                return Template(
                            </pre> <span>…</span></li>
               </ol>
               
-                <ol start='29' class="post-context" id="post140609449436096">
+                <ol start='29' class="post-context" id="post139862193290816">
                   
-                  <li onclick="toggle('pre140609449436096', 'post140609449436096')"><pre>                    contents,</pre></li>
+                  <li onclick="toggle('pre139862193290816', 'post139862193290816')"><pre>                    contents,</pre></li>
                   
-                  <li onclick="toggle('pre140609449436096', 'post140609449436096')"><pre>                    origin,</pre></li>
+                  <li onclick="toggle('pre139862193290816', 'post139862193290816')"><pre>                    origin,</pre></li>
                   
-                  <li onclick="toggle('pre140609449436096', 'post140609449436096')"><pre>                    origin.template_name,</pre></li>
+                  <li onclick="toggle('pre139862193290816', 'post139862193290816')"><pre>                    origin.template_name,</pre></li>
                   
-                  <li onclick="toggle('pre140609449436096', 'post140609449436096')"><pre>                    self.engine,</pre></li>
+                  <li onclick="toggle('pre139862193290816', 'post139862193290816')"><pre>                    self.engine,</pre></li>
                   
-                  <li onclick="toggle('pre140609449436096', 'post140609449436096')"><pre>                )</pre></li>
+                  <li onclick="toggle('pre139862193290816', 'post139862193290816')"><pre>                )</pre></li>
                   
-                  <li onclick="toggle('pre140609449436096', 'post140609449436096')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193290816', 'post139862193290816')"><pre></pre></li>
                   
               </ol>
               
@@ -1328,7 +1328,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449436096">
+            <table class="vars" id="v139862193290816">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -1356,7 +1356,7 @@
                 
                   <tr>
                     <td>self</td>
-                    <td class="code"><pre>&lt;django.template.loaders.cached.Loader object at 0x7fe23229d0a0&gt;</pre></td>
+                    <td class="code"><pre>&lt;django.template.loaders.cached.Loader object at 0x7f34349b4890&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1387,44 +1387,44 @@
           
 
           
-            <div class="context" id="c140609449436608">
+            <div class="context" id="c139862193284992">
               
-                <ol start="147" class="pre-context" id="pre140609449436608">
+                <ol start="147" class="pre-context" id="pre139862193284992">
                 
-                  <li onclick="toggle('pre140609449436608', 'post140609449436608')"><pre>            engine = Engine.get_default()</pre></li>
+                  <li onclick="toggle('pre139862193284992', 'post139862193284992')"><pre>            engine = Engine.get_default()</pre></li>
                 
-                  <li onclick="toggle('pre140609449436608', 'post140609449436608')"><pre>        if origin is None:</pre></li>
+                  <li onclick="toggle('pre139862193284992', 'post139862193284992')"><pre>        if origin is None:</pre></li>
                 
-                  <li onclick="toggle('pre140609449436608', 'post140609449436608')"><pre>            origin = Origin(UNKNOWN_SOURCE)</pre></li>
+                  <li onclick="toggle('pre139862193284992', 'post139862193284992')"><pre>            origin = Origin(UNKNOWN_SOURCE)</pre></li>
                 
-                  <li onclick="toggle('pre140609449436608', 'post140609449436608')"><pre>        self.name = name</pre></li>
+                  <li onclick="toggle('pre139862193284992', 'post139862193284992')"><pre>        self.name = name</pre></li>
                 
-                  <li onclick="toggle('pre140609449436608', 'post140609449436608')"><pre>        self.origin = origin</pre></li>
+                  <li onclick="toggle('pre139862193284992', 'post139862193284992')"><pre>        self.origin = origin</pre></li>
                 
-                  <li onclick="toggle('pre140609449436608', 'post140609449436608')"><pre>        self.engine = engine</pre></li>
+                  <li onclick="toggle('pre139862193284992', 'post139862193284992')"><pre>        self.engine = engine</pre></li>
                 
-                  <li onclick="toggle('pre140609449436608', 'post140609449436608')"><pre>        self.source = str(template_string)  # May be lazy.</pre></li>
+                  <li onclick="toggle('pre139862193284992', 'post139862193284992')"><pre>        self.source = str(template_string)  # May be lazy.</pre></li>
                 
                 </ol>
               
               <ol start="154" class="context-line">
-                <li onclick="toggle('pre140609449436608', 'post140609449436608')"><pre>        self.nodelist = self.compile_nodelist()
+                <li onclick="toggle('pre139862193284992', 'post139862193284992')"><pre>        self.nodelist = self.compile_nodelist()
                              ^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='155' class="post-context" id="post140609449436608">
+                <ol start='155' class="post-context" id="post139862193284992">
                   
-                  <li onclick="toggle('pre140609449436608', 'post140609449436608')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193284992', 'post139862193284992')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140609449436608', 'post140609449436608')"><pre>    def __repr__(self):</pre></li>
+                  <li onclick="toggle('pre139862193284992', 'post139862193284992')"><pre>    def __repr__(self):</pre></li>
                   
-                  <li onclick="toggle('pre140609449436608', 'post140609449436608')"><pre>        return &#x27;&lt;%s template_string=&quot;%s...&quot;&gt;&#x27; % (</pre></li>
+                  <li onclick="toggle('pre139862193284992', 'post139862193284992')"><pre>        return &#x27;&lt;%s template_string=&quot;%s...&quot;&gt;&#x27; % (</pre></li>
                   
-                  <li onclick="toggle('pre140609449436608', 'post140609449436608')"><pre>            self.__class__.__qualname__,</pre></li>
+                  <li onclick="toggle('pre139862193284992', 'post139862193284992')"><pre>            self.__class__.__qualname__,</pre></li>
                   
-                  <li onclick="toggle('pre140609449436608', 'post140609449436608')"><pre>            self.source[:20].replace(&quot;\n&quot;, &quot;&quot;),</pre></li>
+                  <li onclick="toggle('pre139862193284992', 'post139862193284992')"><pre>            self.source[:20].replace(&quot;\n&quot;, &quot;&quot;),</pre></li>
                   
-                  <li onclick="toggle('pre140609449436608', 'post140609449436608')"><pre>        )</pre></li>
+                  <li onclick="toggle('pre139862193284992', 'post139862193284992')"><pre>        )</pre></li>
                   
               </ol>
               
@@ -1436,7 +1436,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449436608">
+            <table class="vars" id="v139862193284992">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -1447,7 +1447,7 @@
                 
                   <tr>
                     <td>engine</td>
-                    <td class="code"><pre>&lt;Engine: app_dirs=True context_processors=[&#x27;django.template.context_processors.debug&#x27;, &#x27;django.template.context_processors.request&#x27;, &#x27;django.contrib.auth.context_processors.auth&#x27;, &#x27;django.contrib.messages.context_processors.messages&#x27;] debug=True loaders=[(&#x27;django.template.loaders.cached.Loader&#x27;, [&#x27;django.template.loaders.filesystem.Loader&#x27;, &#x27;django.template.loaders.app_directories.Loader&#x27;])] string_if_invalid=&#x27;&#x27; file_charset=&#x27;utf-8&#x27; libraries={&#x27;cache&#x27;: &#x27;django.templatetags.cache&#x27;, &#x27;i18n&#x27;: &#x27;django.templatetags.i18n&#x27;, &#x27;l10n&#x27;: &#x27;django.templatetags.l10n&#x27;, &#x27;static&#x27;: &#x27;django.templatetags.static&#x27;, &#x27;tz&#x27;: &#x27;django.templatetags.tz&#x27;, &#x27;admin_list&#x27;: &#x27;django.contrib.admin.templatetags.admin_list&#x27;, &#x27;admin_modify&#x27;: &#x27;django.contrib.admin.templatetags.admin_modify&#x27;, &#x27;admin_urls&#x27;: &#x27;django.contrib.admin.templatetags.admin_urls&#x27;, &#x27;log&#x27;: &#x27;django.contrib.admin.templatetags.log&#x27;, &#x27;flatpages&#x27;: &#x27;django.contrib.flatpages.templatetags.flatpages&#x27;} builtins=[&#x27;django.template.defaulttags&#x27;, &#x27;django.template.defaultfilters&#x27;, &#x27;django.template.loader_tags&#x27;] autoescape=True&gt;</pre></td>
+                    <td class="code"><pre>&lt;Engine: app_dirs=True context_processors=[&#x27;django.template.context_processors.debug&#x27;, &#x27;django.template.context_processors.request&#x27;, &#x27;django.contrib.auth.context_processors.auth&#x27;, &#x27;django.contrib.messages.context_processors.messages&#x27;] debug=True loaders=[(&#x27;django.template.loaders.cached.Loader&#x27;, [&#x27;django.template.loaders.filesystem.Loader&#x27;, &#x27;django.template.loaders.app_directories.Loader&#x27;])] string_if_invalid=&#x27;&#x27; file_charset=&#x27;utf-8&#x27; libraries={&#x27;cache&#x27;: &#x27;django.templatetags.cache&#x27;, &#x27;i18n&#x27;: &#x27;django.templatetags.i18n&#x27;, &#x27;l10n&#x27;: &#x27;django.templatetags.l10n&#x27;, &#x27;static&#x27;: &#x27;django.templatetags.static&#x27;, &#x27;tz&#x27;: &#x27;django.templatetags.tz&#x27;, &#x27;admin_list&#x27;: &#x27;django.contrib.admin.templatetags.admin_list&#x27;, &#x27;admin_modify&#x27;: &#x27;django.contrib.admin.templatetags.admin_modify&#x27;, &#x27;admin_urls&#x27;: &#x27;django.contrib.admin.templatetags.admin_urls&#x27;, &#x27;log&#x27;: &#x27;django.contrib.admin.templatetags.log&#x27;, &#x27;auth&#x27;: &#x27;django.contrib.auth.templatetags.auth&#x27;, &#x27;flatpages&#x27;: &#x27;django.contrib.flatpages.templatetags.flatpages&#x27;} builtins=[&#x27;django.template.defaulttags&#x27;, &#x27;django.template.defaultfilters&#x27;, &#x27;django.template.loader_tags&#x27;] autoescape=True&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1490,44 +1490,44 @@
           
 
           
-            <div class="context" id="c140609449440704">
+            <div class="context" id="c139862193283264">
               
-                <ol start="189" class="pre-context" id="pre140609449440704">
+                <ol start="189" class="pre-context" id="pre139862193283264">
                 
-                  <li onclick="toggle('pre140609449440704', 'post140609449440704')"><pre>            tokens,</pre></li>
+                  <li onclick="toggle('pre139862193283264', 'post139862193283264')"><pre>            tokens,</pre></li>
                 
-                  <li onclick="toggle('pre140609449440704', 'post140609449440704')"><pre>            self.engine.template_libraries,</pre></li>
+                  <li onclick="toggle('pre139862193283264', 'post139862193283264')"><pre>            self.engine.template_libraries,</pre></li>
                 
-                  <li onclick="toggle('pre140609449440704', 'post140609449440704')"><pre>            self.engine.template_builtins,</pre></li>
+                  <li onclick="toggle('pre139862193283264', 'post139862193283264')"><pre>            self.engine.template_builtins,</pre></li>
                 
-                  <li onclick="toggle('pre140609449440704', 'post140609449440704')"><pre>            self.origin,</pre></li>
+                  <li onclick="toggle('pre139862193283264', 'post139862193283264')"><pre>            self.origin,</pre></li>
                 
-                  <li onclick="toggle('pre140609449440704', 'post140609449440704')"><pre>        )</pre></li>
+                  <li onclick="toggle('pre139862193283264', 'post139862193283264')"><pre>        )</pre></li>
                 
-                  <li onclick="toggle('pre140609449440704', 'post140609449440704')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193283264', 'post139862193283264')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140609449440704', 'post140609449440704')"><pre>        try:</pre></li>
+                  <li onclick="toggle('pre139862193283264', 'post139862193283264')"><pre>        try:</pre></li>
                 
                 </ol>
               
               <ol start="196" class="context-line">
-                <li onclick="toggle('pre140609449440704', 'post140609449440704')"><pre>            nodelist = parser.parse()
+                <li onclick="toggle('pre139862193283264', 'post139862193283264')"><pre>            nodelist = parser.parse()
                             ^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='197' class="post-context" id="post140609449440704">
+                <ol start='197' class="post-context" id="post139862193283264">
                   
-                  <li onclick="toggle('pre140609449440704', 'post140609449440704')"><pre>            self.extra_data = parser.extra_data</pre></li>
+                  <li onclick="toggle('pre139862193283264', 'post139862193283264')"><pre>            self.extra_data = parser.extra_data</pre></li>
                   
-                  <li onclick="toggle('pre140609449440704', 'post140609449440704')"><pre>            return nodelist</pre></li>
+                  <li onclick="toggle('pre139862193283264', 'post139862193283264')"><pre>            return nodelist</pre></li>
                   
-                  <li onclick="toggle('pre140609449440704', 'post140609449440704')"><pre>        except Exception as e:</pre></li>
+                  <li onclick="toggle('pre139862193283264', 'post139862193283264')"><pre>        except Exception as e:</pre></li>
                   
-                  <li onclick="toggle('pre140609449440704', 'post140609449440704')"><pre>            if self.engine.debug:</pre></li>
+                  <li onclick="toggle('pre139862193283264', 'post139862193283264')"><pre>            if self.engine.debug:</pre></li>
                   
-                  <li onclick="toggle('pre140609449440704', 'post140609449440704')"><pre>                e.template_debug = self.get_exception_info(e, e.token)</pre></li>
+                  <li onclick="toggle('pre139862193283264', 'post139862193283264')"><pre>                e.template_debug = self.get_exception_info(e, e.token)</pre></li>
                   
-                  <li onclick="toggle('pre140609449440704', 'post140609449440704')"><pre>            raise</pre></li>
+                  <li onclick="toggle('pre139862193283264', 'post139862193283264')"><pre>            if (</pre></li>
                   
               </ol>
               
@@ -1539,7 +1539,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449440704">
+            <table class="vars" id="v139862193283264">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -1556,6 +1556,12 @@
                   <tr>
                     <td>parser</td>
                     <td class="code"><pre>&lt;Parser tokens=[&lt;Text token: &quot;...&quot;&gt;, &lt;Block token: &quot;endblock...&quot;&gt;, &lt;Text token: &quot;&lt;/p&gt;...&quot;&gt;]&gt;</pre></td>
+                  </tr>
+                
+                  <tr>
+                    <td>raw_message</td>
+                    <td class="code"><pre>(&quot;Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, expected &#x27;endblock&#x27;. &quot;
+ &#x27;Did you forget to register or load this tag?&#x27;)</pre></td>
                   </tr>
                 
                   <tr>
@@ -1592,48 +1598,48 @@
         
         <li class="frame django">
           
-            <code class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</code>, line 518, in parse
+            <code class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</code>, line 526, in parse
           
 
           
-            <div class="context" id="c140609449440192">
+            <div class="context" id="c139862193282496">
               
-                <ol start="511" class="pre-context" id="pre140609449440192">
+                <ol start="519" class="pre-context" id="pre139862193282496">
                 
-                  <li onclick="toggle('pre140609449440192', 'post140609449440192')"><pre>                except KeyError:</pre></li>
+                  <li onclick="toggle('pre139862193282496', 'post139862193282496')"><pre>                except KeyError:</pre></li>
                 
-                  <li onclick="toggle('pre140609449440192', 'post140609449440192')"><pre>                    self.invalid_block_tag(token, command, parse_until)</pre></li>
+                  <li onclick="toggle('pre139862193282496', 'post139862193282496')"><pre>                    self.invalid_block_tag(token, command, parse_until)</pre></li>
                 
-                  <li onclick="toggle('pre140609449440192', 'post140609449440192')"><pre>                # Compile the callback into a node object and add it to</pre></li>
+                  <li onclick="toggle('pre139862193282496', 'post139862193282496')"><pre>                # Compile the callback into a node object and add it to</pre></li>
                 
-                  <li onclick="toggle('pre140609449440192', 'post140609449440192')"><pre>                # the node list.</pre></li>
+                  <li onclick="toggle('pre139862193282496', 'post139862193282496')"><pre>                # the node list.</pre></li>
                 
-                  <li onclick="toggle('pre140609449440192', 'post140609449440192')"><pre>                try:</pre></li>
+                  <li onclick="toggle('pre139862193282496', 'post139862193282496')"><pre>                try:</pre></li>
                 
-                  <li onclick="toggle('pre140609449440192', 'post140609449440192')"><pre>                    compiled_result = compile_func(self, token)</pre></li>
+                  <li onclick="toggle('pre139862193282496', 'post139862193282496')"><pre>                    compiled_result = compile_func(self, token)</pre></li>
                 
-                  <li onclick="toggle('pre140609449440192', 'post140609449440192')"><pre>                except Exception as e:</pre></li>
+                  <li onclick="toggle('pre139862193282496', 'post139862193282496')"><pre>                except Exception as e:</pre></li>
                 
                 </ol>
               
-              <ol start="518" class="context-line">
-                <li onclick="toggle('pre140609449440192', 'post140609449440192')"><pre>                    raise self.error(token, e)
+              <ol start="526" class="context-line">
+                <li onclick="toggle('pre139862193282496', 'post139862193282496')"><pre>                    raise self.error(token, e)
                          ^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='519' class="post-context" id="post140609449440192">
+                <ol start='527' class="post-context" id="post139862193282496">
                   
-                  <li onclick="toggle('pre140609449440192', 'post140609449440192')"><pre>                self.extend_nodelist(nodelist, compiled_result, token)</pre></li>
+                  <li onclick="toggle('pre139862193282496', 'post139862193282496')"><pre>                self.extend_nodelist(nodelist, compiled_result, token)</pre></li>
                   
-                  <li onclick="toggle('pre140609449440192', 'post140609449440192')"><pre>                # Compile success. Remove the token from the command stack.</pre></li>
+                  <li onclick="toggle('pre139862193282496', 'post139862193282496')"><pre>                # Compile success. Remove the token from the command stack.</pre></li>
                   
-                  <li onclick="toggle('pre140609449440192', 'post140609449440192')"><pre>                self.command_stack.pop()</pre></li>
+                  <li onclick="toggle('pre139862193282496', 'post139862193282496')"><pre>                self.command_stack.pop()</pre></li>
                   
-                  <li onclick="toggle('pre140609449440192', 'post140609449440192')"><pre>        if parse_until:</pre></li>
+                  <li onclick="toggle('pre139862193282496', 'post139862193282496')"><pre>        if parse_until:</pre></li>
                   
-                  <li onclick="toggle('pre140609449440192', 'post140609449440192')"><pre>            self.unclosed_block_tag(parse_until)</pre></li>
+                  <li onclick="toggle('pre139862193282496', 'post139862193282496')"><pre>            self.unclosed_block_tag(parse_until)</pre></li>
                   
-                  <li onclick="toggle('pre140609449440192', 'post140609449440192')"><pre>        return nodelist</pre></li>
+                  <li onclick="toggle('pre139862193282496', 'post139862193282496')"><pre>        return nodelist</pre></li>
                   
               </ol>
               
@@ -1645,7 +1651,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449440192">
+            <table class="vars" id="v139862193282496">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -1661,7 +1667,7 @@
                 
                   <tr>
                     <td>compile_func</td>
-                    <td class="code"><pre>&lt;function do_extends at 0x7fe2340d0220&gt;</pre></td>
+                    <td class="code"><pre>&lt;function do_extends at 0x7f343645c5e0&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1698,48 +1704,48 @@
         
         <li class="frame django">
           
-            <code class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</code>, line 516, in parse
+            <code class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</code>, line 524, in parse
           
 
           
-            <div class="context" id="c140609449437504">
+            <div class="context" id="c139862193282560">
               
-                <ol start="509" class="pre-context" id="pre140609449437504">
+                <ol start="517" class="pre-context" id="pre139862193282560">
                 
-                  <li onclick="toggle('pre140609449437504', 'post140609449437504')"><pre>                try:</pre></li>
+                  <li onclick="toggle('pre139862193282560', 'post139862193282560')"><pre>                try:</pre></li>
                 
-                  <li onclick="toggle('pre140609449437504', 'post140609449437504')"><pre>                    compile_func = self.tags[command]</pre></li>
+                  <li onclick="toggle('pre139862193282560', 'post139862193282560')"><pre>                    compile_func = self.tags[command]</pre></li>
                 
-                  <li onclick="toggle('pre140609449437504', 'post140609449437504')"><pre>                except KeyError:</pre></li>
+                  <li onclick="toggle('pre139862193282560', 'post139862193282560')"><pre>                except KeyError:</pre></li>
                 
-                  <li onclick="toggle('pre140609449437504', 'post140609449437504')"><pre>                    self.invalid_block_tag(token, command, parse_until)</pre></li>
+                  <li onclick="toggle('pre139862193282560', 'post139862193282560')"><pre>                    self.invalid_block_tag(token, command, parse_until)</pre></li>
                 
-                  <li onclick="toggle('pre140609449437504', 'post140609449437504')"><pre>                # Compile the callback into a node object and add it to</pre></li>
+                  <li onclick="toggle('pre139862193282560', 'post139862193282560')"><pre>                # Compile the callback into a node object and add it to</pre></li>
                 
-                  <li onclick="toggle('pre140609449437504', 'post140609449437504')"><pre>                # the node list.</pre></li>
+                  <li onclick="toggle('pre139862193282560', 'post139862193282560')"><pre>                # the node list.</pre></li>
                 
-                  <li onclick="toggle('pre140609449437504', 'post140609449437504')"><pre>                try:</pre></li>
+                  <li onclick="toggle('pre139862193282560', 'post139862193282560')"><pre>                try:</pre></li>
                 
                 </ol>
               
-              <ol start="516" class="context-line">
-                <li onclick="toggle('pre140609449437504', 'post140609449437504')"><pre>                    compiled_result = compile_func(self, token)
+              <ol start="524" class="context-line">
+                <li onclick="toggle('pre139862193282560', 'post139862193282560')"><pre>                    compiled_result = compile_func(self, token)
                                            ^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='517' class="post-context" id="post140609449437504">
+                <ol start='525' class="post-context" id="post139862193282560">
                   
-                  <li onclick="toggle('pre140609449437504', 'post140609449437504')"><pre>                except Exception as e:</pre></li>
+                  <li onclick="toggle('pre139862193282560', 'post139862193282560')"><pre>                except Exception as e:</pre></li>
                   
-                  <li onclick="toggle('pre140609449437504', 'post140609449437504')"><pre>                    raise self.error(token, e)</pre></li>
+                  <li onclick="toggle('pre139862193282560', 'post139862193282560')"><pre>                    raise self.error(token, e)</pre></li>
                   
-                  <li onclick="toggle('pre140609449437504', 'post140609449437504')"><pre>                self.extend_nodelist(nodelist, compiled_result, token)</pre></li>
+                  <li onclick="toggle('pre139862193282560', 'post139862193282560')"><pre>                self.extend_nodelist(nodelist, compiled_result, token)</pre></li>
                   
-                  <li onclick="toggle('pre140609449437504', 'post140609449437504')"><pre>                # Compile success. Remove the token from the command stack.</pre></li>
+                  <li onclick="toggle('pre139862193282560', 'post139862193282560')"><pre>                # Compile success. Remove the token from the command stack.</pre></li>
                   
-                  <li onclick="toggle('pre140609449437504', 'post140609449437504')"><pre>                self.command_stack.pop()</pre></li>
+                  <li onclick="toggle('pre139862193282560', 'post139862193282560')"><pre>                self.command_stack.pop()</pre></li>
                   
-                  <li onclick="toggle('pre140609449437504', 'post140609449437504')"><pre>        if parse_until:</pre></li>
+                  <li onclick="toggle('pre139862193282560', 'post139862193282560')"><pre>        if parse_until:</pre></li>
                   
               </ol>
               
@@ -1751,7 +1757,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449437504">
+            <table class="vars" id="v139862193282560">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -1767,7 +1773,7 @@
                 
                   <tr>
                     <td>compile_func</td>
-                    <td class="code"><pre>&lt;function do_extends at 0x7fe2340d0220&gt;</pre></td>
+                    <td class="code"><pre>&lt;function do_extends at 0x7f343645c5e0&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -1808,44 +1814,44 @@
           
 
           
-            <div class="context" id="c140609449437760">
+            <div class="context" id="c139862193279680">
               
-                <ol start="299" class="pre-context" id="pre140609449437760">
+                <ol start="299" class="pre-context" id="pre139862193279680">
                 
-                  <li onclick="toggle('pre140609449437760', 'post140609449437760')"><pre>    the parent template itself (if it evaluates to a Template object).</pre></li>
+                  <li onclick="toggle('pre139862193279680', 'post139862193279680')"><pre>    the parent template itself (if it evaluates to a Template object).</pre></li>
                 
-                  <li onclick="toggle('pre140609449437760', 'post140609449437760')"><pre>    &quot;&quot;&quot;</pre></li>
+                  <li onclick="toggle('pre139862193279680', 'post139862193279680')"><pre>    &quot;&quot;&quot;</pre></li>
                 
-                  <li onclick="toggle('pre140609449437760', 'post140609449437760')"><pre>    bits = token.split_contents()</pre></li>
+                  <li onclick="toggle('pre139862193279680', 'post139862193279680')"><pre>    bits = token.split_contents()</pre></li>
                 
-                  <li onclick="toggle('pre140609449437760', 'post140609449437760')"><pre>    if len(bits) != 2:</pre></li>
+                  <li onclick="toggle('pre139862193279680', 'post139862193279680')"><pre>    if len(bits) != 2:</pre></li>
                 
-                  <li onclick="toggle('pre140609449437760', 'post140609449437760')"><pre>        raise TemplateSyntaxError(&quot;&#x27;%s&#x27; takes one argument&quot; % bits[0])</pre></li>
+                  <li onclick="toggle('pre139862193279680', 'post139862193279680')"><pre>        raise TemplateSyntaxError(&quot;&#x27;%s&#x27; takes one argument&quot; % bits[0])</pre></li>
                 
-                  <li onclick="toggle('pre140609449437760', 'post140609449437760')"><pre>    bits[1] = construct_relative_path(parser.origin.template_name, bits[1])</pre></li>
+                  <li onclick="toggle('pre139862193279680', 'post139862193279680')"><pre>    bits[1] = construct_relative_path(parser.origin.template_name, bits[1])</pre></li>
                 
-                  <li onclick="toggle('pre140609449437760', 'post140609449437760')"><pre>    parent_name = parser.compile_filter(bits[1])</pre></li>
+                  <li onclick="toggle('pre139862193279680', 'post139862193279680')"><pre>    parent_name = parser.compile_filter(bits[1])</pre></li>
                 
                 </ol>
               
               <ol start="306" class="context-line">
-                <li onclick="toggle('pre140609449437760', 'post140609449437760')"><pre>    nodelist = parser.parse()
+                <li onclick="toggle('pre139862193279680', 'post139862193279680')"><pre>    nodelist = parser.parse()
                     ^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='307' class="post-context" id="post140609449437760">
+                <ol start='307' class="post-context" id="post139862193279680">
                   
-                  <li onclick="toggle('pre140609449437760', 'post140609449437760')"><pre>    if nodelist.get_nodes_by_type(ExtendsNode):</pre></li>
+                  <li onclick="toggle('pre139862193279680', 'post139862193279680')"><pre>    if nodelist.get_nodes_by_type(ExtendsNode):</pre></li>
                   
-                  <li onclick="toggle('pre140609449437760', 'post140609449437760')"><pre>        raise TemplateSyntaxError(</pre></li>
+                  <li onclick="toggle('pre139862193279680', 'post139862193279680')"><pre>        raise TemplateSyntaxError(</pre></li>
                   
-                  <li onclick="toggle('pre140609449437760', 'post140609449437760')"><pre>            &quot;&#x27;%s&#x27; cannot appear more than once in the same template&quot; % bits[0]</pre></li>
+                  <li onclick="toggle('pre139862193279680', 'post139862193279680')"><pre>            &quot;&#x27;%s&#x27; cannot appear more than once in the same template&quot; % bits[0]</pre></li>
                   
-                  <li onclick="toggle('pre140609449437760', 'post140609449437760')"><pre>        )</pre></li>
+                  <li onclick="toggle('pre139862193279680', 'post139862193279680')"><pre>        )</pre></li>
                   
-                  <li onclick="toggle('pre140609449437760', 'post140609449437760')"><pre>    return ExtendsNode(nodelist, parent_name)</pre></li>
+                  <li onclick="toggle('pre139862193279680', 'post139862193279680')"><pre>    return ExtendsNode(nodelist, parent_name)</pre></li>
                   
-                  <li onclick="toggle('pre140609449437760', 'post140609449437760')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193279680', 'post139862193279680')"><pre></pre></li>
                   
               </ol>
               
@@ -1857,7 +1863,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449437760">
+            <table class="vars" id="v139862193279680">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -1895,48 +1901,48 @@
         
         <li class="frame django">
           
-            <code class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</code>, line 518, in parse
+            <code class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</code>, line 526, in parse
           
 
           
-            <div class="context" id="c140609449443072">
+            <div class="context" id="c139862193275200">
               
-                <ol start="511" class="pre-context" id="pre140609449443072">
+                <ol start="519" class="pre-context" id="pre139862193275200">
                 
-                  <li onclick="toggle('pre140609449443072', 'post140609449443072')"><pre>                except KeyError:</pre></li>
+                  <li onclick="toggle('pre139862193275200', 'post139862193275200')"><pre>                except KeyError:</pre></li>
                 
-                  <li onclick="toggle('pre140609449443072', 'post140609449443072')"><pre>                    self.invalid_block_tag(token, command, parse_until)</pre></li>
+                  <li onclick="toggle('pre139862193275200', 'post139862193275200')"><pre>                    self.invalid_block_tag(token, command, parse_until)</pre></li>
                 
-                  <li onclick="toggle('pre140609449443072', 'post140609449443072')"><pre>                # Compile the callback into a node object and add it to</pre></li>
+                  <li onclick="toggle('pre139862193275200', 'post139862193275200')"><pre>                # Compile the callback into a node object and add it to</pre></li>
                 
-                  <li onclick="toggle('pre140609449443072', 'post140609449443072')"><pre>                # the node list.</pre></li>
+                  <li onclick="toggle('pre139862193275200', 'post139862193275200')"><pre>                # the node list.</pre></li>
                 
-                  <li onclick="toggle('pre140609449443072', 'post140609449443072')"><pre>                try:</pre></li>
+                  <li onclick="toggle('pre139862193275200', 'post139862193275200')"><pre>                try:</pre></li>
                 
-                  <li onclick="toggle('pre140609449443072', 'post140609449443072')"><pre>                    compiled_result = compile_func(self, token)</pre></li>
+                  <li onclick="toggle('pre139862193275200', 'post139862193275200')"><pre>                    compiled_result = compile_func(self, token)</pre></li>
                 
-                  <li onclick="toggle('pre140609449443072', 'post140609449443072')"><pre>                except Exception as e:</pre></li>
+                  <li onclick="toggle('pre139862193275200', 'post139862193275200')"><pre>                except Exception as e:</pre></li>
                 
                 </ol>
               
-              <ol start="518" class="context-line">
-                <li onclick="toggle('pre140609449443072', 'post140609449443072')"><pre>                    raise self.error(token, e)
+              <ol start="526" class="context-line">
+                <li onclick="toggle('pre139862193275200', 'post139862193275200')"><pre>                    raise self.error(token, e)
                          ^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='519' class="post-context" id="post140609449443072">
+                <ol start='527' class="post-context" id="post139862193275200">
                   
-                  <li onclick="toggle('pre140609449443072', 'post140609449443072')"><pre>                self.extend_nodelist(nodelist, compiled_result, token)</pre></li>
+                  <li onclick="toggle('pre139862193275200', 'post139862193275200')"><pre>                self.extend_nodelist(nodelist, compiled_result, token)</pre></li>
                   
-                  <li onclick="toggle('pre140609449443072', 'post140609449443072')"><pre>                # Compile success. Remove the token from the command stack.</pre></li>
+                  <li onclick="toggle('pre139862193275200', 'post139862193275200')"><pre>                # Compile success. Remove the token from the command stack.</pre></li>
                   
-                  <li onclick="toggle('pre140609449443072', 'post140609449443072')"><pre>                self.command_stack.pop()</pre></li>
+                  <li onclick="toggle('pre139862193275200', 'post139862193275200')"><pre>                self.command_stack.pop()</pre></li>
                   
-                  <li onclick="toggle('pre140609449443072', 'post140609449443072')"><pre>        if parse_until:</pre></li>
+                  <li onclick="toggle('pre139862193275200', 'post139862193275200')"><pre>        if parse_until:</pre></li>
                   
-                  <li onclick="toggle('pre140609449443072', 'post140609449443072')"><pre>            self.unclosed_block_tag(parse_until)</pre></li>
+                  <li onclick="toggle('pre139862193275200', 'post139862193275200')"><pre>            self.unclosed_block_tag(parse_until)</pre></li>
                   
-                  <li onclick="toggle('pre140609449443072', 'post140609449443072')"><pre>        return nodelist</pre></li>
+                  <li onclick="toggle('pre139862193275200', 'post139862193275200')"><pre>        return nodelist</pre></li>
                   
               </ol>
               
@@ -1948,7 +1954,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449443072">
+            <table class="vars" id="v139862193275200">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -1964,7 +1970,7 @@
                 
                   <tr>
                     <td>compile_func</td>
-                    <td class="code"><pre>&lt;function do_block at 0x7fe2340d00e0&gt;</pre></td>
+                    <td class="code"><pre>&lt;function do_block at 0x7f343645c4a0&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -2010,48 +2016,48 @@
         
         <li class="frame django">
           
-            <code class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</code>, line 516, in parse
+            <code class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</code>, line 524, in parse
           
 
           
-            <div class="context" id="c140609449434752">
+            <div class="context" id="c139862193279296">
               
-                <ol start="509" class="pre-context" id="pre140609449434752">
+                <ol start="517" class="pre-context" id="pre139862193279296">
                 
-                  <li onclick="toggle('pre140609449434752', 'post140609449434752')"><pre>                try:</pre></li>
+                  <li onclick="toggle('pre139862193279296', 'post139862193279296')"><pre>                try:</pre></li>
                 
-                  <li onclick="toggle('pre140609449434752', 'post140609449434752')"><pre>                    compile_func = self.tags[command]</pre></li>
+                  <li onclick="toggle('pre139862193279296', 'post139862193279296')"><pre>                    compile_func = self.tags[command]</pre></li>
                 
-                  <li onclick="toggle('pre140609449434752', 'post140609449434752')"><pre>                except KeyError:</pre></li>
+                  <li onclick="toggle('pre139862193279296', 'post139862193279296')"><pre>                except KeyError:</pre></li>
                 
-                  <li onclick="toggle('pre140609449434752', 'post140609449434752')"><pre>                    self.invalid_block_tag(token, command, parse_until)</pre></li>
+                  <li onclick="toggle('pre139862193279296', 'post139862193279296')"><pre>                    self.invalid_block_tag(token, command, parse_until)</pre></li>
                 
-                  <li onclick="toggle('pre140609449434752', 'post140609449434752')"><pre>                # Compile the callback into a node object and add it to</pre></li>
+                  <li onclick="toggle('pre139862193279296', 'post139862193279296')"><pre>                # Compile the callback into a node object and add it to</pre></li>
                 
-                  <li onclick="toggle('pre140609449434752', 'post140609449434752')"><pre>                # the node list.</pre></li>
+                  <li onclick="toggle('pre139862193279296', 'post139862193279296')"><pre>                # the node list.</pre></li>
                 
-                  <li onclick="toggle('pre140609449434752', 'post140609449434752')"><pre>                try:</pre></li>
+                  <li onclick="toggle('pre139862193279296', 'post139862193279296')"><pre>                try:</pre></li>
                 
                 </ol>
               
-              <ol start="516" class="context-line">
-                <li onclick="toggle('pre140609449434752', 'post140609449434752')"><pre>                    compiled_result = compile_func(self, token)
+              <ol start="524" class="context-line">
+                <li onclick="toggle('pre139862193279296', 'post139862193279296')"><pre>                    compiled_result = compile_func(self, token)
                                            ^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='517' class="post-context" id="post140609449434752">
+                <ol start='525' class="post-context" id="post139862193279296">
                   
-                  <li onclick="toggle('pre140609449434752', 'post140609449434752')"><pre>                except Exception as e:</pre></li>
+                  <li onclick="toggle('pre139862193279296', 'post139862193279296')"><pre>                except Exception as e:</pre></li>
                   
-                  <li onclick="toggle('pre140609449434752', 'post140609449434752')"><pre>                    raise self.error(token, e)</pre></li>
+                  <li onclick="toggle('pre139862193279296', 'post139862193279296')"><pre>                    raise self.error(token, e)</pre></li>
                   
-                  <li onclick="toggle('pre140609449434752', 'post140609449434752')"><pre>                self.extend_nodelist(nodelist, compiled_result, token)</pre></li>
+                  <li onclick="toggle('pre139862193279296', 'post139862193279296')"><pre>                self.extend_nodelist(nodelist, compiled_result, token)</pre></li>
                   
-                  <li onclick="toggle('pre140609449434752', 'post140609449434752')"><pre>                # Compile success. Remove the token from the command stack.</pre></li>
+                  <li onclick="toggle('pre139862193279296', 'post139862193279296')"><pre>                # Compile success. Remove the token from the command stack.</pre></li>
                   
-                  <li onclick="toggle('pre140609449434752', 'post140609449434752')"><pre>                self.command_stack.pop()</pre></li>
+                  <li onclick="toggle('pre139862193279296', 'post139862193279296')"><pre>                self.command_stack.pop()</pre></li>
                   
-                  <li onclick="toggle('pre140609449434752', 'post140609449434752')"><pre>        if parse_until:</pre></li>
+                  <li onclick="toggle('pre139862193279296', 'post139862193279296')"><pre>        if parse_until:</pre></li>
                   
               </ol>
               
@@ -2063,7 +2069,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449434752">
+            <table class="vars" id="v139862193279296">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -2079,7 +2085,7 @@
                 
                   <tr>
                     <td>compile_func</td>
-                    <td class="code"><pre>&lt;function do_block at 0x7fe2340d00e0&gt;</pre></td>
+                    <td class="code"><pre>&lt;function do_block at 0x7f343645c4a0&gt;</pre></td>
                   </tr>
                 
                   <tr>
@@ -2129,44 +2135,44 @@
           
 
           
-            <div class="context" id="c140609449430016">
+            <div class="context" id="c139862193289088">
               
-                <ol start="227" class="pre-context" id="pre140609449430016">
+                <ol start="227" class="pre-context" id="pre139862193289088">
                 
-                  <li onclick="toggle('pre140609449430016', 'post140609449430016')"><pre>        if block_name in parser.__loaded_blocks:</pre></li>
+                  <li onclick="toggle('pre139862193289088', 'post139862193289088')"><pre>        if block_name in parser.__loaded_blocks:</pre></li>
                 
-                  <li onclick="toggle('pre140609449430016', 'post140609449430016')"><pre>            raise TemplateSyntaxError(</pre></li>
+                  <li onclick="toggle('pre139862193289088', 'post139862193289088')"><pre>            raise TemplateSyntaxError(</pre></li>
                 
-                  <li onclick="toggle('pre140609449430016', 'post140609449430016')"><pre>                &quot;&#x27;%s&#x27; tag with name &#x27;%s&#x27; appears more than once&quot; % (bits[0], block_name)</pre></li>
+                  <li onclick="toggle('pre139862193289088', 'post139862193289088')"><pre>                &quot;&#x27;%s&#x27; tag with name &#x27;%s&#x27; appears more than once&quot; % (bits[0], block_name)</pre></li>
                 
-                  <li onclick="toggle('pre140609449430016', 'post140609449430016')"><pre>            )</pre></li>
+                  <li onclick="toggle('pre139862193289088', 'post139862193289088')"><pre>            )</pre></li>
                 
-                  <li onclick="toggle('pre140609449430016', 'post140609449430016')"><pre>        parser.__loaded_blocks.append(block_name)</pre></li>
+                  <li onclick="toggle('pre139862193289088', 'post139862193289088')"><pre>        parser.__loaded_blocks.append(block_name)</pre></li>
                 
-                  <li onclick="toggle('pre140609449430016', 'post140609449430016')"><pre>    except AttributeError:  # parser.__loaded_blocks isn&#x27;t a list yet</pre></li>
+                  <li onclick="toggle('pre139862193289088', 'post139862193289088')"><pre>    except AttributeError:  # parser.__loaded_blocks isn&#x27;t a list yet</pre></li>
                 
-                  <li onclick="toggle('pre140609449430016', 'post140609449430016')"><pre>        parser.__loaded_blocks = [block_name]</pre></li>
+                  <li onclick="toggle('pre139862193289088', 'post139862193289088')"><pre>        parser.__loaded_blocks = [block_name]</pre></li>
                 
                 </ol>
               
               <ol start="234" class="context-line">
-                <li onclick="toggle('pre140609449430016', 'post140609449430016')"><pre>    nodelist = parser.parse((&quot;endblock&quot;,))
+                <li onclick="toggle('pre139862193289088', 'post139862193289088')"><pre>    nodelist = parser.parse((&quot;endblock&quot;,))
                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='235' class="post-context" id="post140609449430016">
+                <ol start='235' class="post-context" id="post139862193289088">
                   
-                  <li onclick="toggle('pre140609449430016', 'post140609449430016')"><pre></pre></li>
+                  <li onclick="toggle('pre139862193289088', 'post139862193289088')"><pre></pre></li>
                   
-                  <li onclick="toggle('pre140609449430016', 'post140609449430016')"><pre>    # This check is kept for backwards-compatibility. See #3100.</pre></li>
+                  <li onclick="toggle('pre139862193289088', 'post139862193289088')"><pre>    # This check is kept for backwards-compatibility. See #3100.</pre></li>
                   
-                  <li onclick="toggle('pre140609449430016', 'post140609449430016')"><pre>    endblock = parser.next_token()</pre></li>
+                  <li onclick="toggle('pre139862193289088', 'post139862193289088')"><pre>    endblock = parser.next_token()</pre></li>
                   
-                  <li onclick="toggle('pre140609449430016', 'post140609449430016')"><pre>    acceptable_endblocks = (&quot;endblock&quot;, &quot;endblock %s&quot; % block_name)</pre></li>
+                  <li onclick="toggle('pre139862193289088', 'post139862193289088')"><pre>    acceptable_endblocks = (&quot;endblock&quot;, &quot;endblock %s&quot; % block_name)</pre></li>
                   
-                  <li onclick="toggle('pre140609449430016', 'post140609449430016')"><pre>    if endblock.contents not in acceptable_endblocks:</pre></li>
+                  <li onclick="toggle('pre139862193289088', 'post139862193289088')"><pre>    if endblock.contents not in acceptable_endblocks:</pre></li>
                   
-                  <li onclick="toggle('pre140609449430016', 'post140609449430016')"><pre>        parser.invalid_block_tag(endblock, &quot;endblock&quot;, acceptable_endblocks)</pre></li>
+                  <li onclick="toggle('pre139862193289088', 'post139862193289088')"><pre>        parser.invalid_block_tag(endblock, &quot;endblock&quot;, acceptable_endblocks)</pre></li>
                   
               </ol>
               
@@ -2178,7 +2184,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449430016">
+            <table class="vars" id="v139862193289088">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -2216,48 +2222,48 @@
         
         <li class="frame django">
           
-            <code class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</code>, line 512, in parse
+            <code class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</code>, line 520, in parse
           
 
           
-            <div class="context" id="c140609449435328">
+            <div class="context" id="c139862193286848">
               
-                <ol start="505" class="pre-context" id="pre140609449435328">
+                <ol start="513" class="pre-context" id="pre139862193286848">
                 
-                  <li onclick="toggle('pre140609449435328', 'post140609449435328')"><pre>                # tag.</pre></li>
+                  <li onclick="toggle('pre139862193286848', 'post139862193286848')"><pre>                # tag.</pre></li>
                 
-                  <li onclick="toggle('pre140609449435328', 'post140609449435328')"><pre>                self.command_stack.append((command, token))</pre></li>
+                  <li onclick="toggle('pre139862193286848', 'post139862193286848')"><pre>                self.command_stack.append((command, token))</pre></li>
                 
-                  <li onclick="toggle('pre140609449435328', 'post140609449435328')"><pre>                # Get the tag callback function from the ones registered with</pre></li>
+                  <li onclick="toggle('pre139862193286848', 'post139862193286848')"><pre>                # Get the tag callback function from the ones registered with</pre></li>
                 
-                  <li onclick="toggle('pre140609449435328', 'post140609449435328')"><pre>                # the parser.</pre></li>
+                  <li onclick="toggle('pre139862193286848', 'post139862193286848')"><pre>                # the parser.</pre></li>
                 
-                  <li onclick="toggle('pre140609449435328', 'post140609449435328')"><pre>                try:</pre></li>
+                  <li onclick="toggle('pre139862193286848', 'post139862193286848')"><pre>                try:</pre></li>
                 
-                  <li onclick="toggle('pre140609449435328', 'post140609449435328')"><pre>                    compile_func = self.tags[command]</pre></li>
+                  <li onclick="toggle('pre139862193286848', 'post139862193286848')"><pre>                    compile_func = self.tags[command]</pre></li>
                 
-                  <li onclick="toggle('pre140609449435328', 'post140609449435328')"><pre>                except KeyError:</pre></li>
+                  <li onclick="toggle('pre139862193286848', 'post139862193286848')"><pre>                except KeyError:</pre></li>
                 
                 </ol>
               
-              <ol start="512" class="context-line">
-                <li onclick="toggle('pre140609449435328', 'post140609449435328')"><pre>                    self.invalid_block_tag(token, command, parse_until)
+              <ol start="520" class="context-line">
+                <li onclick="toggle('pre139862193286848', 'post139862193286848')"><pre>                    self.invalid_block_tag(token, command, parse_until)
                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='513' class="post-context" id="post140609449435328">
+                <ol start='521' class="post-context" id="post139862193286848">
                   
-                  <li onclick="toggle('pre140609449435328', 'post140609449435328')"><pre>                # Compile the callback into a node object and add it to</pre></li>
+                  <li onclick="toggle('pre139862193286848', 'post139862193286848')"><pre>                # Compile the callback into a node object and add it to</pre></li>
                   
-                  <li onclick="toggle('pre140609449435328', 'post140609449435328')"><pre>                # the node list.</pre></li>
+                  <li onclick="toggle('pre139862193286848', 'post139862193286848')"><pre>                # the node list.</pre></li>
                   
-                  <li onclick="toggle('pre140609449435328', 'post140609449435328')"><pre>                try:</pre></li>
+                  <li onclick="toggle('pre139862193286848', 'post139862193286848')"><pre>                try:</pre></li>
                   
-                  <li onclick="toggle('pre140609449435328', 'post140609449435328')"><pre>                    compiled_result = compile_func(self, token)</pre></li>
+                  <li onclick="toggle('pre139862193286848', 'post139862193286848')"><pre>                    compiled_result = compile_func(self, token)</pre></li>
                   
-                  <li onclick="toggle('pre140609449435328', 'post140609449435328')"><pre>                except Exception as e:</pre></li>
+                  <li onclick="toggle('pre139862193286848', 'post139862193286848')"><pre>                except Exception as e:</pre></li>
                   
-                  <li onclick="toggle('pre140609449435328', 'post140609449435328')"><pre>                    raise self.error(token, e)</pre></li>
+                  <li onclick="toggle('pre139862193286848', 'post139862193286848')"><pre>                    raise self.error(token, e)</pre></li>
                   
               </ol>
               
@@ -2269,7 +2275,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449435328">
+            <table class="vars" id="v139862193286848">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -2317,48 +2323,48 @@
         
         <li class="frame django">
           
-            <code class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</code>, line 567, in invalid_block_tag
+            <code class="fname">/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py</code>, line 575, in invalid_block_tag
           
 
           
-            <div class="context" id="c140609449433024">
+            <div class="context" id="c139862190200832">
               
-                <ol start="560" class="pre-context" id="pre140609449433024">
+                <ol start="568" class="pre-context" id="pre139862190200832">
                 
-                  <li onclick="toggle('pre140609449433024', 'post140609449433024')"><pre>            e = TemplateSyntaxError(e)</pre></li>
+                  <li onclick="toggle('pre139862190200832', 'post139862190200832')"><pre>            e = TemplateSyntaxError(e)</pre></li>
                 
-                  <li onclick="toggle('pre140609449433024', 'post140609449433024')"><pre>        if not hasattr(e, &quot;token&quot;):</pre></li>
+                  <li onclick="toggle('pre139862190200832', 'post139862190200832')"><pre>        if not hasattr(e, &quot;token&quot;):</pre></li>
                 
-                  <li onclick="toggle('pre140609449433024', 'post140609449433024')"><pre>            e.token = token</pre></li>
+                  <li onclick="toggle('pre139862190200832', 'post139862190200832')"><pre>            e.token = token</pre></li>
                 
-                  <li onclick="toggle('pre140609449433024', 'post140609449433024')"><pre>        return e</pre></li>
+                  <li onclick="toggle('pre139862190200832', 'post139862190200832')"><pre>        return e</pre></li>
                 
-                  <li onclick="toggle('pre140609449433024', 'post140609449433024')"><pre></pre></li>
+                  <li onclick="toggle('pre139862190200832', 'post139862190200832')"><pre></pre></li>
                 
-                  <li onclick="toggle('pre140609449433024', 'post140609449433024')"><pre>    def invalid_block_tag(self, token, command, parse_until=None):</pre></li>
+                  <li onclick="toggle('pre139862190200832', 'post139862190200832')"><pre>    def invalid_block_tag(self, token, command, parse_until=None):</pre></li>
                 
-                  <li onclick="toggle('pre140609449433024', 'post140609449433024')"><pre>        if parse_until:</pre></li>
+                  <li onclick="toggle('pre139862190200832', 'post139862190200832')"><pre>        if parse_until:</pre></li>
                 
                 </ol>
               
-              <ol start="567" class="context-line">
-                <li onclick="toggle('pre140609449433024', 'post140609449433024')"><pre>            raise self.error(
+              <ol start="575" class="context-line">
+                <li onclick="toggle('pre139862190200832', 'post139862190200832')"><pre>            raise self.error(
                  ^</pre> <span>…</span></li>
               </ol>
               
-                <ol start='568' class="post-context" id="post140609449433024">
+                <ol start='576' class="post-context" id="post139862190200832">
                   
-                  <li onclick="toggle('pre140609449433024', 'post140609449433024')"><pre>                token,</pre></li>
+                  <li onclick="toggle('pre139862190200832', 'post139862190200832')"><pre>                token,</pre></li>
                   
-                  <li onclick="toggle('pre140609449433024', 'post140609449433024')"><pre>                &quot;Invalid block tag on line %d: &#x27;%s&#x27;, expected %s. Did you &quot;</pre></li>
+                  <li onclick="toggle('pre139862190200832', 'post139862190200832')"><pre>                &quot;Invalid block tag on line %d: &#x27;%s&#x27;, expected %s. Did you &quot;</pre></li>
                   
-                  <li onclick="toggle('pre140609449433024', 'post140609449433024')"><pre>                &quot;forget to register or load this tag?&quot;</pre></li>
+                  <li onclick="toggle('pre139862190200832', 'post139862190200832')"><pre>                &quot;forget to register or load this tag?&quot;</pre></li>
                   
-                  <li onclick="toggle('pre140609449433024', 'post140609449433024')"><pre>                % (</pre></li>
+                  <li onclick="toggle('pre139862190200832', 'post139862190200832')"><pre>                % (</pre></li>
                   
-                  <li onclick="toggle('pre140609449433024', 'post140609449433024')"><pre>                    token.lineno,</pre></li>
+                  <li onclick="toggle('pre139862190200832', 'post139862190200832')"><pre>                    token.lineno,</pre></li>
                   
-                  <li onclick="toggle('pre140609449433024', 'post140609449433024')"><pre>                    command,</pre></li>
+                  <li onclick="toggle('pre139862190200832', 'post139862190200832')"><pre>                    command,</pre></li>
                   
               </ol>
               
@@ -2370,7 +2376,7 @@
               <details>
                 <summary class="commands">Local vars</summary>
             
-            <table class="vars" id="v140609449433024">
+            <table class="vars" id="v139862190200832">
               <thead>
                 <tr>
                   <th scope="col">Variable</th>
@@ -2422,8 +2428,8 @@ Environment:
 Request Method: 
 Request URL: http://Hello:1337/django_admin_tests/latest/english/defaults/500-template-broken/
 
-Django Version: 6.0.dev20250412174200
-Python Version: 3.12.9
+Django Version: 6.0.dev20250417152306
+Python Version: 3.12.10
 Installed Applications:
 [&#x27;demo&#x27;,
  &#x27;debug_toolbar&#x27;,
@@ -2464,7 +2470,7 @@ In template /home/runner/work/django_admin_tests/django_admin_tests/demo/templat
    9 : 
 
 Traceback (most recent call last):
-  File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py", line 510, in parse
+  File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py", line 518, in parse
     compile_func = self.tags[command]
                    ^^^^^^^^^^^^^^^^^^
 
@@ -2508,28 +2514,28 @@ During handling of the above exception (&#x27;unknown_tag_name_foo&#x27;), anoth
   File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py", line 196, in compile_nodelist
     nodelist = parser.parse()
                ^^^^^^^^^^^^^^
-  File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py", line 518, in parse
+  File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py", line 526, in parse
     raise self.error(token, e)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py", line 516, in parse
+  File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py", line 524, in parse
     compiled_result = compile_func(self, token)
                       ^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/loader_tags.py", line 306, in do_extends
     nodelist = parser.parse()
                ^^^^^^^^^^^^^^
-  File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py", line 518, in parse
+  File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py", line 526, in parse
     raise self.error(token, e)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py", line 516, in parse
+  File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py", line 524, in parse
     compiled_result = compile_func(self, token)
                       ^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/loader_tags.py", line 234, in do_block
     nodelist = parser.parse((&quot;endblock&quot;,))
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py", line 512, in parse
+  File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py", line 520, in parse
     self.invalid_block_tag(token, command, parse_until)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py", line 567, in invalid_block_tag
+  File "/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py", line 575, in invalid_block_tag
     raise self.error(
     ^
 
@@ -2814,7 +2820,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
       
         <tr>
           <td>DEBUG_TOOLBAR_CONFIG</td>
-          <td class="code"><pre>{&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7fe234aa5b20&gt;}</pre></td>
+          <td class="code"><pre>{&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7f3436de9da0&gt;}</pre></td>
         </tr>
       
         <tr>
@@ -3526,7 +3532,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
       
         <tr>
           <td>VERSION_NUMBERS</td>
-          <td class="code"><pre>{&#x27;latest&#x27;: &#x27;v6.0.dev20250412174200&#x27;,
+          <td class="code"><pre>{&#x27;latest&#x27;: &#x27;v6.0.dev20250417152306&#x27;,
  &#x27;v2.2&#x27;: &#x27;v2.2&#x27;,
  &#x27;v3.0&#x27;: &#x27;v3.0&#x27;,
  &#x27;v3.1&#x27;: &#x27;v3.1&#x27;,
@@ -3661,7 +3667,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
   Versions
   
     
-      <br><small>Django 6.0.dev20250412174200</small>
+      <br><small>Django 6.0.dev20250417152306</small>
     
   
   
@@ -3680,7 +3686,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
   Time
   
     
-      <br><small>CPU: 63.32ms (63.34ms)</small>
+      <br><small>CPU: 64.64ms (64.63ms)</small>
     
   
   
@@ -3851,7 +3857,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
   Signals
   
     
-      <br><small>37 receivers of 15 signals</small>
+      <br><small>36 receivers of 15 signals</small>
     
   
   
@@ -3934,19 +3940,19 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
       <tr>
         <td>Django</td>
         <td></td>
-        <td>6.0.dev20250412174200</td>
+        <td>6.0.dev20250417152306</td>
       </tr>
     
       <tr>
         <td>Python</td>
         <td></td>
-        <td>3.12.9</td>
+        <td>3.12.10</td>
       </tr>
     
       <tr>
         <td>debug_toolbar</td>
         <td>Debug Toolbar</td>
-        <td>5.0.1</td>
+        <td>5.1.0</td>
       </tr>
     
   </tbody>
@@ -3986,27 +3992,27 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
     
       <tr>
         <td>User CPU time</td>
-        <td>62.344 msec</td>
+        <td>62.600 msec</td>
       </tr>
     
       <tr>
         <td>System CPU time</td>
-        <td>0.976 msec</td>
+        <td>2.037 msec</td>
       </tr>
     
       <tr>
         <td>Total CPU time</td>
-        <td>63.320 msec</td>
+        <td>64.637 msec</td>
       </tr>
     
       <tr>
         <td>Elapsed time</td>
-        <td>63.337 msec</td>
+        <td>64.626 msec</td>
       </tr>
     
       <tr>
         <td>Context switches</td>
-        <td>2 voluntary, 1 involuntary</td>
+        <td>2 voluntary, 0 involuntary</td>
       </tr>
     
   </tbody>
@@ -4266,7 +4272,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
     
       <tr>
         <td>DEBUG_TOOLBAR_CONFIG</td>
-        <td><code>{&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7fe234aa5b20&gt;}</code></td>
+        <td><code>{&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7f3436de9da0&gt;}</code></td>
       </tr>
     
       <tr>
@@ -4978,7 +4984,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
     
       <tr>
         <td>VERSION_NUMBERS</td>
-        <td><code>{&#x27;latest&#x27;: &#x27;v6.0.dev20250412174200&#x27;,
+        <td><code>{&#x27;latest&#x27;: &#x27;v6.0.dev20250417152306&#x27;,
  &#x27;v2.2&#x27;: &#x27;v2.2&#x27;,
  &#x27;v3.0&#x27;: &#x27;v3.0&#x27;,
  &#x27;v3.1&#x27;: &#x27;v3.1&#x27;,
@@ -5085,7 +5091,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
     
       <tr>
         <td>Content-Length</td>
-        <td>151712</td>
+        <td>152356</td>
       </tr>
     
       <tr>
@@ -6036,14 +6042,14 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
 
   <dl>
     
-      <dt><strong><a class="remoteCall toggleTemplate" href="/debug_toolbar/template_source/?template=None&amp;template_origin=Ijx1bmtub3duIHNvdXJjZT4i:1u4X5N:93vUo-BhGnn1tgwSoeaS3nrrxwbafkQjafIpGcskdKs">None</a></strong></dt>
+      <dt><strong><a class="remoteCall toggleTemplate" href="/debug_toolbar/template_source/?template=None&amp;template_origin=Ijx1bmtub3duIHNvdXJjZT4i:1u5cUZ:CrEDXhh-wL0dYQ-ztqZ3dJDrgrkrMzBrELak_jHXeW8">None</a></strong></dt>
       <dd><samp>&lt;unknown source&gt;</samp></dd>
       
         <dd>
           <details>
             <summary>Toggle context</summary>
             <code class="djTemplateContext">{&#x27;False&#x27;: False, &#x27;None&#x27;: None, &#x27;True&#x27;: True}
-{&#x27;django_version_info&#x27;: &#x27;6.0.dev20250412174200&#x27;,
+{&#x27;django_version_info&#x27;: &#x27;6.0.dev20250417152306&#x27;,
  &#x27;exception_type&#x27;: &#x27;TemplateSyntaxError&#x27;,
  &#x27;exception_value&#x27;: &quot;Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, &quot;
                     &quot;expected &#x27;endblock&#x27;. Did you forget to register or load &quot;
@@ -6058,8 +6064,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py&#x27;,
              &#x27;function&#x27;: &#x27;parse&#x27;,
-             &#x27;id&#x27;: 140609449432704,
-             &#x27;lineno&#x27;: 510,
+             &#x27;id&#x27;: 139862193278144,
+             &#x27;lineno&#x27;: 518,
              &#x27;post_context&#x27;: [&#x27;                except KeyError:&#x27;,
                               &#x27;                    &#x27;
                               &#x27;self.invalid_block_tag(token, command, &#x27;
@@ -6081,8 +6087,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;from the ones registered with&#x27;,
                              &#x27;                # the parser.&#x27;,
                              &#x27;                try:&#x27;],
-             &#x27;pre_context_lineno&#x27;: 503,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe230491680&gt;,
+             &#x27;pre_context_lineno&#x27;: 511,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434590cc0&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n                   ^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;self&#x27;,
@@ -6100,7 +6106,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/core/handlers/exception.py&#x27;,
              &#x27;function&#x27;: &#x27;inner&#x27;,
-             &#x27;id&#x27;: 140609449439552,
+             &#x27;id&#x27;: 139862193279808,
              &#x27;lineno&#x27;: 55,
              &#x27;post_context&#x27;: [&#x27;            except Exception as exc:&#x27;,
                               &#x27;                response = &#x27;
@@ -6117,20 +6123,22 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;        def inner(request):&#x27;,
                              &#x27;            try:&#x27;],
              &#x27;pre_context_lineno&#x27;: 48,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe230493140&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434591340&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n               ^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;request&#x27;,
                        &#x27;&lt;WSGIRequest: GET &#x27;
                        &quot;&#x27;/django_admin_tests/latest/english/defaults/500-template-broken/&#x27;&gt;&quot;),
                       (&#x27;exc&#x27;,
-                       &#x27;TemplateSyntaxError(&quot;Invalid block tag on line 7: &#x27;
-                       &quot;&#x27;unknown_tag_name_foo&#x27;, expected &#x27;endblock&#x27;. Did you &quot;
-                       &#x27;forget to register or load this tag?&quot;)&#x27;),
+                       &#x27;TemplateSyntaxError(&quot;Template: &#x27;
+                       &#x27;/home/runner/work/django_admin_tests/django_admin_tests/demo/templates/demo/broken_template.html, &#x27;
+                       &quot;Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, &quot;
+                       &quot;expected &#x27;endblock&#x27;. Did you forget to register or &quot;
+                       &#x27;load this tag?&quot;)&#x27;),
                       (&#x27;get_response&#x27;,
                        &#x27;&lt;bound method BaseHandler._get_response of &#x27;
                        &#x27;&lt;django.core.handlers.wsgi.WSGIHandler object at &#x27;
-                       &#x27;0x7fe234aac200&gt;&gt;&#x27;)]},
+                       &#x27;0x7f3436a58a70&gt;&gt;&#x27;)]},
             {&#x27;colno&#x27;: &#x27;\n&#x27;
                       &#x27;                                &#x27;
                       &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
@@ -6141,7 +6149,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/core/handlers/base.py&#x27;,
              &#x27;function&#x27;: &#x27;_get_response&#x27;,
-             &#x27;id&#x27;: 140609449439168,
+             &#x27;id&#x27;: 139862193282176,
              &#x27;lineno&#x27;: 197,
              &#x27;post_context&#x27;: [&#x27;            except Exception as e:&#x27;,
                               &#x27;                response = &#x27;
@@ -6164,21 +6172,21 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;async_to_sync(wrapped_callback)&#x27;,
                              &#x27;            try:&#x27;],
              &#x27;pre_context_lineno&#x27;: 190,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe230492fc0&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434591c80&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n&#x27;
                               &#x27;               &#x27;
                               &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;self&#x27;,
                        &#x27;&lt;django.core.handlers.wsgi.WSGIHandler object at &#x27;
-                       &#x27;0x7fe234aac200&gt;&#x27;),
+                       &#x27;0x7f3436a58a70&gt;&#x27;),
                       (&#x27;request&#x27;,
                        &#x27;&lt;WSGIRequest: GET &#x27;
                        &quot;&#x27;/django_admin_tests/latest/english/defaults/500-template-broken/&#x27;&gt;&quot;),
                       (&#x27;response&#x27;, &#x27;None&#x27;),
                       (&#x27;callback&#x27;,
                        &#x27;&lt;function server_error_template_broken at &#x27;
-                       &#x27;0x7fe23386fd80&gt;&#x27;),
+                       &#x27;0x7f3435c1d580&gt;&#x27;),
                       (&#x27;callback_args&#x27;, &#x27;()&#x27;),
                       (&#x27;callback_kwargs&#x27;, &#x27;{}&#x27;),
                       (&#x27;middleware_method&#x27;,
@@ -6187,7 +6195,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                        &#x27;get_response=convert_exception_to_response.&lt;locals&gt;.inner&gt;&gt;&#x27;),
                       (&#x27;wrapped_callback&#x27;,
                        &#x27;&lt;function server_error_template_broken at &#x27;
-                       &#x27;0x7fe23386fd80&gt;&#x27;)]},
+                       &#x27;0x7f3435c1d580&gt;&#x27;)]},
             {&#x27;colno&#x27;: &#x27;\n&#x27;
                       &#x27;               &#x27;
                       &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
@@ -6197,7 +6205,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/demo/demo_urls.py&#x27;,
              &#x27;function&#x27;: &#x27;server_error_template_broken&#x27;,
-             &#x27;id&#x27;: 140609449429824,
+             &#x27;id&#x27;: 139862193287360,
              &#x27;lineno&#x27;: 45,
              &#x27;post_context&#x27;: [&#x27;&#x27;,
                               &#x27;&#x27;,
@@ -6213,7 +6221,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;        &quot;SERVER_PORT&quot;: 1337,&#x27;,
                              &#x27;    }&#x27;],
              &#x27;pre_context_lineno&#x27;: 38,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe230490b40&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f34345930c0&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n&#x27;
                               &#x27;           &#x27;
                               &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
@@ -6231,7 +6239,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/shortcuts.py&#x27;,
              &#x27;function&#x27;: &#x27;render&#x27;,
-             &#x27;id&#x27;: 140609449435136,
+             &#x27;id&#x27;: 139862193284864,
              &#x27;lineno&#x27;: 25,
              &#x27;post_context&#x27;: [&#x27;    return HttpResponse(content, content_type, &#x27;
                               &#x27;status)&#x27;,
@@ -6253,7 +6261,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;with the passed arguments.&#x27;,
                              &#x27;    &quot;&quot;&quot;&#x27;],
              &#x27;pre_context_lineno&#x27;: 18,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe230492000&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434592700&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n&#x27;
                               &#x27;              &#x27;
                               &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
@@ -6275,7 +6283,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/loader.py&#x27;,
              &#x27;function&#x27;: &#x27;render_to_string&#x27;,
-             &#x27;id&#x27;: 140609449435072,
+             &#x27;id&#x27;: 139862193290432,
              &#x27;lineno&#x27;: 61,
              &#x27;post_context&#x27;: [&#x27;    return template.render(context, request)&#x27;,
                               &#x27;&#x27;,
@@ -6294,7 +6302,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;select_template(template_name, using=using)&#x27;,
                              &#x27;    else:&#x27;],
              &#x27;pre_context_lineno&#x27;: 54,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe230491fc0&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434593cc0&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n&#x27;
                               &#x27;               &#x27;
                               &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
@@ -6314,7 +6322,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/loader.py&#x27;,
              &#x27;function&#x27;: &#x27;get_template&#x27;,
-             &#x27;id&#x27;: 140609449429568,
+             &#x27;id&#x27;: 139862193277568,
              &#x27;lineno&#x27;: 15,
              &#x27;post_context&#x27;: [&#x27;        except TemplateDoesNotExist as e:&#x27;,
                               &#x27;            chain.append(e)&#x27;,
@@ -6332,7 +6340,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;    for engine in engines:&#x27;,
                              &#x27;        try:&#x27;],
              &#x27;pre_context_lineno&#x27;: 8,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe230490a40&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434590a80&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;template_name&#x27;, &quot;&#x27;demo/broken_template.html&#x27;&quot;),
@@ -6340,10 +6348,10 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                       (&#x27;chain&#x27;, &#x27;[]&#x27;),
                       (&#x27;engines&#x27;,
                        &#x27;[&lt;django.template.backends.django.DjangoTemplates &#x27;
-                       &#x27;object at 0x7fe233c54a10&gt;]&#x27;),
+                       &#x27;object at 0x7f3435a508f0&gt;]&#x27;),
                       (&#x27;engine&#x27;,
                        &#x27;&lt;django.template.backends.django.DjangoTemplates &#x27;
-                       &#x27;object at 0x7fe233c54a10&gt;&#x27;)]},
+                       &#x27;object at 0x7f3435a508f0&gt;&#x27;)]},
             {&#x27;colno&#x27;: &#x27;\n&#x27;
                       &#x27;                                &#x27;
                       &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
@@ -6354,7 +6362,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/backends/django.py&#x27;,
              &#x27;function&#x27;: &#x27;get_template&#x27;,
-             &#x27;id&#x27;: 140609449430528,
+             &#x27;id&#x27;: 139862193289344,
              &#x27;lineno&#x27;: 79,
              &#x27;post_context&#x27;: [&#x27;        except TemplateDoesNotExist as exc:&#x27;,
                               &#x27;            reraise(exc, self)&#x27;,
@@ -6374,14 +6382,14 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;    def get_template(self, template_name):&#x27;,
                              &#x27;        try:&#x27;],
              &#x27;pre_context_lineno&#x27;: 72,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe230490e00&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434593880&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n&#x27;
                               &#x27;                    &#x27;
                               &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;self&#x27;,
                        &#x27;&lt;django.template.backends.django.DjangoTemplates &#x27;
-                       &#x27;object at 0x7fe233c54a10&gt;&#x27;),
+                       &#x27;object at 0x7f3435a508f0&gt;&#x27;),
                       (&#x27;template_name&#x27;, &quot;&#x27;demo/broken_template.html&#x27;&quot;)]},
             {&#x27;colno&#x27;: &#x27;\n&#x27;
                       &#x27;                                &#x27;
@@ -6392,7 +6400,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/engine.py&#x27;,
              &#x27;function&#x27;: &#x27;get_template&#x27;,
-             &#x27;id&#x27;: 140609449442432,
+             &#x27;id&#x27;: 139862193288512,
              &#x27;lineno&#x27;: 177,
              &#x27;post_context&#x27;: [&#x27;        if not hasattr(template, &quot;render&quot;):&#x27;,
                               &#x27;            # template needs to be compiled&#x27;,
@@ -6413,7 +6421,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;recursively.&#x27;,
                              &#x27;        &quot;&quot;&quot;&#x27;],
              &#x27;pre_context_lineno&#x27;: 170,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe230493c80&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434593540&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n&#x27;
                               &#x27;                       &#x27;
                               &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
@@ -6439,7 +6447,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                        &quot;&#x27;django.contrib.admin.templatetags.admin_modify&#x27;, &quot;
                        &quot;&#x27;admin_urls&#x27;: &quot;
                        &quot;&#x27;django.contrib.admin.templatetags.admin_urls&#x27;, &#x27;log&#x27;: &quot;
-                       &quot;&#x27;django.contrib.admin.templatetags.log&#x27;, &#x27;flatpages&#x27;: &quot;
+                       &quot;&#x27;django.contrib.admin.templatetags.log&#x27;, &#x27;auth&#x27;: &quot;
+                       &quot;&#x27;django.contrib.auth.templatetags.auth&#x27;, &#x27;flatpages&#x27;: &quot;
                        &quot;&#x27;django.contrib.flatpages.templatetags.flatpages&#x27;} &quot;
                        &quot;builtins=[&#x27;django.template.defaulttags&#x27;, &quot;
                        &quot;&#x27;django.template.defaultfilters&#x27;, &quot;
@@ -6454,7 +6463,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/engine.py&#x27;,
              &#x27;function&#x27;: &#x27;find_template&#x27;,
-             &#x27;id&#x27;: 140609449439680,
+             &#x27;id&#x27;: 139862193275520,
              &#x27;lineno&#x27;: 159,
              &#x27;post_context&#x27;: [&#x27;                return template, &#x27;
                               &#x27;template.origin&#x27;,
@@ -6474,7 +6483,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;        for loader in self.template_loaders:&#x27;,
                              &#x27;            try:&#x27;],
              &#x27;pre_context_lineno&#x27;: 152,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe2304931c0&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434590280&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n&#x27;
                               &#x27;               &#x27;
                               &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
@@ -6500,7 +6509,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                        &quot;&#x27;django.contrib.admin.templatetags.admin_modify&#x27;, &quot;
                        &quot;&#x27;admin_urls&#x27;: &quot;
                        &quot;&#x27;django.contrib.admin.templatetags.admin_urls&#x27;, &#x27;log&#x27;: &quot;
-                       &quot;&#x27;django.contrib.admin.templatetags.log&#x27;, &#x27;flatpages&#x27;: &quot;
+                       &quot;&#x27;django.contrib.admin.templatetags.log&#x27;, &#x27;auth&#x27;: &quot;
+                       &quot;&#x27;django.contrib.auth.templatetags.auth&#x27;, &#x27;flatpages&#x27;: &quot;
                        &quot;&#x27;django.contrib.flatpages.templatetags.flatpages&#x27;} &quot;
                        &quot;builtins=[&#x27;django.template.defaulttags&#x27;, &quot;
                        &quot;&#x27;django.template.defaultfilters&#x27;, &quot;
@@ -6511,7 +6521,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                       (&#x27;tried&#x27;, &#x27;[]&#x27;),
                       (&#x27;loader&#x27;,
                        &#x27;&lt;django.template.loaders.cached.Loader object at &#x27;
-                       &#x27;0x7fe23229d0a0&gt;&#x27;)]},
+                       &#x27;0x7f34349b4890&gt;&#x27;)]},
             {&#x27;colno&#x27;: &#x27;\n&#x27;
                       &#x27;                           &#x27;
                       &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
@@ -6521,7 +6531,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/loaders/cached.py&#x27;,
              &#x27;function&#x27;: &#x27;get_template&#x27;,
-             &#x27;id&#x27;: 140609449428032,
+             &#x27;id&#x27;: 139862193278464,
              &#x27;lineno&#x27;: 57,
              &#x27;post_context&#x27;: [&#x27;        except TemplateDoesNotExist as e:&#x27;,
                               &#x27;            self.get_template_cache[key] = (&#x27;,
@@ -6540,14 +6550,14 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;&#x27;,
                              &#x27;        try:&#x27;],
              &#x27;pre_context_lineno&#x27;: 50,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe230490440&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434590e00&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n&#x27;
                               &#x27;               &#x27;
                               &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;self&#x27;,
                        &#x27;&lt;django.template.loaders.cached.Loader object at &#x27;
-                       &#x27;0x7fe23229d0a0&gt;&#x27;),
+                       &#x27;0x7f34349b4890&gt;&#x27;),
                       (&#x27;template_name&#x27;, &quot;&#x27;demo/broken_template.html&#x27;&quot;),
                       (&#x27;skip&#x27;, &#x27;None&#x27;),
                       (&#x27;key&#x27;, &quot;&#x27;demo/broken_template.html&#x27;&quot;),
@@ -6560,7 +6570,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/loaders/base.py&#x27;,
              &#x27;function&#x27;: &#x27;get_template&#x27;,
-             &#x27;id&#x27;: 140609449436096,
+             &#x27;id&#x27;: 139862193290816,
              &#x27;lineno&#x27;: 28,
              &#x27;post_context&#x27;: [&#x27;                    contents,&#x27;,
                               &#x27;                    origin,&#x27;,
@@ -6578,12 +6588,12 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;                continue&#x27;,
                              &#x27;            else:&#x27;],
              &#x27;pre_context_lineno&#x27;: 21,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe2304923c0&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434593e40&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n           &#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;self&#x27;,
                        &#x27;&lt;django.template.loaders.cached.Loader object at &#x27;
-                       &#x27;0x7fe23229d0a0&gt;&#x27;),
+                       &#x27;0x7f34349b4890&gt;&#x27;),
                       (&#x27;template_name&#x27;, &quot;&#x27;demo/broken_template.html&#x27;&quot;),
                       (&#x27;skip&#x27;, &#x27;None&#x27;),
                       (&#x27;tried&#x27;, &#x27;[]&#x27;),
@@ -6605,7 +6615,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py&#x27;,
              &#x27;function&#x27;: &#x27;__init__&#x27;,
-             &#x27;id&#x27;: 140609449436608,
+             &#x27;id&#x27;: 139862193284992,
              &#x27;lineno&#x27;: 154,
              &#x27;post_context&#x27;: [&#x27;&#x27;,
                               &#x27;    def __repr__(self):&#x27;,
@@ -6624,7 +6634,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;        self.source = str(template_string)  # &#x27;
                              &#x27;May be lazy.&#x27;],
              &#x27;pre_context_lineno&#x27;: 147,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe2304925c0&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434592780&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n                    ^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;self&#x27;,
@@ -6663,7 +6673,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                        &quot;&#x27;django.contrib.admin.templatetags.admin_modify&#x27;, &quot;
                        &quot;&#x27;admin_urls&#x27;: &quot;
                        &quot;&#x27;django.contrib.admin.templatetags.admin_urls&#x27;, &#x27;log&#x27;: &quot;
-                       &quot;&#x27;django.contrib.admin.templatetags.log&#x27;, &#x27;flatpages&#x27;: &quot;
+                       &quot;&#x27;django.contrib.admin.templatetags.log&#x27;, &#x27;auth&#x27;: &quot;
+                       &quot;&#x27;django.contrib.auth.templatetags.auth&#x27;, &#x27;flatpages&#x27;: &quot;
                        &quot;&#x27;django.contrib.flatpages.templatetags.flatpages&#x27;} &quot;
                        &quot;builtins=[&#x27;django.template.defaulttags&#x27;, &quot;
                        &quot;&#x27;django.template.defaultfilters&#x27;, &quot;
@@ -6674,7 +6685,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py&#x27;,
              &#x27;function&#x27;: &#x27;compile_nodelist&#x27;,
-             &#x27;id&#x27;: 140609449440704,
+             &#x27;id&#x27;: 139862193283264,
              &#x27;lineno&#x27;: 196,
              &#x27;post_context&#x27;: [&#x27;            self.extra_data = parser.extra_data&#x27;,
                               &#x27;            return nodelist&#x27;,
@@ -6682,7 +6693,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                               &#x27;            if self.engine.debug:&#x27;,
                               &#x27;                e.template_debug = &#x27;
                               &#x27;self.get_exception_info(e, e.token)&#x27;,
-                              &#x27;            raise&#x27;],
+                              &#x27;            if (&#x27;],
              &#x27;pre_context&#x27;: [&#x27;            tokens,&#x27;,
                              &#x27;            self.engine.template_libraries,&#x27;,
                              &#x27;            self.engine.template_builtins,&#x27;,
@@ -6691,7 +6702,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;&#x27;,
                              &#x27;        try:&#x27;],
              &#x27;pre_context_lineno&#x27;: 189,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe2304935c0&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f34345920c0&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n               ^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;self&#x27;,
@@ -6718,15 +6729,19 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                        &#x27; &lt;Text token: &quot;...&quot;&gt;]&#x27;),
                       (&#x27;parser&#x27;,
                        &#x27;&lt;Parser tokens=[&lt;Text token: &quot;...&quot;&gt;, &lt;Block token: &#x27;
-                       &#x27;&quot;endblock...&quot;&gt;, &lt;Text token: &quot;&lt;/p&gt;...&quot;&gt;]&gt;&#x27;)]},
+                       &#x27;&quot;endblock...&quot;&gt;, &lt;Text token: &quot;&lt;/p&gt;...&quot;&gt;]&gt;&#x27;),
+                      (&#x27;raw_message&#x27;,
+                       &#x27;(&quot;Invalid block tag on line 7: &#x27;
+                       &#x27;\&#x27;unknown_tag_name_foo\&#x27;, expected \&#x27;endblock\&#x27;. &quot;\n&#x27;
+                       &quot; &#x27;Did you forget to register or load this tag?&#x27;)&quot;)]},
             {&#x27;colno&#x27;: &#x27;\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;context_line&#x27;: &#x27;                    raise self.error(token, e)&#x27;,
              &#x27;exc_cause&#x27;: KeyError(&#x27;unknown_tag_name_foo&#x27;),
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py&#x27;,
              &#x27;function&#x27;: &#x27;parse&#x27;,
-             &#x27;id&#x27;: 140609449440192,
-             &#x27;lineno&#x27;: 518,
+             &#x27;id&#x27;: 139862193282496,
+             &#x27;lineno&#x27;: 526,
              &#x27;post_context&#x27;: [&#x27;                self.extend_nodelist(nodelist, &#x27;
                               &#x27;compiled_result, token)&#x27;,
                               &#x27;                # Compile success. Remove the &#x27;
@@ -6747,8 +6762,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;                    compiled_result = &#x27;
                              &#x27;compile_func(self, token)&#x27;,
                              &#x27;                except Exception as e:&#x27;],
-             &#x27;pre_context_lineno&#x27;: 511,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe2304933c0&gt;,
+             &#x27;pre_context_lineno&#x27;: 519,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434591dc0&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;self&#x27;,
@@ -6760,7 +6775,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                       (&#x27;token_type&#x27;, &#x27;2&#x27;),
                       (&#x27;command&#x27;, &quot;&#x27;extends&#x27;&quot;),
                       (&#x27;compile_func&#x27;,
-                       &#x27;&lt;function do_extends at 0x7fe2340d0220&gt;&#x27;)]},
+                       &#x27;&lt;function do_extends at 0x7f343645c5e0&gt;&#x27;)]},
             {&#x27;colno&#x27;: &#x27;\n&#x27;
                       &#x27;                                           &#x27;
                       &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
@@ -6770,8 +6785,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py&#x27;,
              &#x27;function&#x27;: &#x27;parse&#x27;,
-             &#x27;id&#x27;: 140609449437504,
-             &#x27;lineno&#x27;: 516,
+             &#x27;id&#x27;: 139862193282560,
+             &#x27;lineno&#x27;: 524,
              &#x27;post_context&#x27;: [&#x27;                except Exception as e:&#x27;,
                               &#x27;                    raise self.error(token, e)&#x27;,
                               &#x27;                self.extend_nodelist(nodelist, &#x27;
@@ -6791,8 +6806,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;node object and add it to&#x27;,
                              &#x27;                # the node list.&#x27;,
                              &#x27;                try:&#x27;],
-             &#x27;pre_context_lineno&#x27;: 509,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe230492940&gt;,
+             &#x27;pre_context_lineno&#x27;: 517,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434591e00&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n&#x27;
                               &#x27;                      ^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
@@ -6805,14 +6820,14 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                       (&#x27;token_type&#x27;, &#x27;2&#x27;),
                       (&#x27;command&#x27;, &quot;&#x27;extends&#x27;&quot;),
                       (&#x27;compile_func&#x27;,
-                       &#x27;&lt;function do_extends at 0x7fe2340d0220&gt;&#x27;)]},
+                       &#x27;&lt;function do_extends at 0x7f343645c5e0&gt;&#x27;)]},
             {&#x27;colno&#x27;: &#x27;\n                    ^^^^^^^^^^^^^^&#x27;,
              &#x27;context_line&#x27;: &#x27;    nodelist = parser.parse()&#x27;,
              &#x27;exc_cause&#x27;: KeyError(&#x27;unknown_tag_name_foo&#x27;),
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/loader_tags.py&#x27;,
              &#x27;function&#x27;: &#x27;do_extends&#x27;,
-             &#x27;id&#x27;: 140609449437760,
+             &#x27;id&#x27;: 139862193279680,
              &#x27;lineno&#x27;: 306,
              &#x27;post_context&#x27;: [&#x27;    if nodelist.get_nodes_by_type(ExtendsNode):&#x27;,
                               &#x27;        raise TemplateSyntaxError(&#x27;,
@@ -6834,7 +6849,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;    parent_name = &#x27;
                              &#x27;parser.compile_filter(bits[1])&#x27;],
              &#x27;pre_context_lineno&#x27;: 299,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe230492a40&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f34345912c0&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n               ^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;parser&#x27;,
@@ -6850,8 +6865,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py&#x27;,
              &#x27;function&#x27;: &#x27;parse&#x27;,
-             &#x27;id&#x27;: 140609449443072,
-             &#x27;lineno&#x27;: 518,
+             &#x27;id&#x27;: 139862193275200,
+             &#x27;lineno&#x27;: 526,
              &#x27;post_context&#x27;: [&#x27;                self.extend_nodelist(nodelist, &#x27;
                               &#x27;compiled_result, token)&#x27;,
                               &#x27;                # Compile success. Remove the &#x27;
@@ -6872,8 +6887,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;                    compiled_result = &#x27;
                              &#x27;compile_func(self, token)&#x27;,
                              &#x27;                except Exception as e:&#x27;],
-             &#x27;pre_context_lineno&#x27;: 511,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe230493f00&gt;,
+             &#x27;pre_context_lineno&#x27;: 519,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434590140&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;self&#x27;,
@@ -6891,7 +6906,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                       (&#x27;token&#x27;, &#x27;&lt;Block token: &quot;block content...&quot;&gt;&#x27;),
                       (&#x27;token_type&#x27;, &#x27;2&#x27;),
                       (&#x27;command&#x27;, &quot;&#x27;block&#x27;&quot;),
-                      (&#x27;compile_func&#x27;, &#x27;&lt;function do_block at 0x7fe2340d00e0&gt;&#x27;),
+                      (&#x27;compile_func&#x27;, &#x27;&lt;function do_block at 0x7f343645c4a0&gt;&#x27;),
                       (&#x27;compiled_result&#x27;,
                        &quot;&lt;Block Node: h1. Contents: [&lt;TextNode: &#x27;Broken &quot;
                        &quot;template&#x27;&gt;]&gt;&quot;)]},
@@ -6904,8 +6919,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py&#x27;,
              &#x27;function&#x27;: &#x27;parse&#x27;,
-             &#x27;id&#x27;: 140609449434752,
-             &#x27;lineno&#x27;: 516,
+             &#x27;id&#x27;: 139862193279296,
+             &#x27;lineno&#x27;: 524,
              &#x27;post_context&#x27;: [&#x27;                except Exception as e:&#x27;,
                               &#x27;                    raise self.error(token, e)&#x27;,
                               &#x27;                self.extend_nodelist(nodelist, &#x27;
@@ -6925,8 +6940,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;node object and add it to&#x27;,
                              &#x27;                # the node list.&#x27;,
                              &#x27;                try:&#x27;],
-             &#x27;pre_context_lineno&#x27;: 509,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe230491e80&gt;,
+             &#x27;pre_context_lineno&#x27;: 517,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434591140&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n&#x27;
                               &#x27;                      ^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
@@ -6945,7 +6960,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                       (&#x27;token&#x27;, &#x27;&lt;Block token: &quot;block content...&quot;&gt;&#x27;),
                       (&#x27;token_type&#x27;, &#x27;2&#x27;),
                       (&#x27;command&#x27;, &quot;&#x27;block&#x27;&quot;),
-                      (&#x27;compile_func&#x27;, &#x27;&lt;function do_block at 0x7fe2340d00e0&gt;&#x27;),
+                      (&#x27;compile_func&#x27;, &#x27;&lt;function do_block at 0x7f343645c4a0&gt;&#x27;),
                       (&#x27;compiled_result&#x27;,
                        &quot;&lt;Block Node: h1. Contents: [&lt;TextNode: &#x27;Broken &quot;
                        &quot;template&#x27;&gt;]&gt;&quot;)]},
@@ -6955,7 +6970,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/loader_tags.py&#x27;,
              &#x27;function&#x27;: &#x27;do_block&#x27;,
-             &#x27;id&#x27;: 140609449430016,
+             &#x27;id&#x27;: 139862193289088,
              &#x27;lineno&#x27;: 234,
              &#x27;post_context&#x27;: [&#x27;&#x27;,
                               &#x27;    # This check is kept for &#x27;
@@ -6978,7 +6993,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &quot;parser.__loaded_blocks isn&#x27;t a list yet&quot;,
                              &#x27;        parser.__loaded_blocks = [block_name]&#x27;],
              &#x27;pre_context_lineno&#x27;: 227,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe230490c00&gt;,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434593780&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;parser&#x27;,
@@ -6997,8 +7012,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py&#x27;,
              &#x27;function&#x27;: &#x27;parse&#x27;,
-             &#x27;id&#x27;: 140609449435328,
-             &#x27;lineno&#x27;: 512,
+             &#x27;id&#x27;: 139862193286848,
+             &#x27;lineno&#x27;: 520,
              &#x27;post_context&#x27;: [&#x27;                # Compile the callback into a &#x27;
                               &#x27;node object and add it to&#x27;,
                               &#x27;                # the node list.&#x27;,
@@ -7017,8 +7032,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;                    compile_func = &#x27;
                              &#x27;self.tags[command]&#x27;,
                              &#x27;                except KeyError:&#x27;],
-             &#x27;pre_context_lineno&#x27;: 505,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe2304920c0&gt;,
+             &#x27;pre_context_lineno&#x27;: 513,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f3434592ec0&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n&#x27;
                               &#x27;    &#x27;
                               &#x27;^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#x27;,
@@ -7038,8 +7053,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
              &#x27;exc_cause_explicit&#x27;: None,
              &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py&#x27;,
              &#x27;function&#x27;: &#x27;invalid_block_tag&#x27;,
-             &#x27;id&#x27;: 140609449433024,
-             &#x27;lineno&#x27;: 567,
+             &#x27;id&#x27;: 139862190200832,
+             &#x27;lineno&#x27;: 575,
              &#x27;post_context&#x27;: [&#x27;                token,&#x27;,
                               &#x27;                &quot;Invalid block tag on line %d: &#x27;
                               &#x27;\&#x27;%s\&#x27;, expected %s. Did you &quot;&#x27;,
@@ -7056,8 +7071,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                              &#x27;    def invalid_block_tag(self, token, command, &#x27;
                              &#x27;parse_until=None):&#x27;,
                              &#x27;        if parse_until:&#x27;],
-             &#x27;pre_context_lineno&#x27;: 560,
-             &#x27;tb&#x27;: &lt;traceback object at 0x7fe2304917c0&gt;,
+             &#x27;pre_context_lineno&#x27;: 568,
+             &#x27;tb&#x27;: &lt;traceback object at 0x7f34342a1800&gt;,
              &#x27;tb_area_colno&#x27;: &#x27;\n    ^&#x27;,
              &#x27;type&#x27;: &#x27;django&#x27;,
              &#x27;vars&#x27;: [(&#x27;self&#x27;,
@@ -7073,8 +7088,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                &#x27;exc_cause_explicit&#x27;: None,
                &#x27;filename&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/src/django/django/template/base.py&#x27;,
                &#x27;function&#x27;: &#x27;invalid_block_tag&#x27;,
-               &#x27;id&#x27;: 140609449433024,
-               &#x27;lineno&#x27;: 567,
+               &#x27;id&#x27;: 139862190200832,
+               &#x27;lineno&#x27;: 575,
                &#x27;post_context&#x27;: [&#x27;                token,&#x27;,
                                 &#x27;                &quot;Invalid block tag on line &#x27;
                                 &#x27;%d: \&#x27;%s\&#x27;, expected %s. Did you &quot;&#x27;,
@@ -7091,8 +7106,8 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                                &#x27;    def invalid_block_tag(self, token, &#x27;
                                &#x27;command, parse_until=None):&#x27;,
                                &#x27;        if parse_until:&#x27;],
-               &#x27;pre_context_lineno&#x27;: 560,
-               &#x27;tb&#x27;: &lt;traceback object at 0x7fe2304917c0&gt;,
+               &#x27;pre_context_lineno&#x27;: 568,
+               &#x27;tb&#x27;: &lt;traceback object at 0x7f34342a1800&gt;,
                &#x27;tb_area_colno&#x27;: &#x27;\n    ^&#x27;,
                &#x27;type&#x27;: &#x27;django&#x27;,
                &#x27;vars&#x27;: [(&#x27;self&#x27;,
@@ -7105,11 +7120,11 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
  &#x27;raising_view_name&#x27;: &#x27;demo.demo_urls.server_error_template_broken&#x27;,
  &#x27;request&#x27;: &#x27;&lt;&lt;request&gt;&gt;&#x27;,
  &#x27;request_COOKIES_items&#x27;: dict_items([]),
- &#x27;request_FILES_items&#x27;: &lt;generator object MultiValueDict.items at 0x7fe230622dc0&gt;,
- &#x27;request_GET_items&#x27;: &lt;generator object MultiValueDict.items at 0x7fe230620860&gt;,
+ &#x27;request_FILES_items&#x27;: &lt;generator object MultiValueDict.items at 0x7f342d77c520&gt;,
+ &#x27;request_GET_items&#x27;: &lt;generator object MultiValueDict.items at 0x7f342d77f370&gt;,
  &#x27;request_insecure_uri&#x27;: &#x27;http://Hello:1337/django_admin_tests/latest/english/defaults/500-template-broken/&#x27;,
  &#x27;request_meta&#x27;: {&#x27;SERVER_NAME&#x27;: &#x27;Hello&#x27;, &#x27;SERVER_PORT&#x27;: 1337},
- &#x27;server_time&#x27;: datetime.datetime(2025, 4, 15, 3, 35, 45, 339518, tzinfo=datetime.timezone.utc),
+ &#x27;server_time&#x27;: datetime.datetime(2025, 4, 18, 3, 34, 15, 291968, tzinfo=datetime.timezone.utc),
  &#x27;settings&#x27;: {&#x27;ABSOLUTE_URL_OVERRIDES&#x27;: {},
               &#x27;ADMINS&#x27;: [],
               &#x27;ALLOWED_HOSTS&#x27;: [&#x27;*&#x27;],
@@ -7178,7 +7193,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
                                      &#x27;%d %B, %Y&#x27;],
               &#x27;DEBUG&#x27;: True,
               &#x27;DEBUG_PROPAGATE_EXCEPTIONS&#x27;: False,
-              &#x27;DEBUG_TOOLBAR_CONFIG&#x27;: {&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7fe234aa5b20&gt;},
+              &#x27;DEBUG_TOOLBAR_CONFIG&#x27;: {&#x27;SHOW_TOOLBAR_CALLBACK&#x27;: &lt;function &lt;lambda&gt; at 0x7f3436de9da0&gt;},
               &#x27;DECIMAL_SEPARATOR&#x27;: &#x27;.&#x27;,
               &#x27;DEFAULT_AUTO_FIELD&#x27;: &#x27;django.db.models.BigAutoField&#x27;,
               &#x27;DEFAULT_CHARSET&#x27;: &#x27;utf-8&#x27;,
@@ -7422,7 +7437,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
               &#x27;VARIANT&#x27;: &#x27;English&#x27;,
               &#x27;VARIANTS&#x27;: [&#x27;English&#x27;, &#x27;German&#x27;, &#x27;Arabic&#x27;],
               &#x27;VERSION_NUMBER&#x27;: &#x27;latest&#x27;,
-              &#x27;VERSION_NUMBERS&#x27;: {&#x27;latest&#x27;: &#x27;v6.0.dev20250412174200&#x27;,
+              &#x27;VERSION_NUMBERS&#x27;: {&#x27;latest&#x27;: &#x27;v6.0.dev20250417152306&#x27;,
                                   &#x27;v2.2&#x27;: &#x27;v2.2&#x27;,
                                   &#x27;v3.0&#x27;: &#x27;v3.0&#x27;,
                                   &#x27;v3.1&#x27;: &#x27;v3.1&#x27;,
@@ -7438,12 +7453,12 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
               &#x27;YEAR_MONTH_FORMAT&#x27;: &#x27;F Y&#x27;},
  &#x27;sys_executable&#x27;: &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/bin/python&#x27;,
  &#x27;sys_path&#x27;: [&#x27;/home/runner/work/django_admin_tests/django_admin_tests&#x27;,
-              &#x27;/opt/hostedtoolcache/Python/3.12.9/x64/lib/python312.zip&#x27;,
-              &#x27;/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12&#x27;,
-              &#x27;/opt/hostedtoolcache/Python/3.12.9/x64/lib/python3.12/lib-dynload&#x27;,
+              &#x27;/opt/hostedtoolcache/Python/3.12.10/x64/lib/python312.zip&#x27;,
+              &#x27;/opt/hostedtoolcache/Python/3.12.10/x64/lib/python3.12&#x27;,
+              &#x27;/opt/hostedtoolcache/Python/3.12.10/x64/lib/python3.12/lib-dynload&#x27;,
               &#x27;/home/runner/work/django_admin_tests/django_admin_tests/.venv/lib/python3.12/site-packages&#x27;,
-              &#x27;__editable__.django-6.0.dev20250412174200.finder.__path_hook__&#x27;],
- &#x27;sys_version_info&#x27;: &#x27;3.12.9&#x27;,
+              &#x27;__editable__.django-6.0.dev20250417152306.finder.__path_hook__&#x27;],
+ &#x27;sys_version_info&#x27;: &#x27;3.12.10&#x27;,
  &#x27;template_does_not_exist&#x27;: False,
  &#x27;template_info&#x27;: {&#x27;after&#x27;: &#x27;&lt;/p&gt;\n&#x27;,
                    &#x27;before&#x27;: &#x27;  &lt;p&gt;&#x27;,
@@ -7720,7 +7735,7 @@ Exception Value: Invalid block tag on line 7: &#x27;unknown_tag_name_foo&#x27;, 
     
       <tr>
         <td>setting_changed</td>
-        <td>reset_cache, clear_cache_handlers, update_installed_apps, update_connections_time_zone, clear_routers_cache, reset_template_engines, storages_changed, clear_serializers_cache, language_changed, localize_settings_changed, complex_setting_changed, root_urlconf_changed, static_storage_changed, static_finders_changed, form_renderer_changed, auth_password_validators_changed, user_model_swapped, update_toolbar_config, reset_hashers, Options.setting_changed, clear_caches, update_level_tags, FileSystemStorage._clear_cached_properties, FileSystemStorage._clear_cached_properties, StaticFilesStorage._clear_cached_properties, DebugStaticFilesStorage._clear_cached_properties</td>
+        <td>reset_cache, clear_cache_handlers, update_installed_apps, update_connections_time_zone, clear_routers_cache, reset_template_engines, storages_changed, clear_serializers_cache, language_changed, localize_settings_changed, complex_setting_changed, root_urlconf_changed, static_storage_changed, static_finders_changed, form_renderer_changed, auth_password_validators_changed, user_model_swapped, update_toolbar_config, reset_hashers, Options.setting_changed, clear_caches, StaticFilesStorage._clear_cached_properties, update_level_tags, FileSystemStorage._clear_cached_properties, FileSystemStorage._clear_cached_properties</td>
       </tr>
     
   </tbody>
