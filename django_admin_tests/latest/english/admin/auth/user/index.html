@@ -55,7 +55,7 @@
       <header id="header">
         <div id="branding">
         
-<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration 6.0.dev20250512163920</a></div>
+<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration 6.0.dev20250515175251</a></div>
 
 
         </div>
@@ -80,7 +80,7 @@
                 <a href="/django_admin_tests/latest/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/latest/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="WjZ9DBtPPH3AdKdAmAhpYhFVMYYkhI3XFN4sW2EkbFFYmwnVl5SDK752idBnJWst">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="I2zp2n70Y8fOM3YGYKfhlW7oUQv9fuW36Rxpox1lyF939MKWbcFnhUGEHDxqHbHB">
                     <button type="submit">Log out</button>
                 </form>
                 
@@ -510,7 +510,9 @@
       <div class="changelist-form-container">
         
 
-<div id="toolbar"><form id="changelist-search" method="get" role="search">
+<div id="toolbar">
+<h2 id="changelist-search-form" class="visually-hidden">Search users</h2>
+<form id="changelist-search" method="get" role="search" aria-labelledby="changelist-search-form">
 <div><!-- DIV needed for valid HTML -->
 <label for="searchbar"><img src="/django_admin_tests/latest/english/static/admin/img/search.svg" alt="Search"></label>
 <input type="text" size="40" name="q" value="" id="searchbar">
@@ -524,7 +526,7 @@
 
         
 
-        <form id="changelist-form" method="post" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="WjZ9DBtPPH3AdKdAmAhpYhFVMYYkhI3XFN4sW2EkbFFYmwnVl5SDK752idBnJWst">
+        <form id="changelist-form" method="post" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="I2zp2n70Y8fOM3YGYKfhlW7oUQv9fuW36Rxpox1lyF939MKWbcFnhUGEHDxqHbHB">
         
 
         
@@ -637,7 +639,7 @@
       </div>
       
         
-          <nav id="changelist-filter" aria-labelledby="changelist-filter-header">
+          <search id="changelist-filter" aria-labelledby="changelist-filter-header">
             <h2 id="changelist-filter-header">Filter</h2>
             <div id="changelist-filter-extra-actions">
               <h3>
@@ -718,7 +720,7 @@
   </ul>
 </details>
 
-          </nav>
+          </search>
         
       
     </div>
