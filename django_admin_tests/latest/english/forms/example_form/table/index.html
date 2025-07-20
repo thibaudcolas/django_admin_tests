@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example form: table</title>
+</head>
+<body>
+<main>
+  <h1>Example form: table</h1>
+
+
+  <form action="" method="POST" novalidate>
+    <input type="hidden" name="csrfmiddlewaretoken" value="r6aOHng7GTYIjb7KuMtuEp8SXCjePkSvCRN4C4bqs9gI3mVQv3UGmdlQ7dNnRDUA">
+
+    
+
+    <button type="Submit">Submit</button>
+
+    <fieldset>
+      <legend>Experimental fields</legend>
+      <div>
+        <label for="date-experiment">HTML5 date</label>
+        <input type="date" name="date-experiment" id="date-experiment">
+      </div>
+      <div>
+        <label for="datetime-local-experiment">HTML5 datetime-local</label>
+        <input type="datetime-local" name="datetime-local-experiment" id="datetime-local-experiment">
+      </div>
+    </fieldset>
+
+    
+      <table>
+        <tbody>
+          <tr>
+    <th><label for="id_boolean_required">Boolean required:</label></th>
+    <td>
+      
+      <input type="checkbox" name="boolean_required" required aria-describedby="id_boolean_required_helptext" id="id_boolean_required">
+      
+        <br>
+        <span class="helptext" id="id_boolean_required_helptext">boolean required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_boolean_optional">Boolean optional:</label></th>
+    <td>
+      
+      <input type="checkbox" name="boolean_optional" aria-describedby="id_boolean_optional_helptext" id="id_boolean_optional">
+      
+        <br>
+        <span class="helptext" id="id_boolean_optional_helptext">boolean optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_boolean_disabled">Boolean disabled:</label></th>
+    <td>
+      
+      <input type="checkbox" name="boolean_disabled" required disabled aria-describedby="id_boolean_disabled_helptext" id="id_boolean_disabled">
+      
+        <br>
+        <span class="helptext" id="id_boolean_disabled_helptext">boolean disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_char_required">Char required:</label></th>
+    <td>
+      
+      <input type="text" name="char_required" required aria-describedby="id_char_required_helptext" id="id_char_required">
+      
+        <br>
+        <span class="helptext" id="id_char_required_helptext">char required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_char_optional">Char optional:</label></th>
+    <td>
+      
+      <input type="text" name="char_optional" aria-describedby="id_char_optional_helptext" id="id_char_optional">
+      
+        <br>
+        <span class="helptext" id="id_char_optional_helptext">char optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_char_disabled">Char disabled:</label></th>
+    <td>
+      
+      <input type="text" name="char_disabled" required disabled aria-describedby="id_char_disabled_helptext" id="id_char_disabled">
+      
+        <br>
+        <span class="helptext" id="id_char_disabled_helptext">char disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_password_required">Password required:</label></th>
+    <td>
+      
+      <input type="password" name="password_required" required aria-describedby="id_password_required_helptext" id="id_password_required">
+      
+        <br>
+        <span class="helptext" id="id_password_required_helptext">field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_password_optional">Password optional:</label></th>
+    <td>
+      
+      <input type="password" name="password_optional" aria-describedby="id_password_optional_helptext" id="id_password_optional">
+      
+        <br>
+        <span class="helptext" id="id_password_optional_helptext">field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_password_disabled">Password disabled:</label></th>
+    <td>
+      
+      <input type="password" name="password_disabled" required disabled aria-describedby="id_password_disabled_helptext" id="id_password_disabled">
+      
+        <br>
+        <span class="helptext" id="id_password_disabled_helptext">field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_multiline_required">Multiline required:</label></th>
+    <td>
+      
+      <textarea name="multiline_required" cols="40" rows="10" required aria-describedby="id_multiline_required_helptext" id="id_multiline_required">
+</textarea>
+      
+        <br>
+        <span class="helptext" id="id_multiline_required_helptext">field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_multiline_optional">Multiline optional:</label></th>
+    <td>
+      
+      <textarea name="multiline_optional" cols="40" rows="10" aria-describedby="id_multiline_optional_helptext" id="id_multiline_optional">
+</textarea>
+      
+        <br>
+        <span class="helptext" id="id_multiline_optional_helptext">field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_multiline_disabled">Multiline disabled:</label></th>
+    <td>
+      
+      <textarea name="multiline_disabled" cols="40" rows="10" aria-describedby="id_multiline_disabled_helptext" id="id_multiline_disabled">
+</textarea>
+      
+        <br>
+        <span class="helptext" id="id_multiline_disabled_helptext">field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_choice_required">Choice required:</label></th>
+    <td>
+      
+      <select name="choice_required" aria-describedby="id_choice_required_helptext" id="id_choice_required">
+  <option value="one">One</option>
+
+  <option value="two">Two</option>
+
+  <option value="three">Three</option>
+
+  <option value="four">Four</option>
+
+</select>
+      
+        <br>
+        <span class="helptext" id="id_choice_required_helptext">field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_choice_optional">Choice optional:</label></th>
+    <td>
+      
+      <select name="choice_optional" aria-describedby="id_choice_optional_helptext" id="id_choice_optional">
+  <option value="one">One</option>
+
+  <option value="two">Two</option>
+
+  <option value="three">Three</option>
+
+  <option value="four">Four</option>
+
+</select>
+      
+        <br>
+        <span class="helptext" id="id_choice_optional_helptext">field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_choice_disabled">Choice disabled:</label></th>
+    <td>
+      
+      <select name="choice_disabled" disabled aria-describedby="id_choice_disabled_helptext" id="id_choice_disabled">
+  <option value="one">One</option>
+
+  <option value="two">Two</option>
+
+  <option value="three">Three</option>
+
+  <option value="four">Four</option>
+
+</select>
+      
+        <br>
+        <span class="helptext" id="id_choice_disabled_helptext">field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label>Radio choice required:</label></th>
+    <td>
+      
+      <div id="id_radio_choice_required"><div>
+    <label for="id_radio_choice_required_0"><input type="radio" name="radio_choice_required" value="one" required id="id_radio_choice_required_0">
+ One</label>
+
+</div><div>
+    <label for="id_radio_choice_required_1"><input type="radio" name="radio_choice_required" value="two" required id="id_radio_choice_required_1">
+ Two</label>
+
+</div><div>
+    <label for="id_radio_choice_required_2"><input type="radio" name="radio_choice_required" value="three" required id="id_radio_choice_required_2">
+ Three</label>
+
+</div><div>
+    <label for="id_radio_choice_required_3"><input type="radio" name="radio_choice_required" value="four" required id="id_radio_choice_required_3">
+ Four</label>
+
+</div>
+</div>
+      
+        <br>
+        <span class="helptext" id="id_radio_choice_required_helptext">field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label>Radio choice optional:</label></th>
+    <td>
+      
+      <div id="id_radio_choice_optional"><div>
+    <label for="id_radio_choice_optional_0"><input type="radio" name="radio_choice_optional" value="one" id="id_radio_choice_optional_0">
+ One</label>
+
+</div><div>
+    <label for="id_radio_choice_optional_1"><input type="radio" name="radio_choice_optional" value="two" id="id_radio_choice_optional_1">
+ Two</label>
+
+</div><div>
+    <label for="id_radio_choice_optional_2"><input type="radio" name="radio_choice_optional" value="three" id="id_radio_choice_optional_2">
+ Three</label>
+
+</div><div>
+    <label for="id_radio_choice_optional_3"><input type="radio" name="radio_choice_optional" value="four" id="id_radio_choice_optional_3">
+ Four</label>
+
+</div>
+</div>
+      
+        <br>
+        <span class="helptext" id="id_radio_choice_optional_helptext">field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label>Radio choice disabled:</label></th>
+    <td>
+      
+      <div id="id_radio_choice_disabled"><div>
+    <label for="id_radio_choice_disabled_0"><input type="radio" name="radio_choice_disabled" value="one" required disabled id="id_radio_choice_disabled_0">
+ One</label>
+
+</div><div>
+    <label for="id_radio_choice_disabled_1"><input type="radio" name="radio_choice_disabled" value="two" required disabled id="id_radio_choice_disabled_1">
+ Two</label>
+
+</div><div>
+    <label for="id_radio_choice_disabled_2"><input type="radio" name="radio_choice_disabled" value="three" required disabled id="id_radio_choice_disabled_2">
+ Three</label>
+
+</div><div>
+    <label for="id_radio_choice_disabled_3"><input type="radio" name="radio_choice_disabled" value="four" required disabled id="id_radio_choice_disabled_3">
+ Four</label>
+
+</div>
+</div>
+      
+        <br>
+        <span class="helptext" id="id_radio_choice_disabled_helptext">field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_date_required">Date required:</label></th>
+    <td>
+      
+      <input type="text" name="date_required" required aria-describedby="id_date_required_helptext" id="id_date_required">
+      
+        <br>
+        <span class="helptext" id="id_date_required_helptext">date required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_date_optional">Date optional:</label></th>
+    <td>
+      
+      <input type="text" name="date_optional" aria-describedby="id_date_optional_helptext" id="id_date_optional">
+      
+        <br>
+        <span class="helptext" id="id_date_optional_helptext">date optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_date_disabled">Date disabled:</label></th>
+    <td>
+      
+      <input type="text" name="date_disabled" required disabled aria-describedby="id_date_disabled_helptext" id="id_date_disabled">
+      
+        <br>
+        <span class="helptext" id="id_date_disabled_helptext">date disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_datetime_required">Datetime required:</label></th>
+    <td>
+      
+      <input type="text" name="datetime_required" required aria-describedby="id_datetime_required_helptext" id="id_datetime_required">
+      
+        <br>
+        <span class="helptext" id="id_datetime_required_helptext">datetime required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_datetime_optional">Datetime optional:</label></th>
+    <td>
+      
+      <input type="text" name="datetime_optional" aria-describedby="id_datetime_optional_helptext" id="id_datetime_optional">
+      
+        <br>
+        <span class="helptext" id="id_datetime_optional_helptext">datetime optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_datetime_disabled">Datetime disabled:</label></th>
+    <td>
+      
+      <input type="text" name="datetime_disabled" required disabled aria-describedby="id_datetime_disabled_helptext" id="id_datetime_disabled">
+      
+        <br>
+        <span class="helptext" id="id_datetime_disabled_helptext">datetime disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_decimal_required">Decimal required:</label></th>
+    <td>
+      
+      <input type="number" name="decimal_required" step="any" required aria-describedby="id_decimal_required_helptext" id="id_decimal_required">
+      
+        <br>
+        <span class="helptext" id="id_decimal_required_helptext">decimal required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_decimal_optional">Decimal optional:</label></th>
+    <td>
+      
+      <input type="number" name="decimal_optional" step="any" aria-describedby="id_decimal_optional_helptext" id="id_decimal_optional">
+      
+        <br>
+        <span class="helptext" id="id_decimal_optional_helptext">decimal optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_decimal_disabled">Decimal disabled:</label></th>
+    <td>
+      
+      <input type="number" name="decimal_disabled" step="any" required disabled aria-describedby="id_decimal_disabled_helptext" id="id_decimal_disabled">
+      
+        <br>
+        <span class="helptext" id="id_decimal_disabled_helptext">decimal disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_duration_required">Duration required:</label></th>
+    <td>
+      
+      <input type="text" name="duration_required" required aria-describedby="id_duration_required_helptext" id="id_duration_required">
+      
+        <br>
+        <span class="helptext" id="id_duration_required_helptext">duration required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_duration_optional">Duration optional:</label></th>
+    <td>
+      
+      <input type="text" name="duration_optional" aria-describedby="id_duration_optional_helptext" id="id_duration_optional">
+      
+        <br>
+        <span class="helptext" id="id_duration_optional_helptext">duration optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_duration_disabled">Duration disabled:</label></th>
+    <td>
+      
+      <input type="text" name="duration_disabled" required disabled aria-describedby="id_duration_disabled_helptext" id="id_duration_disabled">
+      
+        <br>
+        <span class="helptext" id="id_duration_disabled_helptext">duration disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_email_required">Email required:</label></th>
+    <td>
+      
+      <input type="email" name="email_required" maxlength="320" required aria-describedby="id_email_required_helptext" id="id_email_required">
+      
+        <br>
+        <span class="helptext" id="id_email_required_helptext">email required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_email_optional">Email optional:</label></th>
+    <td>
+      
+      <input type="email" name="email_optional" maxlength="320" aria-describedby="id_email_optional_helptext" id="id_email_optional">
+      
+        <br>
+        <span class="helptext" id="id_email_optional_helptext">email optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_email_disabled">Email disabled:</label></th>
+    <td>
+      
+      <input type="email" name="email_disabled" maxlength="320" required disabled aria-describedby="id_email_disabled_helptext" id="id_email_disabled">
+      
+        <br>
+        <span class="helptext" id="id_email_disabled_helptext">email disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_file_required">File required:</label></th>
+    <td>
+      
+      <input type="file" name="file_required" required aria-describedby="id_file_required_helptext" id="id_file_required">
+      
+        <br>
+        <span class="helptext" id="id_file_required_helptext">file required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_file_optional">File optional:</label></th>
+    <td>
+      
+      <input type="file" name="file_optional" aria-describedby="id_file_optional_helptext" id="id_file_optional">
+      
+        <br>
+        <span class="helptext" id="id_file_optional_helptext">file optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_file_disabled">File disabled:</label></th>
+    <td>
+      
+      <input type="file" name="file_disabled" required disabled aria-describedby="id_file_disabled_helptext" id="id_file_disabled">
+      
+        <br>
+        <span class="helptext" id="id_file_disabled_helptext">file disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_float_required">Float required:</label></th>
+    <td>
+      
+      <input type="number" name="float_required" step="any" required aria-describedby="id_float_required_helptext" id="id_float_required">
+      
+        <br>
+        <span class="helptext" id="id_float_required_helptext">float required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_float_optional">Float optional:</label></th>
+    <td>
+      
+      <input type="number" name="float_optional" step="any" aria-describedby="id_float_optional_helptext" id="id_float_optional">
+      
+        <br>
+        <span class="helptext" id="id_float_optional_helptext">float optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_float_disabled">Float disabled:</label></th>
+    <td>
+      
+      <input type="number" name="float_disabled" step="any" required disabled aria-describedby="id_float_disabled_helptext" id="id_float_disabled">
+      
+        <br>
+        <span class="helptext" id="id_float_disabled_helptext">float disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_image_required">Image required:</label></th>
+    <td>
+      
+      <input type="file" name="image_required" accept="image/*" required aria-describedby="id_image_required_helptext" id="id_image_required">
+      
+        <br>
+        <span class="helptext" id="id_image_required_helptext">image required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_image_optional">Image optional:</label></th>
+    <td>
+      
+      <input type="file" name="image_optional" accept="image/*" aria-describedby="id_image_optional_helptext" id="id_image_optional">
+      
+        <br>
+        <span class="helptext" id="id_image_optional_helptext">image optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_image_disabled">Image disabled:</label></th>
+    <td>
+      
+      <input type="file" name="image_disabled" accept="image/*" required disabled aria-describedby="id_image_disabled_helptext" id="id_image_disabled">
+      
+        <br>
+        <span class="helptext" id="id_image_disabled_helptext">image disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_integer_required">Integer required:</label></th>
+    <td>
+      
+      <input type="number" name="integer_required" required aria-describedby="id_integer_required_helptext" id="id_integer_required">
+      
+        <br>
+        <span class="helptext" id="id_integer_required_helptext">integer required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_integer_optional">Integer optional:</label></th>
+    <td>
+      
+      <input type="number" name="integer_optional" aria-describedby="id_integer_optional_helptext" id="id_integer_optional">
+      
+        <br>
+        <span class="helptext" id="id_integer_optional_helptext">integer optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_integer_disabled">Integer disabled:</label></th>
+    <td>
+      
+      <input type="number" name="integer_disabled" required disabled aria-describedby="id_integer_disabled_helptext" id="id_integer_disabled">
+      
+        <br>
+        <span class="helptext" id="id_integer_disabled_helptext">integer disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_json_required">JSON required:</label></th>
+    <td>
+      
+      <textarea name="json_required" cols="40" rows="10" required aria-describedby="id_json_required_helptext" id="id_json_required">
+null</textarea>
+      
+        <br>
+        <span class="helptext" id="id_json_required_helptext">json required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_json_optional">JSON optional:</label></th>
+    <td>
+      
+      <textarea name="json_optional" cols="40" rows="10" aria-describedby="id_json_optional_helptext" id="id_json_optional">
+null</textarea>
+      
+        <br>
+        <span class="helptext" id="id_json_optional_helptext">json optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_json_disabled">JSON disabled:</label></th>
+    <td>
+      
+      <textarea name="json_disabled" cols="40" rows="10" required disabled aria-describedby="id_json_disabled_helptext" id="id_json_disabled">
+null</textarea>
+      
+        <br>
+        <span class="helptext" id="id_json_disabled_helptext">json disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_generic_ip_address_required">Generic ip address required:</label></th>
+    <td>
+      
+      <input type="text" name="generic_ip_address_required" maxlength="39" required aria-describedby="id_generic_ip_address_required_helptext" id="id_generic_ip_address_required">
+      
+        <br>
+        <span class="helptext" id="id_generic_ip_address_required_helptext">generic ip address required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_generic_ip_address_optional">Generic ip address optional:</label></th>
+    <td>
+      
+      <input type="text" name="generic_ip_address_optional" maxlength="39" aria-describedby="id_generic_ip_address_optional_helptext" id="id_generic_ip_address_optional">
+      
+        <br>
+        <span class="helptext" id="id_generic_ip_address_optional_helptext">generic ip address optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_generic_ip_address_disabled">Generic ip address disabled:</label></th>
+    <td>
+      
+      <input type="text" name="generic_ip_address_disabled" maxlength="39" required disabled aria-describedby="id_generic_ip_address_disabled_helptext" id="id_generic_ip_address_disabled">
+      
+        <br>
+        <span class="helptext" id="id_generic_ip_address_disabled_helptext">generic ip address disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_select_multiple">Select multiple:</label></th>
+    <td>
+      
+      <select name="select_multiple" required id="id_select_multiple" multiple>
+  <option value="one">One</option>
+
+  <option value="two">Two</option>
+
+  <option value="three">Three</option>
+
+  <option value="four">Four</option>
+
+</select>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label>Checkboxes multiple:</label></th>
+    <td>
+      
+      <div id="id_checkboxes_multiple"><div>
+    <label for="id_checkboxes_multiple_0"><input type="checkbox" name="checkboxes_multiple" value="one" id="id_checkboxes_multiple_0">
+ One</label>
+
+</div><div>
+    <label for="id_checkboxes_multiple_1"><input type="checkbox" name="checkboxes_multiple" value="two" id="id_checkboxes_multiple_1">
+ Two</label>
+
+</div><div>
+    <label for="id_checkboxes_multiple_2"><input type="checkbox" name="checkboxes_multiple" value="three" id="id_checkboxes_multiple_2">
+ Three</label>
+
+</div><div>
+    <label for="id_checkboxes_multiple_3"><input type="checkbox" name="checkboxes_multiple" value="four" id="id_checkboxes_multiple_3">
+ Four</label>
+
+</div>
+</div>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_null_boolean_required">Null boolean required:</label></th>
+    <td>
+      
+      <select name="null_boolean_required" aria-describedby="id_null_boolean_required_helptext" id="id_null_boolean_required">
+  <option value="unknown" selected>Unknown</option>
+
+  <option value="true">Yes</option>
+
+  <option value="false">No</option>
+
+</select>
+      
+        <br>
+        <span class="helptext" id="id_null_boolean_required_helptext">null boolean required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_null_boolean_optional">Null boolean optional:</label></th>
+    <td>
+      
+      <select name="null_boolean_optional" aria-describedby="id_null_boolean_optional_helptext" id="id_null_boolean_optional">
+  <option value="unknown" selected>Unknown</option>
+
+  <option value="true">Yes</option>
+
+  <option value="false">No</option>
+
+</select>
+      
+        <br>
+        <span class="helptext" id="id_null_boolean_optional_helptext">null boolean optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_null_boolean_disabled">Null boolean disabled:</label></th>
+    <td>
+      
+      <select name="null_boolean_disabled" disabled aria-describedby="id_null_boolean_disabled_helptext" id="id_null_boolean_disabled">
+  <option value="unknown" selected>Unknown</option>
+
+  <option value="true">Yes</option>
+
+  <option value="false">No</option>
+
+</select>
+      
+        <br>
+        <span class="helptext" id="id_null_boolean_disabled_helptext">null boolean disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_regex_required">Regex required:</label></th>
+    <td>
+      
+      <input type="text" name="regex_required" required aria-describedby="id_regex_required_helptext" id="id_regex_required">
+      
+        <br>
+        <span class="helptext" id="id_regex_required_helptext">regex required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_regex_optional">Regex optional:</label></th>
+    <td>
+      
+      <input type="text" name="regex_optional" aria-describedby="id_regex_optional_helptext" id="id_regex_optional">
+      
+        <br>
+        <span class="helptext" id="id_regex_optional_helptext">regex optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_regex_disabled">Regex disabled:</label></th>
+    <td>
+      
+      <input type="text" name="regex_disabled" required disabled aria-describedby="id_regex_disabled_helptext" id="id_regex_disabled">
+      
+        <br>
+        <span class="helptext" id="id_regex_disabled_helptext">regex disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_slug_required">Slug required:</label></th>
+    <td>
+      
+      <input type="text" name="slug_required" required aria-describedby="id_slug_required_helptext" id="id_slug_required">
+      
+        <br>
+        <span class="helptext" id="id_slug_required_helptext">slug required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_slug_optional">Slug optional:</label></th>
+    <td>
+      
+      <input type="text" name="slug_optional" aria-describedby="id_slug_optional_helptext" id="id_slug_optional">
+      
+        <br>
+        <span class="helptext" id="id_slug_optional_helptext">slug optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_slug_disabled">Slug disabled:</label></th>
+    <td>
+      
+      <input type="text" name="slug_disabled" required disabled aria-describedby="id_slug_disabled_helptext" id="id_slug_disabled">
+      
+        <br>
+        <span class="helptext" id="id_slug_disabled_helptext">slug disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_time_required">Time required:</label></th>
+    <td>
+      
+      <input type="text" name="time_required" required aria-describedby="id_time_required_helptext" id="id_time_required">
+      
+        <br>
+        <span class="helptext" id="id_time_required_helptext">time required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_time_optional">Time optional:</label></th>
+    <td>
+      
+      <input type="text" name="time_optional" aria-describedby="id_time_optional_helptext" id="id_time_optional">
+      
+        <br>
+        <span class="helptext" id="id_time_optional_helptext">time optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_time_disabled">Time disabled:</label></th>
+    <td>
+      
+      <input type="text" name="time_disabled" required disabled aria-describedby="id_time_disabled_helptext" id="id_time_disabled">
+      
+        <br>
+        <span class="helptext" id="id_time_disabled_helptext">time disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_url_required">URL required:</label></th>
+    <td>
+      
+      <input type="url" name="url_required" required aria-describedby="id_url_required_helptext" id="id_url_required">
+      
+        <br>
+        <span class="helptext" id="id_url_required_helptext">url required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_url_optional">URL optional:</label></th>
+    <td>
+      
+      <input type="url" name="url_optional" aria-describedby="id_url_optional_helptext" id="id_url_optional">
+      
+        <br>
+        <span class="helptext" id="id_url_optional_helptext">url optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_url_disabled">URL disabled:</label></th>
+    <td>
+      
+      <input type="url" name="url_disabled" required disabled aria-describedby="id_url_disabled_helptext" id="id_url_disabled">
+      
+        <br>
+        <span class="helptext" id="id_url_disabled_helptext">url disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_uuid_required">UUID required:</label></th>
+    <td>
+      
+      <input type="text" name="uuid_required" required aria-describedby="id_uuid_required_helptext" id="id_uuid_required">
+      
+        <br>
+        <span class="helptext" id="id_uuid_required_helptext">uuid required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_uuid_optional">UUID optional:</label></th>
+    <td>
+      
+      <input type="text" name="uuid_optional" aria-describedby="id_uuid_optional_helptext" id="id_uuid_optional">
+      
+        <br>
+        <span class="helptext" id="id_uuid_optional_helptext">uuid optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_uuid_disabled">UUID disabled:</label></th>
+    <td>
+      
+      <input type="text" name="uuid_disabled" required disabled aria-describedby="id_uuid_disabled_helptext" id="id_uuid_disabled">
+      
+        <br>
+        <span class="helptext" id="id_uuid_disabled_helptext">uuid disabled field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_combo_required">Combo required:</label></th>
+    <td>
+      
+      <input type="text" name="combo_required" required aria-describedby="id_combo_required_helptext" id="id_combo_required">
+      
+        <br>
+        <span class="helptext" id="id_combo_required_helptext">combo required field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_combo_optional">Combo optional:</label></th>
+    <td>
+      
+      <input type="text" name="combo_optional" aria-describedby="id_combo_optional_helptext" id="id_combo_optional">
+      
+        <br>
+        <span class="helptext" id="id_combo_optional_helptext">combo optional field’s help text</span>
+      
+      
+    </td>
+  </tr>
+
+  <tr>
+    <th><label for="id_combo_disabled">Combo disabled:</label></th>
+    <td>
+      
+      <input type="text" name="combo_disabled" required disabled aria-describedby="id_combo_disabled_helptext" id="id_combo_disabled">
+      
+        <br>
+        <span class="helptext" id="id_combo_disabled_helptext">combo disabled field’s help text</span>
+      
+      
+        <input type="hidden" name="char_hidden" id="id_char_hidden">
+      
+    </td>
+  </tr>
+        </tbody>
+      </table>
+    
+  </form>
+</main>
+
+
+<link rel="stylesheet" href="/django_admin_tests/latest/english/static/debug_toolbar/css/print.css" media="print">
+<link rel="stylesheet" href="/django_admin_tests/latest/english/static/debug_toolbar/css/toolbar.css">
+
+
+<script type="module" src="/django_admin_tests/latest/english/static/debug_toolbar/js/toolbar.js" async></script>
+
+<div id="djDebug" class="djdt-hidden" dir="ltr"
+     
+     data-store-id="746765bb485c46feae3c6e69eb7fcba0"
+     data-render-panel-url="/debug_toolbar/render_panel/"
+     
+     
+     
+     data-sidebar-url="/debug_toolbar/history_sidebar/"
+     
+     data-default-show="true"
+       data-update-on-fetch="False">
+  <div class="djdt-hidden" id="djDebugToolbar">
+    <ul id="djDebugPanelList">
+      <li><a id="djHideToolBarButton" href="#" title="Hide toolbar">Hide »</a></li>
+      <li>
+        <a id="djToggleThemeButton" href="#" title="Toggle Theme">
+          Toggle Theme <svg
+  aria-hidden="true"
+  class="djdt-hidden theme-auto"
+  fill="currentColor"
+  viewBox="0 0 32 32"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M0 16q0 3.264 1.28 6.24t3.392 5.088 5.12 3.424 6.208 1.248q3.264 0 6.24-1.248t5.088-3.424 3.392-5.088 1.28-6.24-1.28-6.208-3.392-5.12-5.088-3.392-6.24-1.28q-3.264 0-6.208 1.28t-5.12 3.392-3.392 5.12-1.28 6.208zM4 16q0-3.264 1.6-6.016t4.384-4.352 6.016-1.632 6.016 1.632 4.384 4.352 1.6 6.016-1.6 6.048-4.384 4.352-6.016 1.6-6.016-1.6-4.384-4.352-1.6-6.048zM16 26.016q2.72 0 5.024-1.344t3.648-3.648 1.344-5.024-1.344-4.992-3.648-3.648-5.024-1.344v20z"
+  ></path>
+</svg>
+<svg
+  aria-hidden="true"
+  class="djdt-hidden theme-light"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M12 1.25C12.4142 1.25 12.75 1.58579 12.75 2V4C12.75 4.41421 12.4142 4.75 12 4.75C11.5858 4.75 11.25 4.41421 11.25 4V2C11.25 1.58579 11.5858 1.25 12 1.25ZM3.66865 3.71609C3.94815 3.41039 4.42255 3.38915 4.72825 3.66865L6.95026 5.70024C7.25596 5.97974 7.2772 6.45413 6.9977 6.75983C6.7182 7.06553 6.2438 7.08677 5.9381 6.80727L3.71609 4.77569C3.41039 4.49619 3.38915 4.02179 3.66865 3.71609ZM20.3314 3.71609C20.6109 4.02179 20.5896 4.49619 20.2839 4.77569L18.0619 6.80727C17.7562 7.08677 17.2818 7.06553 17.0023 6.75983C16.7228 6.45413 16.744 5.97974 17.0497 5.70024L19.2718 3.66865C19.5775 3.38915 20.0518 3.41039 20.3314 3.71609ZM12 7.75C9.65279 7.75 7.75 9.65279 7.75 12C7.75 14.3472 9.65279 16.25 12 16.25C14.3472 16.25 16.25 14.3472 16.25 12C16.25 9.65279 14.3472 7.75 12 7.75ZM6.25 12C6.25 8.82436 8.82436 6.25 12 6.25C15.1756 6.25 17.75 8.82436 17.75 12C17.75 15.1756 15.1756 17.75 12 17.75C8.82436 17.75 6.25 15.1756 6.25 12ZM1.25 12C1.25 11.5858 1.58579 11.25 2 11.25H4C4.41421 11.25 4.75 11.5858 4.75 12C4.75 12.4142 4.41421 12.75 4 12.75H2C1.58579 12.75 1.25 12.4142 1.25 12ZM19.25 12C19.25 11.5858 19.5858 11.25 20 11.25H22C22.4142 11.25 22.75 11.5858 22.75 12C22.75 12.4142 22.4142 12.75 22 12.75H20C19.5858 12.75 19.25 12.4142 19.25 12ZM17.0255 17.0252C17.3184 16.7323 17.7933 16.7323 18.0862 17.0252L20.3082 19.2475C20.6011 19.5404 20.601 20.0153 20.3081 20.3082C20.0152 20.6011 19.5403 20.601 19.2475 20.3081L17.0255 18.0858C16.7326 17.7929 16.7326 17.3181 17.0255 17.0252ZM6.97467 17.0253C7.26756 17.3182 7.26756 17.7931 6.97467 18.086L4.75244 20.3082C4.45955 20.6011 3.98468 20.6011 3.69178 20.3082C3.39889 20.0153 3.39889 19.5404 3.69178 19.2476L5.91401 17.0253C6.2069 16.7324 6.68177 16.7324 6.97467 17.0253ZM12 19.25C12.4142 19.25 12.75 19.5858 12.75 20V22C12.75 22.4142 12.4142 22.75 12 22.75C11.5858 22.75 11.25 22.4142 11.25 22V20C11.25 19.5858 11.5858 19.25 12 19.25Z"
+    fill="currentColor"
+  />
+</svg>
+<svg
+  aria-hidden="true"
+  class="djdt-hidden theme-dark"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
+
+        </a>
+      </li>
+      
+        
+
+<li id="djdt-HistoryPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtHistoryPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="History" class="HistoryPanel">
+  
+  History
+  
+    
+      <br><small>/django_admin_tests/latest/english/forms/example_form/table/</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-VersionsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtVersionsPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Versions" class="VersionsPanel">
+  
+  Versions
+  
+    
+      <br><small>Django 6.0.dev20250720120653</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-TimerPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtTimerPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Time" class="TimerPanel">
+  
+  Time
+  
+    
+      <br><small>CPU: 72.05ms (74.02ms)</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-SettingsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtSettingsPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Settings from demo.settings" class="SettingsPanel">
+  
+  Settings
+  
+    
+      
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-HeadersPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtHeadersPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Headers" class="HeadersPanel">
+  
+  Headers
+  
+    
+      
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-RequestPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtRequestPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Request" class="RequestPanel">
+  
+  Request
+  
+    
+      <br><small>example_form</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-SQLPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtSQLPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="SQL queries from 1 connection" class="SQLPanel">
+  
+  SQL
+  
+    
+      <br><small>5 queries in 1.90ms</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-StaticFilesPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtStaticFilesPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Static files (137 found, 0 used)" class="StaticFilesPanel">
+  
+  Static files
+  
+    
+      <br><small>0 files used</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-TemplatesPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtTemplatesPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Templates (300 rendered)" class="TemplatesPanel">
+  
+  Templates
+  
+    
+      <br><small>demo/example_form.html</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-AlertsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtAlertsPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Alerts" class="AlertsPanel">
+  
+  Alerts
+  
+    
+      <br><small>1 alert</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-CachePanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtCachePanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Cache calls from 1 backend" class="CachePanel">
+  
+  Cache
+  
+    
+      <br><small>0 calls in 0.00ms</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-SignalsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtSignalsPanel" checked title="Disable for next and successive requests">
+  
+    <a href="#" title="Signals" class="SignalsPanel">
+  
+  Signals
+  
+    
+      <br><small>36 receivers of 15 signals</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-RedirectsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtRedirectsPanel" title="Enable for next and successive requests">
+  
+    <div class="djdt-contentless djdt-disabled">
+  
+  Intercept redirects
+  
+  
+    </div>
+  
+</li>
+
+      
+        
+
+<li id="djdt-ProfilingPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtProfilingPanel" title="Enable for next and successive requests">
+  
+    <div class="djdt-contentless djdt-disabled">
+  
+  Profiling
+  
+  
+    </div>
+  
+</li>
+
+      
+    </ul>
+  </div>
+  <div class="djdt-hidden" id="djDebugToolbarHandle">
+    <div title="Show toolbar" id="djShowToolBarButton">
+      <span id="djShowToolBarD">D</span><span id="djShowToolBarJ">J</span>DT
+    </div>
+  </div>
+
+  
+    
+
+
+  <div id="HistoryPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>History</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="VersionsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Versions</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="TimerPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Time</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="SettingsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Settings from demo.settings</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="HeadersPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Headers</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="RequestPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Request</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="SQLPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>SQL queries from 1 connection</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="StaticFilesPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Static files (137 found, 0 used)</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="TemplatesPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Templates (300 rendered)</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="AlertsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Alerts</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="CachePanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Cache calls from 1 backend</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="SignalsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Signals</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+
+  
+    
+
+
+
+  
+  <div id="djDebugWindow" class="djdt-panelContent djdt-hidden"></div>
+</div>
+</body>
+</html>
