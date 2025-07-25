@@ -60,7 +60,7 @@
                 <a href="/django_admin_tests/latest/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/latest/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="JOIdD0R9jrw1eHuJVkM4zkcHsOQ9PccRJ3vVQoMIn5VokAQdPm84v5BkKLbFxsVX">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="oig1oTefxQbnPYpj9ruG6QL979PkP8fz4NSkH4sQGGI7JUMqASoL6JpFDHnkQ6gP">
                     <button type="submit">Log out</button>
                 </form>
                 
@@ -412,7 +412,7 @@ passed variables are False:</p>
 </pre>
 <p>Or if only some variables should be escaped, you can use:</p>
 <pre class="literal-block">
-{% firstof var1 var2|safe var3 &quot;&lt;strong&gt;fallback value&lt;/strong&gt;&quot;|safe %}
+{% firstof var1 var2|safe var3 &quot;&lt;strong&gt;fallback&lt;/strong&gt;&quot;|safe %}
 </pre>
 
     <hr>
@@ -464,8 +464,8 @@ than -- the following:</p>
 <blockquote>
 <table border="1" class="docutils">
 <colgroup>
-<col width="35%" />
-<col width="65%" />
+<col width="33%" />
+<col width="67%" />
 </colgroup>
 <thead valign="bottom">
 <tr><th class="head">Variable</th>
@@ -488,7 +488,8 @@ loop (1-indexed)</td>
 loop (0-indexed)</td>
 </tr>
 <tr><td><tt class="docutils literal">forloop.first</tt></td>
-<td>True if this is the first time through the loop</td>
+<td>True if this is the first time through the
+loop</td>
 </tr>
 <tr><td><tt class="docutils literal">forloop.last</tt></td>
 <td>True if this is the last time through the loop</td>
@@ -749,10 +750,10 @@ item that was grouped by; <tt class="docutils literal">list</tt> contains the li
 that <tt class="docutils literal">grouper</tt>. In this case, <tt class="docutils literal">grouper</tt> would be <tt class="docutils literal">Guitar</tt>, <tt class="docutils literal">Piano</tt>
 and <tt class="docutils literal">Trumpet</tt>, and <tt class="docutils literal">list</tt> is the list of musicians who play this
 instrument.</p>
-<p>Note that <tt class="docutils literal">{% regroup %}</tt> does not work when the list to be grouped is not
-sorted by the key you are grouping by! This means that if your list of
-musicians was not sorted by instrument, you'd need to make sure it is sorted
-before using it, i.e.:</p>
+<p>Note that <tt class="docutils literal">{% regroup %}</tt> does not work when the list to be grouped is
+not sorted by the key you are grouping by! This means that if your list of
+musicians was not sorted by instrument, you'd need to make sure it is
+sorted before using it, i.e.:</p>
 <pre class="literal-block">
 {% regroup musicians|dictsort:&quot;instrument&quot; by instrument as grouped %}
 </pre>
@@ -862,7 +863,11 @@ All arguments for the URL must be present.</p>
 <p>For example, if you have a view <tt class="docutils literal">app_name.views.client_details</tt> taking
 the client's id and the corresponding line in a URLconf looks like this:</p>
 <pre class="literal-block">
-path('client/&lt;int:id&gt;/', views.client_details, name='client-detail-view')
+path(
+    'client/&lt;int:id&gt;/',
+    views.client_details,
+    name='client-detail-view',
+)
 </pre>
 <p>and this app's URLconf is included into the project's URLconf under some
 path:</p>
@@ -910,7 +915,8 @@ maximum value, and then apply that ratio to a constant.
     <p>For example:</p>
 <pre class="literal-block">
 &lt;img src=&quot;bar.png&quot; alt=&quot;Bar&quot;
-     height=&quot;10&quot; width=&quot;{% widthratio this_value max_value max_width %}&quot;&gt;
+     height=&quot;10&quot;
+     width=&quot;{% widthratio this_value max_value max_width %}&quot;&gt;
 </pre>
 <p>If <tt class="docutils literal">this_value</tt> is 175, <tt class="docutils literal">max_value</tt> is 200, and <tt class="docutils literal">max_width</tt> is 100,
 the image in the above example will be 88 pixels wide
@@ -1063,7 +1069,7 @@ of time.
 </pre>
 <p>Optionally the cache to use may be specified thus:</p>
 <pre class="literal-block">
-{% cache ....  using=&quot;cachename&quot; %}
+{% cache .... using=&quot;cachename&quot; %}
 </pre>
 <p>Each unique set of arguments will result in a unique cache entry.</p>
 
@@ -1381,7 +1387,7 @@ sure that the string in there is something that is in the .po file.</p>
 </h4>
     <p>Usage:</p>
 <pre class="literal-block">
-{% get_admin_log [limit] as [varname] for_user [context_var_with_user_obj] %}
+{% get_admin_log [limit] as [varname] for_user [user_id_or_varname] %}
 </pre>
 <p>Examples:</p>
 <pre class="literal-block">
@@ -1389,9 +1395,9 @@ sure that the string in there is something that is in the .po file.</p>
 {% get_admin_log 10 as admin_log for_user user %}
 {% get_admin_log 10 as admin_log %}
 </pre>
-<p>Note that <tt class="docutils literal">context_var_containing_user_obj</tt> can be a hard-coded integer
-(user ID) or the name of a template context variable containing the user
-object whose ID you want.</p>
+<p>Note that <tt class="docutils literal">user_id_or_varname</tt> can be a hard-coded integer (user ID)
+or the name of a template context variable containing the user object
+whose ID you want.</p>
 
     
     
