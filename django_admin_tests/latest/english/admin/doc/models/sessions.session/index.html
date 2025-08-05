@@ -2,7 +2,7 @@
 
 <html lang="en" dir="ltr">
 <head>
-<title>Delete | Django site admin</title>
+<title>Model: sessions.Session</title>
 <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/base.css">
 
   <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/dark_mode.css">
@@ -15,16 +15,11 @@
 
 
 
-    
-    <script src="/django_admin_tests/latest/english/static/admin/js/vendor/jquery/jquery.js"></script>
-<script src="/django_admin_tests/latest/english/static/admin/js/jquery.init.js"></script>
-<script src="/django_admin_tests/latest/english/static/admin/js/core.js"></script>
-<script src="/django_admin_tests/latest/english/static/admin/js/admin/RelatedObjectLookups.js"></script>
-<script src="/django_admin_tests/latest/english/static/admin/js/actions.js"></script>
-<script src="/django_admin_tests/latest/english/static/admin/js/urlify.js"></script>
-<script src="/django_admin_tests/latest/english/static/admin/js/prepopulate.js"></script>
-<script src="/django_admin_tests/latest/english/static/admin/js/vendor/xregexp/xregexp.js"></script>
-    <script src="/django_admin_tests/latest/english/static/admin/js/cancel.js" async></script>
+
+<style>
+.module table { width:100%; }
+.module table p { padding: 0; margin: 0; }
+</style>
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +29,7 @@
 <meta name="robots" content="NONE,NOARCHIVE">
 </head>
 
-<body class=" app-sessions model-session delete-confirmation"
+<body class=""
   data-admin-utc-offset="0">
 <a href="#content-start" class="skip-to-content-link">Skip to main content</a>
 <!-- Container -->
@@ -46,7 +41,7 @@
       <header id="header">
         <div id="branding">
         
-<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration 6.0.dev20250731091250</a></div>
+<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration</a></div>
 
 
         </div>
@@ -71,7 +66,7 @@
                 <a href="/django_admin_tests/latest/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/latest/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="inxR3zTPKbxaDQ4uaEFdzZoSkk6lfaNb9p6WVYbSaVEekY0kqd4EGJhJP6V1NzcC">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="UKzlTRXn70sJRbDcaNGTkiplsobMTiHVF17ubv3Yn08dR5unZ3v48I9bQmkVk7Iu">
                     <button type="submit">Log out</button>
                 </form>
                 
@@ -103,10 +98,9 @@
         
 <div class="breadcrumbs">
 <a href="/django_admin_tests/latest/english/admin/">Home</a>
-&rsaquo; <a href="/django_admin_tests/latest/english/admin/sessions/">Sessions</a>
-&rsaquo; <a href="/django_admin_tests/latest/english/admin/sessions/session/">Sessions</a>
-&rsaquo; <a href="/django_admin_tests/latest/english/admin/sessions/session/0nlzjcbpwapyswplmrm8v1j76it12c16/change/">0nlzjcbpwapyswplmrm8v1j76it12c16</a>
-&rsaquo; Delete
+&rsaquo; <a href="/django_admin_tests/latest/english/admin/doc/">Documentation</a>
+&rsaquo; <a href="/django_admin_tests/latest/english/admin/doc/models/">Models</a>
+&rsaquo; sessions.Session
 </div>
 
       </nav>
@@ -125,38 +119,6 @@
   
 
 
-  
-    <div class="app-admin module">
-      <table>
-        <caption>
-          <a href="/django_admin_tests/latest/english/admin/admin/" class="section" title="Models in the Administration application">Administration</a>
-        </caption>
-        <thead class="visually-hidden">
-          <tr>
-            <th scope="col">Model name</th>
-            <th scope="col">Add link</th>
-            <th scope="col">Change or view list link</th>
-          </tr>
-        </thead>
-        
-          
-            <tr class="model-logentry">
-              <th scope="row" id="admin-logentry">
-                
-                  <a href="/django_admin_tests/latest/english/admin/admin/logentry/">Log entries</a>
-                
-              </th>
-
-              
-                <td><a href="/django_admin_tests/latest/english/admin/admin/logentry/add/" class="addlink" aria-describedby="admin-logentry">Add</a></td>
-              
-
-              
-            </tr>
-          
-        
-      </table>
-    </div>
   
     <div class="app-auth module">
       <table>
@@ -188,22 +150,6 @@
           
         
           
-            <tr class="model-permission">
-              <th scope="row" id="auth-permission">
-                
-                  <a href="/django_admin_tests/latest/english/admin/auth/permission/">Permissions</a>
-                
-              </th>
-
-              
-                <td><a href="/django_admin_tests/latest/english/admin/auth/permission/add/" class="addlink" aria-describedby="auth-permission">Add</a></td>
-              
-
-              
-            </tr>
-          
-        
-          
             <tr class="model-user">
               <th scope="row" id="auth-user">
                 
@@ -213,118 +159,6 @@
 
               
                 <td><a href="/django_admin_tests/latest/english/admin/auth/user/add/" class="addlink" aria-describedby="auth-user">Add</a></td>
-              
-
-              
-            </tr>
-          
-        
-      </table>
-    </div>
-  
-    <div class="app-contenttypes module">
-      <table>
-        <caption>
-          <a href="/django_admin_tests/latest/english/admin/contenttypes/" class="section" title="Models in the Content Types application">Content Types</a>
-        </caption>
-        <thead class="visually-hidden">
-          <tr>
-            <th scope="col">Model name</th>
-            <th scope="col">Add link</th>
-            <th scope="col">Change or view list link</th>
-          </tr>
-        </thead>
-        
-          
-            <tr class="model-contenttype">
-              <th scope="row" id="contenttypes-contenttype">
-                
-                  <a href="/django_admin_tests/latest/english/admin/contenttypes/contenttype/">Content types</a>
-                
-              </th>
-
-              
-                <td><a href="/django_admin_tests/latest/english/admin/contenttypes/contenttype/add/" class="addlink" aria-describedby="contenttypes-contenttype">Add</a></td>
-              
-
-              
-            </tr>
-          
-        
-      </table>
-    </div>
-  
-    <div class="app-demo module">
-      <table>
-        <caption>
-          <a href="/django_admin_tests/latest/english/admin/demo/" class="section" title="Models in the Demo application">Demo</a>
-        </caption>
-        <thead class="visually-hidden">
-          <tr>
-            <th scope="col">Model name</th>
-            <th scope="col">Add link</th>
-            <th scope="col">Change or view list link</th>
-          </tr>
-        </thead>
-        
-          
-            <tr class="model-artist">
-              <th scope="row" id="demo-artist">
-                
-                  <a href="/django_admin_tests/latest/english/admin/demo/artist/">Artists</a>
-                
-              </th>
-
-              
-                <td><a href="/django_admin_tests/latest/english/admin/demo/artist/add/" class="addlink" aria-describedby="demo-artist">Add</a></td>
-              
-
-              
-            </tr>
-          
-        
-          
-            <tr class="model-releasetrack">
-              <th scope="row" id="demo-releasetrack">
-                
-                  <a href="/django_admin_tests/latest/english/admin/demo/releasetrack/">Release tracks</a>
-                
-              </th>
-
-              
-                <td><a href="/django_admin_tests/latest/english/admin/demo/releasetrack/add/" class="addlink" aria-describedby="demo-releasetrack">Add</a></td>
-              
-
-              
-            </tr>
-          
-        
-          
-            <tr class="model-release">
-              <th scope="row" id="demo-release">
-                
-                  <a href="/django_admin_tests/latest/english/admin/demo/release/">Releases</a>
-                
-              </th>
-
-              
-                <td><a href="/django_admin_tests/latest/english/admin/demo/release/add/" class="addlink" aria-describedby="demo-release">Add</a></td>
-              
-
-              
-            </tr>
-          
-        
-          
-            <tr class="model-track">
-              <th scope="row" id="demo-track">
-                
-                  <a href="/django_admin_tests/latest/english/admin/demo/track/">Tracks</a>
-                
-              </th>
-
-              
-                <td><a href="/django_admin_tests/latest/english/admin/demo/track/add/" class="addlink" aria-describedby="demo-track">Add</a></td>
               
 
               
@@ -398,38 +232,6 @@
       </table>
     </div>
   
-    <div class="app-sessions module current-app">
-      <table>
-        <caption>
-          <a href="/django_admin_tests/latest/english/admin/sessions/" class="section" title="Models in the Sessions application">Sessions</a>
-        </caption>
-        <thead class="visually-hidden">
-          <tr>
-            <th scope="col">Model name</th>
-            <th scope="col">Add link</th>
-            <th scope="col">Change or view list link</th>
-          </tr>
-        </thead>
-        
-          
-            <tr class="model-session current-model">
-              <th scope="row" id="sessions-session">
-                
-                  <a href="/django_admin_tests/latest/english/admin/sessions/session/" aria-current="page">Sessions</a>
-                
-              </th>
-
-              
-                <td><a href="/django_admin_tests/latest/english/admin/sessions/session/add/" class="addlink" aria-describedby="sessions-session">Add</a></td>
-              
-
-              
-            </tr>
-          
-        
-      </table>
-    </div>
-  
     <div class="app-sites module">
       <table>
         <caption>
@@ -475,33 +277,65 @@
         <!-- Content -->
         <div id="content" class="colM">
           
-          <h1>Delete</h1>
           
           
+          
+<div id="content-main">
+<h1>sessions.Session</h1>
+<h2 class="subhead">Django provides full support for anonymous sessions. The session
+framework lets you store and retrieve arbitrary data on a
+per-site-visitor basis. It stores data on the server side and
+abstracts the sending and receiving of cookies. Cookies contain a
+session ID -- not the data itself.
+</h2>
 
-  
-    <p>Are you sure you want to delete the session “0nlzjcbpwapyswplmrm8v1j76it12c16”? All of the following related items will be deleted:</p>
-    
-<h2>Summary</h2>
-<ul>
-    
-    <li>Sessions: 1</li>
-    
-</ul>
+<p>The Django sessions framework is entirely cookie-based. It does
+not fall back to putting session IDs in URLs. This is an intentional
+design decision. Not only does that behavior make URLs ugly, it makes
+your site vulnerable to session-ID theft via the &quot;Referer&quot; header.</p>
+<p>For complete documentation on using Sessions in your code, consult
+the sessions documentation that is shipped with Django (also available
+on the Django web site).</p>
 
-    <h2>Objects</h2>
-    <ul id="deleted-objects">	<li>Session: <a href="/django_admin_tests/latest/english/admin/sessions/session/0nlzjcbpwapyswplmrm8v1j76it12c16/change/">0nlzjcbpwapyswplmrm8v1j76it12c16</a></li></ul>
-    <form method="post"><input type="hidden" name="csrfmiddlewaretoken" value="inxR3zTPKbxaDQ4uaEFdzZoSkk6lfaNb9p6WVYbSaVEekY0kqd4EGJhJP6V1NzcC">
-    <div>
-    <input type="hidden" name="post" value="yes">
-    
-    
-    <input type="submit" value="Yes, I’m sure">
-    <a role="button" href="#" class="button cancel-link">No, take me back</a>
-    </div>
-    </form>
-  
 
+<h3>Fields</h3>
+<div class="module">
+<table class="model">
+<thead>
+<tr>
+    <th scope="col">Field</th>
+    <th scope="col">Type</th>
+    <th scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+    <td>expire_date</td>
+    <td>Date (with time)</td>
+    <td>expire date</td>
+</tr>
+
+<tr>
+    <td>session_data</td>
+    <td>Text</td>
+    <td>session data</td>
+</tr>
+
+<tr>
+    <td>session_key</td>
+    <td>String (up to 40)</td>
+    <td>session key</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+
+<p><a href="/django_admin_tests/latest/english/admin/doc/models/">&lsaquo; Back to Model documentation</a></p>
+</div>
 
           
           <br class="clear">
