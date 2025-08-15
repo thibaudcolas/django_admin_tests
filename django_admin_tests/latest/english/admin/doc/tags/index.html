@@ -60,7 +60,7 @@
                 <a href="/django_admin_tests/latest/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/latest/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="GOXNfhpREPNFa2t2dgTwkqtvwoY6IlH9jn6rr05LgMgsblMhajFZjQuTGlJqCwIh">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="nUdeJkUcWdn12cafBYMircVNV8MYB4hzFcLdVyHhv76hiL7ntl2XtPGJZgcpb7Ci">
                     <button type="submit">Log out</button>
                 </form>
                 
@@ -658,6 +658,32 @@ for all the possible values.</p>
 <pre class="literal-block">
 It is {% now &quot;jS F Y H:i&quot; %}
 </pre>
+
+    <hr>
+    
+    <h3 id="built_in-partial">partial</h3>
+    <h4>Render a partial previously declared with the {% partialdef %} tag.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% partial partial_name %}
+</pre>
+
+    <hr>
+    
+    <h3 id="built_in-partialdef">partialdef</h3>
+    <h4>Declare a partial that can be used in the template.
+</h4>
+    <p>Usage:</p>
+<pre class="literal-block">
+{% partialdef partial_name %}
+Content goes here.
+{% endpartialdef %}
+</pre>
+<p>Store the nodelist in the context under the key &quot;partials&quot;. It can be
+retrieved using the <tt class="docutils literal">{% partial %}</tt> tag.</p>
+<p>The optional <tt class="docutils literal">inline</tt> argument renders the partial's contents
+immediately, at the point where it is defined.</p>
 
     <hr>
     
@@ -1546,6 +1572,10 @@ used within the block.</p>
         <li><a href="#built_in-lorem">lorem</a></li>
     
         <li><a href="#built_in-now">now</a></li>
+    
+        <li><a href="#built_in-partial">partial</a></li>
+    
+        <li><a href="#built_in-partialdef">partialdef</a></li>
     
         <li><a href="#built_in-querystring">querystring</a></li>
     
