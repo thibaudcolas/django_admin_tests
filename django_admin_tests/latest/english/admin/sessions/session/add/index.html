@@ -47,7 +47,7 @@
       <header id="header">
         <div id="branding">
         
-<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration 6.0.dev20250818212100</a></div>
+<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration 6.0.dev20250821162830</a></div>
 
 
         </div>
@@ -72,7 +72,7 @@
                 <a href="/django_admin_tests/latest/english/admin/password_change/">Change password</a> /
                 
                 <form id="logout-form" method="post" action="/django_admin_tests/latest/english/admin/logout/">
-                    <input type="hidden" name="csrfmiddlewaretoken" value="CpAcY3oe3quanP2W1biMIV6tVSr6jr13jOejqyINzNXZiIeeQeCZdKzd71RzyEuS">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="5w2Gauw9bVo0WHMQ24AKGaJHnvggASpl7ctUSQqN2jmbYCMAA7uWc5jJonWQhT0M">
                     <button type="submit">Log out</button>
                 </form>
                 
@@ -481,7 +481,7 @@
 
 
 
-<form method="post" id="session_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="CpAcY3oe3quanP2W1biMIV6tVSr6jr13jOejqyINzNXZiIeeQeCZdKzd71RzyEuS">
+<form method="post" id="session_form" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="5w2Gauw9bVo0WHMQ24AKGaJHnvggASpl7ctUSQqN2jmbYCMAA7uWc5jJonWQhT0M">
 <div>
 
 
@@ -497,6 +497,7 @@
         <div class="form-row field-session_key">
             
             
+                
                 <div>
                     
                         <div class="flex-container">
@@ -509,6 +510,7 @@
                         </div>
                     
                 </div>
+                
             
             
         </div>
@@ -516,6 +518,7 @@
         <div class="form-row field-session_data">
             
             
+                
                 <div>
                     
                         <div class="flex-container">
@@ -529,6 +532,7 @@
                         </div>
                     
                 </div>
+                
             
             
         </div>
@@ -536,17 +540,18 @@
         <div class="form-row field-expire_date">
             
             
+                <fieldset class="flex-container"><legend class="required" for="id_expire_date">Expire date:</legend>
                 <div>
                     
                         <div class="flex-container">
                             
-                                <label class="required">Expire date:</label>
+                                
                                 
                                     <p class="datetime">
-  Date: <input type="text" name="expire_date_0" class="vDateField" size="10" required id="id_expire_date_0">
+  <label for="id_expire_date_0">Date:</label> <input type="text" name="expire_date_0" class="vDateField" size="10" required id="id_expire_date_0" aria-describedby="id_expire_date_timezone_warning_helptext">
 
 <br>
-  Time: <input type="text" name="expire_date_1" class="vTimeField" size="8" required id="id_expire_date_1">
+  <label for="id_expire_date_1">Time:</label> <input type="text" name="expire_date_1" class="vTimeField" size="8" required id="id_expire_date_1" aria-describedby="id_expire_date_timezone_warning_helptext">
 
 
 </p>
@@ -555,6 +560,7 @@
                         </div>
                     
                 </div>
+                </fieldset>
             
             
         </div>
