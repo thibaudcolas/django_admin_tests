@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+<title>Select session to change | Django site admin</title>
+<link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/base.css">
+
+  <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/dark_mode.css">
+  <script src="/django_admin_tests/latest/english/static/admin/js/theme.js" defer></script>
+
+
+  <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/nav_sidebar.css">
+  <script src="/django_admin_tests/latest/english/static/admin/js/nav_sidebar.js" defer></script>
+
+
+  
+  <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/changelists.css">
+  
+  
+    <script src="/django_admin_tests/latest/english/admin/jsi18n/"></script>
+  
+  
+  
+
+
+
+
+<script src="/django_admin_tests/latest/english/static/admin/js/vendor/jquery/jquery.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/jquery.init.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/core.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/actions.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/urlify.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/prepopulate.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/vendor/xregexp/xregexp.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/filters.js" defer></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=" app-sessions model-session change-list"
+  data-admin-utc-offset="0">
+<a href="#content-start" class="skip-to-content-link">Skip to main content</a>
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+      <header id="header">
+        <div id="branding">
+        
+<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration 5.1.dev20230929135340</a></div>
+
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>admin</strong>.
+            
+            
+                
+                    <a href="/">View site</a> /
+                
+                
+                    
+                    
+                        <a href="/django_admin_tests/latest/english/admin/doc/">Documentation</a> /
+                    
+                
+                
+                <a href="/django_admin_tests/latest/english/admin/password_change/">Change password</a> /
+                
+                <form id="logout-form" method="post" action="/django_admin_tests/latest/english/admin/logout/">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="qXb4M13RYGmLOBSziw7AVzdv1U6I7U9bM0BLVVt9osExwQrrENBdszQfQxXIIF2t">
+                    <button type="submit">Log out</button>
+                </form>
+                
+<button class="theme-toggle">
+  <div class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</div>
+  <div class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</div>
+  <div class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</div>
+  <svg aria-hidden="true" class="theme-icon-when-auto">
+    <use xlink:href="#icon-auto" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-dark">
+    <use xlink:href="#icon-moon" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-light">
+    <use xlink:href="#icon-sun" />
+  </svg>
+</button>
+
+            
+        </div>
+        
+        
+        
+      </header>
+    
+    <!-- END Header -->
+    
+      <nav aria-label="Breadcrumbs">
+        
+<div class="breadcrumbs">
+<a href="/django_admin_tests/latest/english/admin/">Home</a>
+&rsaquo; <a href="/django_admin_tests/latest/english/admin/sessions/">Sessions</a>
+&rsaquo; Sessions
+</div>
+
+      </nav>
+    
+    
+
+    <main class="main" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
+<nav class="sticky" id="nav-sidebar" aria-label="Sidebar">
+  <input type="search" id="nav-filter"
+         placeholder="Start typing to filter…"
+         aria-label="Filter navigation items">
+  
+
+
+  
+    <div class="app-admin module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/admin/" class="section" title="Models in the Administration application">Administration</a>
+        </caption>
+        
+          <tr class="model-logentry">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/admin/logentry/">Log entries</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/admin/logentry/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-auth module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
+        </caption>
+        
+          <tr class="model-group">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/auth/group/">Groups</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/auth/group/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-permission">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/auth/permission/">Permissions</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/auth/permission/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-user">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/auth/user/">Users</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/auth/user/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-contenttypes module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/contenttypes/" class="section" title="Models in the Content Types application">Content Types</a>
+        </caption>
+        
+          <tr class="model-contenttype">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/contenttypes/contenttype/">Content types</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/contenttypes/contenttype/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-demo module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/demo/" class="section" title="Models in the Demo application">Demo</a>
+        </caption>
+        
+          <tr class="model-artist">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/demo/artist/">Artists</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/demo/artist/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-releasetrack">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/demo/releasetrack/">Release tracks</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/demo/releasetrack/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-release">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/demo/release/">Releases</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/demo/release/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-track">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/demo/track/">Tracks</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/demo/track/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-flatpages module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/flatpages/" class="section" title="Models in the Flat Pages application">Flat Pages</a>
+        </caption>
+        
+          <tr class="model-flatpage">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/flatpages/flatpage/">Flat pages</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/flatpages/flatpage/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-redirects module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/redirects/" class="section" title="Models in the Redirects application">Redirects</a>
+        </caption>
+        
+          <tr class="model-redirect">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/redirects/redirect/">Redirects</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/redirects/redirect/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-sessions module current-app">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/sessions/" class="section" title="Models in the Sessions application">Sessions</a>
+        </caption>
+        
+          <tr class="model-session current-model">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/sessions/session/" aria-current="page">Sessions</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/sessions/session/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-sites module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/sites/" class="section" title="Models in the Sites application">Sites</a>
+        </caption>
+        
+          <tr class="model-site">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/sites/site/">Sites</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/sites/site/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+
+
+</nav>
+
+        
+      
+      <div id="content-start" class="content" tabindex="-1">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="">
+          
+          <h1>Select session to change</h1>
+          
+          
+  <div id="content-main">
+    
+        <ul class="object-tools">
+          
+            
+
+
+  
+  <li>
+    
+    <a href="/django_admin_tests/latest/english/admin/sessions/session/add/" class="addlink">
+      Add session
+    </a>
+  </li>
+  
+
+
+          
+        </ul>
+    
+    
+    <div class="module" id="changelist">
+      <div class="changelist-form-container">
+        
+
+
+        
+
+        <form id="changelist-form" method="post" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="qXb4M13RYGmLOBSziw7AVzdv1U6I7U9bM0BLVVt9osExwQrrENBdszQfQxXIIF2t">
+        
+
+        
+          
+<div class="actions">
+  
+    
+    <label>Action: <select name="action" required>
+  <option value="" selected>---------</option>
+
+  <option value="delete_selected">Delete selected sessions</option>
+
+</select></label><input type="hidden" name="select_across" value="0" class="select-across">
+    
+    
+    <button type="submit" class="button" title="Run the selected action" name="index" value="0">Go</button>
+    
+    
+    
+        <span class="action-counter" data-actions-icnt="16">0 of 16 selected</span>
+        
+    
+    
+  
+</div>
+
+          
+
+
+<div class="results">
+<table id="result_list">
+<thead>
+<tr>
+
+<th scope="col" class="action-checkbox-column">
+   
+   <div class="text"><span><input type="checkbox" id="action-toggle" aria-label="Select all objects on this page for an action"></span></div>
+   <div class="clear"></div>
+</th>
+<th scope="col" class="column-__str__">
+   
+   <div class="text"><span>Session</span></div>
+   <div class="clear"></div>
+</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="zzbe6a6a53pzccea1avarejzkgsuo2nb" class="action-select" aria-label="Select this object for an action - zzbe6a6a53pzccea1avarejzkgsuo2nb"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/zzbe6a6a53pzccea1avarejzkgsuo2nb/change/">zzbe6a6a53pzccea1avarejzkgsuo2nb</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="xrxm5ec93ju2l85f5uo8jp93ttfv5grk" class="action-select" aria-label="Select this object for an action - xrxm5ec93ju2l85f5uo8jp93ttfv5grk"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/xrxm5ec93ju2l85f5uo8jp93ttfv5grk/change/">xrxm5ec93ju2l85f5uo8jp93ttfv5grk</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="waqtn91h0cvyq2imp15v8lsxnq5tjiib" class="action-select" aria-label="Select this object for an action - waqtn91h0cvyq2imp15v8lsxnq5tjiib"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/waqtn91h0cvyq2imp15v8lsxnq5tjiib/change/">waqtn91h0cvyq2imp15v8lsxnq5tjiib</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="uj9xhyj79z5x1s95sp5vr9jdnebso81c" class="action-select" aria-label="Select this object for an action - uj9xhyj79z5x1s95sp5vr9jdnebso81c"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/uj9xhyj79z5x1s95sp5vr9jdnebso81c/change/">uj9xhyj79z5x1s95sp5vr9jdnebso81c</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="rcaoczynl1av4gnhvcld71uepovz9r7a" class="action-select" aria-label="Select this object for an action - rcaoczynl1av4gnhvcld71uepovz9r7a"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/rcaoczynl1av4gnhvcld71uepovz9r7a/change/">rcaoczynl1av4gnhvcld71uepovz9r7a</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="r8w31xokcppmifo8pp0jc5e6wup3lyg1" class="action-select" aria-label="Select this object for an action - r8w31xokcppmifo8pp0jc5e6wup3lyg1"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/r8w31xokcppmifo8pp0jc5e6wup3lyg1/change/">r8w31xokcppmifo8pp0jc5e6wup3lyg1</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="r4g503nbuov0neuww0jvfs8kvqbhcoz9" class="action-select" aria-label="Select this object for an action - r4g503nbuov0neuww0jvfs8kvqbhcoz9"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/r4g503nbuov0neuww0jvfs8kvqbhcoz9/change/">r4g503nbuov0neuww0jvfs8kvqbhcoz9</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="qc5efwi00nn3mb1javh5qeunt6si1oy5" class="action-select" aria-label="Select this object for an action - qc5efwi00nn3mb1javh5qeunt6si1oy5"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/qc5efwi00nn3mb1javh5qeunt6si1oy5/change/">qc5efwi00nn3mb1javh5qeunt6si1oy5</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="hjf7wbgq97mo7xfh47iup1o0fpq6nmha" class="action-select" aria-label="Select this object for an action - hjf7wbgq97mo7xfh47iup1o0fpq6nmha"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/hjf7wbgq97mo7xfh47iup1o0fpq6nmha/change/">hjf7wbgq97mo7xfh47iup1o0fpq6nmha</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="cme42iq38ajwg3mx4m1a96bcw53bsccz" class="action-select" aria-label="Select this object for an action - cme42iq38ajwg3mx4m1a96bcw53bsccz"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/cme42iq38ajwg3mx4m1a96bcw53bsccz/change/">cme42iq38ajwg3mx4m1a96bcw53bsccz</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="awi32dihcy6vdzpqxhtce46qkvncv1ft" class="action-select" aria-label="Select this object for an action - awi32dihcy6vdzpqxhtce46qkvncv1ft"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/awi32dihcy6vdzpqxhtce46qkvncv1ft/change/">awi32dihcy6vdzpqxhtce46qkvncv1ft</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="6o5yzaye48hy8r7247wq6d2hgodtkvg8" class="action-select" aria-label="Select this object for an action - 6o5yzaye48hy8r7247wq6d2hgodtkvg8"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/6o5yzaye48hy8r7247wq6d2hgodtkvg8/change/">6o5yzaye48hy8r7247wq6d2hgodtkvg8</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="5e20q86n3mm2lucxd5y4jz3ji6mvkx1j" class="action-select" aria-label="Select this object for an action - 5e20q86n3mm2lucxd5y4jz3ji6mvkx1j"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/5e20q86n3mm2lucxd5y4jz3ji6mvkx1j/change/">5e20q86n3mm2lucxd5y4jz3ji6mvkx1j</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="25egxil3boeh5graopvobbuzuagr5io3" class="action-select" aria-label="Select this object for an action - 25egxil3boeh5graopvobbuzuagr5io3"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/25egxil3boeh5graopvobbuzuagr5io3/change/">25egxil3boeh5graopvobbuzuagr5io3</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="10zt6b6r1hex1lsyrinhwxr96y20zny6" class="action-select" aria-label="Select this object for an action - 10zt6b6r1hex1lsyrinhwxr96y20zny6"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/10zt6b6r1hex1lsyrinhwxr96y20zny6/change/">10zt6b6r1hex1lsyrinhwxr96y20zny6</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="0m3h1lgxwtz65yy2ruaytsfc44v5p80l" class="action-select" aria-label="Select this object for an action - 0m3h1lgxwtz65yy2ruaytsfc44v5p80l"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/sessions/session/0m3h1lgxwtz65yy2ruaytsfc44v5p80l/change/">0m3h1lgxwtz65yy2ruaytsfc44v5p80l</a></th></tr>
+
+</tbody>
+</table>
+</div>
+
+
+          
+        
+        
+
+<p class="paginator">
+
+16 sessions
+
+
+</p>
+
+        </form>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        <div id="footer"></div>
+      </div>
+    </main>
+</div>
+<!-- END Container -->
+
+<!-- SVGs -->
+<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>
+</svg>
+<!-- END SVGs -->
+</body>
+</html>

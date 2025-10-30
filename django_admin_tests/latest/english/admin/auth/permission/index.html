@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+<title>Select permission to change | Django site admin</title>
+<link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/base.css">
+
+  <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/dark_mode.css">
+  <script src="/django_admin_tests/latest/english/static/admin/js/theme.js" defer></script>
+
+
+  <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/nav_sidebar.css">
+  <script src="/django_admin_tests/latest/english/static/admin/js/nav_sidebar.js" defer></script>
+
+
+  
+  <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/changelists.css">
+  
+  
+    <script src="/django_admin_tests/latest/english/admin/jsi18n/"></script>
+  
+  
+  
+
+
+
+
+<script src="/django_admin_tests/latest/english/static/admin/js/vendor/jquery/jquery.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/jquery.init.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/core.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/admin/RelatedObjectLookups.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/actions.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/urlify.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/prepopulate.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/vendor/xregexp/xregexp.js"></script>
+<script src="/django_admin_tests/latest/english/static/admin/js/filters.js" defer></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=" app-auth model-permission change-list"
+  data-admin-utc-offset="0">
+<a href="#content-start" class="skip-to-content-link">Skip to main content</a>
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+      <header id="header">
+        <div id="branding">
+        
+<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration 5.1.dev20230929135340</a></div>
+
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>admin</strong>.
+            
+            
+                
+                    <a href="/">View site</a> /
+                
+                
+                    
+                    
+                        <a href="/django_admin_tests/latest/english/admin/doc/">Documentation</a> /
+                    
+                
+                
+                <a href="/django_admin_tests/latest/english/admin/password_change/">Change password</a> /
+                
+                <form id="logout-form" method="post" action="/django_admin_tests/latest/english/admin/logout/">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="vJ9z16u8eDsBdbfdr7cOYAvvL8smbQxhRMzga0UqEpKnVqO5NoGrvA8fALjmMBqz">
+                    <button type="submit">Log out</button>
+                </form>
+                
+<button class="theme-toggle">
+  <div class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</div>
+  <div class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</div>
+  <div class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</div>
+  <svg aria-hidden="true" class="theme-icon-when-auto">
+    <use xlink:href="#icon-auto" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-dark">
+    <use xlink:href="#icon-moon" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-light">
+    <use xlink:href="#icon-sun" />
+  </svg>
+</button>
+
+            
+        </div>
+        
+        
+        
+      </header>
+    
+    <!-- END Header -->
+    
+      <nav aria-label="Breadcrumbs">
+        
+<div class="breadcrumbs">
+<a href="/django_admin_tests/latest/english/admin/">Home</a>
+&rsaquo; <a href="/django_admin_tests/latest/english/admin/auth/">Authentication and Authorization</a>
+&rsaquo; Permissions
+</div>
+
+      </nav>
+    
+    
+
+    <main class="main" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
+<nav class="sticky" id="nav-sidebar" aria-label="Sidebar">
+  <input type="search" id="nav-filter"
+         placeholder="Start typing to filter…"
+         aria-label="Filter navigation items">
+  
+
+
+  
+    <div class="app-admin module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/admin/" class="section" title="Models in the Administration application">Administration</a>
+        </caption>
+        
+          <tr class="model-logentry">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/admin/logentry/">Log entries</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/admin/logentry/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-auth module current-app">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
+        </caption>
+        
+          <tr class="model-group">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/auth/group/">Groups</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/auth/group/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-permission current-model">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/auth/permission/" aria-current="page">Permissions</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/auth/permission/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-user">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/auth/user/">Users</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/auth/user/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-contenttypes module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/contenttypes/" class="section" title="Models in the Content Types application">Content Types</a>
+        </caption>
+        
+          <tr class="model-contenttype">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/contenttypes/contenttype/">Content types</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/contenttypes/contenttype/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-demo module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/demo/" class="section" title="Models in the Demo application">Demo</a>
+        </caption>
+        
+          <tr class="model-artist">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/demo/artist/">Artists</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/demo/artist/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-releasetrack">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/demo/releasetrack/">Release tracks</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/demo/releasetrack/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-release">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/demo/release/">Releases</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/demo/release/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+          <tr class="model-track">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/demo/track/">Tracks</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/demo/track/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-flatpages module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/flatpages/" class="section" title="Models in the Flat Pages application">Flat Pages</a>
+        </caption>
+        
+          <tr class="model-flatpage">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/flatpages/flatpage/">Flat pages</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/flatpages/flatpage/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-redirects module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/redirects/" class="section" title="Models in the Redirects application">Redirects</a>
+        </caption>
+        
+          <tr class="model-redirect">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/redirects/redirect/">Redirects</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/redirects/redirect/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-sessions module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/sessions/" class="section" title="Models in the Sessions application">Sessions</a>
+        </caption>
+        
+          <tr class="model-session">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/sessions/session/">Sessions</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/sessions/session/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+    <div class="app-sites module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/sites/" class="section" title="Models in the Sites application">Sites</a>
+        </caption>
+        
+          <tr class="model-site">
+            
+              <th scope="row"><a href="/django_admin_tests/latest/english/admin/sites/site/">Sites</a></th>
+            
+
+            
+              <td><a href="/django_admin_tests/latest/english/admin/sites/site/add/" class="addlink">Add</a></td>
+            
+
+            
+          </tr>
+        
+      </table>
+    </div>
+  
+
+
+</nav>
+
+        
+      
+      <div id="content-start" class="content" tabindex="-1">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="">
+          
+          <h1>Select permission to change</h1>
+          
+          
+  <div id="content-main">
+    
+        <ul class="object-tools">
+          
+            
+
+
+  
+  <li>
+    
+    <a href="/django_admin_tests/latest/english/admin/auth/permission/add/" class="addlink">
+      Add permission
+    </a>
+  </li>
+  
+
+
+          
+        </ul>
+    
+    
+    <div class="module" id="changelist">
+      <div class="changelist-form-container">
+        
+
+
+        
+
+        <form id="changelist-form" method="post" novalidate><input type="hidden" name="csrfmiddlewaretoken" value="vJ9z16u8eDsBdbfdr7cOYAvvL8smbQxhRMzga0UqEpKnVqO5NoGrvA8fALjmMBqz">
+        
+
+        
+          
+<div class="actions">
+  
+    
+    <label>Action: <select name="action" required>
+  <option value="" selected>---------</option>
+
+  <option value="delete_selected">Delete selected permissions</option>
+
+</select></label><input type="hidden" name="select_across" value="0" class="select-across">
+    
+    
+    <button type="submit" class="button" title="Run the selected action" name="index" value="0">Go</button>
+    
+    
+    
+        <span class="action-counter" data-actions-icnt="52">0 of 52 selected</span>
+        
+    
+    
+  
+</div>
+
+          
+
+
+<div class="results">
+<table id="result_list">
+<thead>
+<tr>
+
+<th scope="col" class="action-checkbox-column">
+   
+   <div class="text"><span><input type="checkbox" id="action-toggle" aria-label="Select all objects on this page for an action"></span></div>
+   <div class="clear"></div>
+</th>
+<th scope="col" class="column-__str__">
+   
+   <div class="text"><span>Permission</span></div>
+   <div class="clear"></div>
+</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1" class="action-select" aria-label="Select this object for an action - Administration | log entry | Can add log entry"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/1/change/">Administration | log entry | Can add log entry</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2" class="action-select" aria-label="Select this object for an action - Administration | log entry | Can change log entry"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/2/change/">Administration | log entry | Can change log entry</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="3" class="action-select" aria-label="Select this object for an action - Administration | log entry | Can delete log entry"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/3/change/">Administration | log entry | Can delete log entry</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="4" class="action-select" aria-label="Select this object for an action - Administration | log entry | Can view log entry"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/4/change/">Administration | log entry | Can view log entry</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="9" class="action-select" aria-label="Select this object for an action - Authentication and Authorization | group | Can add group"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/9/change/">Authentication and Authorization | group | Can add group</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="10" class="action-select" aria-label="Select this object for an action - Authentication and Authorization | group | Can change group"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/10/change/">Authentication and Authorization | group | Can change group</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="11" class="action-select" aria-label="Select this object for an action - Authentication and Authorization | group | Can delete group"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/11/change/">Authentication and Authorization | group | Can delete group</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="12" class="action-select" aria-label="Select this object for an action - Authentication and Authorization | group | Can view group"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/12/change/">Authentication and Authorization | group | Can view group</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="5" class="action-select" aria-label="Select this object for an action - Authentication and Authorization | permission | Can add permission"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/5/change/">Authentication and Authorization | permission | Can add permission</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="6" class="action-select" aria-label="Select this object for an action - Authentication and Authorization | permission | Can change permission"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/6/change/">Authentication and Authorization | permission | Can change permission</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="7" class="action-select" aria-label="Select this object for an action - Authentication and Authorization | permission | Can delete permission"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/7/change/">Authentication and Authorization | permission | Can delete permission</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="8" class="action-select" aria-label="Select this object for an action - Authentication and Authorization | permission | Can view permission"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/8/change/">Authentication and Authorization | permission | Can view permission</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="13" class="action-select" aria-label="Select this object for an action - Authentication and Authorization | user | Can add user"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/13/change/">Authentication and Authorization | user | Can add user</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="14" class="action-select" aria-label="Select this object for an action - Authentication and Authorization | user | Can change user"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/14/change/">Authentication and Authorization | user | Can change user</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="15" class="action-select" aria-label="Select this object for an action - Authentication and Authorization | user | Can delete user"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/15/change/">Authentication and Authorization | user | Can delete user</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="16" class="action-select" aria-label="Select this object for an action - Authentication and Authorization | user | Can view user"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/16/change/">Authentication and Authorization | user | Can view user</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="17" class="action-select" aria-label="Select this object for an action - Content Types | content type | Can add content type"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/17/change/">Content Types | content type | Can add content type</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="18" class="action-select" aria-label="Select this object for an action - Content Types | content type | Can change content type"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/18/change/">Content Types | content type | Can change content type</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="19" class="action-select" aria-label="Select this object for an action - Content Types | content type | Can delete content type"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/19/change/">Content Types | content type | Can delete content type</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="20" class="action-select" aria-label="Select this object for an action - Content Types | content type | Can view content type"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/20/change/">Content Types | content type | Can view content type</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="41" class="action-select" aria-label="Select this object for an action - Demo | artist | Can add artist"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/41/change/">Demo | artist | Can add artist</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="42" class="action-select" aria-label="Select this object for an action - Demo | artist | Can change artist"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/42/change/">Demo | artist | Can change artist</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="43" class="action-select" aria-label="Select this object for an action - Demo | artist | Can delete artist"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/43/change/">Demo | artist | Can delete artist</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="44" class="action-select" aria-label="Select this object for an action - Demo | artist | Can view artist"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/44/change/">Demo | artist | Can view artist</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="37" class="action-select" aria-label="Select this object for an action - Demo | release | Can add release"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/37/change/">Demo | release | Can add release</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="38" class="action-select" aria-label="Select this object for an action - Demo | release | Can change release"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/38/change/">Demo | release | Can change release</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="39" class="action-select" aria-label="Select this object for an action - Demo | release | Can delete release"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/39/change/">Demo | release | Can delete release</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="40" class="action-select" aria-label="Select this object for an action - Demo | release | Can view release"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/40/change/">Demo | release | Can view release</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="49" class="action-select" aria-label="Select this object for an action - Demo | release track | Can add release track"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/49/change/">Demo | release track | Can add release track</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="50" class="action-select" aria-label="Select this object for an action - Demo | release track | Can change release track"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/50/change/">Demo | release track | Can change release track</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="51" class="action-select" aria-label="Select this object for an action - Demo | release track | Can delete release track"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/51/change/">Demo | release track | Can delete release track</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="52" class="action-select" aria-label="Select this object for an action - Demo | release track | Can view release track"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/52/change/">Demo | release track | Can view release track</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="45" class="action-select" aria-label="Select this object for an action - Demo | track | Can add track"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/45/change/">Demo | track | Can add track</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="46" class="action-select" aria-label="Select this object for an action - Demo | track | Can change track"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/46/change/">Demo | track | Can change track</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="47" class="action-select" aria-label="Select this object for an action - Demo | track | Can delete track"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/47/change/">Demo | track | Can delete track</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="48" class="action-select" aria-label="Select this object for an action - Demo | track | Can view track"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/48/change/">Demo | track | Can view track</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="33" class="action-select" aria-label="Select this object for an action - Flat Pages | flat page | Can add flat page"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/33/change/">Flat Pages | flat page | Can add flat page</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="34" class="action-select" aria-label="Select this object for an action - Flat Pages | flat page | Can change flat page"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/34/change/">Flat Pages | flat page | Can change flat page</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="35" class="action-select" aria-label="Select this object for an action - Flat Pages | flat page | Can delete flat page"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/35/change/">Flat Pages | flat page | Can delete flat page</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="36" class="action-select" aria-label="Select this object for an action - Flat Pages | flat page | Can view flat page"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/36/change/">Flat Pages | flat page | Can view flat page</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="25" class="action-select" aria-label="Select this object for an action - Redirects | redirect | Can add redirect"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/25/change/">Redirects | redirect | Can add redirect</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="26" class="action-select" aria-label="Select this object for an action - Redirects | redirect | Can change redirect"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/26/change/">Redirects | redirect | Can change redirect</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="27" class="action-select" aria-label="Select this object for an action - Redirects | redirect | Can delete redirect"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/27/change/">Redirects | redirect | Can delete redirect</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="28" class="action-select" aria-label="Select this object for an action - Redirects | redirect | Can view redirect"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/28/change/">Redirects | redirect | Can view redirect</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="21" class="action-select" aria-label="Select this object for an action - Sessions | session | Can add session"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/21/change/">Sessions | session | Can add session</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="22" class="action-select" aria-label="Select this object for an action - Sessions | session | Can change session"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/22/change/">Sessions | session | Can change session</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="23" class="action-select" aria-label="Select this object for an action - Sessions | session | Can delete session"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/23/change/">Sessions | session | Can delete session</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="24" class="action-select" aria-label="Select this object for an action - Sessions | session | Can view session"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/24/change/">Sessions | session | Can view session</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="29" class="action-select" aria-label="Select this object for an action - Sites | site | Can add site"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/29/change/">Sites | site | Can add site</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="30" class="action-select" aria-label="Select this object for an action - Sites | site | Can change site"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/30/change/">Sites | site | Can change site</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="31" class="action-select" aria-label="Select this object for an action - Sites | site | Can delete site"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/31/change/">Sites | site | Can delete site</a></th></tr>
+
+
+<tr><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="32" class="action-select" aria-label="Select this object for an action - Sites | site | Can view site"></td><th class="field-__str__"><a href="/django_admin_tests/latest/english/admin/auth/permission/32/change/">Sites | site | Can view site</a></th></tr>
+
+</tbody>
+</table>
+</div>
+
+
+          
+        
+        
+
+<p class="paginator">
+
+52 permissions
+
+
+</p>
+
+        </form>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+
+          
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        <div id="footer"></div>
+      </div>
+    </main>
+</div>
+<!-- END Container -->
+
+<!-- SVGs -->
+<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>
+  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>
+</svg>
+<!-- END SVGs -->
+</body>
+</html>
