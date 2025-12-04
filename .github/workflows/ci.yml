@@ -2,29 +2,29 @@ name: CI
 on:
   schedule:
     # https://crontab.guru/#20_3_*_*_2,5
-    - cron:  '20 3 * * 2,5'
+    - cron: "20 3 * * 2,5"
   push:
     branches-ignore:
       - "gh-pages"
   workflow_dispatch:
     inputs:
       pr:
-        description: 'Pull Request number'
+        description: "Pull Request number"
         required: true
         type: string
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
-          python-version: "3.12"
+          python-version: "3.14"
       - id: pip-cache
         uses: actions/cache@v4
         with:
           path: .venv
-          key: ${{ runner.os }}-pip-v3-${{ hashFiles('**/runtime.txt') }}-${{ hashFiles('**/requirements.txt') }}
+          key: ${{ runner.os }}-pip-v4-${{ hashFiles('**/runtime.txt') }}-${{ hashFiles('**/requirements.txt') }}
       - if: steps.pip-cache.outputs.cache-hit != 'true'
         run: python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
       - if: "${{ github.event.inputs.pr == '' }}"
@@ -37,23 +37,23 @@ jobs:
       - run: source .venv/bin/activate && ./manage.py collectstatic --noinput
       - run: ./snapshot/backup.sh || true
       - run: cp -R ./static/* ./django_admin_tests/django_admin_tests/latest/english/static
-      - uses: actions/configure-pages@v4
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: django_admin_tests/django_admin_tests
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: snapshot
           path: django_admin_tests/django_admin_tests
           retention-days: 1
       - if: "${{ github.event.inputs.pr == '' }}"
-        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        uses: JamesIves/github-pages-deploy-action@v4.7.4
         with:
           branch: gh-pages
           folder: django_admin_tests
           clean: true
       - if: "${{ github.event.inputs.pr != '' }}"
-        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        uses: JamesIves/github-pages-deploy-action@v4.7.4
         with:
           branch: preview-${{ inputs.pr }}
           folder: django_admin_tests
