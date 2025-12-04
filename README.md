@@ -1,11 +1,19 @@
 # [Django admin tests](http://thibaudcolas.github.io/django_admin_tests/) [![Build status](https://github.com/thibaudcolas/django_admin_tests/workflows/CI/badge.svg)](https://github.com/thibaudcolas/django_admin_tests/actions)
 
-> Sample Django project including automated accessibility CI tests for Django, based on Pa11y and Lighthouse, inspired by [wagtail-tooling](https://github.com/thibaudcolas/wagtail-tooling). [View latest report](http://thibaudcolas.github.io/django_admin_tests/)
+> Sample Django project including automated accessibility CI tests for Django, based on Pa11y and Lighthouse, inspired by [wagtail-tooling](https://github.com/thibaudcolas/wagtail-tooling). [View latest report](https://django-admin-tests.netlify.app/django_admin_tests/latest/english/)
 
 - django-developers discussion: [Admin accessibility](https://groups.google.com/g/django-developers/c/FsBrNGTxvCA)
-- Demo report: [Django admin tests report | Pa11y + Lighthouse](http://thibaudcolas.github.io/django_admin_tests/)
+- Demo report: [Django admin tests report | Pa11y + Lighthouse](https://django-admin-tests.netlify.app/django_admin_tests/latest/english/)
 
 ## Using the demo
+
+### Online demo
+
+Weekly snapshot of the demo: [django-admin-tests on Netlify](https://django-admin-tests.netlify.app/django_admin_tests/latest/english/)
+
+To preview a Django pull request, [trigger a build of the PR number](https://github.com/thibaudcolas/django_admin_tests/actions/workflows/ci.yml), then view it in Netlify. For example, [PR #19688](https://github.com/django/django/pull/19688) is [preview-19688](https://preview-19688--django-admin-tests.netlify.app/django_admin_tests/latest/english/) on Netlify.
+
+### Local demo
 
 1. Clone this repo.
 2. `pip install -r requirements.txt`
