@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+<title>Template filters</title>
+<link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/base.css">
+
+  <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/dark_mode.css">
+  <script src="/django_admin_tests/latest/english/static/admin/js/theme.js"></script>
+
+
+  <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/nav_sidebar.css">
+  <script src="/django_admin_tests/latest/english/static/admin/js/nav_sidebar.js" defer></script>
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/django_admin_tests/latest/english/static/admin/css/responsive.css">
+    
+
+<meta name="robots" content="NONE,NOARCHIVE">
+</head>
+
+<body class=""
+  data-admin-utc-offset="0">
+<a href="#content-start" class="skip-to-content-link">Skip to main content</a>
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    
+      <header id="header">
+        <div id="branding">
+        
+<div id="site-name"><a href="/django_admin_tests/latest/english/admin/">Django administration</a></div>
+
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>admin</strong>.
+            
+            
+                
+                    <a href="/">View site</a> /
+                
+                
+                    
+                    
+                        <a href="/django_admin_tests/latest/english/admin/doc/">Documentation</a> /
+                    
+                
+                
+                <a href="/django_admin_tests/latest/english/admin/password_change/">Change password</a> /
+                
+                <form id="logout-form" method="post" action="/django_admin_tests/latest/english/admin/logout/">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="XPcWh67eygh5cr8cHkMazZAEf4OUWLVrRcgNwZki3YWvy0f6OSYQGIO2KGCAKyMQ">
+                    <button type="submit">Log out</button>
+                </form>
+                
+<button class="theme-toggle">
+  <span class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</span>
+  <span class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</span>
+  <span class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</span>
+  <svg aria-hidden="true" class="theme-icon-when-auto">
+    <use xlink:href="#icon-auto" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-dark">
+    <use xlink:href="#icon-moon" />
+  </svg>
+  <svg aria-hidden="true" class="theme-icon-when-light">
+    <use xlink:href="#icon-sun" />
+  </svg>
+</button>
+
+            
+        </div>
+        
+        
+        
+      </header>
+    
+    <!-- END Header -->
+    
+      <nav aria-label="Breadcrumbs">
+        
+<div class="breadcrumbs">
+<a href="/django_admin_tests/latest/english/admin/">Home</a>
+&rsaquo; <a href="/django_admin_tests/latest/english/admin/doc/">Documentation</a>
+&rsaquo; Filters
+</div>
+
+      </nav>
+    
+    
+
+    <div class="main" id="main">
+      
+        
+          
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="Toggle navigation"></button>
+<nav class="sticky" id="nav-sidebar" aria-label="Sidebar">
+  <input type="search" id="nav-filter"
+         placeholder="Start typing to filter…"
+         aria-label="Filter navigation items">
+  
+
+
+  
+    <div class="app-auth module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/auth/" class="section" title="Models in the Authentication and Authorization application">Authentication and Authorization</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-group">
+              <th scope="row" id="auth-group">
+                
+                  <a href="/django_admin_tests/latest/english/admin/auth/group/">Groups</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/auth/group/add/" class="addlink" aria-describedby="auth-group">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+          
+            <tr class="model-user">
+              <th scope="row" id="auth-user">
+                
+                  <a href="/django_admin_tests/latest/english/admin/auth/user/">Users</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/auth/user/add/" class="addlink" aria-describedby="auth-user">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-flatpages module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/flatpages/" class="section" title="Models in the Flat Pages application">Flat Pages</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-flatpage">
+              <th scope="row" id="flatpages-flatpage">
+                
+                  <a href="/django_admin_tests/latest/english/admin/flatpages/flatpage/">Flat pages</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/flatpages/flatpage/add/" class="addlink" aria-describedby="flatpages-flatpage">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-redirects module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/redirects/" class="section" title="Models in the Redirects application">Redirects</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-redirect">
+              <th scope="row" id="redirects-redirect">
+                
+                  <a href="/django_admin_tests/latest/english/admin/redirects/redirect/">Redirects</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/redirects/redirect/add/" class="addlink" aria-describedby="redirects-redirect">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+    <div class="app-sites module">
+      <table>
+        <caption>
+          <a href="/django_admin_tests/latest/english/admin/sites/" class="section" title="Models in the Sites application">Sites</a>
+        </caption>
+        <thead class="visually-hidden">
+          <tr>
+            <th scope="col">Model name</th>
+            <th scope="col">Add link</th>
+            <th scope="col">Change or view list link</th>
+          </tr>
+        </thead>
+        
+          
+            <tr class="model-site">
+              <th scope="row" id="sites-site">
+                
+                  <a href="/django_admin_tests/latest/english/admin/sites/site/">Sites</a>
+                
+              </th>
+
+              
+                <td><a href="/django_admin_tests/latest/english/admin/sites/site/add/" class="addlink" aria-describedby="sites-site">Add</a></td>
+              
+
+              
+            </tr>
+          
+        
+      </table>
+    </div>
+  
+
+
+</nav>
+
+        
+      
+      <main id="content-start" class="content" tabindex="-1">
+        
+          
+        
+        <!-- Content -->
+        <div id="content" class="colSM">
+          
+          
+          
+          
+
+<h1>Template filter documentation</h1>
+
+<div id="content-main">
+
+
+<div class="module">
+    <h2>Built-in filters</h2>
+    
+    
+    <h3 id="built_in-add">add</h3>
+    <p>Add the arg to the value.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-addslashes">addslashes</h3>
+    <p>Add slashes before quotes. Useful for escaping strings in CSV, for
+example. Less useful for escaping JavaScript; use the <tt class="docutils literal">escapejs</tt>
+filter instead.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-capfirst">capfirst</h3>
+    <p>Capitalize the first character of the value.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-center">center</h3>
+    <p>Center the value in a field of a given width.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-cut">cut</h3>
+    <p>Remove all values of arg from the given string.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-date">date</h3>
+    <p>Format a date according to the given format.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-default">default</h3>
+    <p>If value is unavailable, use given default.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-default_if_none">default_if_none</h3>
+    <p>If value is None, use given default.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-dictsort">dictsort</h3>
+    <p>Given a list of dicts, return that list sorted by the property given in
+the argument.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-dictsortreversed">dictsortreversed</h3>
+    <p>Given a list of dicts, return that list sorted in reverse order by the
+property given in the argument.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-divisibleby">divisibleby</h3>
+    <p>Return True if the value is divisible by the argument.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-escape">escape</h3>
+    <p>Mark the value as a string that should be auto-escaped.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-escapejs">escapejs</h3>
+    <p>Hex encode characters for use in JavaScript strings.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-escapeseq">escapeseq</h3>
+    <p>An &quot;escape&quot; filter for sequences. Mark each element in the sequence,
+individually, as a string that should be auto-escaped. Return a list with
+the results.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-filesizeformat">filesizeformat</h3>
+    <p>Format the value like a 'human-readable' file size (i.e. 13 KB, 4.1 MB,
+102 bytes, etc.).</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-first">first</h3>
+    <p>Return the first item in a list.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-floatformat">floatformat</h3>
+    <p>Display a float to a specified number of decimal places.</p>
+
+    <p>If called without an argument, display the floating point number with one
+decimal place -- but only if there's a decimal place to be displayed:</p>
+<ul class="simple">
+<li>num1 = 34.23234</li>
+<li>num2 = 34.00000</li>
+<li>num3 = 34.26000</li>
+<li>{{ num1|floatformat }} displays &quot;34.2&quot;</li>
+<li>{{ num2|floatformat }} displays &quot;34&quot;</li>
+<li>{{ num3|floatformat }} displays &quot;34.3&quot;</li>
+</ul>
+<p>If arg is positive, always display exactly arg number of decimal places:</p>
+<ul class="simple">
+<li>{{ num1|floatformat:3 }} displays &quot;34.232&quot;</li>
+<li>{{ num2|floatformat:3 }} displays &quot;34.000&quot;</li>
+<li>{{ num3|floatformat:3 }} displays &quot;34.260&quot;</li>
+</ul>
+<p>If arg is negative, display arg number of decimal places -- but only if
+there are places to be displayed:</p>
+<ul class="simple">
+<li>{{ num1|floatformat:&quot;-3&quot; }} displays &quot;34.232&quot;</li>
+<li>{{ num2|floatformat:&quot;-3&quot; }} displays &quot;34&quot;</li>
+<li>{{ num3|floatformat:&quot;-3&quot; }} displays &quot;34.260&quot;</li>
+</ul>
+<p>If arg has the 'g' suffix, force the result to be grouped by the
+THOUSAND_SEPARATOR for the active locale. When the active locale is
+en (English):</p>
+<ul class="simple">
+<li>{{ 6666.6666|floatformat:&quot;2g&quot; }} displays &quot;6,666.67&quot;</li>
+<li>{{ 10000|floatformat:&quot;g&quot; }} displays &quot;10,000&quot;</li>
+</ul>
+<p>If arg has the 'u' suffix, force the result to be unlocalized. When the
+active locale is pl (Polish):</p>
+<ul class="simple">
+<li>{{ 66666.6666|floatformat:&quot;2&quot; }} displays &quot;66666,67&quot;</li>
+<li>{{ 66666.6666|floatformat:&quot;2u&quot; }} displays &quot;66666.67&quot;</li>
+</ul>
+<p>If the input float is infinity or NaN, display the string representation
+of that value.</p>
+
+    <hr>
+    
+    <h3 id="built_in-force_escape">force_escape</h3>
+    <p>Escape a string's HTML. Return a new string containing the escaped
+characters (as opposed to &quot;escape&quot;, which marks the content for later
+possible escaping).</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-get_digit">get_digit</h3>
+    <p>Given a whole number, return the requested digit of it, where 1 is the
+right-most digit, 2 is the second-right-most digit, etc. Return the
+original value for invalid input (if input or argument is not an integer,
+or if argument is less than 1). Otherwise, output is always an integer.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-iriencode">iriencode</h3>
+    <p>Escape an IRI value for use in a URL.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-join">join</h3>
+    <p>Join a list with a string, like Python's <tt class="docutils literal">str.join(list)</tt>.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-json_script">json_script</h3>
+    <p>Output value JSON-encoded, wrapped in a &lt;script type=&quot;application/json&quot;&gt;
+tag (with an optional id).</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-last">last</h3>
+    <p>Return the last item in a list.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-length">length</h3>
+    <p>Return the length of the value - useful for lists.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-linebreaks">linebreaks</h3>
+    <p>Replace line breaks in plain text with appropriate HTML; a single
+newline becomes an HTML line break (<tt class="docutils literal">&lt;br&gt;</tt>) and a new line
+followed by a blank line becomes a paragraph break (<tt class="docutils literal">&lt;/p&gt;</tt>).</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-linebreaksbr">linebreaksbr</h3>
+    <p>Convert all newlines in a piece of plain text to HTML line breaks
+(<tt class="docutils literal">&lt;br&gt;</tt>).</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-linenumbers">linenumbers</h3>
+    <p>Display text with line numbers.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-ljust">ljust</h3>
+    <p>Left-align the value in a field of a given width.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-lower">lower</h3>
+    <p>Convert a string into all lowercase.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-make_list">make_list</h3>
+    <p>Return the value turned into a list.</p>
+
+    <p>For an integer, it's a list of digits.
+For a string, it's a list of characters.</p>
+
+    <hr>
+    
+    <h3 id="built_in-phone2numeric">phone2numeric</h3>
+    <p>Take a phone number and converts it in to its numerical equivalent.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-pluralize">pluralize</h3>
+    <p>Return a plural suffix if the value is not 1, '1', or an object of
+length 1. By default, use 's' as the suffix:</p>
+
+    <ul class="simple">
+<li>If value is 0, vote{{ value|pluralize }} display &quot;votes&quot;.</li>
+<li>If value is 1, vote{{ value|pluralize }} display &quot;vote&quot;.</li>
+<li>If value is 2, vote{{ value|pluralize }} display &quot;votes&quot;.</li>
+</ul>
+<p>If an argument is provided, use that string instead:</p>
+<ul class="simple">
+<li>If value is 0, class{{ value|pluralize:&quot;es&quot; }} display &quot;classes&quot;.</li>
+<li>If value is 1, class{{ value|pluralize:&quot;es&quot; }} display &quot;class&quot;.</li>
+<li>If value is 2, class{{ value|pluralize:&quot;es&quot; }} display &quot;classes&quot;.</li>
+</ul>
+<p>If the provided argument contains a comma, use the text before the comma
+for the singular case and the text after the comma for the plural case:</p>
+<ul class="simple">
+<li>If value is 0, cand{{ value|pluralize:&quot;y,ies&quot; }} display &quot;candies&quot;.</li>
+<li>If value is 1, cand{{ value|pluralize:&quot;y,ies&quot; }} display &quot;candy&quot;.</li>
+<li>If value is 2, cand{{ value|pluralize:&quot;y,ies&quot; }} display &quot;candies&quot;.</li>
+</ul>
+
+    <hr>
+    
+    <h3 id="built_in-pprint">pprint</h3>
+    <p>A wrapper around pprint.pprint -- for debugging, really.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-random">random</h3>
+    <p>Return a random item from the list.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-rjust">rjust</h3>
+    <p>Right-align the value in a field of a given width.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-safe">safe</h3>
+    <p>Mark the value as a string that should not be auto-escaped.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-safeseq">safeseq</h3>
+    <p>A &quot;safe&quot; filter for sequences. Mark each element in the sequence,
+individually, as safe, after converting them to strings. Return a list
+with the results.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-slice">slice</h3>
+    <p>Return a slice of the list using the same syntax as Python's list slicing.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-slugify">slugify</h3>
+    <p>Convert to ASCII. Convert spaces to hyphens. Remove characters that aren't
+alphanumerics, underscores, or hyphens. Convert to lowercase. Also strip
+leading and trailing whitespace.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-stringformat">stringformat</h3>
+    <p>Format the variable according to the arg, a string formatting specifier.</p>
+
+    <p>This specifier uses Python string formatting syntax, with the exception
+that the leading &quot;%&quot; is dropped.</p>
+<p>See
+<a class="reference external" href="https://docs.python.org/library/stdtypes.html#printf-style-string-formatting">https://docs.python.org/library/stdtypes.html#printf-style-string-formatting</a>
+for documentation of Python string formatting.</p>
+
+    <hr>
+    
+    <h3 id="built_in-striptags">striptags</h3>
+    <p>Strip all [X]HTML tags.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-time">time</h3>
+    <p>Format a time according to the given format.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-timesince">timesince</h3>
+    <p>Format a date as the time since that date (i.e. &quot;4 days, 6 hours&quot;).</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-timeuntil">timeuntil</h3>
+    <p>Format a date as the time until that date (i.e. &quot;4 days, 6 hours&quot;).</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-title">title</h3>
+    <p>Convert a string into titlecase.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-truncatechars">truncatechars</h3>
+    <p>Truncate a string after <a class="reference external" href="/django_admin_tests/latest/english/admin/doc/filters/#arg">arg</a> number of characters.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-truncatechars_html">truncatechars_html</h3>
+    <p>Truncate HTML after <a class="reference external" href="/django_admin_tests/latest/english/admin/doc/filters/#arg">arg</a> number of chars.
+Preserve newlines in the HTML.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-truncatewords">truncatewords</h3>
+    <p>Truncate a string after <a class="reference external" href="/django_admin_tests/latest/english/admin/doc/filters/#arg">arg</a> number of words.
+Remove newlines within the string.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-truncatewords_html">truncatewords_html</h3>
+    <p>Truncate HTML after <a class="reference external" href="/django_admin_tests/latest/english/admin/doc/filters/#arg">arg</a> number of words.
+Preserve newlines in the HTML.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-unordered_list">unordered_list</h3>
+    <p>Recursively take a self-nested list and return an HTML unordered list --
+WITHOUT opening and closing &lt;ul&gt; tags.</p>
+
+    <p>Assume the list is in the proper format. For example, if <tt class="docutils literal">var</tt> contains:
+<tt class="docutils literal">['States', ['Kansas', ['Lawrence', <span class="pre">'Topeka'],</span> <span class="pre">'Illinois']]</span></tt>, then
+<tt class="docutils literal">{{ var|unordered_list }}</tt> returns:</p>
+<pre class="literal-block">
+&lt;li&gt;States
+&lt;ul&gt;
+        &lt;li&gt;Kansas
+        &lt;ul&gt;
+                &lt;li&gt;Lawrence&lt;/li&gt;
+                &lt;li&gt;Topeka&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;Illinois&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+</pre>
+
+    <hr>
+    
+    <h3 id="built_in-upper">upper</h3>
+    <p>Convert a string into all uppercase.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-urlencode">urlencode</h3>
+    <p>Escape a value for use in a URL.</p>
+
+    <p>The <tt class="docutils literal">safe</tt> parameter determines the characters which should not be
+escaped by Python's quote() function. If not provided, use the default safe
+characters (but an empty string can be provided when <em>all</em> characters
+should be escaped).</p>
+
+    <hr>
+    
+    <h3 id="built_in-urlize">urlize</h3>
+    <p>Convert URLs in plain text into clickable links.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-urlizetrunc">urlizetrunc</h3>
+    <p>Convert URLs into clickable links, truncating URLs to the given character
+limit, and adding 'rel=nofollow' attribute to discourage spamming.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-wordcount">wordcount</h3>
+    <p>Return the number of words.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-wordwrap">wordwrap</h3>
+    <p>Wrap words at <a class="reference external" href="/django_admin_tests/latest/english/admin/doc/filters/#arg">arg</a> line length.</p>
+
+    
+    <hr>
+    
+    <h3 id="built_in-yesno">yesno</h3>
+    <p>Given a string mapping values for true, false, and (optionally) None,
+return one of those strings according to the value:</p>
+
+    <table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="33%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Value</th>
+<th class="head">Argument</th>
+<th class="head">Outputs</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><tt class="docutils literal">True</tt></td>
+<td><tt class="docutils literal">&quot;yeah,no,maybe&quot;</tt></td>
+<td><tt class="docutils literal">yeah</tt></td>
+</tr>
+<tr><td><tt class="docutils literal">False</tt></td>
+<td><tt class="docutils literal">&quot;yeah,no,maybe&quot;</tt></td>
+<td><tt class="docutils literal">no</tt></td>
+</tr>
+<tr><td><tt class="docutils literal">None</tt></td>
+<td><tt class="docutils literal">&quot;yeah,no,maybe&quot;</tt></td>
+<td><tt class="docutils literal">maybe</tt></td>
+</tr>
+<tr><td><tt class="docutils literal">None</tt></td>
+<td><tt class="docutils literal">&quot;yeah,no&quot;</tt></td>
+<td><tt class="docutils literal">&quot;no&quot;</tt> (converts None to False
+if no mapping for None is given.</td>
+</tr>
+</tbody>
+</table>
+
+    
+    
+</div>
+
+<div class="module">
+    <h2>admin_modify</h2>
+    <p class="small quiet">To use these filters, put <code>{% load admin_modify %}</code> in your template before using the filter.</p><hr>
+    
+    <h3 id="admin_modify-cell_count">cell_count</h3>
+    <p>Return the number of cells used in a tabular inline.</p>
+
+    
+    
+    
+</div>
+
+<div class="module">
+    <h2>admin_urls</h2>
+    <p class="small quiet">To use these filters, put <code>{% load admin_urls %}</code> in your template before using the filter.</p><hr>
+    
+    <h3 id="admin_urls-admin_urlname">admin_urlname</h3>
+    
+    
+    <hr>
+    
+    <h3 id="admin_urls-admin_urlquote">admin_urlquote</h3>
+    
+    
+    
+    
+</div>
+
+<div class="module">
+    <h2>i18n</h2>
+    <p class="small quiet">To use these filters, put <code>{% load i18n %}</code> in your template before using the filter.</p><hr>
+    
+    <h3 id="i18n-language_bidi">language_bidi</h3>
+    
+    
+    <hr>
+    
+    <h3 id="i18n-language_name">language_name</h3>
+    
+    
+    <hr>
+    
+    <h3 id="i18n-language_name_local">language_name_local</h3>
+    
+    
+    <hr>
+    
+    <h3 id="i18n-language_name_translated">language_name_translated</h3>
+    
+    
+    
+    
+</div>
+
+<div class="module">
+    <h2>l10n</h2>
+    <p class="small quiet">To use these filters, put <code>{% load l10n %}</code> in your template before using the filter.</p><hr>
+    
+    <h3 id="l10n-localize">localize</h3>
+    <p>Force a value to be rendered as a localized value.</p>
+
+    
+    <hr>
+    
+    <h3 id="l10n-unlocalize">unlocalize</h3>
+    <p>Force a value to be rendered as a non-localized value.</p>
+
+    
+    
+    
+</div>
+
+<div class="module">
+    <h2>tz</h2>
+    <p class="small quiet">To use these filters, put <code>{% load tz %}</code> in your template before using the filter.</p><hr>
+    
+    <h3 id="tz-localtime">localtime</h3>
+    <p>Convert a datetime to local time in the active time zone.</p>
+
+    <p>This only makes sense within a {% localtime off %} block.</p>
+
+    <hr>
+    
+    <h3 id="tz-timezone">timezone</h3>
+    <p>Convert a datetime to local time in a given time zone.</p>
+
+    <p>The argument must be an instance of a tzinfo subclass or a time zone name.</p>
+<p>Naive datetimes are assumed to be in local time in the default time zone.</p>
+
+    <hr>
+    
+    <h3 id="tz-utc">utc</h3>
+    <p>Convert a datetime to UTC.</p>
+
+    
+    
+    
+</div>
+
+</div>
+
+
+          
+
+<div id="content-related">
+
+
+
+<div class="module">
+    <h2>Built-in filters</h2>
+    <ul>
+    
+        <li><a href="#built_in-add">add</a></li>
+    
+        <li><a href="#built_in-addslashes">addslashes</a></li>
+    
+        <li><a href="#built_in-capfirst">capfirst</a></li>
+    
+        <li><a href="#built_in-center">center</a></li>
+    
+        <li><a href="#built_in-cut">cut</a></li>
+    
+        <li><a href="#built_in-date">date</a></li>
+    
+        <li><a href="#built_in-default">default</a></li>
+    
+        <li><a href="#built_in-default_if_none">default_if_none</a></li>
+    
+        <li><a href="#built_in-dictsort">dictsort</a></li>
+    
+        <li><a href="#built_in-dictsortreversed">dictsortreversed</a></li>
+    
+        <li><a href="#built_in-divisibleby">divisibleby</a></li>
+    
+        <li><a href="#built_in-escape">escape</a></li>
+    
+        <li><a href="#built_in-escapejs">escapejs</a></li>
+    
+        <li><a href="#built_in-escapeseq">escapeseq</a></li>
+    
+        <li><a href="#built_in-filesizeformat">filesizeformat</a></li>
+    
+        <li><a href="#built_in-first">first</a></li>
+    
+        <li><a href="#built_in-floatformat">floatformat</a></li>
+    
+        <li><a href="#built_in-force_escape">force_escape</a></li>
+    
+        <li><a href="#built_in-get_digit">get_digit</a></li>
+    
+        <li><a href="#built_in-iriencode">iriencode</a></li>
+    
+        <li><a href="#built_in-join">join</a></li>
+    
+        <li><a href="#built_in-json_script">json_script</a></li>
+    
+        <li><a href="#built_in-last">last</a></li>
+    
+        <li><a href="#built_in-length">length</a></li>
+    
+        <li><a href="#built_in-linebreaks">linebreaks</a></li>
+    
+        <li><a href="#built_in-linebreaksbr">linebreaksbr</a></li>
+    
+        <li><a href="#built_in-linenumbers">linenumbers</a></li>
+    
+        <li><a href="#built_in-ljust">ljust</a></li>
+    
+        <li><a href="#built_in-lower">lower</a></li>
+    
+        <li><a href="#built_in-make_list">make_list</a></li>
+    
+        <li><a href="#built_in-phone2numeric">phone2numeric</a></li>
+    
+        <li><a href="#built_in-pluralize">pluralize</a></li>
+    
+        <li><a href="#built_in-pprint">pprint</a></li>
+    
+        <li><a href="#built_in-random">random</a></li>
+    
+        <li><a href="#built_in-rjust">rjust</a></li>
+    
+        <li><a href="#built_in-safe">safe</a></li>
+    
+        <li><a href="#built_in-safeseq">safeseq</a></li>
+    
+        <li><a href="#built_in-slice">slice</a></li>
+    
+        <li><a href="#built_in-slugify">slugify</a></li>
+    
+        <li><a href="#built_in-stringformat">stringformat</a></li>
+    
+        <li><a href="#built_in-striptags">striptags</a></li>
+    
+        <li><a href="#built_in-time">time</a></li>
+    
+        <li><a href="#built_in-timesince">timesince</a></li>
+    
+        <li><a href="#built_in-timeuntil">timeuntil</a></li>
+    
+        <li><a href="#built_in-title">title</a></li>
+    
+        <li><a href="#built_in-truncatechars">truncatechars</a></li>
+    
+        <li><a href="#built_in-truncatechars_html">truncatechars_html</a></li>
+    
+        <li><a href="#built_in-truncatewords">truncatewords</a></li>
+    
+        <li><a href="#built_in-truncatewords_html">truncatewords_html</a></li>
+    
+        <li><a href="#built_in-unordered_list">unordered_list</a></li>
+    
+        <li><a href="#built_in-upper">upper</a></li>
+    
+        <li><a href="#built_in-urlencode">urlencode</a></li>
+    
+        <li><a href="#built_in-urlize">urlize</a></li>
+    
+        <li><a href="#built_in-urlizetrunc">urlizetrunc</a></li>
+    
+        <li><a href="#built_in-wordcount">wordcount</a></li>
+    
+        <li><a href="#built_in-wordwrap">wordwrap</a></li>
+    
+        <li><a href="#built_in-yesno">yesno</a></li>
+    
+    </ul>
+</div>
+
+<div class="module">
+    <h2>admin_modify</h2>
+    <ul>
+    
+        <li><a href="#admin_modify-cell_count">cell_count</a></li>
+    
+    </ul>
+</div>
+
+<div class="module">
+    <h2>admin_urls</h2>
+    <ul>
+    
+        <li><a href="#admin_urls-admin_urlname">admin_urlname</a></li>
+    
+        <li><a href="#admin_urls-admin_urlquote">admin_urlquote</a></li>
+    
+    </ul>
+</div>
+
+<div class="module">
+    <h2>i18n</h2>
+    <ul>
+    
+        <li><a href="#i18n-language_bidi">language_bidi</a></li>
+    
+        <li><a href="#i18n-language_name">language_name</a></li>
+    
+        <li><a href="#i18n-language_name_local">language_name_local</a></li>
+    
+        <li><a href="#i18n-language_name_translated">language_name_translated</a></li>
+    
+    </ul>
+</div>
+
+<div class="module">
+    <h2>l10n</h2>
+    <ul>
+    
+        <li><a href="#l10n-localize">localize</a></li>
+    
+        <li><a href="#l10n-unlocalize">unlocalize</a></li>
+    
+    </ul>
+</div>
+
+<div class="module">
+    <h2>tz</h2>
+    <ul>
+    
+        <li><a href="#tz-localtime">localtime</a></li>
+    
+        <li><a href="#tz-timezone">timezone</a></li>
+    
+        <li><a href="#tz-utc">utc</a></li>
+    
+    </ul>
+</div>
+
+
+</div>
+
+
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+      </main>
+    </div>
+    <footer id="footer"></footer>
+</div>
+<!-- END Container -->
+
+<!-- SVGs -->
+<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">
+  <symbol viewBox="0 0 24 24" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>
+  <symbol viewBox="0 0 24 24" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>
+  <symbol viewBox="0 0 24 24" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>
+</svg>
+<!-- END SVGs -->
+
+</body>
+</html>
