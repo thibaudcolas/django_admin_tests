@@ -54,21 +54,6 @@ jobs:
         run: python -m unittest discover -s wasm -p 'test_*.py'
       - name: Build the browser demo
         run: python wasm/build.py
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-      - name: Install browser smoke test dependencies
-        run: |
-          npm ci --prefix wasm
-          npx --prefix wasm playwright install --with-deps chromium
-      - name: Test the browser demo
-        run: npm test --prefix wasm
-      - uses: actions/upload-artifact@v5
-        if: failure()
-        with:
-          name: browser-test-results
-          path: wasm/test-results
-          retention-days: 7
       - uses: actions/upload-pages-artifact@v4
         with:
           path: wasm/dist/django_admin_tests

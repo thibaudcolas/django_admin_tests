@@ -83,7 +83,8 @@ stops the worker while idle. Dynamic responses have the header
 ## Hosting and GitHub Actions
 
 The workflow builds on pushes, repository PRs, scheduled runs, and manual runs.
-It tests the bridge and runs a Chromium smoke test before uploading artifacts.
+It tests the bridge before building and uploading artifacts. Browser smoke tests
+are temporarily excluded from CI to keep builds fast; they remain available locally.
 Publishing runs only from this repository's `main` branch, outside repository PRs:
 
 | Target | Published directory | Deployment |
@@ -123,7 +124,7 @@ executable for the smoke test's static server. The Chromium test starts its own
 server on port 8002. It covers first-visit deep links, login, creating/deleting an
 admin object, CSRF rejection, search, static assets, the SVG styleguide, logout,
 and database/session recovery after a forced worker stop. Failed runs retain a
-Playwright trace under `wasm/test-results/`, uploaded by CI for diagnosis.
+Playwright trace under `wasm/test-results/` for diagnosis.
 
 The bridge tests cover byte-preserving multipart requests, Unicode paths, cookies,
 and closing streaming responses. The existing Pa11y/Lighthouse suite still targets

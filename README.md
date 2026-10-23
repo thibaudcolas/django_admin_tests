@@ -106,8 +106,9 @@ node pa11y/report.js
 
 Via a [custom GitHub Actions workflow](./.github/workflows/ci.yml), this repository
 packages a selected Django revision, the demo source, a migrated copy of the sample
-database, and the Pyodide runtime. A browser smoke test checks the result before
-publishing. Builds of Django main go to `gh-pages` and GitHub Pages; requested
+database, and the Pyodide runtime. CI runs the WSGI bridge tests before building;
+browser smoke tests are currently run locally. Builds of Django main go to
+`gh-pages` and GitHub Pages; requested
 Django PR builds go to `preview-<PR number>` for separate static hosting.
 
 View the latest interactive Django admin: <https://django-admin-tests.pages.dev/>
