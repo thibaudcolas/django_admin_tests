@@ -38,8 +38,10 @@ urlpatterns = [
         f"django_admin_tests/{settings.VERSION_NUMBER}/{settings.VARIANT.lower()}/",
         include("demo.demo_urls"),
     ),
-    path("debug_toolbar/", include("debug_toolbar.urls")),
 ]
+
+if "debug_toolbar" in settings.INSTALLED_APPS:
+    urlpatterns += [path("debug_toolbar/", include("debug_toolbar.urls"))]
 
 # urlpatterns += i18n_patterns(
 #     path(

@@ -151,3 +151,8 @@ node_modules
 .DS_Store
 snapshot/django_admin_tests
 static
+.venv-wasm/
+wasm/.build/
+wasm/.cache/
+wasm/dist/
+wasm/test-results/

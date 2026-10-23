@@ -1,0 +1,4 @@
+# Django is installed separately so CI can select main or a pull request head.
+asgiref==3.12.1
+docutils==0.23
+sqlparse==0.6.0

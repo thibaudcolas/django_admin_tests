@@ -9,9 +9,18 @@
 
 ### Online demo
 
-Weekly snapshot of the demo: [django-admin-tests on Netlify](https://django-admin-tests.netlify.app/django_admin_tests/latest/english/)
+Interactive demo: [django-admin-tests on Netlify](https://django-admin-tests.netlify.app/django_admin_tests/latest/english/).
+GitHub Actions builds Django’s main branch twice a week. The deployed files run
+Django in your browser with WebAssembly and a service worker, including working
+forms and admin edits. Each browser has its own database; changes persist across
+reloads but reset when a new build is deployed. Sign in with `admin` /
+`correcthorsebatterystaple`.
 
 To preview a Django pull request, [trigger a build of the PR number](https://github.com/thibaudcolas/django_admin_tests/actions/workflows/ci.yml), then view it in Netlify. For example, [PR #19688](https://github.com/django/django/pull/19688) is [preview-19688](https://preview-19688--django-admin-tests.netlify.app/django_admin_tests/latest/english/) on Netlify.
+
+See [the WebAssembly build guide](wasm/README.md) for local builds, hosting, and
+browser tests. The existing Python development server and Pa11y suite remain
+available separately.
 
 ### Local demo
 
@@ -95,9 +104,13 @@ node pa11y/report.js
 
 ## Django pull request previews
 
-Via a [custom GitHub Actions workflow](./.github/workflows/ci.yml), this repository will automatically generate the Django admin for a given Django pull request. The generated admin HTML is stored as a git branch, for separate static file hosting to pick up.
+Via a [custom GitHub Actions workflow](./.github/workflows/ci.yml), this repository
+packages a selected Django revision, the demo source, a migrated copy of the sample
+database, and the Pyodide runtime. A browser smoke test checks the result before
+publishing. Builds of Django main go to `gh-pages` and GitHub Pages; requested
+Django PR builds go to `preview-<PR number>` for separate static hosting.
 
-View the latest Django admin HTML: <https://django-admin-tests.pages.dev/>
+View the latest interactive Django admin: <https://django-admin-tests.pages.dev/>
 
 For a specific pull request,
 
@@ -108,6 +121,11 @@ If you want to generate a preview for a specific pull request,
 
 1. Go to the [CI workflow](https://github.com/thibaudcolas/django_admin_tests/actions/workflows/ci.yml)
 2. Click "Run workflow" and provide a pull request number.
+
+Leave the PR number empty to rebuild Django main. The `webassembly-demo` workflow
+artifact contains the complete distribution. The build requires a Django revision
+compatible with Python 3.13. The old `snapshot/backup.sh` crawler is retained for
+manual use but no longer runs in CI.
 
 ## Scope for audits
 

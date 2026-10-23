@@ -6,12 +6,22 @@ on:
   push:
     branches-ignore:
       - "gh-pages"
+      - "preview-*"
+  pull_request:
   workflow_dispatch:
     inputs:
       pr:
-        description: "Pull Request number"
-        required: true
+        description: "Django pull request number (leave empty for main)"
+        required: false
         type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wasm-${{ github.workflow }}-${{ github.ref }}-${{ inputs.pr || 'main' }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,47 +29,82 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
-          python-version: "3.14"
-      - id: pip-cache
-        uses: actions/cache@v4
+          # Match the CPython version in Pyodide 0.29.3.
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: wasm/requirements.txt
+      - name: Install the selected Django revision
+        env:
+          DJANGO_PR: ${{ inputs.pr }}
+        run: |
+          ref=main
+          if [ -n "$DJANGO_PR" ]; then
+            if [[ ! "$DJANGO_PR" =~ ^[1-9][0-9]*$ ]]; then
+              echo "The Django PR number must be a positive integer."
+              exit 1
+            fi
+            ref="refs/pull/$DJANGO_PR/head"
+          fi
+          python -m pip install -r wasm/requirements.txt "Django @ git+https://github.com/django/django.git@$ref"
+      - uses: actions/cache@v4
         with:
-          path: .venv
-          key: ${{ runner.os }}-pip-v4-${{ hashFiles('**/runtime.txt') }}-${{ hashFiles('**/requirements.txt') }}
-      - if: steps.pip-cache.outputs.cache-hit != 'true'
-        run: python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
-      - if: "${{ github.event.inputs.pr == '' }}"
-        run: source .venv/bin/activate && pip install -e git+https://github.com/django/django.git@main#egg=django
-      - if: "${{ github.event.inputs.pr != '' }}"
-        run: source .venv/bin/activate && pip install -e git+https://github.com/django/django.git@refs/pull/${{ inputs.pr }}/head#egg=django
-      - run: source .venv/bin/activate && ./manage.py makemigrations --check
-      - run: source .venv/bin/activate && ./manage.py migrate --noinput
-      - run: source .venv/bin/activate && ./manage.py runserver &
-      - run: source .venv/bin/activate && ./manage.py collectstatic --noinput
-      - run: ./snapshot/backup.sh || true
-      - run: cp -R ./static/* ./django_admin_tests/django_admin_tests/latest/english/static
-      - uses: actions/configure-pages@v5
+          path: wasm/.cache
+          key: pyodide-${{ hashFiles('wasm/build.py') }}
+      - name: Test the WSGI bridge
+        run: python -m unittest discover -s wasm -p 'test_*.py'
+      - name: Build the browser demo
+        run: python wasm/build.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install browser smoke test dependencies
+        run: |
+          npm ci --prefix wasm
+          npx --prefix wasm playwright install --with-deps chromium
+      - name: Test the browser demo
+        run: npm test --prefix wasm
+      - uses: actions/upload-artifact@v5
+        if: failure()
+        with:
+          name: browser-test-results
+          path: wasm/test-results
+          retention-days: 7
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: django_admin_tests/django_admin_tests
+          path: wasm/dist/django_admin_tests
       - uses: actions/upload-artifact@v5
         with:
-          name: snapshot
-          path: django_admin_tests/django_admin_tests
-          retention-days: 1
-      - if: "${{ github.event.inputs.pr == '' }}"
-        uses: JamesIves/github-pages-deploy-action@v4.7.4
+          name: webassembly-demo
+          path: wasm/dist
+          include-hidden-files: true
+          retention-days: 7
+
+  publish-branch:
+    needs: build
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v5
         with:
-          branch: gh-pages
-          folder: django_admin_tests
-          clean: true
-      - if: "${{ github.event.inputs.pr != '' }}"
-        uses: JamesIves/github-pages-deploy-action@v4.7.4
+          name: webassembly-demo
+          path: wasm/dist
+      - uses: JamesIves/github-pages-deploy-action@v4.7.4
         with:
-          branch: preview-${{ inputs.pr }}
-          folder: django_admin_tests
+          branch: ${{ inputs.pr && format('preview-{0}', inputs.pr) || 'gh-pages' }}
+          folder: wasm/dist
           clean: true
+
   deploy:
     needs: build
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      github.event_name != 'pull_request' &&
+      inputs.pr == ''
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -67,6 +112,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     steps:
-      - uses: actions/deploy-pages@v4
+      - uses: actions/configure-pages@v5
+      - id: deployment
+        uses: actions/deploy-pages@v4
