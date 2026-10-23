@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Starting Django admin tests</title>
+    <style>
+      :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+      body { max-width: 38rem; margin: 12vh auto; padding: 1.5rem; line-height: 1.6; }
+      h1 { line-height: 1.2; }
+    </style>
+    <script src="/django_admin_tests/boot.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Django admin tests, in your browser</h1>
+      <p>This interactive demo runs Django on your device. The first visit downloads
+        Python and the demo’s sample database. This can take a minute.</p>
+      <p id="status" role="status">Starting the demo…</p>
+      <p>Sign in with <strong>admin</strong> / <strong>correcthorsebatterystaple</strong>.
+        Edits stay in this browser and reset with each new build.</p>
+      <a id="retry" href="/django_admin_tests/index.html" hidden>Try again</a>
+      <noscript>JavaScript is required to run this demo.</noscript>
+    </main>
+  </body>
+</html>

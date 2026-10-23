@@ -1,0 +1,4 @@
+/django_admin_tests/static/* /asset-not-found.html 404
+/django_admin_tests/runtime/* /asset-not-found.html 404
+/django_admin_tests/* /django_admin_tests/index.html 200
+/ /django_admin_tests/ 302

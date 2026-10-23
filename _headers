@@ -1,0 +1,4 @@
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+/django_admin_tests/runtime/*.wasm
+  Content-Type: application/wasm
