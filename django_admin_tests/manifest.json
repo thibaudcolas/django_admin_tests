@@ -1,5 +1,5 @@
 {
-  "build": "0f8d07d479b9a9c4",
+  "build": "0e77d73b6f49d113",
   "pyodide": "0.29.3",
   "packages": [
     "sqlite3",
@@ -11,7 +11,7 @@
     "url": "https://github.com/django/django.git",
     "vcs_info": {
       "commit_id": "8fc1fab66faf943e99452b6358810641c315d426",
-      "requested_revision": "refs/pull/19655/head",
+      "requested_revision": "8fc1fab66faf943e99452b6358810641c315d426",
       "vcs": "git"
     }
   },
