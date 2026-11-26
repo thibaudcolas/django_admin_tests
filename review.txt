@@ -1,1 +1,82 @@
-The automated review was unavailable. See the review job in GitHub Actions.
+OpenCodeReview for django/django PR #19655 (8fc1fab66faf943e99452b6358810641c315d426)
+[ocr] Summary: 3 file(s) reviewed, 6 comment(s), ~8569799 token(s) used (input: ~8245883, output: ~323916), cache(read: ~6916992, write: ~0), 27m10s elapsed
+[ocr] Session: ae6eae32-dfab-4a69-a30d-8338aadd331d
+Review complete: 6 finding(s) across 3 selected item(s).
+
+─── django/contrib/admin/templatetags/admin_list.py:223-225 ───
+[performance · low] The label for a column is invariant across all rows, but `label_for_field()` is
+now called for every field of every result row (`items_for_result()` is invoked once per row). For
+100-row changelists with callable/related columns this means thousands of redundant
+`hasattr`/`get_field`/`pretty_name` lookups per page. Consider resolving the labels once per column
+(e.g. reuse the value already computed in `result_headers()` or cache it on the changelist) instead
+of recomputing them inside the row loop.
+
+
+
+─── tests/admin_changelist/tests.py:434-434 ───
+[test · low] The updated assertion only covers the new `aria-labelledby` attribute on the input;
+nothing verifies that the referenced header element (`<div class="text" id="name">`) actually exists
+in the rendered table. Because `result_headers()` only emits an `id` for the *sortable* branch, a
+`list_editable` column that is not sortable (e.g. excluded via `Admin.sortable_by`) would render
+`aria-labelledby="name"` pointing at a non-existent id, and this test would still pass. Consider
+also asserting the header markup, e.g. `self.assertInHTML('<div class="text" id="name">',
+table_output)`, and a case where the list-editable column is not sortable.
+
+
+
+─── django/contrib/admin/templatetags/admin_list.py:312-313 ───
+[bug · low] This unconditionally overwrites `aria-labelledby` on the widget, so an attribute
+explicitly configured by a developer (e.g. via `formfield_for_dbfield()` or a custom
+widget/`get_changelist_form`) is silently replaced with the slugified column label — which may not
+even correspond to an existing header id when the column isn't sortable. Use `setdefault()` so an
+explicit value wins.
+
+                  if not label_attr:
+-                     bf.field.widget.attrs["aria-labelledby"] = slugify(label)
++                     bf.field.widget.attrs.setdefault("aria-labelledby", slugify(label))
+
+
+─── django/contrib/admin/templatetags/admin_list.py:223-225 ───
+[bug · medium] `label` and `label_attr` are assigned inside the `try`, but they are read further
+down in the `list_editable` branch, which is reached even when `lookup_field()` raised
+`ObjectDoesNotExist` (that branch is under `if link_to_changelist: ... else:`, not inside the
+`try`/`else`). For a `list_editable` field whose attribute access raises `ObjectDoesNotExist`, `if
+not label_attr` will raise `UnboundLocalError` instead of rendering the empty-value display.
+Initialize the variables before the `try` (or move the label lookup outside it, see also the note
+about doing it once per column).
+
++             f, attr, value = lookup_field(field_name, result, cl.model_admin)
+              label, label_attr = label_for_field(
+                  field_name, cl.model, model_admin=cl.model_admin, return_attr=True
+              )
+
+
+─── django/contrib/admin/templatetags/admin_list.py:170-170 ───
+[bug · medium] Deriving the header id from `slugify(text)` doesn't guarantee uniqueness or a
+non-empty value:
+- two columns can share the same label (e.g. `list_display = ["name", "parent__name"]`, or two
+callables with the same `short_description`) → duplicate ids;
+- a non-ASCII verbose name (e.g. `verbose_name = "名前"`) slugifies to `""` → an empty id, and
+`aria-labelledby=""` on the list-editable widget then references nothing.
+Consider building the id from the (unique) `field_name` instead, e.g. `"id_%s" %
+slugify(_coerce_field_name(field_name, i))` or `slugify(field_name)`, so each header id is unique
+and non-empty, and use the exact same value for the widget's `aria-labelledby`.
+
+-             "id": slugify(text),
++             "id": slugify(_coerce_field_name(field_name, i)),
+
+
+─── django/contrib/admin/templates/admin/change_list_results.html:21-21 ───
+[bug · high] `header.id` only exists on the *sortable* branch of `result_headers()`. The other two
+yields (the non-sortable branch and the `action_checkbox` branch) don't include an `id` key, so the
+template renders `id=""` for them. Since actions are enabled by default, nearly every changelist
+ends up with several `<div class="text" id="">` elements — invalid HTML (ids must be unique and
+non-empty) — and for list_editable columns excluded via `sortable_by`, the widget's new
+`aria-labelledby` would point to a non-existent id. Either guard the attribute here, or (better)
+make `result_headers()` always emit an `id` (and derive it from the field name to guarantee
+uniqueness / non-empty values, since `slugify()` returns `''` for non-Latin verbose names and
+collides for duplicate labels).
+
+-    <div class="text" id="{{ header.id }}">{% if header.sortable %}<a role="button" href="{{ header.url_primary }}">{{ header.text|capfirst }}</a>{% else %}<span>{{ header.text|capfirst }}</span>{% endif %}</div>
++    <div class="text"{% if header.id %} id="{{ header.id }}"{% endif %}>{% if header.sortable %}<a role="button" href="{{ header.url_primary }}">{{ header.text|capfirst }}</a>{% else %}<span>{{ header.text|capfirst }}</span>{% endif %}</div>
+
