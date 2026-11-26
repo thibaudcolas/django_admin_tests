@@ -1,5 +1,5 @@
 {
-  "build": "b64c150d3be41043",
+  "build": "d73656db9291869b",
   "pyodide": "0.29.3",
   "packages": [
     "sqlite3",
