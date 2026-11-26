@@ -156,3 +156,4 @@ wasm/.build/
 wasm/.cache/
 wasm/dist/
 wasm/test-results/
+.wrangler/

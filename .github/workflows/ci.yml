@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       pr:
-        description: "Django pull request number (leave empty for main)"
+        description: "Django pull request number (leave empty for wasm/django-ref)"
         required: false
         type: string
 
@@ -19,7 +19,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: wasm-${{ github.workflow }}-${{ github.ref }}-${{ inputs.pr || 'main' }}
+  group: wasm-${{ github.workflow }}-${{ github.event_name == 'pull_request' && format('repo-pr-{0}', github.event.pull_request.number) || inputs.pr && format('django-pr-{0}', inputs.pr) || github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -37,7 +37,11 @@ jobs:
         env:
           DJANGO_PR: ${{ inputs.pr }}
         run: |
-          ref=main
+          ref=$(cat wasm/django-ref)
+          if [[ ! "$ref" =~ ^[a-zA-Z0-9._/-]+$ ]]; then
+            echo "wasm/django-ref must contain a Django Git branch, tag, or commit."
+            exit 1
+          fi
           if [ -n "$DJANGO_PR" ]; then
             if [[ ! "$DJANGO_PR" =~ ^[1-9][0-9]*$ ]]; then
               echo "The Django PR number must be a positive integer."
@@ -50,7 +54,7 @@ jobs:
         with:
           path: wasm/.cache
           key: pyodide-${{ hashFiles('wasm/build.py') }}
-      - name: Test the WSGI bridge
+      - name: Test the WSGI bridge and deployment routing
         run: python -m unittest discover -s wasm -p 'test_*.py'
       - name: Build the browser demo
         run: python wasm/build.py
@@ -67,20 +71,28 @@ jobs:
   publish-branch:
     needs: build
     if: >-
-      github.ref == 'refs/heads/main' &&
-      github.event_name != 'pull_request'
+      github.event_name != 'pull_request' &&
+      startsWith(github.ref, 'refs/heads/') &&
+      github.ref != 'refs/heads/gh-pages' &&
+      !startsWith(github.ref, 'refs/heads/preview-')
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v6
+      - name: Select the Pages branch and URL
+        id: target
+        env:
+          SOURCE_BRANCH: ${{ github.ref_name }}
+          DJANGO_PR: ${{ inputs.pr }}
+        run: python3 wasm/deployment.py
       - uses: actions/download-artifact@v5
         with:
           name: webassembly-demo
           path: wasm/dist
       - uses: JamesIves/github-pages-deploy-action@v4.7.4
         with:
-          branch: ${{ inputs.pr && format('preview-{0}', inputs.pr) || 'gh-pages' }}
+          branch: ${{ steps.target.outputs.branch }}
           folder: wasm/dist
           clean: true
 

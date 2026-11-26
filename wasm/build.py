@@ -174,6 +174,11 @@ def main():
     shutil.copyfile(SITE / "index.html", SITE / "404.html")
     shutil.copyfile(SITE / "index.html", DIST / "index.html")
     shutil.copyfile(SITE / "index.html", DIST / "404.html")
+    # Pages redirects apply even to existing files, and do not support 404
+    # rewrites. Native directory-specific 404 pages keep missing assets from
+    # falling back to the application launcher.
+    for directory in ["static", "runtime"]:
+        shutil.copyfile(SOURCE / "asset-not-found.html", SITE / directory / "404.html")
     shutil.copyfile(SOURCE / "LICENSE.bakerydemo", SITE / "LICENSE.bakerydemo")
     (SITE / ".nojekyll").touch()
     (DIST / ".nojekyll").touch()

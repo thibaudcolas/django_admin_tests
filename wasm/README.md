@@ -85,16 +85,21 @@ stops the worker while idle. Dynamic responses have the header
 The workflow builds on pushes, repository PRs, scheduled runs, and manual runs.
 It tests the bridge before building and uploading artifacts. Browser smoke tests
 are temporarily excluded from CI to keep builds fast; they remain available locally.
-Publishing runs only from this repository's `main` branch, outside repository PRs:
+Publishing runs on source-branch pushes, scheduled runs, and manual runs. Repository
+pull requests build and test only; pushes to their same-repository source branches
+publish previews separately. Generated `gh-pages` and `preview-*` output branches
+are excluded from CI to avoid loops:
 
 | Target | Published directory | Deployment |
 | --- | --- | --- |
 | GitHub Pages project site | `wasm/dist/django_admin_tests/` | Actions Pages artifact, mounted at `/django_admin_tests/` |
-| Netlify / Cloudflare Pages branch site | `wasm/dist/` | `gh-pages` or `preview-<Django PR number>` branch |
+| Netlify / Cloudflare Pages branch site | `wasm/dist/` | `gh-pages`, `preview-branch-<source>`, or `preview-<Django PR number>` |
 
 The outer distribution includes `_redirects` and `_headers` for branch hosting.
-Existing files take precedence; application routes fall back to the launcher,
-while missing static/runtime assets return 404. Disable host-side HTML/JS
+Cloudflare Pages uses native `404.html` fallbacks for application routes, with
+separate `404.html` files inside static/runtime directories for missing assets.
+Do not add a catch-all Pages rewrite: it also intercepts existing runtime files.
+Disable host-side HTML/JS
 post-processing so the supplied assets are served unchanged. GitHub Pages uses
 the generated `404.html` launcher for a first visit to a deep URL. `serve.py`
 simulates that behavior, including the initial HTTP 404 before the worker starts.
@@ -108,6 +113,63 @@ outside that prefix, including other GitHub Pages projects on the same origin.
 Django PR numbers are validated before installation and preview branch publishing.
 PR previews never replace the main GitHub Pages deployment. Building has only
 read access to the repository; deployment permissions belong to separate jobs.
+
+### Deploy to the existing Cloudflare Pages project
+
+After building and testing, use your local Wrangler login:
+
+```sh
+npx wrangler pages deploy wasm/dist --project-name django-admin-tests --branch gh-pages
+```
+
+The project's production branch is `gh-pages`, even though the bundled Django
+revision is `main`. Passing `--branch main` creates a preview instead of updating
+`https://django-admin-tests.pages.dev`. This uploads the already-built static
+distribution; no Python Worker, D1 database, or Cloudflare build command is needed.
+The current Git integration can also publish the generated `gh-pages` branch.
+
+### Automatic branch previews
+
+The existing Cloudflare GitHub integration watches `gh-pages` for production and
+`preview-*` for previews, serving the generated branch root without a build step.
+GitHub Actions builds the application, then pushes only `wasm/dist/` to the output
+branch with its job-scoped `GITHUB_TOKEN`. No Cloudflare API token is needed.
+
+| Source / workflow selection | Stable hostname |
+| --- | --- |
+| `main` | `django-admin-tests.pages.dev` |
+| `rtl` | `preview-branch-rtl.django-admin-tests.pages.dev` |
+| `django-5-2` | `preview-branch-django-5-2.django-admin-tests.pages.dev` |
+| Manual Django PR `19688` | `preview-19688.django-admin-tests.pages.dev` |
+
+Every hostname serves the admin at `/django_admin_tests/latest/english/admin/`.
+Each push updates the same alias after GitHub Actions and Cloudflare finish.
+The publishing job's summary shows the expected URL; it does not imply that the
+asynchronous Cloudflare deployment has already completed. Previews are public.
+
+Use lowercase letters, digits, and hyphens for short, readable branch URLs.
+Names requiring normalization (for example `fix/api` or `Fix-API`), or exceeding
+48 characters, map to `preview-ref-<slug>-<12-character SHA-256 prefix>` instead.
+The suffix depends only on the original branch name, never the commit, and keeps
+normalized names distinct. `preview-*` and `gh-pages` are reserved output names.
+
+To select a Django release, change `wasm/django-ref` on the source branch to a
+Django Git branch, tag, or commit, such as `stable/5.2.x`. It defaults to `main`.
+The manual workflow's PR input overrides the file. Selected revisions must still
+support Python 3.13 and the pinned dependencies. No previews are published from
+fork pull requests. Deleting a source branch does not delete its output branch
+or Cloudflare deployments; cleanup is manual for now.
+
+To test Cloudflare's routing locally:
+
+```sh
+npx wrangler pages dev wasm/dist --port 8014
+WASM_BASE_URL=http://127.0.0.1:8014 npm test --prefix wasm
+```
+
+Set `WASM_BASE_URL=https://django-admin-tests.pages.dev` to run the same browser
+smoke test against the deployed site. Its edits affect only the test browser's
+IndexedDB, not shared server data.
 
 ## Validation
 

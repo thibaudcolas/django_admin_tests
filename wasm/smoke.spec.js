@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 const BASE = '/django_admin_tests/';
 const ADMIN = `${BASE}latest/english/admin/`;
 
-test('boots a deep link, edits through Django, and persists across worker restarts', async ({ page, context, request, browser }) => {
+test('boots a deep link, edits through Django, and persists across worker restarts', async ({ page, context, request, browser, baseURL }) => {
   // There is only a static server: an HTTP client gets the launcher, not Django.
   const launcher = await request.get(ADMIN);
   expect(launcher.status()).toBe(404);
@@ -52,7 +52,7 @@ test('boots a deep link, edits through Django, and persists across worker restar
   await expect(page.locator('#result_list').getByRole('link', { name: groupName, exact: true })).toHaveCount(0);
   expect(await page.evaluate(async (url) => {
     const response = await fetch(url);
-    return [response.status, response.headers.get('Content-Type')];
+    return [response.status, response.headers.get('Content-Type').split(';')[0]];
   }, `${BASE}static/admin/css/base.css`)).toEqual([200, 'text/css']);
 
   // The demo's SVG styleguide reads files inside the Python package.
@@ -61,7 +61,7 @@ test('boots a deep link, edits through Django, and persists across worker restar
   await expect(page.locator('svg').first()).toBeVisible();
 
   // Delete through the confirmation form as well.
-  await page.goto(new URL(changeURL, `http://127.0.0.1:8002${ADMIN}auth/group/`).href);
+  await page.goto(new URL(changeURL, `${baseURL}${ADMIN}auth/group/`).href);
   await page.locator('.deletelink').click();
   await page.getByRole('button', { name: /Yes, I’m sure/ }).click();
   await expect(page.locator('#result_list').getByRole('link', { name: groupName, exact: true })).toHaveCount(0);
@@ -74,7 +74,7 @@ test('boots a deep link, edits through Django, and persists across worker restar
   const isolated = await browser.newContext();
   try {
     const otherPage = await isolated.newPage();
-    await otherPage.goto(`http://127.0.0.1:8002${ADMIN}`);
+    await otherPage.goto(`${baseURL}${ADMIN}`);
     await expect(otherPage.getByLabel('Username:')).toBeVisible({ timeout: 120000 });
   } finally {
     await isolated.close();
