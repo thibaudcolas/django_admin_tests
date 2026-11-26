@@ -100,6 +100,7 @@ jobs:
           OCR_USE_ANTHROPIC: 'false'
         run: |
           ocr config set language English
+          ocr config set llm.extra_body '{"reasoning_effort":"max"}'
           ocr llm test
           echo "OpenCodeReview for django/django PR #$DJANGO_PR ($DJANGO_HEAD)" > review.txt
           ocr review --repo django --from "$DJANGO_BASE" --to "$DJANGO_HEAD" \
