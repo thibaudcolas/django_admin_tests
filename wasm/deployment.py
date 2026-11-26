@@ -33,3 +33,5 @@ if __name__ == "__main__":
         output.write(f"branch={branch}\nurl={url}\n")
     with open(os.environ["GITHUB_STEP_SUMMARY"], "a") as summary:
         summary.write(f"Pages output branch: `{branch}`\n\nPreview URL after Cloudflare finishes deploying: {url}\n")
+        if os.environ.get("DJANGO_PR"):
+            summary.write(f"\n[Automated code review](https://{host}/review.txt)\n")

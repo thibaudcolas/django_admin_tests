@@ -201,3 +201,16 @@ and in the generated distribution.
 
 - [Pyodide service workers](https://pyodide.org/en/0.29.3/usage/service-worker.html)
 - [Pyodide filesystems and persistence](https://pyodide.org/en/0.29.3/usage/file-system.html)
+
+### Automated review of Django PR previews
+
+Dispatch CI with a Django PR number to build its preview and review the same
+commit with OpenCodeReview. The Actions run summary links to the public
+`/review.txt` on the preview. Re-run the workflow with the PR number to
+refresh the preview after new commits.
+
+Configure Actions secrets `OCR_LLM_URL` (OpenAI-compatible endpoint) and
+`OCR_LLM_AUTH_TOKEN`. Set the repository variable `OCR_LLM_MODEL` if your
+provider uses a model other than `MiniMax-M3`. The review job sends Django
+code to this provider. If the review fails, the preview still deploys with
+an availability message at the same URL.

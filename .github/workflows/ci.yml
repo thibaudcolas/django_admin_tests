@@ -25,7 +25,19 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      django_head: ${{ steps.pr.outputs.head }}
+      django_base: ${{ steps.pr.outputs.base }}
     steps:
+      - name: Resolve the Django PR revision
+        if: inputs.pr != ''
+        id: pr
+        env:
+          DJANGO_PR: ${{ inputs.pr }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [[ "$DJANGO_PR" =~ ^[1-9][0-9]{0,19}$ ]]
+          gh api "repos/django/django/pulls/$DJANGO_PR" --jq '"head=\(.head.sha)\nbase=\(.base.sha)"' >> "$GITHUB_OUTPUT"
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
@@ -35,20 +47,14 @@ jobs:
           cache-dependency-path: wasm/requirements.txt
       - name: Install the selected Django revision
         env:
-          DJANGO_PR: ${{ inputs.pr }}
+          DJANGO_HEAD: ${{ steps.pr.outputs.head }}
         run: |
           ref=$(cat wasm/django-ref)
           if [[ ! "$ref" =~ ^[a-zA-Z0-9._/-]+$ ]]; then
             echo "wasm/django-ref must contain a Django Git branch, tag, or commit."
             exit 1
           fi
-          if [ -n "$DJANGO_PR" ]; then
-            if [[ ! "$DJANGO_PR" =~ ^[1-9][0-9]*$ ]]; then
-              echo "The Django PR number must be a positive integer."
-              exit 1
-            fi
-            ref="refs/pull/$DJANGO_PR/head"
-          fi
+          ref=${DJANGO_HEAD:-$ref}
           python -m pip install -r wasm/requirements.txt "Django @ git+https://github.com/django/django.git@$ref"
       - uses: actions/cache@v4
         with:
@@ -68,9 +74,45 @@ jobs:
           include-hidden-files: true
           retention-days: 7
 
-  publish-branch:
+  review:
     needs: build
+    if: inputs.pr != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions: {}
+    env:
+      DJANGO_HEAD: ${{ needs.build.outputs.django_head }}
+      DJANGO_BASE: ${{ needs.build.outputs.django_base }}
+      DJANGO_PR: ${{ inputs.pr }}
+    steps:
+      - name: Fetch Django history for the review
+        run: |
+          git init django
+          git -C django remote add origin https://github.com/django/django.git
+          git -C django fetch --filter=blob:none origin "$DJANGO_BASE" "$DJANGO_HEAD"
+          git -C django checkout --detach "$DJANGO_BASE"
+      - run: npm install --global @alibaba-group/open-code-review@1.13.10
+      - name: Review the Django diff
+        env:
+          OCR_LLM_URL: ${{ secrets.OCR_LLM_URL }}
+          OCR_LLM_TOKEN: ${{ secrets.OCR_LLM_AUTH_TOKEN }}
+          OCR_LLM_MODEL: ${{ vars.OCR_LLM_MODEL || 'MiniMax-M3' }}
+          OCR_USE_ANTHROPIC: 'false'
+        run: |
+          ocr config set language English
+          ocr llm test
+          echo "OpenCodeReview for django/django PR #$DJANGO_PR ($DJANGO_HEAD)" > review.txt
+          ocr review --repo django --from "$DJANGO_BASE" --to "$DJANGO_HEAD" \
+            --audience agent --format text --background "Review Django PR #$DJANGO_PR for correctness and regressions." >> review.txt
+      - uses: actions/upload-artifact@v5
+        with:
+          name: django-review
+          path: review.txt
+
+  publish-branch:
+    needs: [build, review]
     if: >-
+      !cancelled() && needs.build.result == 'success' &&
       github.event_name != 'pull_request' &&
       startsWith(github.ref, 'refs/heads/') &&
       github.ref != 'refs/heads/gh-pages' &&
@@ -90,6 +132,14 @@ jobs:
         with:
           name: webassembly-demo
           path: wasm/dist
+      - uses: actions/download-artifact@v5
+        if: needs.review.result == 'success'
+        with:
+          name: django-review
+          path: wasm/dist
+      - name: Record unavailable review
+        if: inputs.pr != '' && needs.review.result != 'success'
+        run: echo 'The automated review was unavailable. See the review job in GitHub Actions.' > wasm/dist/review.txt
       - uses: JamesIves/github-pages-deploy-action@v4.7.4
         with:
           branch: ${{ steps.target.outputs.branch }}
