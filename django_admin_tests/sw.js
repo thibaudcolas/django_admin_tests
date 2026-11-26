@@ -6,7 +6,7 @@ importScripts(`${BASE}runtime/xhr-shim.js`);
 self.XMLHttpRequest = self.XMLHttpRequestShim;
 importScripts(`${BASE}runtime/pyodide.js`, `${BASE}runtime/pyodide.asm.js`);
 
-const BUILD = 'beebe4f17879f23d';
+const BUILD = '3637f24ddba6657b';
 let runtime;
 let queue = Promise.resolve();
 

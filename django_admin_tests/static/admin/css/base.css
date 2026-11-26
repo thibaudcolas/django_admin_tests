@@ -45,6 +45,9 @@ html[data-theme="light"],
     --message-error-bg: #ffefef;
     --message-error-icon: url(../img/icon-no.svg);
 
+    --selector-icons: url(../img/selector-icons.svg);
+    --selector-chooser-bg: var(--selected-bg);
+
     --darkened-bg: #f8f8f8; /* A bit darker than --body-bg */
     --selected-bg: #e4e4e4; /* E.g. selected table cells */
     --selected-row: #ffc;
@@ -365,6 +368,7 @@ th {
 }
 
 thead th,
+thead td,
 tfoot td {
     color: var(--body-quiet-color);
     padding: 5px 10px;
@@ -402,6 +406,7 @@ tr:nth-child(odd) + .row-form-errors .errorlist {
 
 /* SORTABLE TABLES */
 
+thead td,
 thead th {
     padding: 5px 10px;
     line-height: normal;
