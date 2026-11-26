@@ -1,0 +1,24 @@
+{
+  "build": "de6b231757499b9d",
+  "pyodide": "0.29.3",
+  "packages": [
+    "sqlite3",
+    "ssl",
+    "tzdata"
+  ],
+  "django": "6.1.dev20250930093709",
+  "django_source": {
+    "url": "https://github.com/django/django.git",
+    "vcs_info": {
+      "commit_id": "b5a13009d2a262e6b861b9096c74d3f8d8553142",
+      "requested_revision": "refs/pull/19737/head",
+      "vcs": "git"
+    }
+  },
+  "dependencies": {
+    "django": "6.1.dev20250930093709",
+    "asgiref": "3.13.0",
+    "sqlparse": "0.6.0",
+    "docutils": "0.23"
+  }
+}
